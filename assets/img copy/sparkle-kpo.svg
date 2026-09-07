@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="k-bg" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#b6c6d5" stop-opacity="0.85"/>
+      <stop offset="55%" stop-color="#d4dde5" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="k-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="55%" stop-color="#d8e3ec" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="#ffffff"/>
+  <rect width="800" height="600" fill="url(#k-bg)"/>
+  <g>
+    <circle cx="120" cy="540" r="80" fill="url(#k-glow)"/>
+    <circle cx="200" cy="500" r="100" fill="url(#k-glow)"/>
+    <circle cx="340" cy="560" r="55" fill="url(#k-glow)"/>
+    <circle cx="60" cy="490" r="45" fill="url(#k-glow)"/>
+    <circle cx="450" cy="490" r="35" fill="url(#k-glow)"/>
+    <circle cx="620" cy="540" r="60" fill="url(#k-glow)"/>
+    <circle cx="720" cy="500" r="40" fill="url(#k-glow)"/>
+    <circle cx="540" cy="560" r="25" fill="url(#k-glow)"/>
+    <circle cx="280" cy="440" r="20" fill="url(#k-glow)"/>
+    <circle cx="500" cy="430" r="18" fill="url(#k-glow)"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="80" cy="430" r="1.3" opacity="0.8"/>
+    <circle cx="180" cy="380" r="1" opacity="0.7"/>
+    <circle cx="240" cy="500" r="1.5" opacity="0.85"/>
+    <circle cx="340" cy="420" r="1" opacity="0.6"/>
+    <circle cx="420" cy="540" r="1.6" opacity="0.9"/>
+    <circle cx="520" cy="510" r="1.2" opacity="0.7"/>
+    <circle cx="620" cy="420" r="1" opacity="0.6"/>
+    <circle cx="700" cy="440" r="1.4" opacity="0.7"/>
+    <circle cx="760" cy="540" r="1" opacity="0.6"/>
+    <circle cx="380" cy="360" r="1.2" opacity="0.55"/>
+    <circle cx="160" cy="320" r="1" opacity="0.5"/>
+    <circle cx="500" cy="380" r="1.3" opacity="0.65"/>
+  </g>
+</svg>

@@ -1,0 +1,2721 @@
+/* =========================================================================
+   A CAN SOLUTIONS Co.,Ltd. — main stylesheet
+   Canva モバイル版 (8 ページ) と Canva デスクトップ版 (2 ページ) を元に
+   モバイルファーストで構築し、768px 以上で PC レイアウトに切り替える。
+   ヘッダー / ハンバーガーメニューは持たず、フッターを末尾に持つ。
+   ブレークポイントは 768px の 1 つのみ。
+   ========================================================================= */
+
+/* ---------- design tokens ---------- */
+:root {
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #3a3a3a;
+  --color-muted: #6e6e6e;
+  --color-paper: #ffffff;
+  --color-paper-cool: #f6f7f9;
+  /* 各セクションの薄いオフホワイト */
+  --color-paper-warm: #fbf5e6;
+  /* お問い合わせのベージュ */
+  --color-line: #c4944b;
+  /* 見出しのオレンジ/ゴールド下線 */
+  --color-line-soft: rgba(196, 148, 75, 0.5);
+  --color-accent: #a25a30;
+  --color-accent-soft: #d49a78;
+  --color-blue: #1f4fa0;
+  --color-red: #d32a2f;
+  --color-send: #f1a546;
+
+  --font-jp: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+  --font-mono: "Roboto Mono", "SFMono-Regular", Menlo, monospace;
+
+  --container-max: 1200px;
+
+  --transition: 220ms ease;
+}
+
+/* ---------- reset & base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-jp);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--color-ink);
+  background: var(--color-paper);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition), opacity var(--transition);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent);
+}
+
+/* ---------- SITE HEADER / NAV ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  height: 60px;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--color-ink);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+}
+
+.site-header__logo img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.site-header__nav {
+  display: none;
+  gap: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .site-header__nav {
+    display: flex;
+  }
+}
+
+.site-header__nav a {
+  text-decoration: none;
+  color: var(--color-ink);
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Anonymous Pro", monospace;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.site-header__nav a:hover {
+  color: var(--color-blue);
+}
+
+.site-header__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 1.1rem;
+  background: var(--color-blue);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: "Anonymous Pro", monospace;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--transition), opacity var(--transition);
+}
+
+.site-header__cta:hover {
+  background: #1a6de0;
+  color: #fff;
+  opacity: 1;
+}
+
+.site-header__cta--dl {
+  background: #dc2626;
+}
+
+.site-header__cta--dl:hover {
+  background: #b91c1c;
+}
+
+.site-header__cta--dl .site-header__cta-icon {
+  color: #dc2626;
+}
+
+.site-header__cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  color: var(--color-blue);
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+#main {
+  padding-top: 60px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* =========================================================================
+   MOBILE FIRST STYLES (default = mobile, < 768px)
+   Canva モバイル版モックアップ準拠
+   ========================================================================= */
+
+.container {
+  width: 100%;
+  max-width: 560px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* ---------- HERO (mobile) ---------- */
+.hero {
+  position: relative;
+  background: var(--color-paper);
+  padding: 4rem 1.25rem 5rem;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__desktop {
+  display: none;
+  /* desktop hero is hidden on mobile */
+}
+
+.hero__mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 480px;
+}
+
+/* ---------- hero ロゴ要素の共通 wipe-up アニメーション ---------- */
+/* Canva モバイル版の各テキストが上からスライドインして順番に現れる振る舞いを再現する */
+/* ため、各要素を overflow:hidden と inner span の translateY で maskインさせる。 */
+.hero__pre,
+.hero__sub,
+.hero__company {
+  overflow: hidden;
+  display: block;
+}
+
+.hero__pre-inner,
+.hero__sub-inner,
+.hero__company-inner {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  animation: hero-rise-in 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.hero__pre-inner {
+  animation-delay: 100ms;
+}
+
+.hero__sub-inner {
+  animation-delay: 1100ms;
+}
+
+.hero__company-inner {
+  animation-delay: 1350ms;
+}
+
+@keyframes hero-rise-in {
+  0% {
+    opacity: 0;
+    transform: translateY(110%);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__pre {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: var(--color-line);
+  letter-spacing: 0.02em;
+  margin: 0 0 1.5rem;
+}
+
+.hero__pre-inner {
+  text-decoration: underline;
+  text-decoration-color: var(--color-line);
+  text-underline-offset: 0.3em;
+}
+
+.hero__title {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: clamp(2.6rem, 12vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.hero__title-line {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.25em;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.hero__title-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: hero-word-rise 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+}
+
+.hero__title-line:nth-child(1) .hero__title-word:nth-child(1) {
+  animation-delay: 300ms;
+}
+
+.hero__title-line:nth-child(1) .hero__title-word:nth-child(2) {
+  animation-delay: 500ms;
+}
+
+.hero__title-line:nth-child(2) .hero__title-word:nth-child(1) {
+  animation-delay: 700ms;
+}
+
+@keyframes hero-word-rise {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero__sub {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-line);
+  letter-spacing: 0.02em;
+  line-height: 1.6;
+  margin: 1.5rem 0 0;
+}
+
+.hero__company {
+  margin-top: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.hero__company-inner {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero__logo {
+  width: 28px;
+  height: 28px;
+}
+
+/* ---------- SERVICES OVERVIEW (mobile) ---------- */
+.services {
+  background: var(--color-paper);
+  padding: 3rem 0 3.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../img/myanmarmap.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+/* Mobile: make container flex so myanmar can be reordered to last position */
+.services .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* display:contents makes intro's children direct flex siblings of service-list */
+.services__intro {
+  display: contents;
+}
+
+/* Push myanmar below the service-list (after BLOG) on mobile */
+.services__myanmar {
+  order: 1;
+  margin-top: 0.5rem;
+}
+
+/* Prevent reveal ghost-box: hide until JS fires .is-visible */
+.services__myanmar:not(.is-visible) {
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* セクションヘッド共通(左寄せ + 下線 + 英語サブ) */
+.section-head {
+  margin: 0 0 1.5rem;
+}
+
+.section-head__ja {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.04em;
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-line);
+  color: var(--color-ink);
+}
+
+.section-head__en {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  margin: 0.5rem 0 0;
+  line-height: 1.4;
+}
+
+.br-mobile {
+  display: inline;
+}
+
+.services__lead {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin: 0 0 2rem;
+  color: var(--color-ink);
+}
+
+.services__myanmar {
+  margin-top: auto;
+}
+
+.services__myanmar.is-visible {
+  overflow: visible;
+}
+
+.service-card__link--myanmar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem;
+  min-height: 110px;
+  border: 1px dashed rgba(196, 148, 75, 0.7);
+  border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.service-card__link--myanmar:hover {
+  border-color: var(--color-line);
+  transform: translateY(-2px);
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-card {
+  border: 1px dashed rgba(196, 148, 75, 0.7);
+  background: var(--color-paper);
+  border-radius: 4px;
+  transition: transform var(--transition), border-color var(--transition);
+}
+
+.service-card:hover {
+  border-color: var(--color-line);
+  transform: translateY(-2px);
+}
+
+.service-card a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 1.5rem;
+  min-height: 110px;
+}
+
+.service-card__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.service-card__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0 0 0.4rem;
+  letter-spacing: 0.01em;
+  color: var(--color-ink);
+  line-height: 1.15;
+}
+
+.service-card__sub {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.service-card__more {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- CASE DETAILS (mobile) ---------- */
+.case {
+  position: relative;
+  isolation: isolate;
+  background: var(--color-paper);
+  padding: 3.5rem 0 5rem;
+  overflow: hidden;
+}
+
+/* 各サービス詳細の下半分に異なるスパークル背景を敷く */
+.case::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.case--tech::before {
+  background-image: url("../img/1.jpg");
+}
+
+.case--design::before {
+  background-image: url("../img/2.jpg");
+}
+
+.case--kpo::before {
+  background-image: url("../img/3.jpg");
+}
+
+.case--consulting::before {
+  background-image: url("../img/4.jpg");
+}
+
+/* 各サービス詳細セクションの上下端を背景色（白）にフェードさせ、
+   隣接セクションとの境界線をぼかす。 */
+.case::before {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, #000 14%, #000 78%, transparent 100%);
+}
+
+.case::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 6rem;
+  pointer-events: none;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent 0%, var(--color-paper) 100%);
+}
+
+.case__head {
+  margin-bottom: 1rem;
+}
+
+.case__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.85rem;
+  letter-spacing: 0.01em;
+  margin: 0;
+  padding-bottom: 0.35rem;
+  border-bottom: 2px solid var(--color-line);
+  display: inline-block;
+  color: var(--color-ink);
+}
+
+.case__subtitle {
+  font-family: var(--font-mono);
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+  margin: 0.6rem 0 0;
+  padding: 0 0.6rem;
+  line-height: 1.4;
+}
+
+.case__desc {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--color-ink);
+  margin: 1.5rem 0 0;
+  padding: 0 0 1.25rem;
+  border-bottom: 1px solid var(--color-line-soft);
+}
+
+.case__desc strong {
+  font-weight: 700;
+}
+
+.case-block {
+  margin-top: 2.25rem;
+}
+
+.case-block__ja {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-line);
+  display: inline-block;
+  color: var(--color-ink);
+}
+
+.case-block__en {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  margin: 0.5rem 0 1rem;
+}
+
+.case-block__lead {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  padding-left: 0.5rem;
+  color: var(--color-ink);
+  line-height: 1.45;
+}
+
+.case-block__list {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+  padding-left: 1.5rem;
+}
+
+.case-block__list li {
+  position: relative;
+  padding-left: 1em;
+  margin-bottom: 0.15rem;
+}
+
+.case-block__list li::before {
+  content: "・";
+  position: absolute;
+  left: -0.1em;
+  color: var(--color-ink);
+}
+
+.case-block__list--indent {
+  padding-left: 1rem;
+}
+
+/* ---------- BLOG (mobile) ---------- */
+.blog {
+  background: #ffffff;
+  padding: 3rem 0 3.5rem;
+}
+
+.blog__header {
+  margin-bottom: 2.5rem;
+}
+
+.blog__title {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: var(--color-ink);
+  display: inline-block;
+  position: relative;
+}
+
+.blog__title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 250px;
+  height: 2px;
+  background-color: var(--color-line);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* ---- Scrollable blog container (~3 cards visible) ---- */
+.blog-scroll-wrap {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) #ece8e0;
+}
+
+.blog-scroll-wrap::-webkit-scrollbar {
+  width: 6px;
+}
+
+.blog-scroll-wrap::-webkit-scrollbar-track {
+  background: #ece8e0;
+  border-radius: 3px;
+}
+
+.blog-scroll-wrap::-webkit-scrollbar-thumb {
+  background: var(--color-line);
+  border-radius: 3px;
+}
+
+.blog-scroll-wrap::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ---- Card: padded layout with clear border ---- */
+.blog-card {
+  background: #ffffff;
+  border: 1px solid #b0b0b0;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  padding: 0.75rem;
+}
+
+.blog-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  border-color: #909090;
+}
+
+/* ---- Link row (mobile: stacked vertically, text on top) ---- */
+.blog-card__link {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  gap: 0.6rem;
+  align-items: stretch;
+}
+
+/* ---- Image panel (mobile: full-width, below the text) ---- */
+.blog-card__image {
+  order: 2;
+  width: 100%;
+  height: 150px;
+  min-width: unset;
+  flex-shrink: 0;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+
+.blog-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition);
+}
+
+.blog-card:hover .blog-card__image img {
+  transform: scale(1.02);
+}
+
+/* ---- Content panel (mobile: sits above image) ---- */
+.blog-card__content {
+  order: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 0;
+}
+
+.blog-card__header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.3rem;
+}
+
+.blog-card__date {
+  font-family: var(--font-jp);
+  font-size: 0.75rem;
+  color: #999999;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+}
+
+.blog-card__title {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0.3rem 0 0.5rem 0;
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.blog-card__category {
+  font-family: var(--font-jp);
+  font-size: 0.7rem;
+  color: #1a1a1a;
+  background-color: #f2ebd9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+
+.blog-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.blog-card__tag {
+  font-family: var(--font-jp);
+  font-size: 0.7rem;
+  color: #1f4fa0;
+  background: transparent;
+  padding: 0;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* hide forced title line-breaks on mobile */
+.blog-card__title br {
+  display: none;
+}
+
+/* ---------- ABOUT (mobile) ---------- */
+.about {
+  background: var(--color-paper);
+  padding: 3rem 0 3.5rem;
+}
+
+.about__head {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about__title {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 1.7rem;
+  margin: 0 auto;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-line);
+  display: inline-block;
+  letter-spacing: 0.04em;
+}
+
+.about__title-en {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #6b5a2a;
+  letter-spacing: 0.04em;
+  margin: 0.6rem 0 0;
+}
+
+.about__text {
+  margin: 1.5rem 0 2.5rem;
+}
+
+.about__lead,
+.about__mission {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+  margin: 0 0 1.5rem;
+  color: var(--color-ink);
+}
+
+.about__lead strong,
+.about__mission strong {
+  font-weight: 700;
+}
+
+.about__body {
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--color-ink);
+  margin: 0 0 1.5rem;
+  text-align: justify;
+}
+
+.team {
+  display: grid;
+  /* チームを 1行 × 2列 のグリッドにし、その中の テキスト行 と 画像行 を サブグリッドで
+     共有することで、職位行数が異なってもメンバー間で画像の位置をそろえる。 */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.4rem;
+  margin-top: 1.5rem;
+}
+
+/* `.reveal { display: block }` を打ち消すために `.team > .team__member` の
+   セレクタで詳細度を上げる。 */
+.team>.team__member {
+  text-align: left;
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  row-gap: 0;
+}
+
+.team__info {
+  grid-row: 1;
+}
+
+.team__photo {
+  grid-row: 2;
+  align-self: start;
+}
+
+.team__name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.team__role {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-ink);
+  margin: 0.35rem 0 0.75rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.team__role span {
+  font-weight: 700;
+}
+
+.team__photo {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 0;
+  overflow: hidden;
+  background: #eceae4;
+}
+
+.team__photo-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* ---------- GROUP / LOCATIONS (mobile) ---------- */
+.group {
+  background: linear-gradient(to bottom,
+      var(--color-paper) 0%,
+      var(--color-paper) 65%,
+      var(--color-paper-warm) 100%);
+  padding: 3rem 0 3.5rem;
+}
+
+.group__head {
+  text-align: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-line);
+  margin-bottom: 2rem;
+}
+
+.group__title {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0.14em;
+  margin: 0;
+  color: var(--color-ink);
+}
+
+/* ---------- COMPANY PROFILE TABLE ---------- */
+.company-profile {
+  margin-bottom: 2.5rem;
+  /* max-width: 885px; */
+  max-width: 1114px;
+  margin-inline: auto;
+}
+
+.company-profile__region {
+  font-family: var(--font-jp);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0;
+  padding: 0;
+}
+
+.company-profile__table {
+  margin: 0;
+  padding: 0;
+}
+
+.company-profile__row {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  align-items: stretch;
+  border-bottom: 1px solid #e8e4db;
+  gap: 0;
+}
+
+.company-profile__row--full {
+  grid-template-columns: 1fr;
+}
+
+.company-profile__row--no-border {
+  border-bottom: none;
+}
+
+.company-profile__row--valign-top {
+  align-items: start;
+}
+
+.company-profile__row--region {
+  display: block;
+  padding: 0;
+}
+
+.company-profile__row--region .company-profile__region {
+  margin: 0;
+  padding: 0.6rem 0.75rem 0.4rem;
+  font-size: 0.9rem;
+}
+
+.company-profile__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-jp);
+  font-size: 0.8rem;
+  font-weight: 700;
+  /* color: var(--color-ink);
+  background: #f4f2ee; */
+  padding: 0.7rem 0.4rem;
+  margin: 0;
+}
+
+.company-profile__value {
+  font-family: var(--font-jp);
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+}
+
+.company-profile__value a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.company-profile__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.company-profile__list li {
+  font-family: var(--font-jp);
+  font-size: 0.82rem;
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+  padding-left: 0.9rem;
+  position: relative;
+}
+
+.company-profile__list li::before {
+  content: "・";
+  position: absolute;
+  left: 0;
+}
+
+.company-profile__note {
+  font-family: var(--font-jp);
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  margin: 0.3rem 0 0;
+  padding: 0;
+}
+
+.company-profile__map-wrap {
+  margin-top: 0.5rem;
+  max-width: 320px;
+}
+
+.company-profile__map {
+  position: relative;
+  max-width: 320px;
+}
+
+.company-profile__building {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 130px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.company-profile__map iframe {
+  display: block;
+  width: 100%;
+  height: 160px;
+  border: 0;
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .company-profile__row {
+    grid-template-columns: 10rem 1fr;
+  }
+
+  .company-profile__label {
+    font-size: 0.85rem;
+  }
+
+  .company-profile__value {
+    font-size: 0.9rem;
+    padding: 0.7rem 1rem;
+  }
+
+  .company-profile__map {
+    max-width: 320px;
+  }
+
+  .company-profile__map iframe {
+    height: 180px;
+  }
+}
+
+.locations {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.location__map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  background: #e3e3df;
+  overflow: hidden;
+  border-radius: 0;
+}
+
+/* Google Maps の iframe を 地図コンテナにフィットさせる。 */
+.location__map-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 地図右上にオーバーレイ表示する建物写真。 */
+.location__map-overlay {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 35%;
+  max-width: 160px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.location__caption {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--color-ink);
+  margin: 0.5rem 0 0;
+  align-self: flex-end;
+  text-align: right;
+}
+
+.location__info {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.location__name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.location__address {
+  font-style: normal;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+/* ---------- CONTACT (mobile) ---------- */
+.contact {
+  background: var(--color-paper-warm);
+  padding: 2.5rem 0 4rem;
+}
+
+.contact__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact__head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__title {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid var(--color-line);
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.contact__title-en {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  margin: 0.25rem 0 0;
+}
+
+.contact__note {
+  font-family: var(--font-jp);
+  font-size: 0.78rem;
+  color: var(--color-ink);
+  margin: 0.5rem 0 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  border: 0;
+  border-radius: 10px;
+  background: var(--color-paper);
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+  transition: box-shadow var(--transition);
+}
+
+.form-row textarea {
+  border-radius: 10px;
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #b6b6b6;
+  font-family: var(--font-jp);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-accent);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.btn-send {
+  background: transparent;
+  border: 0;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0;
+  color: var(--color-ink);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  transition: transform var(--transition);
+}
+
+.btn-send:hover,
+.btn-send:focus-visible {
+  transform: translateY(-2px);
+}
+
+.btn-send__icon {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 48px;
+}
+
+.btn-send__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-send__label {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.btn-send {
+  position: relative;
+}
+
+/* ---------- HERO MARKETING (mobile = hidden) ---------- */
+/* Canva デスクトップ版で言及される「Benefit from our tried and tested */
+/* solutions.」で始まる GROW YOUR COMPANY セクション。モバイルでは     */
+/* hero__mobile 側に同等の表示があるためここでは非表示にする。        */
+.hero-marketing {
+  display: none;
+}
+
+/* ============================================================ */
+/* Scroll-triggered reveal animations (shared)                    */
+/* Canva デザインで使われている 3 種類の入場アニメをそれぞれ      */
+/* CSS で再現する。クラスを使い分けて部位ごとに適用する。         */
+/*                                                                */
+/* 1. .reveal         : 既定の wipe-up（マスク + translateY 100→0）*/
+/*    GROW YOUR COMPANY 系の見出しや本文に使用。                  */
+/* 2. .reveal--pop    : 文字ごとに左から順番にポップ表示する。     */
+/*    section heading（サービスについて / Technology 等）に使用。 */
+/* 3. .reveal--slide-l: 左からスライドインしてフェードイン。       */
+/*    本文・リード文・段落（テキストブロック）に使用。           */
+/* 4. .reveal--slide-r: 右からスライドインしてフェードイン。       */
+/*    サービスカードや右寄せ要素に使用。                         */
+/* ============================================================ */
+.reveal {
+  --reveal-delay: 0ms;
+  display: block;
+  /* JS がラッパー / 文字分割を行うまで隠して FOUC を防ぐ。 */
+  visibility: hidden;
+}
+
+.reveal.reveal--ready {
+  visibility: visible;
+}
+
+.reveal--delay-1 {
+  --reveal-delay: 150ms;
+}
+
+.reveal--delay-2 {
+  --reveal-delay: 300ms;
+}
+
+.reveal--delay-3 {
+  --reveal-delay: 450ms;
+}
+
+/* ---------- 1. 既定: マスク wipe-up（GROW YOUR COMPANY と同じ） ---------- */
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf) {
+  overflow: hidden;
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>* {
+  transform: translateY(110%);
+  opacity: 0;
+  transition: transform 950ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
+    opacity 700ms ease-out var(--reveal-delay);
+  will-change: transform, opacity;
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf).is-visible>* {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 子要素が複数ある .reveal では順番に立ち上げてカスケード表現にする。 */
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>*:nth-child(2) {
+  transition-delay: calc(var(--reveal-delay) + 100ms);
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>*:nth-child(3) {
+  transition-delay: calc(var(--reveal-delay) + 200ms);
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>*:nth-child(4) {
+  transition-delay: calc(var(--reveal-delay) + 300ms);
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>*:nth-child(5) {
+  transition-delay: calc(var(--reveal-delay) + 400ms);
+}
+
+.reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>*:nth-child(6) {
+  transition-delay: calc(var(--reveal-delay) + 500ms);
+}
+
+/* JS が text-only な .reveal をこのラッパーで包む。マスク内で translateY するために */
+/* block 表示にする。                                                                 */
+.reveal__inner {
+  display: block;
+}
+
+/* ---------- 2. ポップコーン式: 文字ごとに左からポップ表示 ---------- */
+/* JS が .reveal--pop 配下のテキストノードを 1 文字ずつ <span class="reveal__char"> */
+/* に分解する。各文字は scale + translateY + opacity でポップアップする。          */
+.reveal--pop {
+  overflow: visible;
+  /* インライン要素にも適用できるよう display は変更しない */
+}
+
+.reveal--pop .reveal__char {
+  display: inline-block;
+  transform: translateY(0.4em) scale(0.4);
+  opacity: 0;
+  transition: transform 650ms cubic-bezier(0.34, 1.56, 0.64, 1) var(--reveal-char-delay, 0ms),
+    opacity 500ms ease-out var(--reveal-char-delay, 0ms);
+  will-change: transform, opacity;
+}
+
+.reveal--pop.is-visible .reveal__char {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* 改行用の空白文字は幅を確保しつつアニメーションさせない */
+.reveal--pop .reveal__char--space {
+  transform: none;
+  opacity: 1;
+  transition: none;
+  width: 0.25em;
+}
+
+/* ---------- 3. 左からスライドイン ---------- */
+.reveal--slide-l {
+  overflow: hidden;
+}
+
+.reveal--slide-l>* {
+  transform: translateX(-60px);
+  opacity: 0;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
+    opacity 700ms ease-out var(--reveal-delay);
+  will-change: transform, opacity;
+}
+
+.reveal--slide-l.is-visible>* {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ---------- 4. 右からスライドイン ---------- */
+.reveal--slide-r {
+  overflow: hidden;
+}
+
+.reveal--slide-r>* {
+  transform: translateX(60px);
+  opacity: 0;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
+    opacity 700ms ease-out var(--reveal-delay);
+  will-change: transform, opacity;
+}
+
+.reveal--slide-r.is-visible>* {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* ---------- 5. Leaf（子要素を持たない .reveal）はそれ自体をスライドアップ ---------- */
+.reveal--leaf {
+  display: block;
+  overflow: visible;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: transform 950ms cubic-bezier(0.16, 1, 0.3, 1) var(--reveal-delay),
+    opacity 700ms ease-out var(--reveal-delay);
+  will-change: transform, opacity;
+}
+
+.reveal--leaf>* {
+  transform: none;
+  opacity: 1;
+  transition: none;
+}
+
+.reveal--leaf.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ---------- FOOTER (mobile) ---------- */
+.site-footer {
+  /* background: var(--color-paper-warm); */
+   background: white;
+  padding-block: 0.75rem;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -1px;
+}
+
+.site-footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-footer__link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+}
+
+.site-footer__divider {
+  width: 1px;
+  height: 1.1em;
+  background: var(--color-muted);
+}
+
+.site-footer__copy {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8125rem;
+  letter-spacing: 0.01em;
+  color: var(--color-muted);
+}
+
+.site-footer__logo {
+  width: 32px;
+  height: 32px;
+}
+
+.site-footer__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.site-footer__social {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.site-footer__social-link {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.site-footer__social-link:hover {
+  opacity: 1;
+}
+
+/* =========================================================================
+   DESKTOP STYLES (≥ 768px)
+   Canva デスクトップ版モックアップ準拠 — モバイルとは別レイアウト
+   ========================================================================= */
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-max);
+    padding-inline: 3rem;
+  }
+
+  /* ---------- FOOTER (desktop) ---------- */
+  .site-footer__inner {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .site-footer__row {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  /* ---------- HERO (desktop): logo + name ONLY ---------- */
+  .hero {
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .hero__mobile {
+    display: none;
+  }
+
+  .hero__desktop {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+
+  .hero__desktop-logo {
+    width: clamp(140px, 18vw, 240px);
+    height: auto;
+  }
+
+  .hero__desktop-name {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 0.08em;
+    margin: 0;
+    color: var(--color-ink);
+  }
+
+  .hero__desktop-tag {
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+    letter-spacing: 0.18em;
+    color: var(--color-muted);
+    text-transform: lowercase;
+    margin: 0;
+  }
+
+  /* ---------- HERO MARKETING (desktop only) ---------- */
+  /* PC 版で「Benefit from our tried and tested solutions.」で始まる        */
+  /* GROW YOUR COMPANY 大見出しのページを 1 画面として表示する。         */
+  .hero-marketing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 3rem;
+    background: var(--color-paper);
+    text-align: center;
+  }
+
+  .hero-marketing__inner {
+    width: 100%;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-marketing__pre {
+    font-family: var(--font-mono);
+    font-weight: 400;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    color: var(--color-line);
+    margin: 0 0 2rem;
+    line-height: 1.4;
+    letter-spacing: 0.02em;
+    overflow: hidden;
+  }
+
+  .hero-marketing__pre-inner {
+    text-decoration: underline;
+    text-decoration-color: var(--color-line);
+    text-underline-offset: 0.3em;
+  }
+
+  .hero-marketing__pre-inner {
+    display: inline-block;
+    transform: translateY(110%);
+    opacity: 0;
+    animation: hero-rise-in 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    animation-delay: 100ms;
+    /* hero-marketing セクションがスクロールで可視になるまでアニメを一時停止しておく。 */
+    animation-play-state: paused;
+  }
+
+  .hero-marketing.is-visible .hero-marketing__pre-inner {
+    animation-play-state: running;
+  }
+
+  .hero-marketing__title {
+    font-family: var(--font-jp);
+    font-weight: 900;
+    font-size: clamp(4.5rem, 11vw, 9rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: var(--color-ink);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.05em;
+  }
+
+  .hero-marketing__title-line {
+    display: inline-flex;
+    justify-content: center;
+    gap: 0.25em;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .hero-marketing__title-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: hero-word-rise 900ms cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
+    /* スクロールで可視になるまでアニメを一時停止しておく。 */
+    animation-play-state: paused;
+  }
+
+  .hero-marketing.is-visible .hero-marketing__title-word {
+    animation-play-state: running;
+  }
+
+  .hero-marketing__title-line:nth-child(1) .hero-marketing__title-word:nth-child(1) {
+    animation-delay: 350ms;
+  }
+
+  .hero-marketing__title-line:nth-child(1) .hero-marketing__title-word:nth-child(2) {
+    animation-delay: 550ms;
+  }
+
+  .hero-marketing__title-line:nth-child(2) .hero-marketing__title-word:nth-child(1) {
+    animation-delay: 750ms;
+  }
+
+  .hero-marketing__sub {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    color: var(--color-line);
+    margin: 2.5rem 0 0;
+  }
+
+  .hero-marketing__company {
+    /* テキスト中央揃えのブロックとして配置し、実際の横並びレイアウトは
+       JS が起こした wipe-up 用の .reveal__inner 側に付与し、アニメと
+       並びの両方を成り立たせる。 */
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+    color: var(--color-ink);
+    letter-spacing: 0.04em;
+  }
+
+  .hero-marketing__company>.reveal__inner {
+    /* ロゴと社名を一行に inline-flex で並べる。 */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-marketing__logo {
+    width: clamp(36px, 3.5vw, 48px);
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  /* ---------- SERVICES OVERVIEW (desktop) ---------- */
+  /* PC 版: 左列に見出し+リード文、右列に4カードを縦並び */
+  .services {
+    padding: 6rem 0 7rem;
+  }
+
+  .services .container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 5rem;
+    align-items: stretch;
+  }
+
+  .services__intro {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services__myanmar {
+    order: 0;
+    margin-top: auto;
+    min-height: unset;
+    overflow: hidden;
+  }
+
+  .services .section-head {
+    margin: 0;
+  }
+
+  .services__lead {
+    font-size: 1.05rem;
+    line-height: 2;
+    text-align: left;
+    max-width: none;
+    margin: 1.75rem 0 0;
+  }
+
+  .service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .section-head__ja {
+    font-size: 2.2rem;
+  }
+
+  .section-head__en {
+    font-size: 1.2rem;
+  }
+
+  .br-mobile {
+    display: none;
+  }
+
+  .service-card a {
+    padding: 1.75rem 2rem;
+    min-height: 110px;
+  }
+
+  .service-card__title {
+    font-size: 1.75rem;
+  }
+
+  .service-card__sub {
+    font-size: 0.85rem;
+  }
+
+  /* ---------- CASE (desktop): 2 column ---------- */
+  .case {
+    padding: 6rem 0 8rem;
+  }
+
+  .case::before {
+    background-position: right bottom;
+  }
+
+  .case .container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    column-gap: 5rem;
+    row-gap: 2rem;
+    align-items: start;
+  }
+
+  .case__head {
+    grid-column: 1;
+  }
+
+  .case__title {
+    font-size: 2.4rem;
+  }
+
+  .case__subtitle {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+
+  .case__desc {
+    grid-column: 1;
+    margin-top: 1.5rem;
+    font-size: 1.05rem;
+    line-height: 2;
+    padding-bottom: 2rem;
+  }
+
+  .case-block {
+    grid-column: 2;
+    margin-top: 0;
+  }
+
+  .case-block+.case-block {
+    margin-top: 3rem;
+  }
+
+  .case-block__ja {
+    font-size: 1.6rem;
+  }
+
+  .case-block__en {
+    font-size: 0.95rem;
+  }
+
+  .case-block__lead {
+    font-size: 1.25rem;
+  }
+
+  .case-block__list {
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  /* ---------- BLOG (desktop) ---------- */
+  .blog {
+    padding: 5rem 0 6rem;
+  }
+
+  .blog__header {
+    margin-bottom: 3.5rem;
+  }
+
+  .blog__title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: 0.05em;
+  }
+
+  .blog__title::after {
+    width: 420px;
+    bottom: -15px;
+  }
+
+  .blog-list {
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .blog-scroll-wrap {
+    max-height: 660px;
+  }
+
+  /* ---- Desktop card: padded layout ---- */
+  .blog-card {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #b0b0b0;
+    background: #ffffff;
+  }
+
+  .blog-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+    border-color: #909090;
+  }
+
+  .blog-card__link {
+    flex-direction: row;
+    gap: 52px;
+    align-items: stretch;
+    min-height: auto;
+  }
+
+  /* ---- Desktop image ---- */
+  .blog-card__image {
+    order: 0;
+    width: 300px;
+    height: 170px;
+    min-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+  }
+
+  /* ---- Desktop content area ---- */
+  .blog-card__content {
+    order: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: auto auto 1fr;
+    /* 3rd row expands to fill space */
+    column-gap: 1.5rem;
+    row-gap: 0.75rem;
+    align-items: start;
+    min-width: 0;
+    flex: 1;
+  }
+
+  .blog-card__header {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 0;
+    padding-top: 0.4rem;
+    /* align date text with title baseline */
+  }
+
+  .blog-card__date {
+    font-size: 0.8rem;
+    color: #999999;
+    font-family: var(--font-jp);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  /* Title centered, in the right column, sharing row 1 with date */
+  .blog-card__title {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    color: var(--color-ink);
+    font-weight: 700;
+  }
+
+  .blog-card__category {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    justify-self: start;
+    font-size: 0.75rem;
+    color: #1a1a1a;
+    background-color: #f2ebd9;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0;
+    font-weight: 500;
+  }
+
+  .blog-card__tags {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* margin-top: auto; */
+    margin-top: 14px;
+    /* push tags to bottom of the 3rd row */
+  }
+
+  .blog-card__tag {
+    font-size: 0.75rem;
+    color: #1f4fa0;
+    font-weight: 500;
+  }
+
+  .blog-card__title br {
+    display: inline;
+  }
+
+  /* ---------- ABOUT (desktop) ---------- */
+  .about {
+    padding: 6rem 0;
+  }
+
+  .about__title {
+    font-size: 2.4rem;
+  }
+
+  .about__title-en {
+    font-size: 2.2rem;
+  }
+
+  .about__text {
+    max-width: 78ch;
+    margin: 2.5rem auto 4rem;
+  }
+
+  .about__lead,
+  .about__mission {
+    font-size: 1.4rem;
+    line-height: 1.75;
+  }
+
+  .about__body {
+    font-size: 1rem;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .team {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 580px;
+    margin-inline: auto;
+  }
+
+  .team__member {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team__name {
+    font-size: 1.05rem;
+  }
+
+  .team__role {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .team__photo {
+    width: 212px;
+    max-width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  /* ---------- GROUP (desktop): map left, info right ---------- */
+  .group {
+    padding: 5rem 0 6rem;
+  }
+
+  .group__title {
+    font-size: 2.4rem;
+    letter-spacing: 0.18em;
+  }
+
+  .locations {
+    gap: 4rem;
+  }
+
+ .location {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    text-align: left;
+  }
+
+  .location__map {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+  }
+
+  .location__info {
+    text-align: center;
+    margin-top: 0;
+  }
+
+   .location__caption {
+    text-align: center;
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .location__name {
+    font-size: 1.3rem;
+  }
+
+  .location__address {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- CONTACT (desktop): label left / field right ---------- */
+  .contact {
+    padding: 5rem 0 6rem;
+  }
+
+  .contact__grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact__head {
+    position: sticky;
+    top: 2rem;
+    gap: 0.5rem;
+  }
+
+  .contact__title {
+    font-size: 2.4rem;
+  }
+
+  .contact__title-en {
+    font-size: 1.15rem;
+  }
+
+  .contact__note {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+  .form-row:not(.form-row--textarea) {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .form-row--textarea {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: start;
+    gap: 1.5rem;
+  }
+
+  .form-row label {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    padding: 1rem 1.4rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+  }
+
+  .form-row textarea {
+    border-radius: 18px;
+    min-height: 160px;
+  }
+
+  .btn-send__icon {
+    width: 80px;
+    height: 60px;
+  }
+
+  .btn-send__label {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- reduce motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero__title-word,
+  .hero__pre-inner,
+  .hero__sub-inner,
+  .hero__company-inner,
+  .hero-marketing__pre-inner,
+  .hero-marketing__title-word,
+  .reveal,
+  .reveal>*,
+  .reveal--leaf,
+  .reveal--pop .reveal__char,
+  .reveal--slide-l>*,
+  .reveal--slide-r>* {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    visibility: visible;
+  }
+}
+
+/* ---------- BACK TO TOP ---------- */
+/* Canva デザインの "Up Arrow" 表現に合わせ、青色のダブルシェブロンのみを表示する。 */
+/* 背景・枠線は持たず、画面右端の上下中央に固定する。ページ毎に置かず 1 つだけ。     */
+.back-to-top {
+  position: fixed;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: var(--color-blue);
+  text-decoration: none;
+  transition: transform var(--transition), color var(--transition), opacity var(--transition);
+  opacity: 0.85;
+}
+
+.back-to-top:hover,
+.back-to-top:focus-visible {
+  color: var(--color-blue);
+  opacity: 1;
+  transform: translateY(-50%) translateY(-4px);
+  outline: none;
+}
+
+.back-to-top__icon {
+  width: 36px;
+  height: 36px;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .back-to-top {
+    right: 1.25rem;
+    width: 56px;
+    height: 56px;
+  }
+
+  .back-to-top__icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+@media (min-width: 768px) {
+    .legal .section-head {
+        max-width: 760px;
+        margin-inline: auto;
+    }
+}
+/* ---------- LEGAL (privacy policy) ---------- */
+.legal {
+  padding-block: 3rem;
+}
+
+.legal__body {
+  margin-top: 1.75rem;
+  color: var(--color-ink-soft);
+}
+
+.legal__lead {
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.legal__body p {
+  margin: 0 0 1.1rem;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.legal__heading {
+  font-family: var(--font-jp);
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--color-ink);
+  letter-spacing: 0.03em;
+  margin: 2.5rem 0 1rem;
+  padding-left: 0.7rem;
+  border-left: 4px solid var(--color-line);
+}
+
+.legal__subheading {
+  font-family: var(--font-jp);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin: 1.75rem 0 0.75rem;
+}
+
+.legal__list-label {
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 0 0 0.6rem;
+}
+
+.legal__list {
+  margin: 0 0 1.1rem;
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+
+.legal__list li {
+  line-height: 1.85;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.legal__notice {
+  background: var(--color-paper-warm);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.legal__body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+.legal__meta {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line-soft);
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.legal__meta p {
+  margin: 0 0 0.4rem;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .legal {
+    padding-block: 5rem;
+  }
+
+  .legal__body {
+    max-width: 760px;
+    margin-inline: auto;
+  }
+
+  .legal__heading {
+    font-size: 1.3rem;
+  }
+}
+
+/* =========================================================================
+   MYANMAR SITUATION section
+   ========================================================================= */
+
+.myanmar-section {
+  padding-block: 3rem 3.5rem;
+  background: #fff;
+}
+
+.myanmar-section__head {
+  margin-bottom: 0;
+}
+
+.myanmar-section__title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+  margin: 0 0 1.5rem;
+  padding-bottom: 0.75rem;
+  display: inline-block;
+  border-bottom: 2px solid var(--color-line);
+}
+
+/* two-column layout — each column is its own separate box */
+.myanmar-dual {
+  display: flex;
+  gap: 1rem;
+}
+
+.myanmar-dual__col {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e8dcc8;
+  border-radius: 8px;
+  background: #fdfbf5;
+  overflow: hidden;
+}
+
+.myanmar-dual__col--left {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.myanmar-dual__col--right {
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.myanmar-dual__divider {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .myanmar-dual {
+    flex-direction: column;
+  }
+
+  .myanmar-dual__divider {
+    width: auto;
+    height: 1px;
+  }
+
+  /* ---- Footer nav: dividers look stray once links wrap to their own lines ---- */
+  .site-footer__nav {
+    gap: 0.3rem 0.8rem;
+  }
+
+  .site-footer__divider {
+    display: none;
+  }
+}
+
+/* list — ul is the grid, li uses display:contents so all cells share column tracks */
+.myanmar-scroll-wrapper {
+  position: relative;
+  display: flex;
+  flex: 1;
+}
+
+.myanmar-list__scroll {
+  max-height: 460px;
+  overflow-y: scroll;
+  padding: 0.25rem 0;
+  flex: 1;
+  scrollbar-width: none;
+}
+
+.myanmar-list__scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.myanmar-scrollbar {
+  position: absolute;
+  right: 6px;
+  top: 10px;
+  bottom: 10px;
+  width: 8px;
+  background: #f0e8d8;
+  border-radius: 4px;
+}
+
+.myanmar-scrollbar__thumb {
+  position: absolute;
+  width: 8px;
+  height: 40px;
+  background: #c4944b;
+  border-radius: 4px;
+  top: 0;
+  cursor: grab;
+  transition: background 0.2s;
+}
+
+.myanmar-scrollbar__thumb:active {
+  cursor: grabbing;
+}
+
+.myanmar-scrollbar__thumb:hover {
+  background: #a07030;
+}
+
+.myanmar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0 2rem 0 0.75rem;
+  display: grid;
+  grid-template-columns: 5.5rem auto 1fr;
+  column-gap: 0.7rem;
+  align-items: center;
+}
+
+.myanmar-list__item {
+  display: contents;
+}
+
+.myanmar-list__date {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.72rem;
+  color: #888;
+  white-space: nowrap;
+  padding-block: 0.45rem;
+}
+
+.myanmar-list__cat {
+  font-size: 0.65rem;
+  color: #666;
+  background: #f0f0f0;
+  padding: 0.12rem 0.45rem;
+  border-radius: 3px;
+  white-space: nowrap;
+  justify-self: start;
+  align-self: center;
+}
+
+.myanmar-list__link {
+  font-size: 0.82rem;
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-ink);
+  text-underline-offset: 3px;
+  transition: color var(--transition);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-block: 0.45rem;
+}
+
+.myanmar-list__link:hover {
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .myanmar-section {
+    padding-block: 4rem 5rem;
+  }
+
+  .myanmar-section__title {
+    font-size: 1.3rem;
+  }
+
+  .myanmar-list {
+    column-gap: 1.2rem;
+  }
+
+  .myanmar-list__date {
+    font-size: 0.78rem;
+    padding-block: 0.6rem;
+  }
+
+  .myanmar-list__link {
+    font-size: 0.95rem;
+    padding-block: 0.6rem;
+  }
+}

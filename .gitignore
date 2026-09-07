@@ -1,0 +1,34 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+npm-debug.log*
+error_log
+debug.log
+
+# Node (in case tooling is added later)
+node_modules/
+
+# PHP Dependencies
+vendor/
+composer.lock
+
+# Configuration files with sensitive data (IMPORTANT!)
+# 機密情報を含む設定ファイル（重要！）
+mail-config.php
+.env
+.env.local
+
+# Test files (should not be in production)
+# テストファイル（本番環境に含めないこと）
+test-email.php
+
+# Temporary files
+*.tmp
+*.temp
+*.cache

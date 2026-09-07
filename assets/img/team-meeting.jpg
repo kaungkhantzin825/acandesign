@@ -1,0 +1,106 @@
+<svg width="1600" height="1200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <defs>
+    <linearGradient id="roomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e8e4d8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4d0c4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="1600" height="1200" fill="url(#roomGrad)"/>
+  
+  <!-- Table surface -->
+  <ellipse cx="800" cy="900" rx="700" ry="200" fill="#8b4513" opacity="0.3"/>
+  <rect x="100" y="700" width="1400" height="300" fill="#9a5a2a" opacity="0.6"/>
+  
+  <!-- Laptops on table -->
+  <g>
+    <!-- Laptop 1 (left) -->
+    <rect x="200" y="750" width="280" height="180" fill="#2c2c2c" rx="8"/>
+    <rect x="215" y="765" width="250" height="150" fill="#5a7da8"/>
+    <polygon points="200,930 480,930 460,950 220,950" fill="#3c3c3c"/>
+    
+    <!-- Laptop 2 (center-left) -->
+    <rect x="540" y="770" width="260" height="170" fill="#2c2c2c" rx="8"/>
+    <rect x="555" y="785" width="230" height="135" fill="#4a9fd8"/>
+    <polygon points="540,940 800,940 780,960 560,960" fill="#3c3c3c"/>
+    
+    <!-- Laptop 3 (center-right) -->
+    <rect x="860" y="770" width="260" height="170" fill="#2c2c2c" rx="8"/>
+    <rect x="875" y="785" width="230" height="135" fill="#6ab8e8"/>
+    <polygon points="860,940 1120,940 1100,960 880,960" fill="#3c3c3c"/>
+    
+    <!-- Laptop 4 (right) -->
+    <rect x="1180" y="755" width="270" height="175" fill="#2c2c2c" rx="8"/>
+    <rect x="1195" y="770" width="240" height="145" fill="#8ac6ea"/>
+    <polygon points="1180,930 1450,930 1430,950 1200,950" fill="#3c3c3c"/>
+  </g>
+  
+  <!-- People silhouettes (simplified) -->
+  <g opacity="0.7">
+    <!-- Person 1 (left) - in white shirt -->
+    <ellipse cx="340" cy="550" rx="55" ry="65" fill="#f5e6d3"/>
+    <rect x="285" y="605" width="110" height="180" fill="#ffffff" rx="8"/>
+    <circle cx="340" cy="480" rx="45" ry="45" fill="#d4a574"/>
+    <!-- Hand -->
+    <ellipse cx="240" cy="700" rx="30" ry="20" fill="#d4a574"/>
+    
+    <!-- Person 2 (center-left) -->
+    <ellipse cx="680" cy="560" rx="50" ry="60" fill="#e8d4c0"/>
+    <rect x="630" y="610" width="100" height="170" fill="#e8e8e8" rx="8"/>
+    <circle cx="680" cy="495" rx="42" ry="42" fill="#c49a6e"/>
+    
+    <!-- Person 3 (center-right) - in pink -->
+    <ellipse cx="990" cy="560" rx="48" ry="58" fill="#f0d8d8"/>
+    <rect x="942" y="608" width="96" height="165" fill="#e8a0a8" rx="8"/>
+    <circle cx="990" cy="498" rx="40" ry="40" fill="#d4a588"/>
+    
+    <!-- Person 4 (right) -->
+    <ellipse cx="1310" cy="555" rx="52" ry="62" fill="#e0dcd0"/>
+    <rect x="1258" y="607" width="104" height="175" fill="#d8d8d8" rx="8"/>
+    <circle cx="1310" cy="488" rx="43" ry="43" fill="#c8a888"/>
+    <!-- Hand -->
+    <ellipse cx="1380" cy="690" rx="28" ry="18" fill="#c8a888"/>
+  </g>
+  
+  <!-- Notebooks and items on table -->
+  <g>
+    <!-- Notebook/paper 1 -->
+    <rect x="350" y="920" width="100" height="70" fill="#f8f8f8" opacity="0.9" rx="2"/>
+    <line x1="360" y1="935" x2="430" y2="935" stroke="#666" stroke-width="2"/>
+    <line x1="360" y1="950" x2="420" y2="950" stroke="#999" stroke-width="1.5"/>
+    <line x1="360" y1="965" x2="425" y2="965" stroke="#999" stroke-width="1.5"/>
+    
+    <!-- Coffee cup -->
+    <ellipse cx="1350" cy="850" rx="28" ry="8" fill="#5a4a3a"/>
+    <rect x="1322" y="825" width="56" height="25" fill="#7a5a4a" rx="2"/>
+    
+    <!-- Pen -->
+    <rect x="490" y="940" width="6" height="40" fill="#2c5aa0" rx="2"/>
+  </g>
+  
+  <!-- Window/background element (suggestion of office) -->
+  <g opacity="0.3">
+    <rect x="50" y="100" width="300" height="400" fill="#d8e8f0" stroke="#a0a0a0" stroke-width="4"/>
+    <line x1="50" y1="300" x2="350" y2="300" stroke="#a0a0a0" stroke-width="4"/>
+    <line x1="200" y1="100" x2="200" y2="500" stroke="#a0a0a0" stroke-width="4"/>
+  </g>
+  
+  <!-- Decorative elements for office feeling -->
+  <g opacity="0.4">
+    <!-- Plant pot -->
+    <rect x="1450" y="350" width="80" height="100" fill="#8b6f47"/>
+    <ellipse cx="1490" cy="340" rx="50" ry="20" fill="#6a8a4a"/>
+    <path d="M 1460 320 Q 1460 280 1480 260" stroke="#7a9a5a" stroke-width="4" fill="none"/>
+    <path d="M 1480 315 Q 1500 275 1495 255" stroke="#7a9a5a" stroke-width="4" fill="none"/>
+    <path d="M 1500 320 Q 1520 285 1510 265" stroke="#7a9a5a" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Subtle texture overlay -->
+  <rect width="1600" height="1200" fill="#000" opacity="0.02"/>
+  
+  <!-- Text overlay (optional) -->
+  <text x="800" y="1150" font-family="Noto Sans JP, Arial, sans-serif" font-size="32" fill="#666" text-anchor="middle" opacity="0.5">
+    チームでの業務風景
+  </text>
+</svg>

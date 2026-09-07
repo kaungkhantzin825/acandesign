@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <defs>
+    <linearGradient id="lg1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1c3a55"/>
+      <stop offset="50%" stop-color="#3a5d72"/>
+      <stop offset="100%" stop-color="#f2d6c4"/>
+    </linearGradient>
+    <radialGradient id="sparkle" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#lg1)"/>
+  <g>
+    <circle cx="200" cy="200" r="40" fill="url(#sparkle)"/>
+    <circle cx="600" cy="350" r="60" fill="url(#sparkle)"/>
+    <circle cx="1000" cy="180" r="50" fill="url(#sparkle)"/>
+    <circle cx="1400" cy="400" r="55" fill="url(#sparkle)"/>
+    <circle cx="350" cy="450" r="30" fill="url(#sparkle)"/>
+    <circle cx="900" cy="500" r="45" fill="url(#sparkle)"/>
+    <circle cx="1250" cy="100" r="35" fill="url(#sparkle)"/>
+  </g>
+  <g fill="#ffffff">
+    <circle cx="120" cy="120" r="1.2" opacity="0.7"/>
+    <circle cx="280" cy="80" r="1" opacity="0.6"/>
+    <circle cx="420" cy="180" r="1.5" opacity="0.7"/>
+    <circle cx="560" cy="120" r="1" opacity="0.5"/>
+    <circle cx="780" cy="260" r="1.3" opacity="0.7"/>
+    <circle cx="940" cy="80" r="1" opacity="0.6"/>
+    <circle cx="1100" cy="220" r="1.4" opacity="0.7"/>
+    <circle cx="1280" cy="160" r="1" opacity="0.5"/>
+    <circle cx="1440" cy="240" r="1.2" opacity="0.7"/>
+    <circle cx="200" cy="320" r="1" opacity="0.5"/>
+    <circle cx="540" cy="400" r="1.3" opacity="0.7"/>
+    <circle cx="820" cy="440" r="1" opacity="0.6"/>
+    <circle cx="1180" cy="380" r="1.2" opacity="0.6"/>
+    <circle cx="1500" cy="500" r="1" opacity="0.5"/>
+  </g>
+</svg>
