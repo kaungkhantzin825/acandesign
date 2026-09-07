@@ -528,6 +528,8 @@
 @media (max-width: 768px) {
   .svc-wrap { width: 92%; }
   .dl-hero { width: 92%; }
+  .ai-hero { width: 92%; }
+  .dev-hero { width: 92%; }
   .ai-inner { width: 92%; }
   .dev__inner { width: 92%; }
   .svc-grid { grid-template-columns: 1fr; }
@@ -576,6 +578,8 @@
 /* ── HERO (full-bleed background image) ── */
 .dev-hero {
   position: relative;
+  width: 86%;
+  margin: 0 auto;
   background-image:
     linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 30%, rgba(255, 255, 255, 0.2) 52%, rgba(255, 255, 255, 0) 66%),
     url("assets/img/dev-hero.png");
@@ -586,6 +590,10 @@
 }
 
 .dev-hero .dev__inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   position: relative;
   z-index: 2;
   min-height: 470px;
@@ -1002,6 +1010,8 @@
 
 .ai-hero {
   position: relative;
+  width: 86%;
+  margin: 0 auto;
   background-color: #ffffff;
   background-image:
     linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%),
@@ -1013,6 +1023,13 @@
   padding: 3rem 0;
   display: flex;
   align-items: center;
+}
+
+.ai-hero .ai-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .ai-hero__content {
