@@ -1530,6 +1530,40 @@
           </li>
 
 
+
+          <li class="blog-card" data-cat="myanmar">
+            <a href="blog-quality-team.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_8B0.png" alt="BPOの品質は「人」で決まるのか？属人化しないチームをつくる5つの仕組み" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-06">2026/9/6</time>
+                </div>
+                <h3 class="blog-card__title">BPOの品質は「人」で決まるのか？<br>属人化しないチームをつくる5つの仕組み</h3>
+
+                <div class="blog-card__category">BPO/KPO活用ガイド</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#海外BPO</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#属人化</span>
+                  <span class="blog-card__tag">#品質管理</span>
+                  <span class="blog-card__tag">#業務標準化</span>
+                  <span class="blog-card__tag">#マニュアル</span>
+                  <span class="blog-card__tag">#ナレッジ共有</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#ダブルチェック</span>
+                  <span class="blog-card__tag">#AI×BPO</span>
+                  <span class="blog-card__tag">#業務改善</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
