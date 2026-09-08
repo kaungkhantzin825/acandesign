@@ -1508,7 +1508,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ========================================================== -->
     <!-- SERVICE.PHP UI SECTION                                       -->
     <!-- ========================================================== -->
-    <section class="service-php-section">
+    <section class="service-php-section" id="services">
       <!-- ── Hero Banner ── -->
       <div class="dl-hero">
         <img src="assets/img/homepage.png" alt="サービス" class="dl-hero__img" />
