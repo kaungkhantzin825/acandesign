@@ -588,7 +588,7 @@
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center, right center;
-    width: 80%;
+    width: 86%;
     margin: 0 auto;
 }
 
@@ -1309,7 +1309,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 4px solid rgb(18, 18, 18);
+  border: 4px solid #004aad;
   color: #0038a8;
   font-size: 0.95rem;
   font-weight: 800;
