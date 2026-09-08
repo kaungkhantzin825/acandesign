@@ -75,11 +75,12 @@
       z-index: 1;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 2.5rem;
       padding: 3rem;
     }
 
-    .ms-hero__text { flex: 1.1; min-width: 0; }
+    .ms-hero__text { flex: 1; min-width: 0; }
 
     .ms-hero__eyebrow {
       font-family: "Anonymous Pro", monospace;
@@ -106,10 +107,10 @@
     }
 
     .ms-hero__visual {
-      flex: 0.9;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      flex: 1;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
     }
 
     .ms-hero__visual img {
@@ -118,6 +119,28 @@
       height: auto;
       border-radius: 12px;
       box-shadow: 0 8px 32px rgba(18,73,158,0.15);
+      margin: 0 auto !important;
+      display: block !important;
+    }
+
+    /* ══════════════════════════════
+       HERO IMAGE (full-width centered)
+    ══════════════════════════════ */
+    .ms-hero-image {
+      width: 88%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+
+    .ms-hero-image img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block !important;
+      margin: 0 auto !important;
     }
 
     /* ══════════════════════════════

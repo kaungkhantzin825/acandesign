@@ -1,7 +1,7 @@
 <style>
   /* ── Desktop nav gap ── */
   .site-header__nav {
-    gap: 1.75rem;
+    gap: 0.9rem;
   }
 
   /* Extra breathing room between logo and nav, only once the screen

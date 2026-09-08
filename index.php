@@ -1532,7 +1532,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">OCR×AI・<br />データ確認</span>
                 </div>
               </div>
-              <a href="ai-agent.php" class="svc-card__btn">
+              <a href="#data-services" class="svc-card__btn">
                 <span>AI・データサービスの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1577,7 +1577,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">OCR・<br />データ確認</span>
                 </div>
               </div>
-              <a href="bpocompany.php" class="svc-card__btn">
+              <a href="#case-kpo" class="svc-card__btn">
                 <span>BPOサービスの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1622,7 +1622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">プロンプト設計・<br />AI活用支援</span>
                 </div>
               </div>
-              <a href="ai-agent.php" class="svc-card__btn">
+              <a href="#case-kpo" class="svc-card__btn">
                 <span>KPOサービスの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1674,7 +1674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">データベース<br />構築</span>
                 </div>
               </div>
-              <a href="index.php#services" class="svc-card__btn">
+              <a href="#technology" class="svc-card__btn">
                 <span>Technologyの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1719,7 +1719,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
                 </div>
               </div>
-              <a href="index.php#services" class="svc-card__btn">
+              <a href="#case-design" class="svc-card__btn">
                 <span>Designの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -2071,7 +2071,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ACAN-DEV.PHP SECTION (imported from acan-dev.php)             -->
     <!-- Technology / Webサイト・システム開発                          -->
     <!-- ========================================================== -->
-    <div class="dev">
+    <div class="dev" id="technology">
 
         <!-- HERO -->
         <section class="dev-hero">
@@ -2277,115 +2277,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ========================================================== -->
     <!-- SERVICES OVERVIEW                                            -->
     <!-- ========================================================== -->
-    <section class="services" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <div class="services__intro">
-          <header class="section-head">
-            <h2 class="section-head__ja reveal reveal--pop" id="services-title">サービスについて</h2>
-            <p class="section-head__en reveal reveal--pop reveal--delay-1">Dive into<br class="br-mobile" /> our services</p>
-          </header>
-
-          <p class="services__lead reveal reveal--slide-l">
-            ミャンマーの若者の成長エネルギーを貴社の力に。<br />
-            親日国ならではの丁寧な仕事で、データ作成から事務代行まで、国境を越えた安心のサポートをお届けします。
-          </p>
-          <div class="services__myanmar reveal reveal--slide-l">
-            <a href="myanmar-situation.php" class="service-card__link--myanmar">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Myanmar situation</h3>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </div>
-        </div>
-
-        <ul class="service-list" role="list">
-          <li class="service-card reveal reveal--slide-r">
-            <a href="#case-tech">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Technology</h3>
-                <p class="service-card__sub">Website Design &amp; Development</p>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </li>
-          <li class="service-card reveal reveal--slide-r">
-            <a href="#case-design">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Design</h3>
-                <p class="service-card__sub">Graphic &amp; Motion</p>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </li>
-          <li class="service-card reveal reveal--slide-r">
-            <a href="#case-kpo">
-              <div class="service-card__body">
-                <h3 class="service-card__title">KPO/BPO services</h3>
-                <p class="service-card__sub">JAPAN Quality</p>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </li>
-          <li class="service-card reveal reveal--slide-r">
-            <a href="#case-consulting">
-              <div class="service-card__body">
-                <h3 class="service-card__title">Consulting services</h3>
-                <p class="service-card__sub">Support for expansion into Myanmar</p>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </li>
-          <li class="service-card reveal reveal--slide-r">
-            <a href="blog-page.php">
-              <div class="service-card__body">
-                <h3 class="service-card__title">BLOG</h3>
-              </div>
-              <span class="service-card__more">learn more</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+   
 
     <!-- ========================================================== -->
     <!-- CASE: TECHNOLOGY                                             -->
     <!-- ========================================================== -->
-    <section class="case case--tech" id="case-tech" aria-labelledby="case-tech-title">
-      <div class="container">
-        <header class="case__head">
-          <h2 class="case__title reveal reveal--pop" id="case-tech-title">Technology</h2>
-          <p class="case__subtitle reveal reveal--pop reveal--delay-1">Website Design &amp; Development</p>
-        </header>
-        <p class="case__desc reveal reveal--slide-l">
-          <strong>文化の違い、コミュニケーションの不安は、現地日本人と経験豊かなスタッフが解消します。</strong><br />
-          日本同等の環境を準備し、セキュアな環境でリーズナブルで高品質なサービスを提供します。
-        </p>
-
-        <article class="case-block reveal reveal--slide-l">
-          <h3 class="case-block__ja">弊社サービス導入のきっかけ</h3>
-          <p class="case-block__en">Reason for introducing the service</p>
-          <p class="case-block__lead">・若いIT人材を育てたい</p>
-          <ul class="case-block__list">
-            <li>人材不足解決策として東南アジア系オフショアを検討していた</li>
-            <li>価格競争力に魅力があり、開発コストを下げたかった</li>
-            <li>ミャンマーの現地視察ガイドを申し込み、現地スタッフに魅力を感じた</li>
-          </ul>
-        </article>
-
-        <article class="case-block reveal reveal--slide-r">
-          <h3 class="case-block__ja">実績</h3>
-          <p class="case-block__en">Achievements</p>
-          <ul class="case-block__list case-block__list--indent">
-            <li>Webサイトデザイン作成</li>
-            <li>Webサイト構築</li>
-            <li>Webサイト保守作業</li>
-            <li>新、旧データの比較プログラム構築とレポート</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
+   
     <!-- ========================================================== -->
     <!-- CASE: DESIGN                                                  -->
     <!-- ========================================================== -->
