@@ -788,12 +788,12 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 6px solid var(--dev-blue);
+  border: 4px solid var(--dev-blue);
   color: var(--dev-blue);
   display: grid;
   place-items: center;
   font-family: 'Roboto Mono', monospace;
-  font-size: 1.1rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1;
 }
