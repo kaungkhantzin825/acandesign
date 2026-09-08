@@ -1476,6 +1476,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- のページ。モバイルでは hero__mobile 側に表示済みのためここ -->
     <!-- では非表示。                                                  -->
     <!-- ========================================================== -->
+    <section class="hero-marketing" aria-labelledby="hero-title-d">
+      <div class="hero-marketing__inner">
+        <p class="hero-marketing__pre">
+          <span class="hero-marketing__pre-inner">Benefit from our tried and tested solutions.</span>
+        </p>
+        <h2 class="hero-marketing__title" id="hero-title-d">
+          <span class="hero-marketing__title-line">
+            <span class="hero-marketing__title-word" data-text="Grow">GROW</span>
+            <span class="hero-marketing__title-word" data-text="Your">YOUR</span>
+          </span>
+          <span class="hero-marketing__title-line">
+            <span class="hero-marketing__title-word" data-text="Company">COMPANY</span>
+          </span>
+        </h2>
+        <p class="hero-marketing__sub reveal">
+          <span class="reveal__inner">Your Trusted Partner in Digital Transformation</span>
+        </p>
+        <p class="hero-marketing__company reveal reveal--delay-1">
+          <span class="reveal__inner">
+            <img src="assets/img/logo.webp" alt="" class="hero-marketing__logo" width="48" height="48" />
+            <span>A CAN SOLUTIONS Co.,Ltd.</span>
+          </span>
+        </p>
+      </div>
+    </section>
   
     <!-- ========================================================== -->
     <!-- SERVICE.PHP UI SECTION                                       -->
