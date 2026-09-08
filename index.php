@@ -577,30 +577,26 @@
 
 /* ── HERO (full-bleed background image) ── */
 .dev-hero {
-  position: relative;
-  width: 86%;
-  margin: 0 auto;
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 30%, rgba(255, 255, 255, 0.2) 52%, rgba(255, 255, 255, 0) 66%),
+    background-image:
+    linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.30) 30%,
+        rgba(255, 255, 255, 0.35) 40%
+    ),
     url("assets/img/dev-hero.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: cover, cover;
-  background-position: center, right center;
-  height: 92vh;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    background-position: center, right center;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .dev-hero .dev__inner {
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  position: relative;
-  z-index: 2;
-  min-height: 470px;
-  padding-top: 0.4rem;
-  padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
+    padding-top: 0.4rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .dev-hero__content {
@@ -711,21 +707,18 @@
   }
   .dev-hero .dev__inner { min-height: 0; }
   .dev-hero__content { max-width: 100%; }
-  .dev-sec { margin-top: 50px; }
   .dev-hcards { grid-template-columns: 1fr; gap: 1.2rem; max-width: 100%; }
   .dev-hcard + .dev-hcard::before { left: 12%; right: 12%; top: -0.6rem; bottom: auto; width: auto; height: 1px; }
 }
 
 @media (max-width: 592px) {
-  .dev-sec.dev-sec--tint { margin-top: 120px; }
   .dev-sec.dev-sec-team { margin-top: 0; }
-  .dev-sec.dev-sec-service { padding-top: 0; }
+  .dev-sec.dev-sec-service { padding-top: 0; margin-top: 20px; }
   .dev-tp__ic img { margin: 0 auto 0.6rem; }
   .dev-tp { text-align: center !important; }
 }
 
 @media (max-width: 400px) {
-  .dev-sec.dev-sec--tint { margin-top: 200px; }
   .dev-sec.dev-sec--tint.dev-sec-team { margin-top: 0; }
 }
 
@@ -883,7 +876,7 @@
   font-weight: 700;
   color: var(--dev-blue3);
   background: var(--dev-blue-soft);
-  border-radius: 999px;
+  border-radius: 8px;
   padding: 0.35rem 0.8rem;
 }
 
@@ -896,7 +889,7 @@
 
 .dev-team__en { font-family: "Anonymous Pro", monospace; font-size: 0.9rem; font-weight: 700; color: var(--dev-ink); margin: 0 0 0.2rem; }
 .dev-team__jp { margin: 0 0 1rem; font-size: clamp(1.4rem, 3.5vw, 1.9rem); font-weight: 900; color: var(--dev-ink); }
-.dev-team__desc { margin: 0 0 1.6rem; font-size: 0.9rem; line-height: 1.9; color: var(--dev-muted); }
+.dev-team__desc { margin: 0 0 1.6rem; font-size: 0.9rem; line-height: 1.9; color: var(--dev-muted); font-weight: bolder; }
 
 .dev-team__media {
   width: 100%;
@@ -912,19 +905,19 @@
   .dev-team__points { grid-template-columns: repeat(3, 1fr); }
 }
 
-.dev-tp { text-align: start; width: 100%; }
+.dev-tp { text-align: center; width: 100%; }
 
 .dev-tp__ic img {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   color: var(--dev-blue);
   display: grid;
   place-items: center;
+  margin: 0 auto 0.6rem;
 }
 
 .dev-tp__t { margin: 0 0 0.3rem; font-size: 0.9rem; font-weight: 700; color: var(--dev-blue); }
-.dev-tp__d { margin: 0; font-size: 0.75rem; line-height: 1.7; color: var(--dev-muted); }
+.dev-tp__d { margin: 0; font-size: 0.75rem; line-height: 1.7; color: var(--dev-muted); font-weight: bolder; }
 
 /* ── PORTFOLIO ── */
 .dev-work { display: grid; grid-template-columns: 1fr; gap: 2.4rem 1.6rem; max-width: 560px; margin: 0 auto; }
@@ -938,7 +931,7 @@
 .dev-wcard__media img { display: block; width: 100%; height: auto; }
 .dev-wcard__body { padding: 0; font-weight: 700; }
 .dev-wcard__row { margin: 0.2rem 0; font-size: 0.8rem; line-height: 1.8; color: #1f2937; }
-.dev-work__note { text-align: center; font-size: 0.7rem; color: var(--dev-muted); margin: 0; }
+.dev-work__note { text-align: center; font-size: 0.7rem; color: var(--dev-muted); margin: 0; font-weight: bolder }
 
 /* ── CTA banner + contact (copied from profile.php pattern) ── */
 .prof-bottom-row { width: 86%; max-width: 1168px; margin: 3rem auto 2rem; display: flex; gap: 1.5rem; align-items: stretch; }
@@ -1311,12 +1304,12 @@
 
 .ai-step__num {
   position: absolute;
-  top: -4px;
-  left: -10px;
-  width: 32px;
-  height: 32px;
+  top: 0px;
+  left: -42px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  border: 2.5px solid #0038a8;
+  border: 4px solid rgb(18, 18, 18);
   color: #0038a8;
   font-size: 0.95rem;
   font-weight: 800;
@@ -1334,11 +1327,11 @@
   height: 86px;
   border-radius: 50%;
   background: #ffffff;
-  border: 2px solid #93c5fd;
+  border: 2px solid #c7d6ff;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #1d4ed8;
+  color: #b3ceed;
   box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
 }
 
@@ -1351,11 +1344,15 @@
   stroke-linecap: round;
   stroke-linejoin: round;
 }
+.ai-step__ic img {
+  width: 60px;
+  height: 60px;
+}
 
 .ai-step__title {
   font-size: 0.92rem;
   font-weight: 800;
-  color: #0038a8;
+  color: #004aad;
   margin: 0 0 0.5rem;
   line-height: 1.4;
   white-space: nowrap;
@@ -2008,55 +2005,55 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">1</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-1.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-1.png" alt="" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">ヒアリング・要件定義</h3>
-                            <p class="ai-step__desc">お客様の課題や目的をヒアリングし、最適なご提案を行います</p>
+                            <p class="ai-step__desc">お客様の課題や目的をヒアリングし、<br>最適なご提案を行います</p>
                         </div>
 
                         <div class="ai-step">
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">2</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-2.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-2.png" alt="" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ準備</h3>
-                            <p class="ai-step__desc">必要なデータを収集、準備し作業環境を構築します。</p>
+                            <p class="ai-step__desc">必要なデータを収集、準備し作業環境<br>を構築します。</p>
                         </div>
 
                         <div class="ai-step">
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">3</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-3.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-3.png" alt="" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ作成・評価</h3>
-                            <p class="ai-step__desc">専門スタッフがデータ作成・評価を実施し、品質を管理します。</p>
+                            <p class="ai-step__desc">専門スタッフがデータ作成・評価を実<br>施し、品質を管理します。</p>
                         </div>
 
                         <div class="ai-step">
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">4</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-4.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-4.png" alt="" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">納品・検収</h3>
-                            <p class="ai-step__desc">成果物を納品し、品質をご確認いただきます。</p>
+                            <p class="ai-step__desc">成果物を納品し、品質をご確認いただ<br>きます。</p>
                         </div>
 
                         <div class="ai-step">
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">5</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-5.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-5.png" alt="" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">改善・運用サポート</h3>
-                            <p class="ai-step__desc">AIの運用・改善に向けた継続的なサポートを提供します。</p>
+                            <p class="ai-step__desc">AIの運用・改善に向けた継続的なサポート<br>を提供します。</p>
                         </div>
                     </div>
                 </div>
