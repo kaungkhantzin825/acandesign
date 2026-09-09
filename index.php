@@ -1450,7 +1450,7 @@
      from the capped rule above with no visual jump. */
   .ai-hero {
     background-position: top center, top center;
-    background-size: 100% 100%, 100% 70%;
+    background-size: 100% 100%, 100% 100%;
   }
 
   .ai-features-box {
