@@ -578,12 +578,12 @@
 /* ── HERO (full-bleed background image) ── */
 .dev-hero {
     background-image:
-    linear-gradient(
+    /* linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.1) 0%,
         rgba(255, 255, 255, 0.30) 30%,
         rgba(255, 255, 255, 0.35) 40%
-    ),
+    ), */
     url("assets/img/dev-hero.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
