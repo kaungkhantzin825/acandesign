@@ -578,12 +578,12 @@
 /* ── HERO (full-bleed background image) ── */
 .dev-hero {
     background-image:
-    linear-gradient(
+    /* linear-gradient(
         180deg,
         rgba(255, 255, 255, 0.1) 0%,
         rgba(255, 255, 255, 0.30) 30%,
         rgba(255, 255, 255, 0.35) 40%
-    ),
+    ), */
     url("assets/img/dev-hero.png");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
@@ -1505,7 +1505,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ========================================================== -->
     <!-- SERVICE.PHP UI SECTION                                       -->
     <!-- ========================================================== -->
-    <section class="service-php-section">
+    <section class="service-php-section" id="services">
       <!-- ── Hero Banner ── -->
       <div class="dl-hero">
         <img src="assets/img/homepage.png" alt="サービス" class="dl-hero__img" />
