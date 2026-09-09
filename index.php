@@ -1007,8 +1007,8 @@
   margin: 0 auto;
   background-color: #ffffff;
   background-image:
-    linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%),
-    url("assets/img/ai-header-banner.png");
+    linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 90%),
+    url("assets/img/ai-header-banner.png") !important;
   background-repeat: no-repeat, no-repeat;
   background-position: center, right center;
   background-size: cover, cover;
@@ -1368,17 +1368,46 @@
 
 @media (max-width: 992px) {
   .ai-hero {
-    background-position: center bottom;
-    background-size: cover;
-    padding: 2.5rem 0 3rem;
-    min-height: auto;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-image: url("assets/img/ai-header-banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 150% auto;
+    min-height: 0;
+    padding: 1.75rem 0 2rem;
   }
 
   .ai-hero__content {
     max-width: 100%;
-    background: rgba(255, 255, 255, 0.94);
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 0 1.25rem;
+  }
+
+  .ai-bc,
+  .ai-hero__title,
+  .ai-hero__subtitle,
+  .ai-hero__lead,
+  .ai-hero__desc {
+    text-shadow: 0 1px 3px #ffffff, 0 0 6px #ffffff, 0 0 14px rgba(255, 255, 255, 0.9);
+  }
+
+  .ai-hero__title {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+  }
+
+  .ai-hero__subtitle {
+    font-size: 0.95rem;
+    margin: 0 0 1rem;
+  }
+
+  .ai-hero__lead {
+    font-size: 0.95rem;
+    margin: 0 0 0.9rem;
+  }
+
+  .ai-hero__desc {
+    font-size: 0.78rem;
   }
 
   .ai-features-box {
