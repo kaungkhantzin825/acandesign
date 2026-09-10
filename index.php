@@ -116,18 +116,25 @@
   width: 86%;
   margin: 0 auto;
   aspect-ratio: 1324 / 414;
-  background: #ffffff url("assets/img/service-hero-bg.webp") no-repeat center center;
-  background-size: cover;
+  background: #ffffff;
   container-type: inline-size;
   font-family: "Noto Sans JP", sans-serif;
   padding: 0;
   overflow: hidden;
 }
 
-/* Decorative foreground layers, stacked in source order over the office plate. */
+/* Decorative layers over the office plate, stacked in source order. The stage
+   carries the plate and is its own container-query context, so --px inside it
+   is a pixel of the artwork rather than of the hero. On desktop the two boxes
+   coincide; on mobile the stage keeps the artwork's aspect while the hero grows
+   to fit the copy. */
 .dl-hero__art {
+  --px: calc(100cqw / 1324);
   position: absolute;
   inset: 0;
+  container-type: inline-size;
+  background: url("assets/img/service-hero-bg.webp") no-repeat center center;
+  background-size: 100% 100%;
   pointer-events: none;
   user-select: none;
 }
@@ -228,6 +235,148 @@
   line-height: calc(28 * var(--px));
   letter-spacing: -0.0366em;
   color: #000000;
+}
+
+/* Phones: the banner stops being a scaled picture and becomes a full-bleed band
+   with real, readable copy, matching how .ai-hero behaves at this width. The
+   artwork is cropped to its right-hand half and a white wash keeps the copy
+   legible over it. Proportional scaling is what made the type collapse to ~4px
+   here, so nothing in the copy uses --px any more.
+
+   The 3.2:1 artwork cannot both fill a ~300px-tall phone banner and keep the
+   presenter clear of the text -- filling the height crops it to design x
+   769-1324, which is her alone at full width. The stage is therefore sized
+   from the viewport instead, trading a little height at the foot (faded out)
+   for a stable crop that leaves the left half to the copy. */
+@media (max-width: 768px) {
+  .dl-hero {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    aspect-ratio: auto;
+    min-height: 70vw;            /* the stage's height, so it normally fills */
+    padding: 1.6rem 1.25rem 1.9rem;
+    display: flex;
+    align-items: center;
+  }
+
+  /* The stage is sized from the viewport rather than stretched to the hero, so
+     the crop is identical on every phone instead of zooming in as the copy
+     wraps to more lines. 224vw wide puts design x 521-1112 in view: brain, both
+     icons and the presenter's face, with her left edge at 48% so the copy has
+     the left half to itself. The nudge right is the same idea as the `66%`
+     x-anchor on .ai-hero, expressed against the layer's own width so it holds
+     at any size. The foot fades out rather than ending on a hard line when the
+     copy runs taller than the artwork. --px keeps working because the stage is
+     its own container. */
+  .dl-hero__art {
+    inset: auto;
+    top: 0;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    width: 224vw;
+    height: auto;
+    aspect-ratio: 1324 / 414;
+    transform: translateX(16%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 88%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, #000 88%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .dl-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(94deg,
+      #ffffff 0%, #ffffff 1%, rgba(255, 255, 255, 0.9) 1%,
+      rgba(255, 255, 255, 0.5) -5%, rgba(255, 255, 255, 0) 87%);
+    z-index: 1;
+  }
+
+  .dl-hero__copy {
+    position: relative;
+    inset: auto;
+    z-index: 2;
+  }
+
+  .dl-hero__eyebrow,
+  .dl-hero__title,
+  .dl-hero__lead,
+  .dl-hero__desc {
+    position: static;
+    left: auto;
+    top: auto;
+    white-space: normal;
+    max-width: 22rem;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.95), 0 0 8px rgba(255, 255, 255, 0.9);
+  }
+
+  .dl-hero__eyebrow {
+    font-size: 1.2rem;
+    margin: 0 0 0.35rem;
+  }
+
+  .dl-hero__title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin: 20px 0 0.55rem;
+  }
+
+  .dl-hero__lead {
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0;
+    margin: 0 0 0.8rem;
+  }
+
+  .dl-hero__desc {
+    font-size: 0.85rem;
+    line-height: 1.85;
+    letter-spacing: 0;
+  }
+
+  /* The line breaks are tuned for the 1324px layout; let it reflow instead. */
+  .dl-hero__desc br {
+    display: none;
+  }
+}
+
+/* Narrow phones: below ~400px the copy wraps hard enough to run 350px+ tall,
+   which the artwork band cannot cover without zooming to just the presenter's
+   face, so the overlay stops working and the copy spills onto bare white below
+   the image. Stack it properly instead: the artwork becomes a band across the
+   top and the copy sits underneath it on white, clear of the image. The band
+   height and the padding that clears it are both derived from --band, so they
+   cannot drift apart. */
+@media (max-width: 399.98px) {
+  .dl-hero {
+    --band: 54vw;
+    min-height: 0;
+    padding-top: calc(var(--band) + 1.15rem);
+  }
+
+  /* 1324/414 is the artwork's aspect, so this is exactly --band tall. The wider
+     crop this gives (design x 345-1112) keeps the arcs, brain, icons and the
+     presenter all in the band. */
+  .dl-hero__art {
+    width: calc(var(--band) * 1324 / 414);
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  /* Nothing sits on the artwork any more, so the wash and the halo behind the
+     type are just haze. */
+  .dl-hero::before {
+    display: none;
+  }
+
+  .dl-hero__eyebrow,
+  .dl-hero__title,
+  .dl-hero__lead,
+  .dl-hero__desc {
+    max-width: none;
+    text-shadow: none;
+  }
 }
 
 .svc-wrap {
@@ -639,7 +788,9 @@
 
 @media (max-width: 768px) {
   .svc-wrap { width: 92%; }
-  .dl-hero { width: 92%; }
+  /* .dl-hero goes full-bleed on phones instead; see its own max-width:768px
+     block up with the hero rules. A width override here would win on source
+     order and undo it. */
   /* .ai-hero / .ai-inner / .dev-hero / .dev__inner are widened in the
      max-width:768px block at the end of this stylesheet — their base rules
      are declared further down, so an override up here never wins. */
