@@ -100,22 +100,134 @@
   display: block;
 }
 
+/* Service hero banner. Rebuilt from the flat 1324x414 artwork as live text over
+   the five supplied layers (office plate, AI brain, two icons, presenter), each
+   keyed to alpha and positioned independently. Every metric is a multiple of
+   --px, one pixel of that 1324-wide source, so the banner scales exactly like
+   the single image it replaces. Type is calibrated against the original
+   artwork (Noto Sans JP). */
 .dl-hero {
+  /* 0.86vw is the fallback for the 86% width below; cqw takes over wherever
+     container queries are supported and stays correct at every breakpoint. */
+  --px: calc(0.86vw / 13.24);
+  --px: calc(100cqw / 1324);
+  position: relative;
   display: block;
   width: 86%;
   margin: 0 auto;
-  background: #ffffff;
-  line-height: 0;
+  aspect-ratio: 1324 / 414;
+  background: #ffffff url("assets/img/service-hero-bg.webp") no-repeat center center;
+  background-size: cover;
+  container-type: inline-size;
+  font-family: "Noto Sans JP", sans-serif;
   padding: 0;
+  overflow: hidden;
 }
 
-.dl-hero__img {
+/* Decorative foreground layers, stacked in source order over the office plate. */
+.dl-hero__art {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+.dl-hero__art > * {
+  position: absolute;
   display: block;
-  width: 100% !important;
-  max-width: 100% !important;
   height: auto;
+}
+
+/* Dot-map and network arcs, above the office plate and behind everything else,
+   as in the original artwork. */
+.dl-hero__lines {
+  left: calc(152 * var(--px));
+  top: calc(-5 * var(--px));
+  width: calc(624 * var(--px));
+}
+
+.dl-hero__brain {
+  left: calc(684 * var(--px));
+  top: calc(57 * var(--px));
+  width: calc(214 * var(--px));
+}
+
+/* The two supplied icon layers were exported onto white without alpha, which
+   flattened away their white glyphs, so they are redrawn here as SVG. Boxes are
+   the frame rectangles measured off the original artwork plus a 10px glow
+   margin: doc frame 56x58 at (816,37), db frame 51x54 at (721,266). */
+.dl-hero__icon {
+  filter: drop-shadow(0 0 calc(3 * var(--px)) rgba(110, 203, 245, 0.85));
+}
+
+.dl-hero__icon--doc {
+  left: calc(806 * var(--px));
+  top: calc(27 * var(--px));
+  width: calc(76 * var(--px));
+}
+
+.dl-hero__icon--db {
+  left: calc(711 * var(--px));
+  top: calc(256 * var(--px));
+  width: calc(71 * var(--px));
+}
+
+.dl-hero__person {
+  left: calc(806 * var(--px));
+  top: calc(19 * var(--px));
+  width: calc(422 * var(--px));
+}
+
+.dl-hero__copy {
+  position: absolute;
+  inset: 0;
   margin: 0;
-  padding: 0;
+}
+
+.dl-hero__eyebrow,
+.dl-hero__title,
+.dl-hero__lead,
+.dl-hero__desc {
+  position: absolute;
+  left: calc(46 * var(--px));
+  margin: 0;
+  white-space: nowrap;
+}
+
+.dl-hero__eyebrow {
+  top: calc(68.25 * var(--px));
+  font-size: calc(30.5 * var(--px));
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.082em;
+  color: #004aad;
+}
+
+.dl-hero__title {
+  top: calc(128.75 * var(--px));
+  font-size: calc(55 * var(--px));
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #000000;
+}
+
+.dl-hero__lead {
+  top: calc(210.55 * var(--px));
+  font-size: calc(23.4 * var(--px));
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.0085em;
+  color: #004aad;
+}
+
+.dl-hero__desc {
+  top: calc(254.5 * var(--px));
+  font-size: calc(16.4 * var(--px));
+  font-weight: 500;
+  line-height: calc(28 * var(--px));
+  letter-spacing: -0.0366em;
+  color: #000000;
 }
 
 .svc-wrap {
@@ -1569,7 +1681,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="service-php-section" id="services">
       <!-- ── Hero Banner ── -->
       <div class="dl-hero">
-        <img src="assets/img/homepage.png" alt="サービス" class="dl-hero__img" />
+        <div class="dl-hero__art" aria-hidden="true">
+          <img class="dl-hero__lines" src="assets/img/service-hero-lines.webp" alt="" width="578" height="389" />
+          <img class="dl-hero__brain" src="assets/img/service-hero-brain.webp" alt="" width="216" height="245" />
+          <svg class="dl-hero__icon dl-hero__icon--doc" viewBox="0 0 76 78" width="76" height="78" fill="none">
+            <rect x="10" y="10" width="56" height="58" rx="10" stroke="#6FCDF7" stroke-width="2.4" />
+            <g transform="translate(23 20)">
+              <path d="M0 0h20l11 10v28H0Z" fill="#ffffff" />
+              <path d="M20 0l11 10H20Z" fill="#EAF3FC" />
+              <g fill="#4A90E2">
+                <rect x="4" y="9" width="15" height="3" rx="1.1" />
+                <rect x="4" y="12.8" width="24" height="2.8" rx="1.4" />
+                <rect x="4" y="17" width="24" height="2.8" rx="1.4" />
+                <rect x="4" y="21.2" width="24" height="2.8" rx="1.4" />
+                <rect x="4" y="25.4" width="12" height="2.6" rx="1.3" />
+                <circle cx="24.5" cy="30.5" r="2.2" />
+              </g>
+            </g>
+          </svg>
+          <svg class="dl-hero__icon dl-hero__icon--db" viewBox="0 0 71 74" width="71" height="74" fill="none">
+            <rect x="10" y="10" width="51" height="54" rx="9" stroke="#6FCDF7" stroke-width="2.4" />
+            <g transform="translate(23 20)" fill="#ffffff">
+              <path d="M0 3.5A12.5 3.5 0 0 1 25 3.5V5.5A12.5 3.5 0 0 1 0 5.5Z" />
+              <path d="M0 9.5A12.5 3.5 0 0 0 25 9.5V13.5A12.5 3.5 0 0 1 0 13.5Z" />
+              <path d="M0 17.5A12.5 3.5 0 0 0 25 17.5V21.5A12.5 3.5 0 0 1 0 21.5Z" />
+              <path d="M0 25.5A12.5 3.5 0 0 0 25 25.5V29.5A12.5 3.5 0 0 1 0 29.5Z" />
+            </g>
+            <circle cx="42.5" cy="48.5" r="1.8" fill="#4A90E2" />
+          </svg>
+          <img class="dl-hero__person" src="assets/img/service-hero-person.webp" alt="" width="444" height="416" />
+        </div>
+        <div class="dl-hero__copy">
+          <p class="dl-hero__eyebrow">SERVICE</p>
+          <h2 class="dl-hero__title">サービス</h2>
+          <p class="dl-hero__lead">AI × Humanで、企業の業務を次のステージへ。</p>
+          <p class="dl-hero__desc">
+            AI・データ活用からBPO/KPO、Webサイト開発、デザイン、<br />
+            ミャンマー進出支援まで。<br />
+            日本品質のマネジメントとミャンマーの高度人材を組み合わせ、<br />
+            企業の課題に最適なサービスをご提供します。
+          </p>
+        </div>
       </div>
 
       <div class="svc-wrap">
