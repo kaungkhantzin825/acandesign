@@ -1068,7 +1068,7 @@
 .ai-hero__subtitle,
 .ai-hero__lead,
 .ai-hero__desc {
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.95), 0 0 5px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.95), 0 0 5px rgba(255, 255, 255, 0.9);
 }
 
 .ai-sec {
