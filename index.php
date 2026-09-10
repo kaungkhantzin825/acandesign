@@ -1068,9 +1068,7 @@
 .ai-hero__subtitle,
 .ai-hero__lead,
 .ai-hero__desc {
-  text-shadow:
-    0 0 4px rgba(255, 255, 255, 0.95),
-    0 0 10px rgba(255, 255, 255, 0.85);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.95), 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .ai-sec {
@@ -1388,17 +1386,20 @@
     max-width: none;
     height: auto;
     margin: 0;
-    /* Show the banner at its natural 3:1 ratio as a band across the top,
-       with a left-to-right white wash so the copy stays readable on it. */
+    /* Banner as a band across the top, with a left-to-right white wash so
+       the copy stays readable on it. */
     background-image:
-      linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%),
-    url("assets/img/ai-header-banner.png")
-    /* Cap the band at 200px so it always clears the description text: a
-       full-width band grows as viewport/2.993, so above ~600px it would
-       otherwise swallow the whole hero. Anchored right, it still bleeds to
-       the edge and leaves the left column white for the copy. */
-    /* background-position: top center, top right; */
-    /* background-size: 100% 100%, auto 200px; */
+      linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%), url(assets/img/ai-header-banner.png);
+    /* `cover` makes the artwork fill the whole hero, so every line of copy
+       sits on the image instead of spilling onto white below a short band.
+       Sizing it `100% auto` instead fits the whole 2170x725 artwork to the
+       width and collapses it to a ~125px sliver on a phone; `100% 100%`
+       stretches and distorts it. Filling a tall box with a 3:1 image means
+       a hard horizontal crop -- 97% of the artwork is visible at 992px but
+       only ~22% at 320px -- so the x-anchor is set to 66% to keep the brain
+       and the "AI" lettering framed at the narrow end. */
+    background-position: top center, 66% center;
+    background-size: 100% 100%, cover;
     min-height: auto;
     padding: 0 0 1.5rem;
     display: block;
@@ -1446,13 +1447,6 @@
 }
 
 @media (max-width: 600px) {
-  /* At 600px a full-width band is exactly 200px tall, so this takes over
-     from the capped rule above with no visual jump. */
-  .ai-hero {
-    background-position: top center, top center;
-    background-size: 100% 100%, 100% 100%;
-  }
-
   .ai-features-box {
     grid-template-columns: 1fr;
   }
