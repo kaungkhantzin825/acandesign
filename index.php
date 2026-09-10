@@ -528,10 +528,9 @@
 @media (max-width: 768px) {
   .svc-wrap { width: 92%; }
   .dl-hero { width: 92%; }
-  .ai-hero { width: 92%; }
-  .dev-hero { width: 92%; }
-  .ai-inner { width: 92%; }
-  .dev__inner { width: 92%; }
+  /* .ai-hero / .ai-inner / .dev-hero / .dev__inner are widened in the
+     max-width:768px block at the end of this stylesheet — their base rules
+     are declared further down, so an override up here never wins. */
   .svc-grid { grid-template-columns: 1fr; }
   .svc-features-row { grid-template-columns: 1fr; gap: 1.5rem; }
   .svc-feature-item { padding: 0; }
@@ -1002,7 +1001,6 @@
 }
 
 .ai-hero {
-  position: relative;
   width: 86%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -1027,8 +1025,6 @@
 
 .ai-hero__content {
   max-width: 520px;
-  position: relative;
-  z-index: 2;
 }
 
 .ai-hero__title {
@@ -1064,6 +1060,17 @@
   font-weight: 500;
 }
 
+/* Soft white halo so the copy stays legible wherever it overlaps the banner
+   graphic. Invisible against the white parts of the hero, so it is safe to
+   apply at every breakpoint rather than only on mobile. */
+.ai-hero .ai-bc,
+.ai-hero__title,
+.ai-hero__subtitle,
+.ai-hero__lead,
+.ai-hero__desc {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.95), 0 0 5px rgba(255, 255, 255, 0.9);
+}
+
 .ai-sec {
   padding: 3.5rem 0;
 }
@@ -1079,6 +1086,10 @@
   color: #0038a8;
   margin: 0 0 1rem;
   display: inline-block;
+  /* Without this the 340px ::after underline forces the shrink-to-fit
+     heading wider than its container, scrolling the page sideways below
+     ~370px. */
+  max-width: 100%;
   position: relative;
 }
 
@@ -1368,17 +1379,54 @@
 
 @media (max-width: 992px) {
   .ai-hero {
-    background-position: center bottom;
-    background-size: cover;
-    padding: 2.5rem 0 3rem;
+    /* Full-bleed: the banner runs edge to edge like the header bar; the
+       copy is inset by .ai-hero .ai-inner below so it still lines up with
+       the sections underneath. */
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    /* Banner as a band across the top, with a left-to-right white wash so
+       the copy stays readable on it. */
+    background-image:
+      linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%), url(assets/img/ai-header-banner.png);
+    /* `cover` makes the artwork fill the whole hero, so every line of copy
+       sits on the image instead of spilling onto white below a short band.
+       Sizing it `100% auto` instead fits the whole 2170x725 artwork to the
+       width and collapses it to a ~125px sliver on a phone; `100% 100%`
+       stretches and distorts it. Filling a tall box with a 3:1 image means
+       a hard horizontal crop -- 97% of the artwork is visible at 992px but
+       only ~22% at 320px -- so the x-anchor is set to 66% to keep the brain
+       and the "AI" lettering framed at the narrow end. */
+    background-position: top center, 66% center;
+    background-size: 100% 100%, cover;
     min-height: auto;
+    padding: 0 0 1.5rem;
+    display: block;
+  }
+
+  .ai-hero .ai-inner {
+    width: 86%;
+    margin: 0 auto;
   }
 
   .ai-hero__content {
     max-width: 100%;
-    background: rgba(255, 255, 255, 0.94);
-    padding: 1.5rem;
-    border-radius: 16px;
+    padding: 1.2rem 0 0;
+    border-radius: 0;
+  }
+
+  .ai-hero__title {
+    margin: 0.4rem 0 0.2rem;
+  }
+
+  .ai-hero__subtitle {
+    margin: 0 0 1rem;
+  }
+
+  .ai-hero__lead {
+    font-size: 1.02rem;
+    margin: 0 0 1rem;
   }
 
   .ai-features-box {
@@ -1410,6 +1458,19 @@
   .ai-sec {
     padding: 2.5rem 0;
   }
+}
+
+/* Mobile gutters for the sections whose base rules are declared above.
+   These must stay at the end of the stylesheet: the base .ai-hero /
+   .ai-inner / .dev-hero / .dev__inner rules have the same specificity, so
+   whichever is declared last wins. */
+@media (max-width: 768px) {
+  /* .ai-hero itself stays full-bleed below 992px; only its inner wrapper
+     takes the gutter, so the copy lines up with the sections below. */
+  .ai-hero .ai-inner { width: 92%; }
+  .ai-inner { width: 92%; }
+  .dev-hero { width: 92%; }
+  .dev__inner { width: 92%; }
 }
   </style>
   <!-- Google Tag Manager -->
