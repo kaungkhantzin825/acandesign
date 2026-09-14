@@ -1085,8 +1085,7 @@
 .ai-sec__title::after {
   content: "";
   display: block;
-  width: 340px;
-  max-width: 90%;
+  width: 450px;
   height: 3px;
   background: #6b7280;
   margin: 0.8rem auto 0;
@@ -1099,7 +1098,7 @@
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -1132,7 +1131,6 @@
   justify-content: center;
   margin: 0 auto 1.2rem;
   color: #1d4ed8;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
 }
 
 .ai-fcard__ic svg {
