@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;800;900&family=Roboto+Mono:wght@400;500;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
@@ -19,6 +19,21 @@
         *::before,
         *::after {
             box-sizing: border-box;
+        }
+
+        /* ── Page font: Noto Sans JP everywhere (overrides main.css) ── */
+        :root {
+            --font-jp: "Noto Sans JP", sans-serif;
+            --font-mono: "Noto Sans JP", sans-serif;
+        }
+
+        body,
+        body *,
+        input,
+        textarea,
+        select,
+        button {
+            font-family: "Noto Sans JP", sans-serif !important;
         }
 
         /* ── Nav overrides ── */
@@ -32,7 +47,7 @@
             color: var(--color-ink, #001524);
             font-size: 15px;
             font-weight: bold;
-            font-family: "Anonymous Pro", monospace;
+            font-family: "Noto Sans JP", sans-serif;
             white-space: nowrap;
             transition: color var(--transition, 0.2s);
         }
@@ -48,7 +63,7 @@
             border-radius: 999px;
             font-size: 16px;
             font-weight: 700;
-            font-family: "Anonymous Pro", monospace;
+            font-family: "Noto Sans JP", sans-serif;
             white-space: nowrap;
             flex-shrink: 0;
             transition: background var(--transition, 0.2s), opacity var(--transition, 0.2s);
@@ -66,12 +81,15 @@
            BPO PAGE SPECIFIC STYLES
            ========================================================= */
         :root {
-            --bpo-blue: #004aad;
+            --bpo-nav-blue: #0a66c2;
+            --bpo-blue: #0066ff;
+            --bpo-blue-dark1: #004aad;
             --bpo-blue-dark: #072a6b;
             --bpo-blue-light: #e8f0fe;
             --bpo-blue-border: #dce8f8;
             --bpo-text: #1a1a2e;
             --bpo-muted: #4b5563;
+            --bpo-hero-border: #737373;
         }
 
         .bpo-page {
@@ -116,8 +134,8 @@
         }
 
         .bpo-bc__current {
-            color: var(--bpo-blue);
-            font-weight: 800;
+            color: var(--bpo-nav-blue);
+            /* font-weight: 800; */
         }
 
         /* ── HERO SECTION ── */
@@ -125,8 +143,8 @@
             position: relative;
             background-color: #ffffff;
             background-image:
-                linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.97) 38%, rgba(255, 255, 255, 0.8) 52%, rgba(255, 255, 255, 0) 74%),
-                url("assets/img/design-team/hero-desk.png");
+                linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 22%, rgba(255, 255, 255, 0.55) 36%, rgba(255, 255, 255, 0.15) 48%, rgba(255, 255, 255, 0) 58%),
+                url("assets/img/design-team/hero-desk1-cup-hd.webp");
             background-repeat: no-repeat, no-repeat;
             background-size: cover, cover;
             background-position: right center, right center;
@@ -170,7 +188,7 @@
             font-weight: 700;
             color: var(--bpo-blue);
             margin: 0.25rem 0 1.25rem;
-            font-family: "Anonymous Pro", monospace;
+            font-family: "Noto Sans JP", sans-serif;
         }
 
         .bpo-hero__lead {
@@ -195,7 +213,7 @@
             width: 100%;
             max-width: 540px;
             background: #ffffff;
-            border: 1.5px solid var(--bpo-blue-border);
+            border: 1.5px solid var(--bpo-hero-border);
             border-radius: 18px;
             box-shadow: 0 12px 28px rgba(15, 34, 58, 0.08);
             display: grid;
@@ -231,8 +249,8 @@
         }
 
         .bpo-hero-card__ic img {
-            max-height: 36px;
-            max-width: 40px;
+            max-height: 50px;
+            max-width: 50px;
             width: auto;
             object-fit: contain;
         }
@@ -248,7 +266,7 @@
 
         .bpo-hero-card__sub {
             font-size: 0.68rem;
-            font-weight: 600;
+            font-weight: 800;
             color: var(--bpo-muted);
             margin: 0;
             line-height: 1.35;
@@ -274,12 +292,12 @@
         .bpo-sec__title {
             display: inline-block;
             margin: 0;
-            font-size: clamp(1.45rem, 3.2vw, 2.05rem);
-            font-weight: 800;
-            color: var(--bpo-blue);
+            font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+            font-weight: 700;
+            color: var(--bpo-blue-dark1);
             position: relative;
-            padding-bottom: 0.9rem;
-            letter-spacing: 0.02em;
+            padding-bottom: 0.55rem;
+            letter-spacing: 0.01em;
         }
 
         .bpo-sec__title::after {
@@ -288,157 +306,221 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 160px;
+            width: calc(100% + 2.6rem);
+            max-width: 100vw;
             height: 3px;
-            background: #9ab4d6;
+            background: #b4bac4;
             border-radius: 2px;
         }
 
+        /* Lighter, larger title variant (主な業務) */
+        .bpo-sec__title--light {
+            font-size: clamp(1.45rem, 2.7vw, 1.95rem);
+            font-weight: 500;
+            color: #1c3f86;
+            letter-spacing: 0.06em;
+        }
+
+        .bpo-sec__title--light::after {
+            width: calc(100% + 5rem);
+        }
+
         /* ── SECTION 1: なぜ A CAN SOLUTIONSのBPOなのか ── */
+        .bpo-sec--why {
+            padding: 2.2rem 0 2.6rem;
+        }
+
+        .bpo-sec--why .bpo-sec__head {
+            margin-bottom: 1.4rem;
+        }
+
         .bpo-why-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 1.2rem;
+            gap: 1.3rem;
+            max-width: 1060px;
+            margin: 0 auto;
         }
 
         .bpo-why-card {
             position: relative;
             background: #ffffff;
-            border: 1.5px solid var(--bpo-blue-border);
-            border-radius: 16px;
-            padding: 1.6rem 1.2rem 1.4rem;
-            box-shadow: 0 8px 24px rgba(20, 33, 58, 0.05);
+            border: 1px solid #e3ebf7;
+            border-radius: 8px;
+            padding: 1.1rem 1.1rem 1.35rem;
+            box-shadow: 0 2px 10px rgba(30, 64, 140, 0.06);
             display: flex;
             flex-direction: column;
+            min-height: 200px;
+            overflow: hidden;
             transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
 
         .bpo-why-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 14px 30px rgba(0, 74, 173, 0.12);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 24px rgba(30, 64, 140, 0.1);
         }
 
         .bpo-why-card__badge {
             position: absolute;
-            top: 1.2rem;
-            left: 1.2rem;
-            width: 36px;
-            height: 36px;
+            top: 0.95rem;
+            left: 0.95rem;
+            width: 38px;
+            height: 38px;
             border-radius: 50%;
-            background: var(--bpo-blue);
+            background: #1446c8;
             color: #ffffff;
-            font-family: 'Roboto Mono', monospace;
-            font-size: 1.05rem;
-            font-weight: 800;
+            font-size: 1rem;
+            font-weight: 700;
             display: grid;
             place-items: center;
-            box-shadow: 0 3px 8px rgba(0, 74, 173, 0.25);
         }
 
-        .bpo-why-card__graphic {
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            margin-bottom: 1.2rem;
-            padding-right: 0.25rem;
+        /* Main line icon (top, centred) */
+        .bpo-why-card__icon {
+            display: block;
+            width: 62px;
+            height: 54px;
+            margin: 0.35rem auto 0.9rem;
+            color: #1f4fd6;
         }
 
-        .bpo-why-card__graphic img {
-            max-height: 68px;
-            max-width: 110px;
-            width: auto;
-            object-fit: contain;
+        /* Pale decoration (right, beside the title) */
+        .bpo-why-card__deco {
+            position: absolute;
+            right: 0.8rem;
+            top: 40%;
+            width: 60px;
+            height: 60px;
+            color: #b8cbf3;
+            transform: translateY(-38%);
+            pointer-events: none;
         }
 
         .bpo-why-card__title {
-            margin: 0 0 0.55rem;
-            font-size: 1.1rem;
-            font-weight: 800;
-            color: var(--bpo-blue);
-            line-height: 1.35;
+            position: relative;
+            margin: 0 0 0.6rem;
+            padding-right: 2.4rem;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #0d3a94;
+            line-height: 1.4;
         }
 
         .bpo-why-card__desc {
+            position: relative;
             margin: 0;
-            font-size: 0.83rem;
-            font-weight: 600;
-            color: #334155;
-            line-height: 1.75;
+            padding-right: 2.4rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #2b2f36;
+            line-height: 1.7;
         }
 
         /* ── SECTION 2: 主な業務 ── */
+        .bpo-sec--tasks {
+            padding: 2.4rem 0 3rem;
+            background: linear-gradient(180deg, #f7f9fd 0%, #f2f6fc 100%);
+        }
+
+        .bpo-sec--tasks .bpo-sec__head {
+            margin-bottom: 1.4rem;
+        }
+
         .bpo-tasks-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.35rem 1.25rem;
+            gap: 1.5rem 1rem;
         }
 
         .bpo-task-card {
             background: #ffffff;
-            border: 1.5px solid var(--bpo-blue-border);
-            border-radius: 14px;
-            padding: 1.45rem 1.25rem;
-            box-shadow: 0 6px 20px rgba(20, 33, 58, 0.04);
-            display: flex;
+            border-radius: 6px;
+            padding: 1.5rem 1.2rem 1.5rem 1.3rem;
+            box-shadow: 0 2px 12px rgba(30, 64, 140, 0.05);
+            display: grid;
+            grid-template-columns: 84px 1fr;
             align-items: center;
-            gap: 1.15rem;
+            gap: 0.9rem;
+            min-height: 150px;
             transition: transform 0.22s ease, box-shadow 0.22s ease;
         }
 
         .bpo-task-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 12px 26px rgba(0, 74, 173, 0.1);
+            box-shadow: 0 10px 24px rgba(30, 64, 140, 0.1);
         }
 
         .bpo-task-card__ic {
-            width: 66px;
-            height: 66px;
-            flex-shrink: 0;
+            width: 84px;
+            height: 72px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .bpo-task-card__ic img {
-            max-width: 62px;
-            max-height: 62px;
-            width: auto;
+            width: 72px;
+            max-width: 100%;
+            max-height: 66px;
             height: auto;
             object-fit: contain;
         }
 
         .bpo-task-card__content {
-            flex: 1;
             min-width: 0;
+            text-align: center;
         }
 
         .bpo-task-card__title {
-            margin: 0 0 0.4rem;
-            font-size: 1.05rem;
-            font-weight: 800;
-            color: var(--bpo-blue);
-            line-height: 1.3;
+            margin: 0 0 0.7rem;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1c4fb5;
+            line-height: 1.35;
         }
 
         .bpo-task-card__badge {
-            display: inline-block;
-            background: var(--bpo-blue-light);
-            color: var(--bpo-blue);
-            font-weight: 800;
-            font-size: 0.8rem;
-            padding: 0.22rem 0.85rem;
-            border-radius: 6px;
-            margin-bottom: 0.45rem;
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 0.75rem;
+            background: #e3edfc;
+            color: #1c4fb5;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.35rem 0.6rem;
+            border-radius: 4px;
             letter-spacing: 0.01em;
         }
 
         .bpo-task-card__desc {
             margin: 0;
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: var(--bpo-muted);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #2b2f36;
             line-height: 1.55;
+        }
+
+        @media (max-width: 580px) {
+            .bpo-task-card {
+                grid-template-columns: 64px 1fr;
+                padding: 1.2rem 1rem;
+                min-height: 0;
+            }
+
+            .bpo-task-card__ic {
+                width: 64px;
+                height: 60px;
+            }
+
+            .bpo-task-card__ic img {
+                width: 56px;
+            }
+
+            .bpo-why-card {
+                min-height: 0;
+            }
         }
 
         /* ── SECTION 3: 運用フロー ── */
@@ -477,7 +559,7 @@
             border-radius: 50%;
             background: var(--bpo-blue);
             color: #ffffff;
-            font-family: 'Roboto Mono', monospace;
+            font-family: "Noto Sans JP", sans-serif;
             font-size: 0.95rem;
             font-weight: 800;
             display: grid;
@@ -498,6 +580,32 @@
             max-width: 65px;
             width: auto;
             object-fit: contain;
+        }
+
+        /* ── Crisp SVG icons (replace low-res PNGs) ── */
+        .bpo-hero-card__ic svg {
+            width: 38px;
+            height: 38px;
+            color: #1664e0;
+        }
+
+        .bpo-task-card__ic svg {
+            width: 68px;
+            height: 64px;
+            color: #1a63c2;
+        }
+
+        .bpo-flow-card__ic svg {
+            width: 58px;
+            height: 52px;
+            color: #1664e0;
+        }
+
+        @media (max-width: 580px) {
+            .bpo-task-card__ic svg {
+                width: 54px;
+                height: 52px;
+            }
         }
 
         .bpo-flow-card__title {
@@ -556,7 +664,7 @@
 
         .bpo-team__en {
             margin: 0 0 1.4rem;
-            font-family: "Anonymous Pro", monospace;
+            font-family: "Noto Sans JP", sans-serif;
             font-size: 1.02rem;
             font-weight: 700;
             color: var(--bpo-blue);
@@ -662,8 +770,8 @@
 
             .bpo-hero {
                 background-image:
-                    linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.95) 45%, rgba(255, 255, 255, 0.82) 100%),
-                    url("assets/img/design-team/hero-desk.png");
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0.85) 100%),
+                    url("assets/img/design-team/hero-desk1-cup-hd.webp");
                 background-position: center top;
                 min-height: auto;
                 padding-bottom: 2.5rem;
@@ -754,7 +862,13 @@
                 <div class="bpo-hero-cards">
                     <div class="bpo-hero-card">
                         <div class="bpo-hero-card__ic">
-                            <img src="assets/img/bpo/hero-ic1.png" alt="OCR+AI" />
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M24 44H11a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h17l9 9v9" />
+                                <path d="M28 4v9h9" />
+                                <path d="M15 18h13M15 24h10M15 30h6" />
+                                <circle cx="33" cy="33" r="7.5" />
+                                <path d="M38.5 38.5 45 45" stroke-width="3.4" />
+                            </svg>
                         </div>
                         <p class="bpo-hero-card__title">OCR+AI</p>
                         <p class="bpo-hero-card__sub">確認・修正に特化</p>
@@ -762,7 +876,14 @@
 
                     <div class="bpo-hero-card">
                         <div class="bpo-hero-card__ic">
-                            <img src="assets/img/bpo/hero-ic2.png" alt="日本語ブリッジ" />
+                            <svg viewBox="0 0 48 48" fill="currentColor" aria-hidden="true">
+                                <circle cx="24" cy="13" r="6.5" />
+                                <circle cx="10.5" cy="17" r="5" />
+                                <circle cx="37.5" cy="17" r="5" />
+                                <path d="M13 40v-4.5a11 11 0 0 1 22 0V40z" />
+                                <path d="M1.5 38v-3a8 8 0 0 1 11.3-7.3A13.5 13.5 0 0 0 10 36v2z" />
+                                <path d="M46.5 38v-3a8 8 0 0 0-11.3-7.3A13.5 13.5 0 0 1 38 36v2z" />
+                            </svg>
                         </div>
                         <p class="bpo-hero-card__title">日本語ブリッジ</p>
                         <p class="bpo-hero-card__sub">指示を正確に展開</p>
@@ -770,7 +891,10 @@
 
                     <div class="bpo-hero-card">
                         <div class="bpo-hero-card__ic">
-                            <img src="assets/img/bpo/hero-ic3.png" alt="24時間365日" />
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="24" cy="24" r="19.5" />
+                                <path d="M24 12.5V24l7.5 6" />
+                            </svg>
                         </div>
                         <p class="bpo-hero-card__title">24時間365日</p>
                         <p class="bpo-hero-card__sub">土日も対応可能</p>
@@ -778,7 +902,10 @@
 
                     <div class="bpo-hero-card bpo-hero-card--highlight">
                         <div class="bpo-hero-card__ic">
-                            <img src="assets/img/bpo/hero-ic4.png" alt="動画で学んですぐにスタート" />
+                            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="4" y="9" width="40" height="30" rx="7" />
+                                <path d="M20 17.5 31.5 24 20 30.5z" fill="currentColor" stroke-width="1.5" />
+                            </svg>
                         </div>
                         <p class="bpo-hero-card__title">動画で学んで</p>
                         <p class="bpo-hero-card__sub">すぐにスタート</p>
@@ -788,7 +915,7 @@
         </section>
 
         <!-- ── SECTION 1: なぜ A CAN SOLUTIONSのBPOなのか ── -->
-        <section class="bpo-sec">
+        <section class="bpo-sec bpo-sec--why">
             <div class="bpo__inner">
                 <div class="bpo-sec__head">
                     <h2 class="bpo-sec__title">なぜ A CAN SOLUTIONSのBPOなのか</h2>
@@ -798,9 +925,16 @@
                     <!-- Card 1 -->
                     <div class="bpo-why-card">
                         <span class="bpo-why-card__badge">01</span>
-                        <div class="bpo-why-card__graphic">
-                            <img src="assets/img/bpo/why-ic1.png" alt="マニュアル不要で開始" />
-                        </div>
+                        <svg class="bpo-why-card__icon" viewBox="0 0 62 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="4" y="4" width="54" height="36" rx="2.5" />
+                            <path d="M25 13.5 L39 22 L25 30.5 Z" fill="currentColor" stroke-width="2" />
+                            <path d="M31 40 v8 M20 50 h22" />
+                        </svg>
+                        <svg class="bpo-why-card__deco" viewBox="0 0 46 50" fill="currentColor" aria-hidden="true">
+                            <circle cx="23" cy="14" r="10" />
+                            <path d="M3 50 v-8 c0-9 7-15 16-15 h8 c9 0 16 6 16 15 v8 z" />
+                            <path d="M23 28 l-3 4 3 12 3-12 z" fill="#ffffff" opacity="0.85" />
+                        </svg>
                         <h3 class="bpo-why-card__title">マニュアル不要で開始</h3>
                         <p class="bpo-why-card__desc">動画共有で業務を理解し、スムーズに立ち上げ</p>
                     </div>
@@ -808,9 +942,17 @@
                     <!-- Card 2 -->
                     <div class="bpo-why-card">
                         <span class="bpo-why-card__badge">02</span>
-                        <div class="bpo-why-card__graphic">
-                            <img src="assets/img/bpo/why-ic2.png" alt="日本語堪能なブリッジ" />
-                        </div>
+                        <svg class="bpo-why-card__icon" viewBox="0 0 62 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M8 5 h26 a5 5 0 0 1 5 5 v14 a5 5 0 0 1 -5 5 H19 l-8 7 v-7 H8 a5 5 0 0 1 -5 -5 V10 a5 5 0 0 1 5 -5 z" />
+                            <path d="M11 14 h20 M11 21 h13" />
+                            <path d="M44 16 h9 a5 5 0 0 1 5 5 v14 a5 5 0 0 1 -5 5 h-2 v7 l-8 -7 H30 a5 5 0 0 1 -5 -5 v-2" />
+                        </svg>
+                        <svg class="bpo-why-card__deco" viewBox="0 0 46 50" fill="currentColor" aria-hidden="true">
+                            <circle cx="23" cy="14" r="10" />
+                            <path d="M3 50 v-8 c0-9 7-15 16-15 h8 c9 0 16 6 16 15 v8 z" />
+                            <path d="M23 28 l-3 4 3 12 3-12 z" fill="#ffffff" opacity="0.85" />
+                        </svg>
+                        <!-- <img src="assets/img/bpo/why-card-2-deco.png" class="bpo-why-card__deco" alt="" aria-hidden="true"> -->
                         <h3 class="bpo-why-card__title">日本語堪能なブリッジ</h3>
                         <p class="bpo-why-card__desc">日本語での指示を正確に理解し現場へ展開</p>
                     </div>
@@ -818,19 +960,32 @@
                     <!-- Card 3 -->
                     <div class="bpo-why-card">
                         <span class="bpo-why-card__badge">03</span>
-                        <div class="bpo-why-card__graphic">
-                            <img src="assets/img/bpo/why-ic3.png" alt="OCR+AI後工程に特化" />
-                        </div>
-                        <h3 class="bpo-why-card__title">OCR+AI後工程に特化</h3>
+                        <svg class="bpo-why-card__icon" viewBox="0 0 62 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M13 3 h22 l10 10 v12 M45 44 v5 a2 2 0 0 1 -2 2 H13 a2 2 0 0 1 -2 -2 V5 a2 2 0 0 1 2 -2" />
+                            <path d="M35 3 v10 h10" />
+                            <path d="M17 19 h18 M17 27 h14 M17 35 h9" />
+                            <circle cx="45" cy="37" r="10" fill="#ffffff" />
+                            <path d="M40.5 37 l3.2 3.2 6 -6.4" />
+                        </svg>
+                        <svg class="bpo-why-card__deco" viewBox="0 0 46 50" fill="currentColor" aria-hidden="true">
+                            <path d="M20 3 h6 l1.2 5.6 a16 16 0 0 1 4.6 1.9 l4.8 -3.1 4.2 4.2 -3.1 4.8 a16 16 0 0 1 1.9 4.6 L45 22 v6 l-5.6 1.2 a16 16 0 0 1 -1.9 4.6 l3.1 4.8 -4.2 4.2 -4.8 -3.1 a16 16 0 0 1 -4.6 1.9 L26 47 h-6 l-1.2 -5.6 a16 16 0 0 1 -4.6 -1.9 l-4.8 3.1 -4.2 -4.2 3.1 -4.8 a16 16 0 0 1 -1.9 -4.6 L1 28 v-6 l5.6 -1.2 a16 16 0 0 1 1.9 -4.6 L5.4 11.4 9.6 7.2 l4.8 3.1 a16 16 0 0 1 4.6 -1.9 z M23 17 a8 8 0 1 0 0 16 a8 8 0 1 0 0 -16 z" fill-rule="evenodd" />
+                        </svg>
+                        <h3 class="bpo-why-card__title">OCR＋AI後工程に特化</h3>
                         <p class="bpo-why-card__desc">確認・修正に集中し、入力品質を安定化</p>
                     </div>
 
                     <!-- Card 4 -->
                     <div class="bpo-why-card">
                         <span class="bpo-why-card__badge">04</span>
-                        <div class="bpo-why-card__graphic">
-                            <img src="assets/img/bpo/why-ic4.png" alt="24時間365日対応" />
-                        </div>
+                        <svg class="bpo-why-card__icon" viewBox="0 0 62 54" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="31" cy="27" r="23" />
+                            <path d="M31 13 v14 l9 7" />
+                        </svg>
+                        <svg class="bpo-why-card__deco" viewBox="0 0 46 50" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true">
+                            <circle cx="23" cy="25" r="20" />
+                            <ellipse cx="23" cy="25" rx="8.5" ry="20" />
+                            <path d="M3 25 h40 M6 15 h34 M6 35 h34" />
+                        </svg>
                         <h3 class="bpo-why-card__title">24時間365日対応</h3>
                         <p class="bpo-why-card__desc">お客様の業務時間に合わせて柔軟に対応</p>
                     </div>
@@ -839,17 +994,21 @@
         </section>
 
         <!-- ── SECTION 2: 主な業務 ── -->
-        <section class="bpo-sec">
+        <section class="bpo-sec bpo-sec--tasks">
             <div class="bpo__inner">
                 <div class="bpo-sec__head">
-                    <h2 class="bpo-sec__title">主な業務</h2>
+                    <h2 class="bpo-sec__title bpo-sec__title--light">主な業務</h2>
                 </div>
 
                 <div class="bpo-tasks-grid">
                     <!-- Task 1 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic1.png" alt="不動産データチェック" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 28 30 5l25 23" />
+                                <path d="M11 22.5V52h38V22.5" />
+                                <path d="M41 13.5V6h6.5v13.5" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">不動産データチェック</h3>
@@ -861,7 +1020,10 @@
                     <!-- Task 2 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic2.png" alt="ポイント不正チェック" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="14" y="12" width="32" height="32" rx="6" transform="rotate(45 30 28)" stroke="currentColor" stroke-width="2.8" />
+                                <path d="M19 28.5 27 36.5 43 17" stroke="#0d4a9c" stroke-width="6" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">ポイント不正チェック</h3>
@@ -873,7 +1035,17 @@
                     <!-- Task 3 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic3.png" alt="寄港情報システム入力" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M28 5h4v6" />
+                                <path d="M22 17v-6h16v6" />
+                                <path d="M15 27v-10h30v10" />
+                                <path d="M7 27h46l-6 13H13z" />
+                                <path d="M30 17v23" />
+                                <circle cx="21" cy="22" r="1" fill="currentColor" />
+                                <circle cx="39" cy="22" r="1" fill="currentColor" />
+                                <path d="M4 46c2.7 0 2.7-2 5.3-2s2.7 2 5.4 2 2.6-2 5.3-2 2.7 2 5.3 2 2.7-2 5.4-2 2.6 2 5.3 2 2.7-2 5.3-2 2.7 2 5.4 2 2.6-2 5.3-2" />
+                                <path d="M4 52c2.7 0 2.7-2 5.3-2s2.7 2 5.4 2 2.6-2 5.3-2 2.7 2 5.3 2 2.7-2 5.4-2 2.6 2 5.3 2 2.7-2 5.3-2 2.7 2 5.4 2 2.6-2 5.3-2" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">寄港情報システム入力</h3>
@@ -885,7 +1057,11 @@
                     <!-- Task 4 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic4.png" alt="メール添付ファイル入力" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="4" y="11" width="52" height="34" rx="3" />
+                                <path d="M5 13 30 32 55 13" />
+                                <path d="M5 43 23 27M55 43 37 27" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">メール添付ファイル入力</h3>
@@ -897,7 +1073,12 @@
                     <!-- Task 5 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic5.png" alt="ECサイト商品登録" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M3 6h7.5l6.5 32h32l5-22H13" />
+                                <path d="M17 38l-2.5 6H50" />
+                                <circle cx="21" cy="49.5" r="3.2" />
+                                <circle cx="44" cy="49.5" r="3.2" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">ECサイト商品登録</h3>
@@ -909,7 +1090,11 @@
                     <!-- Task 6 -->
                     <div class="bpo-task-card">
                         <div class="bpo-task-card__ic">
-                            <img src="assets/img/bpo/task-ic6.png" alt="人物アノテーション" />
+                            <svg viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M8 16V7a2 2 0 0 1 2-2h9M41 5h9a2 2 0 0 1 2 2v9M52 40v9a2 2 0 0 1-2 2h-9M19 51h-9a2 2 0 0 1-2-2v-9" />
+                                <circle cx="30" cy="20" r="7" fill="currentColor" stroke="none" />
+                                <path d="M17 43v-2a13 13 0 0 1 26 0v2z" fill="currentColor" stroke="none" />
+                            </svg>
                         </div>
                         <div class="bpo-task-card__content">
                             <h3 class="bpo-task-card__title">人物アノテーション</h3>
@@ -933,7 +1118,7 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">01</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic1.png" alt="動画共有で理解" />
+                            <img src="assets/img/bpo/flow-ic1.png" alt="" aria-hidden="true">
                         </div>
                         <h3 class="bpo-flow-card__title">動画共有で理解</h3>
                         <p class="bpo-flow-card__desc">実際の業務動画を共有し、作業内容を視覚的に理解。</p>
@@ -949,7 +1134,14 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">02</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic2.png" alt="日本語ブリッジが整理・指示" />
+                            <img src="assets/img/bpo/flow-ic2.png" alt="" aria-hidden="true">
+
+                            <!-- <svg viewBox="0 0 58 52" fill="currentColor" aria-hidden="true">
+                                <circle cx="38" cy="15" r="8.5" />
+                                <path d="M24 48v-5a14 14 0 0 1 28 0v5z" />
+                                <circle cx="20" cy="17" r="9" stroke="#ffffff" stroke-width="2.5" />
+                                <path d="M4 48v-4.5A15 15 0 0 1 19 29h2a15 15 0 0 1 15 14.5V48z" stroke="#ffffff" stroke-width="2.5" />
+                            </svg> -->
                         </div>
                         <h3 class="bpo-flow-card__title">日本語ブリッジが整理・指示</h3>
                         <p class="bpo-flow-card__desc">日本語での指示を整理し、現場に正確に展開。</p>
@@ -965,7 +1157,12 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">03</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic3.png" alt="現場オペレーション" />
+                            <img src="assets/img/bpo/flow-ic3.png" alt="" aria-hidden="true">
+                            <!-- <svg viewBox="0 0 58 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="5" y="4" width="48" height="32" rx="2.5" />
+                                <path d="M25 8.5h8v9h6L29 28 19 17.5h6z" fill="currentColor" stroke-width="1.5" />
+                                <path d="M29 36v8M19 48h20" />
+                            </svg> -->
                         </div>
                         <h3 class="bpo-flow-card__title">現場オペレーション</h3>
                         <p class="bpo-flow-card__desc">経験豊富なオペレーターが作業を実施。</p>
@@ -981,7 +1178,14 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">04</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic4.png" alt="確認・修正して納品" />
+                            <img src="assets/img/bpo/flow-ic4.png" alt="" aria-hidden="true">
+                            <!-- <svg viewBox="0 0 58 52" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M24 48H10a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h22l8 8v7" />
+                                <path d="M14 13h14M14 20h9M14 27h6" />
+                                <circle cx="36" cy="32" r="11" fill="#ffffff" />
+                                <path d="M31 32l3.5 3.5 6.5-7" />
+                                <path d="M44 40l9 9" stroke-width="3.6" />
+                            </svg> -->
                         </div>
                         <h3 class="bpo-flow-card__title">確認・修正して納品</h3>
                         <p class="bpo-flow-card__desc">品質チェックを行い、データを納品。</p>
