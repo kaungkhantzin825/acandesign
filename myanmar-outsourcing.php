@@ -335,10 +335,7 @@
         <figure class="blog-post__content-image">
           <img src="assets/img/width_799.png" alt="A CAN SOLUTIONS ミャンマーチーム" width="800" height="600" />
         </figure>
-        <div class="blog-post__cta">
-          <p class="blog-post__cta-text">お問い合わせはこちらへ！</p>
-          <a href="index.php#contact" class="blog-post__cta-button"><img src="assets/img/button.png" alt="CONTACT US" /></a>
-        </div>
+        <?php include '3buttonsection.php'; ?>
       </section>
     </div>
 

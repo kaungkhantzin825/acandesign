@@ -438,10 +438,10 @@
                 margin-right: calc(50% - 50vw);
                 background-image: url("assets/img/ai-header-banner.png");
                 background-repeat: no-repeat;
-                background-position: center;
+                background-position: center top;
                 background-size: 150% auto;
                 min-height: 0;
-                padding: 1.75rem 0 2rem;
+                padding: 1rem 0 2rem;
             }
 
             .ai-hero__content {

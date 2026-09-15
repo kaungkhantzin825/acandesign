@@ -359,10 +359,7 @@
         <p>次回は、「BPO導入で失敗する企業の共通点と成功企業の特徴」について解説します。</p>
 
         <!-- CTA Section -->
-        <div class="blog-post__cta">
-          <p class="blog-post__cta-text">お問い合わせはこちらへ！</p>
-          <a href="index.php#contact" class="blog-post__cta-button"><img src="assets/img/button.png" alt="CONTACT US" /></a>
-        </div>
+        <?php include '3buttonsection.php'; ?>
       </section>
 
     </div>

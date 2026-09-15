@@ -32,3 +32,5 @@ test-email.php
 *.tmp
 *.temp
 *.cache
+
+*.zip

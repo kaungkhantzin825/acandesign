@@ -18,7 +18,7 @@
   <style>
     .blog-post__hero-image {
       max-width: 760px;
-      margin: 1.5rem auto 0;
+      margin: 0 auto;
       padding: 0 1.25rem;
       box-sizing: border-box;
     }
@@ -487,10 +487,7 @@
      
 
         <!-- CTA Section -->
-        <div class="blog-post__cta">
-          <p class="blog-post__cta-text">お問い合わせはこちらへ！</p>
-          <a href="index.php#contact" class="blog-post__cta-button"><img src="assets/img/button.png" alt="CONTACT US" /></a>
-        </div>
+        <?php include '3buttonsection.php'; ?>
       </section>
 
     </div>

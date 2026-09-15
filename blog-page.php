@@ -1562,7 +1562,37 @@
             </a>
           </li>
 
+  <li class="blog-card" data-cat="myanmar">
+            <a href="blog-quality-pbo.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_888880.png" alt="マニュアルを作ったのにBPOがうまくいかないのはなぜ？「作業手順」より重要な業務設計とは" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-10">2026/9/10</time>
+                </div>
+                <h3 class="blog-card__title">マニュアルを作ったのにBPOがうまくいかないのはなぜ？</h3>
 
+                <div class="blog-card__category">BPO/KPO活用ガイド</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#海外BPO</span>
+                  <span class="blog-card__tag">#業務設計</span>
+                  <span class="blog-card__tag">#業務標準化</span>
+                  <span class="blog-card__tag">#マニュアル</span>
+                  <span class="blog-card__tag">#判断基準</span>
+                  <span class="blog-card__tag">#例外処理</span>
+                  <span class="blog-card__tag">#エスカレーション</span>
+                  <span class="blog-card__tag">#品質管理</span>
+                  <span class="blog-card__tag">#AI×BPO</span>
+                  <span class="blog-card__tag">#AIエージェント</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#業務改善</span>
+                </div>
+              </div>
+            </a>
+          </li>
 
         </ul>
       </div>
