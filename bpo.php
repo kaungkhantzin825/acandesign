@@ -392,10 +392,7 @@
         </figure>
 
         <!-- CTA Section -->
-        <div class="blog-post__cta">
-          <p class="blog-post__cta-text">お問い合わせはこちらへ！</p>
-          <a href="index.php#contact" class="blog-post__cta-button"><img src="assets/img/button.png" alt="CONTACT US" /></a>
-        </div>
+        <?php include '3buttonsection.php'; ?>
       </section>
 
     </div>

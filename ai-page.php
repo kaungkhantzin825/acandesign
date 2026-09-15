@@ -220,9 +220,10 @@
 
       </section>
 
-      
-
     </div>
+
+    <!-- CTA Section -->
+    <?php include '3buttonsection.php'; ?>
   </article>
 
   <script src="assets/js/main.js" defer></script>
