@@ -2547,7 +2547,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
                 </div>
               </div>
-              <a href="#case-design" class="svc-card__btn">
+              <a href="#design-team" class="svc-card__btn">
                 <span>Designの詳細を見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -3857,8 +3857,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </style>
 
     <div class="dsg" id="design-team">
-
-
         <!-- HERO -->
         <section class="dsg-hero">
             <div class="dsg-bg-1">
