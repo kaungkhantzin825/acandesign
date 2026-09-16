@@ -69,9 +69,11 @@
             --dsg-ink: #004aad;
             --dsg-blue: #0a26d5;
             --dsg-blue2: #004cc7;
+            --dsg-blue3: #0a66c2;
             --dsg-soft: #eaf1fb;
             --dsg-tint: #f5f8fd;
             --dsg-muted: #5b6472;
+            --dsg-soft-muted: #737373;
             --dsg-rule: #8ea0bd;
             padding-top: 60px;
             /* clear fixed header */
@@ -110,6 +112,20 @@
         /* ── placeholder shown until the real artwork is dropped in ── */
         .dsg-ph {
             background: repeating-linear-gradient(45deg, rgba(18, 73, 158, 0.05) 0 12px, rgba(18, 73, 158, 0.09) 12px 24px);
+        }
+
+        .dsg-team__shot.dsg-i {
+            aspect-ratio: 16 / 9;
+        }
+
+        /* icon slot: dashed box until the real icon image replaces the placeholder */
+        .dsg-icon-ph {
+            border-radius: 8px;
+        }
+
+        .dsg-icon-ph.is-empty {
+            background: rgba(0, 74, 173, 0.06);
+            border: 1.5px dashed rgba(0, 74, 173, 0.35);
         }
 
         /* ── HERO (full-bleed background image) ── */
@@ -247,15 +263,16 @@
 
         .dsg-hcard__ic {
             flex: 0 0 auto;
-            width: 26px;
-            height: 26px;
+            width: 30px;
+            height: 30px;
             color: var(--dsg-ink);
         }
 
-        .dsg-hcard__ic svg {
+        .dsg-hcard__ic img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .dsg-hcard__title {
@@ -263,7 +280,7 @@
             font-size: 0.8rem;
             font-weight: 700;
             line-height: 1.35;
-            color: var(--dsg-ink);
+            color: var(--dsg-muted);
         }
 
         .dsg-hcard__desc {
@@ -310,8 +327,9 @@
             transform: translateX(-50%);
             width: calc(100% + 110px);
             max-width: 92vw;
-            height: 2px;
-            background: var(--dsg-rule);
+            height: 3px;
+            opacity: 0.3;
+            background: var(--dsg-muted);
         }
 
         /* ── WHY (3 cards with arrows) ── */
@@ -386,15 +404,16 @@
 
         .dsg-why__ic {
             flex: 0 0 auto;
-            width: 62px;
-            height: 62px;
+            width: 64px;
+            height: 64px;
             color: var(--dsg-ink);
         }
 
-        .dsg-why__ic svg {
+        .dsg-why__ic img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .dsg-why__arrow {
@@ -403,6 +422,8 @@
             height: auto;
             align-self: center;
             object-fit: contain;
+            margin: 0 -12px;
+            z-index: 100;
         }
 
         @media (max-width: 1000px) {
@@ -445,7 +466,7 @@
 
         .dsg-scard {
             background: #fff;
-            border: 1px solid #e6edf7;
+            border: 1px solid #737373;
             border-radius: 14px;
             padding: 1.2rem 1.1rem 1.4rem;
             display: flex;
@@ -462,15 +483,16 @@
 
         .dsg-scard__ic {
             flex: 0 0 auto;
-            width: 34px;
-            height: 34px;
+            width: 40px;
+            height: 40px;
             color: var(--dsg-ink);
         }
 
-        .dsg-scard__ic svg {
+        .dsg-scard__ic img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .dsg-scard__title {
@@ -540,29 +562,31 @@
 
         .dsg-stat__ic {
             display: block;
-            width: 62px;
-            height: 62px;
+            width: 64px;
+            height: 64px;
             margin: 0 auto 0.7rem;
             color: var(--dsg-ink);
         }
 
-        .dsg-stat__ic svg {
+        .dsg-stat__ic img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .dsg-stat__label {
             margin: 0;
-            font-size: 0.95rem;
+            font-size: 1.3rem;
             font-weight: 700;
             line-height: 1.45;
-            color: var(--dsg-blue);
+            color: var(--dsg-muted);
         }
 
         .dsg-stat__n {
             font-size: 1.3rem;
             font-weight: 700;
+            color: var(--dsg-blue3);
         }
 
         /* ── 制作イメージ (3 cards) ── */
@@ -580,16 +604,16 @@
 
         .dsg-wcard {
             background: #fff;
-            border: 1px solid #e6edf7;
+            border: 1px solid var(--dsg-soft-muted);
             border-radius: 14px;
-            padding: 1.1rem 1.1rem 1.3rem;
-            box-shadow: 0 8px 20px rgba(20, 33, 58, 0.05);
+            padding: 1.1rem 1.3rem 1.3rem;
             display: flex;
             flex-direction: column;
         }
 
         .dsg-wcard__title {
             margin: 0 0 0.9rem;
+            text-align: center;
             font-size: 1rem;
             font-weight: 700;
             color: var(--dsg-ink);
@@ -606,12 +630,12 @@
             display: block;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
 
         .dsg-wcard__desc {
             margin: 0;
-            font-size: 0.8rem;
+            font-size: 1rem;
             line-height: 1.85;
             color: #1f2937;
             font-weight: 500;
@@ -621,13 +645,17 @@
         .dsg-team__grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1rem;
             align-items: center;
         }
 
         @media (min-width: 900px) {
             .dsg-team__grid {
                 grid-template-columns: 1fr 1fr;
+            }
+
+            .dsg-team__grid.dsg-team__i {
+                grid-template-columns: 1fr 1fr 1fr;
             }
         }
 
@@ -643,14 +671,14 @@
             font-size: 0.9rem;
             font-weight: 700;
             color: var(--dsg-blue2);
-            margin: 0 0 1rem;
+            margin: 0 0 .8rem;
         }
 
         .dsg-team__desc {
             margin: 0 0 1.8rem;
             font-size: 0.85rem;
             line-height: 1.95;
-            color: var(--dsg-muted);
+            color: var(--dsg-ink);
         }
 
         .dsg-team__media {
@@ -688,18 +716,26 @@
             }
         }
 
+        .dsg-tp__card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
         .dsg-tp__ic {
             display: block;
-            width: 58px;
-            height: 58px;
+            width: 60px;
+            height: 60px;
             margin-bottom: 0.6rem;
             color: var(--dsg-ink);
         }
 
-        .dsg-tp__ic svg {
+        .dsg-tp__ic img {
             width: 100%;
             height: 100%;
             display: block;
+            object-fit: contain;
         }
 
         .dsg-tp__t {
@@ -781,79 +817,6 @@
     <!-- ============================ PAGE 13 ============================ -->
     <div class="dsg" id="top">
 
-        <!-- ── SVG icon sprite ── -->
-        <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-            <defs>
-                <g id="dsg-i-retouch" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2.5" y="4.5" width="19" height="15" rx="2" />
-                    <path d="M2.5 15.5 8 10.5l4.5 4" />
-                    <circle cx="15.5" cy="9" r="1.4" />
-                    <path d="M17.4 15.1l1.1-2.4 1.1 2.4 2.4 1.1-2.4 1.1-1.1 2.4-1.1-2.4-2.4-1.1z" fill="currentColor" stroke="none" />
-                </g>
-                <g id="dsg-i-clock" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 6.8V12l3.6 2.2" />
-                </g>
-                <g id="dsg-i-ai" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="5.5" y="5.5" width="13" height="13" rx="2.5" />
-                    <path d="M9.4 15.2l2.6-6.4 2.6 6.4M10.2 13.3h3.6" />
-                    <path d="M9.5 2.5v3M14.5 2.5v3M9.5 18.5v3M14.5 18.5v3M2.5 9.5h3M2.5 14.5h3M18.5 9.5h3M18.5 14.5h3" />
-                </g>
-                <g id="dsg-i-dress" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 2.5l3 2.2 3-2.2 1.4 4.2L14 9l1.2 3.1c1.6 2.6 2.4 5.2 2.4 7.3 0 1.3-2.5 2.1-5.6 2.1s-5.6-.8-5.6-2.1c0-2.1.8-4.7 2.4-7.3L10 9 7.6 6.7z" />
-                </g>
-                <g id="dsg-i-speed" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.5 12a8.5 8.5 0 1 1-2.6-6.1" />
-                    <path d="M20.9 3.4v4.2h-4.2" />
-                    <path d="M12 7.4V12l3.2 2" />
-                </g>
-                <g id="dsg-i-award" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="9" r="6" />
-                    <path d="M12 6.2l.9 1.9 2.1.3-1.5 1.5.36 2.1-1.86-1-1.86 1 .36-2.1L8 8.4l2.1-.3z" />
-                    <path d="M8.6 14.2L7 21.5l5-2.4 5 2.4-1.6-7.3" />
-                </g>
-                <g id="dsg-i-video" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="2.5" y="8" width="19" height="12" rx="2" />
-                    <path d="M2.9 8L6 3.4l3.6 4.2M9.4 8L12.6 3.4 16.2 8M16 8l3.2-4.6" />
-                    <path d="M10.4 11.8l4.2 2.4-4.2 2.4z" fill="currentColor" stroke="none" />
-                </g>
-                <g id="dsg-i-images" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="6.5" y="2.5" width="15" height="15" rx="2" />
-                    <path d="M6.5 13.5l4-3.6 3.5 3.2 3-2.6 4.5 4" />
-                    <circle cx="17" cy="7" r="1.3" />
-                    <path d="M17.5 21.5h-13a2 2 0 0 1-2-2v-13" />
-                </g>
-                <g id="dsg-i-scissors" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="6" cy="18" r="2.6" />
-                    <circle cx="6" cy="6" r="2.6" />
-                    <path d="M20.5 3.5L8.3 16.4M20.5 20.5L8.3 7.6" />
-                </g>
-                <g id="dsg-i-spec" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5.5 2.5h9l5 5v14a1 1 0 0 1-1 1h-13a1 1 0 0 1-1-1v-18a1 1 0 0 1 1-1z" />
-                    <path d="M14.5 2.5v5h5" />
-                    <path d="M8 12.5h8M8 16h8M8 9h3.5" />
-                </g>
-                <g id="dsg-i-handshake" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="5.8" cy="6.4" r="2.7" />
-                    <path d="M1.5 19.5c0-3 1.9-4.9 4.3-4.9s4.3 1.9 4.3 4.9" />
-                    <circle cx="18.2" cy="6.4" r="2.7" />
-                    <path d="M13.9 19.5c0-3 1.9-4.9 4.3-4.9s4.3 1.9 4.3 4.9" />
-                    <path d="M9.4 10.6h5.2" />
-                    <path d="M13.3 9.3l1.5 1.3-1.5 1.3M10.7 9.3L9.2 10.6l1.5 1.3" />
-                </g>
-                <g id="dsg-i-grow" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2.5 20.5h19" />
-                    <path d="M5.5 20.5v-5M10.5 20.5v-9M15.5 20.5v-6M20.5 20.5v-12" />
-                    <path d="M3.5 9.5l5-4 4 3 7-6" />
-                    <path d="M15.5 2.5h4.5V7" />
-                </g>
-                <g id="dsg-i-teach" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 3.5L22 8l-10 4.5L2 8z" />
-                    <path d="M6 10.2v5.3c0 1.7 2.7 3 6 3s6-1.3 6-3v-5.3" />
-                    <path d="M22 8v5.5" />
-                </g>
-            </defs>
-        </svg>
 
         <!-- HERO -->
         <section class="dsg-hero">
@@ -878,21 +841,21 @@
                         <div class="dsg-hcards">
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-retouch" /></svg></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.png" alt="" /></span>
                                     <h3 class="dsg-hcard__title">高難度画像編集</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">シースルー素材や影調整など<br>高難易度な編集に対応します。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-clock" /></svg></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.png" alt="" /></span>
                                     <h3 class="dsg-hcard__title">24時間365日対応</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">ミャンマー拠点で<br>24時間365日体制を実現。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-ai" /></svg></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.png" alt="" /></span>
                                     <h3 class="dsg-hcard__title">AIによる品質安定</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">編集・チェックプロセスに<br>AIを活用し品質を安定化。</p>
@@ -905,7 +868,7 @@
         </section>
 
         <!-- WHY -->
-        <section class="dsg-sec dsg-sec--tint">
+        <section class="dsg-sec">
             <div class="dsg__inner">
                 <div class="dsg-sec__head">
                     <h2 class="dsg-sec__title dsg-sec__title--ink">なぜA CAN SOLUTIONSのデザインチームなのか</h2>
@@ -918,7 +881,7 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">アパレル商品の特性を理解し、シースルー素材やアクセサリー等の質感も高い精度で編集します。</p>
                             </div>
-                            <span class="dsg-why__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-dress" /></svg></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.png" alt="" /></span>
                         </div>
                     </div>
                     <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
@@ -929,7 +892,7 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">金曜データアップ、翌週月曜日納品など大量データ・短納期案件でも対応します。</p>
                             </div>
-                            <span class="dsg-why__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-speed" /></svg></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.png" alt="" /></span>
                         </div>
                     </div>
                     <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
@@ -940,7 +903,7 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">AIによる一次チェックと、人の目視チェックを組み合わせ、品質を安定化させます。</p>
                             </div>
-                            <span class="dsg-why__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-ai" /></svg></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.png" alt="" /></span>
                         </div>
                     </div>
                 </div>
@@ -956,7 +919,7 @@
                 <div class="dsg-serv">
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-retouch" /></svg></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.png" alt="" /></span>
                             <h3 class="dsg-scard__title">高難度画像編集</h3>
                         </div>
                         <div class="dsg-scard__media">
@@ -971,7 +934,7 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-scissors" /></svg></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.png" alt="" /></span>
                             <h3 class="dsg-scard__title">画像編集、レタッチ</h3>
                         </div>
                         <div class="dsg-scard__media">
@@ -985,7 +948,7 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-video" /></svg></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.png" alt="" /></span>
                             <h3 class="dsg-scard__title">動画編集・短尺量産</h3>
                         </div>
                         <div class="dsg-scard__media">
@@ -999,7 +962,7 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-spec" /></svg></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.png" alt="" /></span>
                             <h3 class="dsg-scard__title">仕様作りから伴走</h3>
                         </div>
                         <div class="dsg-scard__media">
@@ -1023,27 +986,27 @@
                 </div>
                 <div class="dsg-stats">
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-clock" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.png" alt="" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">24</span>時間<span class="dsg-stat__n">365</span>日<br>体制で対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-images" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.png" alt="" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">1,000</span>枚以上<br>／週末対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-award" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.png" alt="" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">5</span>年以上の<br>動画制作実績</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-video" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.png" alt="" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">50</span>本/日の<br>短尺動画制作</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-speed" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.png" alt="" /></span>
                         <p class="dsg-stat__label">夕方入稿→<br>翌朝納品対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-ai" /></svg></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.png" alt="" /></span>
                         <p class="dsg-stat__label">AI活用による<br>編集・チェック</p>
                     </div>
                 </div>
@@ -1060,7 +1023,11 @@
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">アパレル画像編集・レタッチ</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work1.png" alt="アパレル画像編集・レタッチの制作イメージ" />
+                            <img src="assets/img/design-work1.png" alt="アパレル画像編集・レタッチの制作イメージ" 
+                                style="
+                                    object-fit: cover;
+                                    object-position: center -40px;
+                                "/>
                         </div>
                         <p class="dsg-wcard__desc">シースルー素材の合成・影調整・レタッチでラグジュアリーな質感を表現。</p>
                     </div>
@@ -1074,7 +1041,11 @@
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">短尺ファッション動画</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work3.png" alt="短尺ファッション動画の制作イメージ" />
+                            <img src="assets/img/design-work3.png" alt="短尺ファッション動画の制作イメージ" 
+                                style="
+                                    margin: 0 auto;
+                                    width: 80%;
+                                "/>
                         </div>
                         <p class="dsg-wcard__desc">15〜20秒のショート動画を大量制作。SNS・広告・ECで高い訴求力を発揮</p>
                     </div>
@@ -1085,41 +1056,44 @@
         <!-- IMAGE PRODUCTION TEAM -->
         <section class="dsg-sec dsg-sec--tint">
             <div class="dsg__inner">
-                <div class="dsg-team__grid">
+                <div class="dsg-team__grid dsg-team__i">
                     <div class="dsg-team__text">
                         <h2 class="dsg-team__jp">画像制作チーム</h2>
                         <p class="dsg-team__en">Image Production Team in Myanmar</p>
                         <p class="dsg-team__desc">A CAN SOLUTIONSでは、ミャンマーに自社の画像制作チームを構え、アパレル向けの画像編集・レタッチ・モデル合成・商品画像加工などを担当しています。日本側と日常的に連携しながら、確かなスキルの向上、業務の規律、そして品質意識を持ち、継続的に成長し続けています。</p>
 
                         <div class="dsg-team__points">
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-retouch" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.png" alt="" /></span>
                                 <p class="dsg-tp__t">高度な画像編集</p>
                                 <p class="dsg-tp__d">レタッチや合成、色調整など幅広い画像制作に対応</p>
                             </div>
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-handshake" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.png" alt="" /></span>
                                 <p class="dsg-tp__t">日本側との連携</p>
                                 <p class="dsg-tp__d">日々のコミュニケーションで品質と納期を管理</p>
                             </div>
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-teach" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.png" alt="" /></span>
                                 <p class="dsg-tp__t">継続的な技術教育</p>
                                 <p class="dsg-tp__d">最新の編集手法やAI活用を学び、成長を支援</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="dsg-team__media dsg-team__media--pair">
+                    <!-- <div class="dsg-team__media dsg-team__media--pair">
                         <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
                         <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
-                    </div>
+                    </div> -->
+
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
                 </div>
             </div>
         </section>
 
         <!-- VIDEO PRODUCTION TEAM -->
-        <section class="dsg-sec">
+        <section class="dsg-sec dsg-sec--tint">
             <div class="dsg__inner">
                 <div class="dsg-team__grid">
                     <div class="dsg-team__text">
@@ -1128,16 +1102,16 @@
                         <p class="dsg-team__desc">A CAN SOLUTIONSは、ミャンマーに動画制作チームを構築・運用しています。日本側のマネジメントのもと、SNS向けの短尺動画編集やコンテンツ制作のサポートを行い、スピードと品質を両立した安定的な制作体制を実現しています。日本とミャンマーの協働を活かし、継続的に価値ある映像コンテンツをお届けします。</p>
 
                         <div class="dsg-team__points">
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-video" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.png" alt="" /></span>
                                 <p class="dsg-tp__d">SNS・広告向けの<br>15〜20秒動画を<br>効率よく制作。</p>
                             </div>
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-handshake" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.png" alt="" /></span>
                                 <p class="dsg-tp__d">企画意図や品質基準を<br>共有し、安定した<br>制作体制を構築。</p>
                             </div>
-                            <div class="dsg-tp">
-                                <span class="dsg-tp__ic" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#dsg-i-grow" /></svg></span>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.png" alt="" /></span>
                                 <p class="dsg-tp__d">日々の制作を通じて、<br>編集品質とスピードを<br>向上。</p>
                             </div>
                         </div>
@@ -1153,11 +1127,15 @@
     </div><!-- /dsg -->
 
     <script>
-        // Photography for this page is still being prepared: if a placeholder image
-        // is missing, hide the <img> so the .dsg-ph fill shows instead of a broken icon.
-        document.querySelectorAll('.dsg-ph img').forEach(function (img) {
-            img.addEventListener('error', function () { img.style.display = 'none'; });
-            if (img.complete && img.naturalWidth === 0) img.style.display = 'none';
+        // Photos and icons for this page are still being prepared: if a placeholder image
+        // is missing, hide the <img> so the placeholder fill shows instead of a broken icon.
+        document.querySelectorAll('.dsg-ph img, .dsg-icon-ph img').forEach(function (img) {
+            function hide() {
+                img.style.display = 'none';
+                if (img.parentNode.classList.contains('dsg-icon-ph')) img.parentNode.classList.add('is-empty');
+            }
+            img.addEventListener('error', hide);
+            if (img.complete && img.naturalWidth === 0) hide();
         });
     </script>
 
