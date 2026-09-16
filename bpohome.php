@@ -365,8 +365,8 @@
             position: absolute;
             top: 0.95rem;
             left: 0.95rem;
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: #1446c8;
             color: #ffffff;
@@ -554,8 +554,8 @@
             position: absolute;
             top: 1.05rem;
             left: 1.05rem;
-            width: 32px;
-            height: 32px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             background: var(--bpo-blue);
             color: #ffffff;
@@ -678,7 +678,7 @@
         .bpo-team__desc {
             margin: 0 0 0.35rem;
             font-size: 0.86rem;
-            font-weight: 700;
+            font-weight: 500;
             line-height: 1.75;
             color: var(--bpo-blue);
         }
@@ -692,6 +692,7 @@
         .bpo-team-feat {
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .bpo-team-feat__ic {
@@ -722,6 +723,7 @@
             font-weight: 600;
             line-height: 1.6;
             color: #334155;
+            text-align: center;
         }
 
         .bpo-team-media {
@@ -1216,7 +1218,7 @@
                                     <img src="assets/img/bpo/team-ic1.png" alt="確認・修正業務" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">確認・修正業務</h3>
-                                <p class="bpo-team-feat__d">OCR・AI処理後のデータ確認・修正に対応。</p>
+                                <p class="bpo-team-feat__d">OCR・AI処理後の<br>データ確認・修正に対応。</p>
                             </div>
 
                             <!-- Feature 2 -->
@@ -1225,7 +1227,7 @@
                                     <img src="assets/img/bpo/team-ic2.png" alt="日本語ブリッジ" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">日本語ブリッジ</h3>
-                                <p class="bpo-team-feat__d">日本語の指示を現場へ正確に展開。</p>
+                                <p class="bpo-team-feat__d">日本語の指示を現場へ<br>正確に展開。</p>
                             </div>
 
                             <!-- Feature 3 -->
@@ -1234,7 +1236,7 @@
                                     <img src="assets/img/bpo/team-ic3.png" alt="24時間365日対応" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">24時間365日対応</h3>
-                                <p class="bpo-team-feat__d">土日・深夜も含めて柔軟に対応。</p>
+                                <p class="bpo-team-feat__d">土日・深夜も含めて<br>柔軟に対応。</p>
                             </div>
                         </div>
                     </div>
