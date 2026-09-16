@@ -4456,7 +4456,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- ========================================================== -->
     <!-- CASE: KPO/BPO                                                 -->
     <!-- ========================================================== -->
-   
+    <section class="case case--kpo" id="case-kpo" aria-labelledby="case-kpo-title">
+      <div class="container">
+        <header class="case__head">
+          <h2 class="case__title reveal reveal--pop" id="case-kpo-title">KPO/BPO services</h2>
+          <p class="case__subtitle reveal reveal--pop reveal--delay-1">JAPAN Quality</p>
+        </header>
+        <p class="case__desc reveal reveal--slide-l">
+          <strong>日本国内企業様とのお取引で培ったノウハウで専門性の高い日本語を使った業務でも大丈夫です。</strong><br />
+          細かな仕様が無くとも大丈夫です。実務の中で理解を重ね、お客様のニーズを実現します。
+        </p>
+
+        <article class="case-block reveal reveal--slide-l">
+          <h3 class="case-block__ja">弊社サービス導入のきっかけ</h3>
+          <p class="case-block__en">Reason for introducing the service</p>
+          <p class="case-block__lead">・人材を確保したい</p>
+          <ul class="case-block__list">
+            <li>コストバランス良く、データ入力／加工を委託したい</li>
+            <li>細かい仕様書の準備なくとも、手間をかけずに委託したい</li>
+            <li>日本語でコミュニケーションをしたい</li>
+            <li>業務量に合わせてリソースをフレキシブルに調整したい</li>
+            <li>時間問わず、業務を任せたい</li>
+          </ul>
+        </article>
+
+        <article class="case-block reveal reveal--slide-r">
+          <h3 class="case-block__ja">実績</h3>
+          <p class="case-block__en">Achievements</p>
+          <ul class="case-block__list case-block__list--indent">
+            <li>不動産データー入力</li>
+            <li>エネルギー企業向けポイントデータ入力</li>
+            <li>海運業様向け船舶スケジュール入力</li>
+            <li>ECサイト運営業者向け、商品登録作業</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
     <!-- ========================================================== -->
     <!-- CASE: CONSULTING                                              -->
     <!-- ========================================================== -->
