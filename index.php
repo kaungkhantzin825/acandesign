@@ -3108,690 +3108,843 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
    
 
     <!-- ========================================================== -->
-    <!-- DESIGN SECTION (Graphic & Motion)                              -->
+    <!-- DESIGN SECTION (imported from case-design.php)                 -->
+    <!-- デザインチーム（Graphic & Motion）                              -->
     <!-- ========================================================== -->
     <style>
-      /* ── Scoped exclusively to .dev--design to prevent affecting any other part ── */
-      /* ── HERO BANNER ── */
-      .dev--design .dev-hero {
-        width: 85%;
-        margin: 0 auto;
-        background-color: #ffffff;
-        background-image: url("assets/img/design-team/hero-desk.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: right center;
-        position: relative;
-        box-sizing: border-box;
-      }
-      .dev--design .dev-hero .dev__inner {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding-top: 0.9rem;
-        padding-bottom: 2.2rem;
-        display: flex;
-        flex-direction: column;
-        min-height: 480px;
-        box-sizing: border-box;
-      }
-      .dev--design .dev-bc {
-        font-size: 0.75rem;
-        color: var(--dev-ink);
-        padding: 0 0 1rem;
-        font-family: "Noto Sans JP", sans-serif;
-        margin: 0;
-      }
-      .dev--design .dev-hero__content {
-        max-width: 500px;
-        padding: 0;
-        margin: 0;
-      }
-      .dev--design .dev-hero__eyebrow {
-        font-family: "Noto Sans JP", sans-serif;
-        font-size: 1.25rem;
-        font-weight: 800;
-        letter-spacing: 0.03em;
-        color: #0563c0 !important;
-        margin: 0 0 0.15rem;
-        line-height: 1.2;
-      }
-      .dev--design .dev-hero__title {
-        margin: 0 0 0.35rem;
-        font-size: clamp(2.3rem, 4.2vw, 3.2rem);
-        font-weight: 900;
-        line-height: 1.12;
-        letter-spacing: -0.01em;
-        color: #111111 !important; /* Solid Black matching demo */
-      }
-      .dev--design .dev-hero__subtitle {
-        font-family: "Anonymous Pro", monospace;
-        font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-        font-weight: 700;
-        color: #0563c0 !important;
-        margin: 0 0 1.1rem;
-        letter-spacing: 0.02em;
-        line-height: 1.2;
-      }
-      .dev--design .dev-hero__lead {
-        margin: 0 0 0.85rem;
-        font-size: clamp(1.02rem, 1.8vw, 1.28rem);
-        font-weight: 800;
-        line-height: 1.48;
-        color: #0563c0 !important;
-      }
-      .dev--design .dev-hero__desc {
-        margin: 0 0 1.5rem;
-        font-size: 0.85rem;
-        line-height: 1.8;
-        color: #262626;
-        font-weight: 500;
-        max-width: 485px;
-      }
-      .dev--design .dev-hcards {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr 1fr !important;
-        background: #ffffff !important;
-        border: 1.5px solid #d0d7de !important;
-        border-radius: 14px !important;
-        padding: 0.85rem 1rem !important;
-        max-width: 480px !important;
-        box-shadow: 0 4px 18px rgba(0, 74, 173, 0.06) !important;
-        margin-top: auto !important;
-        box-sizing: border-box !important;
-        gap: 0 !important;
-        align-self: flex-start !important;
-        width: auto !important;
-      }
-      .dev--design .dev-hcard {
-        padding: 0 0.75rem !important;
-        box-sizing: border-box !important;
-        text-align: left !important;
-        position: relative !important;
-      }
-      .dev--design .dev-hcard::before {
-        display: none !important;
-      }
-      .dev--design .dev-hcard:first-child {
-        padding-left: 0 !important;
-      }
-      .dev--design .dev-hcard:not(:last-child) {
-        border-right: 1px solid #e5e7eb !important;
-        border-bottom: none !important;
-      }
-      .dev--design .dev-hcard:last-child {
-        padding-right: 0 !important;
-      }
-      .dev--design .dev-hcard__head {
-        display: flex !important;
-        align-items: center !important;
-        gap: 0.4rem !important;
-        margin-bottom: 0.3rem !important;
-        text-align: left !important;
-      }
-      .dev--design .dev-hcard__ic {
-        width: 24px !important;
-        height: 24px !important;
-        color: #0563c0 !important;
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        flex-shrink: 0 !important;
-        margin: 0 !important;
-      }
-      .dev--design .dev-hcard__ic svg {
-        width: 22px !important;
-        height: 22px !important;
-      }
-      .dev--design .dev-hcard__title {
-        font-size: 0.84rem !important;
-        font-weight: 800 !important;
-        color: #111827 !important;
-        margin: 0 !important;
-        white-space: nowrap !important;
-        line-height: 1.3 !important;
-        text-align: left !important;
-      }
-      .dev--design .dev-hcard__desc {
-        font-size: 0.71rem !important;
-        line-height: 1.5 !important;
-        color: #4b5563 !important;
-        margin: 0 !important;
-        font-weight: 500 !important;
-        text-align: left !important;
-      }
-      @media (max-width: 900px) {
-        .dev--design .dev-hero {
-          background-position: 80% center;
+        /* ── Scoped to .dsg (page-level nav/footer overrides from case-design.php omitted) ── */
+        /* =========================================================
+       PAGE 13 — Design / デザインチーム（Graphic & Motion）
+       ========================================================= */
+        .dsg {
+            --dsg-ink: #004aad;
+            --dsg-blue: #0a26d5;
+            --dsg-blue2: #004cc7;
+            --dsg-blue3: #0a66c2;
+            --dsg-soft: #eaf1fb;
+            --dsg-tint: #f5f8fd;
+            --dsg-muted: #5b6472;
+            --dsg-soft-muted: #737373;
+            --dsg-rule: #8ea0bd;
+            padding-top: 60px;
+            /* clear fixed header */
+            color: var(--dsg-ink);
+            font-family: "Noto Sans JP", sans-serif;
         }
-        .dev--design .dev-hero__content {
-          background: rgba(255, 255, 255, 0.92);
-          border-radius: 12px;
-          padding: 1.2rem;
+
+        .dsg__inner {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.25rem;
         }
-        .dev--design .dev-hcards {
-          grid-template-columns: 1fr;
-          gap: 0.8rem;
-          max-width: 100%;
+
+        /* ── breadcrumb ── */
+        .dsg-bc {
+            font-size: 0.75rem;
+            color: #000;
+            padding: 0.9rem 0 0.2rem;
+            margin: 0;
         }
-        .dev--design .dev-hcard {
-          padding: 0 0 0.8rem;
-          border-right: none !important;
-          border-bottom: 1px solid #e5e7eb;
+
+        .dsg-bc a {
+            color: #000;
+            text-decoration: none;
         }
-        .dev--design .dev-hcard:last-child {
-          border-bottom: none;
-          padding-bottom: 0;
+
+        .dsg-bc a:hover {
+            text-decoration: underline;
         }
-      }
-      /* METRICS ROW (制作体制と運用力) */
-      .dev--design .dev-sec-metrics {
-        background: #ffffff;
-        padding-top: 4.5rem;
-        padding-bottom: 4.5rem;
-      }
-      .dev--design .dev-sec-metrics .dev-sec__head {
-        margin-bottom: 3.2rem;
-        text-align: center;
-      }
-      .dev--design .dev-sec-metrics .dev-sec__title {
-        color: #0563c0;
-        font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-        font-weight: 700;
-        display: inline-block;
-        position: relative;
-        padding-bottom: 0.85rem;
-        margin: 0 auto;
-      }
-      .dev--design .dev-sec-metrics .dev-sec__title::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 320px;
-        max-width: 85vw;
-        height: 3px;
-        background-color: #b5b5b5;
-        border-radius: 2px;
-      }
-      .dev--design .dev-metrics-row {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 1.2rem 0.6rem;
-        text-align: center;
-        align-items: flex-start;
-      }
-      .dev--design .dev-metric-col {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .dev--design .dev-metric-ic {
-        width: 76px;
-        height: 76px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.1rem;
-      }
-      .dev--design .dev-metric-ic img {
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-      }
-      .dev--design .dev-metric-t {
-        margin: 0;
-        line-height: 1.38;
-        text-align: center;
-      }
-      .dev--design .dev-metric-val {
-        color: #0563c0;
-        font-size: clamp(0.95rem, 1.22vw, 1.2rem);
-        font-weight: 800;
-        display: block;
-        white-space: nowrap;
-        letter-spacing: -0.02em;
-      }
-      .dev--design .dev-metric-sub {
-        color: #000000;
-        font-size: clamp(0.92rem, 1.18vw, 1.15rem);
-        font-weight: 800;
-        display: block;
-        white-space: nowrap;
-        letter-spacing: -0.02em;
-      }
-      .dev--design .dev-metric-sub--top {
-        font-size: clamp(0.95rem, 1.22vw, 1.2rem);
-      }
-      /* PORTFOLIO SECTION (制作イメージ) */
-      .dev--design .dev-sec-portfolio {
-        background: #ffffff;
-        padding-top: 4.5rem;
-        padding-bottom: 5rem;
-      }
-      .dev--design .dev-sec-portfolio .dev-sec__head {
-        margin-bottom: 3.2rem;
-        text-align: center;
-      }
-      .dev--design .dev-sec-portfolio .dev-sec__title {
-        color: #0563c0;
-        font-size: clamp(1.4rem, 2.2vw, 1.75rem);
-        font-weight: 700;
-        display: inline-block;
-        position: relative;
-        padding-bottom: 0.85rem;
-        margin: 0 auto;
-      }
-      .dev--design .dev-sec-portfolio .dev-sec__title::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 360px;
-        max-width: 85vw;
-        height: 3px;
-        background-color: #b5b5b5;
-        border-radius: 2px;
-      }
-      .dev--design .dev-work {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        align-items: stretch;
-      }
-      .dev--design .dev-wcard {
-        background: #ffffff;
-        border: 1.5px solid #d0d7de;
-        border-radius: 14px;
-        padding: 2rem 1.6rem 2.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: left;
-        box-shadow: 0 4px 16px rgba(0, 74, 173, 0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-      .dev--design .dev-wcard:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(0, 74, 173, 0.08);
-      }
-      .dev--design .dev-wcard__title {
-        font-size: 1.15rem;
-        font-weight: 800;
-        color: #0563c0;
-        text-align: center;
-        margin: 0 0 1.6rem;
-        letter-spacing: 0.02em;
-      }
-      .dev--design .dev-wcard__media {
-        width: 100%;
-        height: 175px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.8rem;
-        overflow: hidden;
-      }
-      .dev--design .dev-wcard__media img {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        object-fit: contain;
-      }
-      .dev--design .dev-wcard__desc {
-        font-size: 0.88rem;
-        line-height: 1.68;
-        color: #374151;
-        font-weight: 600;
-        margin: 0;
-        text-align: left;
-      }
-      .dev--design .dev-scard {
-        background: #fff;
-        border: 1.5px solid #dbe6f5;
-        border-radius: 14px;
-        padding: 1.5rem 1.3rem 1.4rem;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        text-align: left;
-        box-shadow: 0 4px 16px rgba(0, 74, 173, 0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-      .dev--design .dev-scard:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 24px rgba(0, 74, 173, 0.08);
-      }
-      .dev--design .dev-scard__head {
-        display: flex;
-        align-items: center;
-        gap: 0.65rem;
-        margin-bottom: 1.1rem;
-      }
-      .dev--design .dev-scard__head .dev-scard__ic {
-        height: 34px;
-        width: auto;
-        min-width: 34px;
-        max-width: none;
-        overflow: visible;
-        border-radius: 0;
-        margin: 0;
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-      }
-      .dev--design .dev-scard__head .dev-scard__ic img {
-        display: block;
-        height: 34px;
-        width: auto;
-        max-width: none;
-        object-fit: contain;
-      }
-      .dev--design .dev-scard__head .dev-scard__title {
-        margin: 0;
-        font-size: 0.98rem;
-        font-weight: 700;
-        color: var(--dev-blue);
-        text-align: left;
-        white-space: nowrap;
-      }
-      .dev--design .dev-scard__media {
-        width: 100%;
-        height: 130px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1.2rem;
-        overflow: hidden;
-      }
-      .dev--design .dev-scard__media img {
-        max-height: 100%;
-        max-width: 100%;
-        object-fit: contain;
-      }
-      .dev--design .dev-scard__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 0.78rem;
-        line-height: 1.75;
-        color: #4b5563;
-        font-weight: normal;
-        text-align: left;
-        flex: 1;
-      }
-      .dev--design .dev-scard__list li {
-        margin-bottom: 0.25rem;
-      }
-      @media (max-width: 1024px) {
-        .dev--design .dev-metrics-row {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 2.2rem 1rem;
+
+        .dsg-bc span {
+            font-weight: 700;
+            color: var(--dsg-ink);
         }
-        .dev--design .dev-metric-ic {
-          width: 68px;
-          height: 68px;
+
+        /* ── placeholder shown until the real artwork is dropped in ── */
+        .dsg-ph {
+            background: repeating-linear-gradient(45deg, rgba(18, 73, 158, 0.05) 0 12px, rgba(18, 73, 158, 0.09) 12px 24px);
         }
-      }
-      @media (max-width: 540px) {
-        .dev--design .dev-metrics-row {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.8rem 0.6rem;
+
+        .dsg-team__shot.dsg-i {
+            aspect-ratio: 16 / 9;
         }
-        .dev--design .dev-metric-ic {
-          width: 58px;
-          height: 58px;
-          margin-bottom: 0.7rem;
+
+        /* icon slot: dashed box until the real icon image replaces the placeholder */
+        .dsg-icon-ph {
+            border-radius: 8px;
         }
-        .dev--design .dev-metric-val,
-        .dev--design .dev-metric-sub,
-        .dev--design .dev-metric-sub--top {
-          font-size: 0.95rem;
+
+        .dsg-icon-ph.is-empty {
+            background: rgba(0, 74, 173, 0.06);
+            border: 1.5px dashed rgba(0, 74, 173, 0.35);
         }
-      }
-      @media (max-width: 900px) {
-        .dev--design .dev-work {
-          grid-template-columns: 1fr;
-          max-width: 440px;
-          margin: 0 auto;
+
+        /* ── HERO (full-bleed background image) ── */
+        .dsg-hero {
+            position: relative;
+            background-color: #eef4fc;
+            background-image: url("assets/img/design-hero2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right center;
         }
-      }
-      /* ── IMAGE/VIDEO TEAM SECTION (画像制作チーム / 動画制作チーム) ── */
-      .dev--design .dev-sec-team {
-        background: #f8fafe;
-        padding-top: 4.5rem;
-        padding-bottom: 4.5rem;
-      }
-      .dev--design .dev-team-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3.5rem 2.5rem;
-        align-items: center;
-      }
-      .dev--design .dev-team-left {
-        display: flex;
-        flex-direction: column;
-      }
-      .dev--design .dev-team__title {
-        font-size: clamp(1.6rem, 2.8vw, 2.2rem);
-        font-weight: 800;
-        color: #0563c0;
-        margin: 0 0 0.35rem;
-        line-height: 1.2;
-      }
-      .dev--design .dev-team__en {
-        font-family: "Anonymous Pro", monospace;
-        font-size: 0.95rem;
-        font-weight: 700;
-        color: #0563c0;
-        margin: 0 0 1.2rem;
-        letter-spacing: 0.02em;
-      }
-      .dev--design .dev-team__desc {
-        font-size: 0.86rem;
-        line-height: 1.85;
-        color: #374151;
-        font-weight: 500;
-        margin: 0 0 2.2rem;
-      }
-      .dev--design .dev-team-points {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem 0.8rem;
-        margin-top: 0;
-      }
-      .dev--design .dev-tp2 {
-        text-align: center;
-      }
-      .dev--design .dev-tp2__ic {
-        height: 52px;
-        margin: 0 auto 0.65rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      .dev--design .dev-tp2__ic img {
-        max-height: 48px;
-        width: auto;
-        object-fit: contain;
-      }
-      .dev--design .dev-tp2__title {
-        font-size: 0.9rem;
-        font-weight: 800;
-        color: #0563c0;
-        margin: 0 0 0.35rem;
-        white-space: nowrap;
-      }
-      .dev--design .dev-tp2__desc {
-        font-size: 0.74rem;
-        line-height: 1.6;
-        color: #374151;
-        margin: 0;
-        font-weight: 600;
-      }
-      .dev--design .dev-team-right {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.9rem;
-        align-items: center;
-      }
-      .dev--design .dev-team-right img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 74, 173, 0.08);
-        display: block;
-      }
-      @media (max-width: 900px) {
-        .dev--design .dev-team-layout {
-          grid-template-columns: 1fr;
+
+        .dsg-bg-1 {
+            position: relative;
+            background-image: url("assets/img/design-hero3.png");
+            background-repeat: no-repeat;
+            background-size: 700px;
+            background-position: right 350px top -75px;
         }
-        .dev--design .dev-team-right {
-          grid-template-columns: 1fr 1fr;
-          max-width: 600px;
-          margin: 0 auto;
+
+        .dsg-bg-2 {
+            position: relative;
+            background-image: url("assets/img/design-hero.png");
+            background-repeat: no-repeat;
+            background-size: 700px;
+            background-position: right 10px;
         }
-        .dev--design .dev-team-points {
-          grid-template-columns: repeat(3, 1fr);
+
+        .dsg-bg-2:after {
+            content: "";
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+            background: url("assets/img/acan-logo-small.png") no-repeat center;
+            background-size: 45px;
+
+            right: 405px;
+            bottom: -30px;
         }
-      }
-      @media (max-width: 540px) {
-        .dev--design .dev-team-points {
-          grid-template-columns: 1fr;
+
+        .dsg-hero .dsg__inner {
+            position: relative;
+            z-index: 2;
+            min-height: 500px;
+            padding-top: 0.4rem;
+            padding-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
         }
-        .dev--design .dev-team-right {
-          grid-template-columns: 1fr;
+
+        .dsg-hero__content {
+            max-width: 620px;
+            padding: 1rem 0 1.6rem;
         }
-      }
+
+        .dsg-hero__eyebrow {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--dsg-ink);
+            margin: 0 0 0.2rem;
+        }
+
+        .dsg-hero__title {
+            margin: 0 0 0.3rem;
+            font-size: clamp(2.4rem, 5.2vw, 58px);
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: 0.01em;
+            color: #000;
+        }
+
+        .dsg-hero__en {
+            margin: 0 0 1.1rem;
+            font-size: clamp(1.25rem, 2.4vw, 26px);
+            font-weight: 400;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-hero__lead {
+            margin: 0 0 0.9rem;
+            font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-hero__desc {
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.9;
+            color: #001524;
+            font-weight: 500;
+            max-width: 36em;
+        }
+
+        /* 3 feature columns in one white panel, overlapping the bottom of the hero */
+        .dsg-hcards {
+            margin-top: auto;
+            align-self: flex-start;
+            width: 100%;
+            max-width: 620px;
+            background: #fff;
+            border: 1px solid #cfd9e8;
+            border-radius: 18px;
+            box-shadow: 0 18px 42px rgba(20, 33, 58, 0.13);
+            padding: 1.3rem 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+        }
+
+        .dsg-hcard {
+            padding: 0 0.9rem;
+            position: relative;
+        }
+
+        .dsg-hcard+.dsg-hcard::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 6%;
+            bottom: 6%;
+            width: 1px;
+            background: #c3ccdb;
+        }
+
+        .dsg-hcard__head {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            margin-bottom: 0.45rem;
+        }
+
+        .dsg-hcard__ic {
+            flex: 0 0 auto;
+            width: 30px;
+            height: 30px;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-hcard__ic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .dsg-hcard__title {
+            margin: 0;
+            font-size: 0.8rem;
+            font-weight: 700;
+            line-height: 1.35;
+            color: var(--dsg-muted);
+        }
+
+        .dsg-hcard__desc {
+            margin: 0;
+            font-size: 0.68rem;
+            line-height: 1.7;
+            color: var(--dsg-muted);
+            font-weight: 700;
+        }
+
+        /* ── SECTION shell ── */
+        .dsg-sec {
+            padding: 3.2rem 0;
+        }
+
+        .dsg-sec--tint {
+            background: var(--dsg-tint);
+        }
+
+        .dsg-sec__head {
+            text-align: center;
+            margin-bottom: 2.2rem;
+        }
+
+        .dsg-sec__title {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+            padding-bottom: 0.55rem;
+            font-size: clamp(1.3rem, 3vw, 1.72rem);
+            font-weight: 700;
+            color: var(--dsg-blue);
+        }
+
+        .dsg-sec__title--ink {
+            color: var(--dsg-ink);
+        }
+
+        .dsg-sec__title::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: calc(100% + 110px);
+            max-width: 92vw;
+            height: 3px;
+            opacity: 0.3;
+            background: var(--dsg-muted);
+        }
+
+        /* ── WHY (3 cards with arrows) ── */
+        .dsg-why {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: stretch;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .dsg-why__item {
+            position: relative;
+            flex: 1 1 0;
+            min-width: 0;
+            max-width: 340px;
+            text-align: left;
+            padding: 1.3rem 1.4rem;
+            border: 2px solid var(--dsg-soft);
+            border-radius: 14px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .dsg-why__num {
+            position: absolute;
+            top: 1.3rem;
+            left: 1.4rem;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 6px solid var(--dsg-ink);
+            color: var(--dsg-ink);
+            display: grid;
+            place-items: center;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .dsg-why__title {
+            margin: 0 0 0.7rem;
+            padding-left: calc(38px + 1rem);
+            min-height: 38px;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+            font-weight: 800;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-why__main {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+            margin-top: 18px;
+        }
+
+        .dsg-why__text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .dsg-why__desc {
+            margin: 0;
+            font-size: 0.82rem;
+            line-height: 1.85;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-why__ic {
+            flex: 0 0 auto;
+            width: 64px;
+            height: 64px;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-why__ic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .dsg-why__arrow {
+            flex: 0 0 auto;
+            width: 44px;
+            height: auto;
+            align-self: center;
+            object-fit: contain;
+            margin: 0 -12px;
+            z-index: 100;
+        }
+
+        @media (max-width: 1000px) {
+            .dsg-why {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.6rem;
+            }
+
+            .dsg-why__item {
+                flex: 0 0 auto;
+                max-width: 440px;
+                width: 100%;
+            }
+
+            .dsg-why__arrow {
+                width: 34px;
+                transform: rotate(90deg);
+            }
+        }
+
+        /* ── SERVICE CONTENT (4 cards) ── */
+        .dsg-serv {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+        @media (min-width: 600px) {
+            .dsg-serv {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .dsg-serv {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .dsg-scard {
+            background: #fff;
+            border: 1px solid #737373;
+            border-radius: 14px;
+            padding: 1.2rem 1.1rem 1.4rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 8px 20px rgba(20, 33, 58, 0.05);
+        }
+
+        .dsg-scard__head {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .dsg-scard__ic {
+            flex: 0 0 auto;
+            width: 40px;
+            height: 40px;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-scard__ic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .dsg-scard__title {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-scard__media {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 0.9rem;
+            aspect-ratio: 4 / 3;
+        }
+
+        .dsg-scard__media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .dsg-scard__list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            flex: 1;
+        }
+
+        .dsg-scard__list li {
+            position: relative;
+            padding-left: 0.85rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.74rem;
+            line-height: 1.75;
+            color: var(--dsg-muted);
+            font-weight: 700;
+        }
+
+        .dsg-scard__list li::before {
+            content: "・";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* ── CAPACITY / 制作体制と運用力 (6 stats) ── */
+        .dsg-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .dsg-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .dsg-stats {
+                grid-template-columns: repeat(6, 1fr);
+            }
+        }
+
+        .dsg-stat__ic {
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 0.7rem;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-stat__ic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .dsg-stat__label {
+            margin: 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.45;
+            color: var(--dsg-muted);
+        }
+
+        .dsg-stat__n {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dsg-blue3);
+        }
+
+        /* ── 制作イメージ (3 cards) ── */
+        .dsg-work {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.4rem;
+        }
+
+        @media (min-width: 760px) {
+            .dsg-work {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .dsg-wcard {
+            background: #fff;
+            border: 1px solid var(--dsg-soft-muted);
+            border-radius: 14px;
+            padding: 1.1rem 1.3rem 1.3rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .dsg-wcard__title {
+            margin: 0 0 0.9rem;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-wcard__media {
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 0.9rem;
+            aspect-ratio: 3 / 2;
+        }
+
+        .dsg-wcard__media img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .dsg-wcard__desc {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.85;
+            color: #1f2937;
+            font-weight: 500;
+        }
+
+        /* ── TEAM blocks (画像制作チーム / 動画制作チーム) ── */
+        .dsg-team__grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .dsg-team__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dsg-team__grid.dsg-team__i {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .dsg-team__jp {
+            margin: 0 0 0.25rem;
+            font-size: clamp(1.5rem, 3.5vw, 2.05rem);
+            font-weight: 900;
+            color: var(--dsg-blue2);
+        }
+
+        .dsg-team__en {
+            font-family: "Anonymous Pro", monospace;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--dsg-blue2);
+            margin: 0 0 .8rem;
+        }
+
+        .dsg-team__desc {
+            margin: 0 0 1.8rem;
+            font-size: 0.85rem;
+            line-height: 1.95;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-team__media {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .dsg-team__media--pair {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .dsg-team__shot {
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 4 / 3;
+            box-shadow: 0 18px 36px rgba(20, 33, 58, 0.14);
+        }
+
+        .dsg-team__shot img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dsg-team__points {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 520px) {
+            .dsg-team__points {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .dsg-tp__card {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .dsg-tp__ic {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 0.6rem;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-tp__ic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .dsg-tp__t {
+            margin: 0 0 0.3rem;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--dsg-ink);
+        }
+
+        .dsg-tp__d {
+            margin: 0;
+            font-size: 0.74rem;
+            line-height: 1.7;
+            color: var(--dsg-muted);
+        }
+
+        @media (max-width: 640px) {
+            .dsg-hero {
+                background-image:
+                    linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.82) 45%, rgba(255, 255, 255, 0.64) 100%),
+                    url("assets/img/design-hero.png");
+                background-position: center, center right;
+            }
+
+            .dsg-hero .dsg__inner {
+                min-height: 0;
+            }
+
+            .dsg-hero__content {
+                max-width: 100%;
+            }
+
+            /* the hero copy carries the layout's hard line breaks; drop them
+               on narrow screens so the paragraph reflows naturally */
+            .dsg-hero__desc br {
+                display: none;
+            }
+
+            .dsg-hcards {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+                max-width: 100%;
+            }
+
+            .dsg-hcard+.dsg-hcard::before {
+                left: 12%;
+                right: 12%;
+                top: -0.6rem;
+                bottom: auto;
+                width: auto;
+                height: 1px;
+            }
+
+            .dsg-team__media--pair {
+                grid-template-columns: 1fr;
+            }
+
+            .dsg-tp {
+                text-align: center;
+            }
+
+            .dsg-tp__ic {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
     </style>
 
+    <div class="dsg" id="design-team">
 
-    <div class="dev dev--design" id="design-team">
-        <section class="dev-hero">
-            <div class="dev__inner">
-                <p class="dev-bc"><a href="index.php" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="index.php#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Design（デザインチーム）</span></p>
 
-                <div class="dev-hero__content">
-                    <p class="dev-hero__eyebrow">Design</p>
-                    <h1 class="dev-hero__title">デザインチーム</h1>
-                    <p class="dev-hero__subtitle">Graphic &amp; Motion</p>
-                    <p class="dev-hero__lead">アパレルに特化した高難度の画像・動画編集を、<br>24時間365日体制で。</p>
-                    <p class="dev-hero__desc">
-                        A CAN SOLUTIONSのデザインチームは、ミャンマー拠点の専任デザイナーと<br>
-                        日本側の管理体制のもと、シースルー素材の合成や影の微調整、モデル着せ替<br>
-                        え、動画制作までを高品質・短納期でご提供します。
-                    </p>
-                </div>
+        <!-- HERO -->
+        <section class="dsg-hero">
+            <div class="dsg-bg-1">
+                <div class="dsg-bg-2">
+                    <div class="dsg__inner">
+                        <!-- <p class="dsg-bc">
+                            <a href="index.php">HOME</a> ＞ <a href="index.php#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
+                        </p> -->
 
-                <!-- 3 feature columns in one white panel -->
-                <div class="dev-hcards">
-                    <div class="dev-hcard">
-                        <div class="dev-hcard__head">
-                            <span class="dev-hcard__ic" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                                    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                                    <polyline points="21 15 16 10 5 21"></polyline>
-                                </svg>
-                            </span>
-                            <h3 class="dev-hcard__title">高難度画像編集</h3>
+                        <div class="dsg-hero__content">
+                            <p class="dsg-hero__eyebrow">Design</p>
+                            <h1 class="dsg-hero__title">デザインチーム</h1>
+                            <p class="dsg-hero__en">Graphic &amp; Motion</p>
+                            <p class="dsg-hero__lead">アパレルに特化した高難度の画像・動画編集を、<br>24時間365日体制で。</p>
+                            <p class="dsg-hero__desc">
+                                A CAN SOLUTIONSのデザインチームは、ミャンマー拠点の専任デザイナーと<br>日本側の管理体制のもと、シースルー素材の合成や影の微調整、モデル着せ替<br>え、動画制作までを高品質・短納期でご提供します。
+                            </p>
                         </div>
-                        <p class="dev-hcard__desc">シースルー素材や影調整など<br>高難度な編集に対応します。</p>
-                    </div>
-                    <div class="dev-hcard">
-                        <div class="dev-hcard__head">
-                            <span class="dev-hcard__ic" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <polyline points="12 6 12 12 16 14"></polyline>
-                                </svg>
-                            </span>
-                            <h3 class="dev-hcard__title">24時間365日対応</h3>
+
+                        <!-- 3 feature columns in one white panel -->
+                        <div class="dsg-hcards">
+                            <div class="dsg-hcard">
+                                <div class="dsg-hcard__head">
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.png" alt="" /></span>
+                                    <h3 class="dsg-hcard__title">高難度画像編集</h3>
+                                </div>
+                                <p class="dsg-hcard__desc">シースルー素材や影調整など<br>高難易度な編集に対応します。</p>
+                            </div>
+                            <div class="dsg-hcard">
+                                <div class="dsg-hcard__head">
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.png" alt="" /></span>
+                                    <h3 class="dsg-hcard__title">24時間365日対応</h3>
+                                </div>
+                                <p class="dsg-hcard__desc">ミャンマー拠点で<br>24時間365日体制を実現。</p>
+                            </div>
+                            <div class="dsg-hcard">
+                                <div class="dsg-hcard__head">
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.png" alt="" /></span>
+                                    <h3 class="dsg-hcard__title">AIによる品質安定</h3>
+                                </div>
+                                <p class="dsg-hcard__desc">編集・チェックプロセスに<br>AIを活用し品質を安定化。</p>
+                            </div>
                         </div>
-                        <p class="dev-hcard__desc">ミャンマー拠点で<br>24時間365日体制を実現。</p>
-                    </div>
-                    <div class="dev-hcard">
-                        <div class="dev-hcard__head">
-                            <span class="dev-hcard__ic" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                                    <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-                                    <text x="12" y="15" text-anchor="middle" font-size="7" font-weight="bold" fill="currentColor" stroke="none">AI</text>
-                                    <line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line>
-                                    <line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line>
-                                    <line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line>
-                                    <line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line>
-                                </svg>
-                            </span>
-                            <h3 class="dev-hcard__title">AIによる品質安定</h3>
-                        </div>
-                        <p class="dev-hcard__desc">編集・チェックプロセスに<br>AIを活用し品質を安定化。</p>
                     </div>
                 </div>
             </div>
+            
         </section>
 
-     
-
-        <!-- WHY SECTION -->
-        <section class="dev-sec dev-sec--tint">
-            <div class="dev__inner">
-                <div class="dev-sec__head">
-                    <h2 class="dev-sec__title">なぜA CAN SOLUTIONSのデザインチームなのか</h2>
+        <!-- WHY -->
+        <section class="dsg-sec">
+            <div class="dsg__inner">
+                <div class="dsg-sec__head">
+                    <h2 class="dsg-sec__title dsg-sec__title--ink">なぜA CAN SOLUTIONSのデザインチームなのか</h2>
                 </div>
-                <div class="dev-why">
-                    <div class="dev-why__item">
-                        <span class="dev-why__num">1</span>
-                        <div class="dev-why__main">
-                            <div class="dev-why__text">
-                                <h3 class="dev-why__title">アパレル業界に特化</h3>
-                                <p class="dev-why__desc">アパレル商品の特性を理解し、シースルー素材やアクセサリー等の質感も高い精度で編集します。</p>
+                <div class="dsg-why">
+                    <div class="dsg-why__item">
+                        <span class="dsg-why__num">1</span>
+                        <h3 class="dsg-why__title">アパレル業界に特化</h3>
+                        <div class="dsg-why__main">
+                            <div class="dsg-why__text">
+                                <p class="dsg-why__desc">アパレル商品の特性を理解し、シースルー素材やアクセサリー等の質感も高い精度で編集します。</p>
                             </div>
-                            <svg class="dev-why__ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--dev-blue);">
-                                <path d="M22 10 L28 18 L36 18 L42 10 L48 16 L44 26 L40 26 L46 54 L18 54 L24 26 L20 26 L16 16 Z"/>
-                                <path d="M28 18 Q32 22 36 18"/>
-                                <path d="M22 26 Q32 30 42 26"/>
-                            </svg>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.png" alt="" /></span>
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
-                    <div class="dev-why__item">
-                        <span class="dev-why__num">2</span>
-                        <div class="dev-why__main">
-                            <div class="dev-why__text">
-                                <h3 class="dev-why__title">量産と短納期に対応</h3>
-                                <p class="dev-why__desc">金曜データアップ、翌週月曜日納品など大量データ・短納期案件でも対応します。</p>
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <div class="dsg-why__item">
+                        <span class="dsg-why__num">2</span>
+                        <h3 class="dsg-why__title">量産と短納期に対応</h3>
+                        <div class="dsg-why__main">
+                            <div class="dsg-why__text">
+                                <p class="dsg-why__desc">金曜データアップ、翌週月曜日納品など大量データ・短納期案件でも対応します。</p>
                             </div>
-                            <svg class="dev-why__ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--dev-blue);">
-                                <circle cx="32" cy="34" r="20"/>
-                                <polyline points="32 22 32 34 42 34"/>
-                                <line x1="26" y1="8" x2="38" y2="8"/>
-                                <line x1="32" y1="8" x2="32" y2="14"/>
-                            </svg>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.png" alt="" /></span>
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
-                    <div class="dev-why__item">
-                        <span class="dev-why__num">3</span>
-                        <div class="dev-why__main">
-                            <div class="dev-why__text">
-                                <h3 class="dev-why__title">AIと人のチェックで品質を安定化</h3>
-                                <p class="dev-why__desc">AIによる一次チェックと、人の目視チェックを組み合わせ、品質を安定化させます。</p>
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <div class="dsg-why__item">
+                        <span class="dsg-why__num">3</span>
+                        <h3 class="dsg-why__title">AIと人のチェックで品質を安定化</h3>
+                        <div class="dsg-why__main">
+                            <div class="dsg-why__text">
+                                <p class="dsg-why__desc">AIによる一次チェックと、人の目視チェックを組み合わせ、品質を安定化させます。</p>
                             </div>
-                            <svg class="dev-why__ic" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--dev-blue);">
-                                <rect x="14" y="14" width="36" height="36" rx="6"/>
-                                <rect x="22" y="22" width="20" height="20" rx="3"/>
-                                <text x="32" y="36" text-anchor="middle" font-size="12" font-weight="bold" fill="currentColor" stroke="none">AI</text>
-                                <line x1="22" y1="6" x2="22" y2="14"/><line x1="32" y1="6" x2="32" y2="14"/><line x1="42" y1="6" x2="42" y2="14"/>
-                                <line x1="22" y1="50" x2="22" y2="58"/><line x1="32" y1="50" x2="32" y2="58"/><line x1="42" y1="50" x2="42" y2="58"/>
-                                <line x1="6" y1="22" x2="14" y2="22"/><line x1="6" y1="32" x2="14" y2="32"/><line x1="6" y1="42" x2="14" y2="42"/>
-                                <line x1="50" y1="22" x2="58" y2="22"/><line x1="50" y1="32" x2="58" y2="32"/><line x1="50" y1="42" x2="58" y2="42"/>
-                            </svg>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.png" alt="" /></span>
                         </div>
                     </div>
                 </div>
@@ -3799,270 +3952,233 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </section>
 
         <!-- SERVICE CONTENT -->
-        <section class="dev-sec dev-sec-service">
-            <div class="dev__inner">
-                <div class="dev-sec__head">
-                    <h2 class="dev-sec__title">サービス内容</h2>
+        <section class="dsg-sec">
+            <div class="dsg__inner">
+                <div class="dsg-sec__head">
+                    <h2 class="dsg-sec__title">サービス内容</h2>
                 </div>
-                <div class="dev-serv">
-                    <!-- Card 1 -->
-                    <div class="dev-scard">
-                        <div class="dev-scard__head">
-                            <span class="dev-scard__ic">
-                                <img src="assets/img/design-team/icon-card1.png" alt="" />
-                            </span>
-                            <h3 class="dev-scard__title">高難度画像編集</h3>
+                <div class="dsg-serv">
+                    <div class="dsg-scard">
+                        <div class="dsg-scard__head">
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.png" alt="" /></span>
+                            <h3 class="dsg-scard__title">高難度画像編集</h3>
                         </div>
-                        <div class="dev-scard__media">
-                            <img src="assets/img/design-team/card1.png" alt="高難度画像編集" />
+                        <div class="dsg-scard__media">
+                            <img src="assets/img/design-service1.jpg" alt="シースルー素材の合成やモデル着せ替えなどの高難度画像編集" />
                         </div>
-                        <ul class="dev-scard__list">
-                            <li>・シースルー素材の合成</li>
-                            <li>・微妙な影調整</li>
-                            <li>・モデル着せ替え</li>
-                            <li>・モデルの修正などの、高品質画像加工</li>
+                        <ul class="dsg-scard__list">
+                            <li>シースルー素材の合成</li>
+                            <li>微妙な影調整</li>
+                            <li>モデル着せ替え</li>
+                            <li>モデルの修正などの、高品質画像加工</li>
                         </ul>
                     </div>
-
-                    <!-- Card 2 -->
-                    <div class="dev-scard">
-                        <div class="dev-scard__head">
-                            <span class="dev-scard__ic">
-                                <img src="assets/img/design-team/icon-card2.png" alt="" />
-                            </span>
-                            <h3 class="dev-scard__title">画像編集、レタッチ</h3>
+                    <div class="dsg-scard">
+                        <div class="dsg-scard__head">
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.png" alt="" /></span>
+                            <h3 class="dsg-scard__title">画像編集、レタッチ</h3>
                         </div>
-                        <div class="dev-scard__media">
-                            <img src="assets/img/design-team/card2.png" alt="画像編集、レタッチ" />
+                        <div class="dsg-scard__media">
+                            <img src="assets/img/design-service2.png" alt="大量の商品画像編集・レタッチ" />
                         </div>
-                        <ul class="dev-scard__list">
-                            <li>・金曜データUP→翌月曜納品</li>
-                            <li>・1,000枚以上の画像編集</li>
-                            <li>・24時間、365日対応で量産体制を実現</li>
+                        <ul class="dsg-scard__list">
+                            <li>金曜データUP→翌月曜納品</li>
+                            <li>1,000枚以上の画像編集</li>
+                            <li>24時間、365日対応で量産体制を実現</li>
                         </ul>
                     </div>
-
-                    <!-- Card 3 -->
-                    <div class="dev-scard">
-                        <div class="dev-scard__head">
-                            <span class="dev-scard__ic">
-                                <img src="assets/img/design-team/icon-card3.png" alt="" />
-                            </span>
-                            <h3 class="dev-scard__title">動画編集・短尺量産</h3>
+                    <div class="dsg-scard">
+                        <div class="dsg-scard__head">
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.png" alt="" /></span>
+                            <h3 class="dsg-scard__title">動画編集・短尺量産</h3>
                         </div>
-                        <div class="dev-scard__media">
-                            <img src="assets/img/design-team/card3.png" alt="動画編集・短尺量産" />
+                        <div class="dsg-scard__media">
+                            <img src="assets/img/design-service3.png" alt="短尺ファッション動画の編集・量産" />
                         </div>
-                        <ul class="dev-scard__list">
-                            <li>・高級アパレルブランド向け、実績5年以上</li>
-                            <li>・5分素材から15~20秒へ編集</li>
-                            <li>・60本/日製作</li>
+                        <ul class="dsg-scard__list">
+                            <li>高級アパレルブランド向け、実績5年以上</li>
+                            <li>5分素材から15〜20秒へ編集</li>
+                            <li>60本/日制作</li>
                         </ul>
                     </div>
-
-                    <!-- Card 4 -->
-                    <div class="dev-scard">
-                        <div class="dev-scard__head">
-                            <span class="dev-scard__ic">
-                                <img src="assets/img/design-team/icon-card4.png" alt="" />
-                            </span>
-                            <h3 class="dev-scard__title">仕様作りから伴走</h3>
+                    <div class="dsg-scard">
+                        <div class="dsg-scard__head">
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.png" alt="" /></span>
+                            <h3 class="dsg-scard__title">仕様作りから伴走</h3>
                         </div>
-                        <div class="dev-scard__media">
-                            <img src="assets/img/design-team/card4.png" alt="仕様作りから伴走" />
+                        <div class="dsg-scard__media">
+                            <img src="assets/img/design-service4.png" alt="お客様と仕様を整理しながら伴走" />
                         </div>
-                        <ul class="dev-scard__list">
-                            <li>・「良い感じ」に仕上げてからスタート可能</li>
-                            <li>・お客様と随時仕様を整理</li>
-                            <li>・継続改善で品質を向上</li>
+                        <ul class="dsg-scard__list">
+                            <li>「良い感じ」に仕上げてからスタート可能</li>
+                            <li>お客様と随時仕様を整理</li>
+                            <li>継続改善で品質を向上</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 制作体制と運用力 -->
-        <section class="dev-sec dev-sec-metrics">
-            <div class="dev__inner">
-                <div class="dev-sec__head">
-                    <h2 class="dev-sec__title">制作体制と運用力</h2>
+        <!-- CAPACITY -->
+        <section class="dsg-sec">
+            <div class="dsg__inner">
+                <div class="dsg-sec__head">
+                    <h2 class="dsg-sec__title">制作体制と運用力</h2>
                 </div>
-                <div class="dev-metrics-row">
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic1.png" alt="24時間365日 体制で対応" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-val">24時間365日</span>
-                            <span class="dev-metric-sub">体制で対応</span>
-                        </p>
+                <div class="dsg-stats">
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.png" alt="" /></span>
+                        <p class="dsg-stat__label"><span class="dsg-stat__n">24</span>時間<span class="dsg-stat__n">365</span>日<br>体制で対応</p>
                     </div>
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic2.png" alt="1,000枚以上 /週末対応" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-val">1,000枚以上</span>
-                            <span class="dev-metric-sub">/週末対応</span>
-                        </p>
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.png" alt="" /></span>
+                        <p class="dsg-stat__label"><span class="dsg-stat__n">1,000</span>枚以上<br>／週末対応</p>
                     </div>
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic3.png" alt="5年以上の 動画制作実績" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-val">5年以上の</span>
-                            <span class="dev-metric-sub">動画制作実績</span>
-                        </p>
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.png" alt="" /></span>
+                        <p class="dsg-stat__label"><span class="dsg-stat__n">5</span>年以上の<br>動画制作実績</p>
                     </div>
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic4.png" alt="50本/日の 短尺動画制作" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-val">50本/日の</span>
-                            <span class="dev-metric-sub">短尺動画制作</span>
-                        </p>
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.png" alt="" /></span>
+                        <p class="dsg-stat__label"><span class="dsg-stat__n">50</span>本/日の<br>短尺動画制作</p>
                     </div>
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic5.png" alt="夕方入稿→ 翌朝納品対応" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-sub dev-metric-sub--top">夕方入稿→</span>
-                            <span class="dev-metric-sub">翌朝納品対応</span>
-                        </p>
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.png" alt="" /></span>
+                        <p class="dsg-stat__label">夕方入稿→<br>翌朝納品対応</p>
                     </div>
-                    <div class="dev-metric-col">
-                        <div class="dev-metric-ic">
-                            <img src="assets/img/design-team/metric-ic6.png" alt="AI活用による 編集・チェック" />
-                        </div>
-                        <p class="dev-metric-t">
-                            <span class="dev-metric-sub dev-metric-sub--top">AI活用による</span>
-                            <span class="dev-metric-sub">編集・チェック</span>
-                        </p>
+                    <div class="dsg-stat">
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.png" alt="" /></span>
+                        <p class="dsg-stat__label">AI活用による<br>編集・チェック</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PORTFOLIO / 制作イメージ -->
-        <section class="dev-sec dev-sec-portfolio">
-            <div class="dev__inner">
-                <div class="dev-sec__head">
-                    <h2 class="dev-sec__title">制作イメージ</h2>
+        <!-- WORK IMAGES -->
+        <section class="dsg-sec">
+            <div class="dsg__inner">
+                <div class="dsg-sec__head">
+                    <h2 class="dsg-sec__title">制作イメージ</h2>
                 </div>
-                <div class="dev-work">
-                    <!-- Card 1 -->
-                    <div class="dev-wcard">
-                        <h3 class="dev-wcard__title">アパレル画像編集・レタッチ</h3>
-                        <div class="dev-wcard__media">
-                            <img src="assets/img/design-team/work1.png" alt="アパレル画像編集・レタッチ">
+                <div class="dsg-work">
+                    <div class="dsg-wcard">
+                        <h3 class="dsg-wcard__title">アパレル画像編集・レタッチ</h3>
+                        <div class="dsg-wcard__media">
+                            <img src="assets/img/design-work1.png" alt="アパレル画像編集・レタッチの制作イメージ" 
+                                style="
+                                    object-fit: cover;
+                                    object-position: center -40px;
+                                "/>
                         </div>
-                        <p class="dev-wcard__desc">シースルー素材の合成・影調整・レタッチでラグジュアリーな質感を表現。</p>
+                        <p class="dsg-wcard__desc">シースルー素材の合成・影調整・レタッチでラグジュアリーな質感を表現。</p>
                     </div>
-                    <!-- Card 2 -->
-                    <div class="dev-wcard">
-                        <h3 class="dev-wcard__title">商品・モデル合成</h3>
-                        <div class="dev-wcard__media">
-                            <img src="assets/img/design-team/work2.png" alt="商品・モデル合成">
+                    <div class="dsg-wcard">
+                        <h3 class="dsg-wcard__title">商品・モデル合成</h3>
+                        <div class="dsg-wcard__media">
+                            <img src="assets/img/design-work2.png" alt="商品とモデルの合成の制作イメージ" />
                         </div>
-                        <p class="dev-wcard__desc">商品とモデルの自然な合成で、統一感のあるビジュアル制作</p>
+                        <p class="dsg-wcard__desc">商品とモデルの自然な合成で、統一感のあるビジュアル制作</p>
                     </div>
-                    <!-- Card 3 -->
-                    <div class="dev-wcard">
-                        <h3 class="dev-wcard__title">短尺ファッション動画</h3>
-                        <div class="dev-wcard__media">
-                            <img src="assets/img/design-team/work3.png" alt="短尺ファッション動画">
+                    <div class="dsg-wcard">
+                        <h3 class="dsg-wcard__title">短尺ファッション動画</h3>
+                        <div class="dsg-wcard__media">
+                            <img src="assets/img/design-work3.png" alt="短尺ファッション動画の制作イメージ" 
+                                style="
+                                    margin: 0 auto;
+                                    width: 80%;
+                                "/>
                         </div>
-                        <p class="dev-wcard__desc">15〜20秒のショート動画を大量制作。SNS・広告・ECで高い訴求力を発揮</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DEVELOPMENT TEAM 1: 画像制作チーム -->
-        <section class="dev-sec dev-sec-team">
-            <div class="dev__inner">
-                <div class="dev-team-layout">
-                    <!-- LEFT: Text + Icons -->
-                    <div class="dev-team-left">
-                        <h2 class="dev-team__title">画像制作チーム</h2>
-                        <p class="dev-team__en">Image Production Team in Myanmar</p>
-                        <p class="dev-team__desc">A CAN SOLUTIONSでは、ミャンマーに自社の画像制作チームを構え、アパレル向けの画像編集・レタッチ・モデル合成・商品画像加工などを担当しています。日本側と日常的に連携しながら、確かなスキルの向上、業務の規律、そして品質意識を持ち、継続的に成長し続けています。</p>
-
-                        <div class="dev-team-points">
-                            <div class="dev-tp2">
-                                <div class="dev-tp2__ic">
-                                    <img src="assets/img/design-team/team-ic1.png" alt="高度な画像編集" />
-                                </div>
-                                <p class="dev-tp2__title">高度な画像編集</p>
-                                <p class="dev-tp2__desc">レタッチや合成、色調整など<br>幅広い画像制作に対応</p>
-                            </div>
-                            <div class="dev-tp2">
-                                <div class="dev-tp2__ic">
-                                    <img src="assets/img/design-team/team-ic2.png" alt="日本側との連携" />
-                                </div>
-                                <p class="dev-tp2__title">日本側との連携</p>
-                                <p class="dev-tp2__desc">日々のコミュニケーションで<br>品質と納期を管理</p>
-                            </div>
-                            <div class="dev-tp2">
-                                <div class="dev-tp2__ic">
-                                    <img src="assets/img/design-team/team-ic3.png" alt="継続的な技術教育" />
-                                </div>
-                                <p class="dev-tp2__title">継続的な技術教育</p>
-                                <p class="dev-tp2__desc">最新の編集手法やAI活用を<br>学び、成長を支援</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- RIGHT: Two photos -->
-                    <div class="dev-team-right">
-                        <img src="assets/img/four2.png" alt="画像制作チーム 1">
-                        <img src="assets/img/four3.png" alt="画像制作チーム 2">
+                        <p class="dsg-wcard__desc">15〜20秒のショート動画を大量制作。SNS・広告・ECで高い訴求力を発揮</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- DEVELOPMENT TEAM 2: 動画制作チーム -->
-        <section class="dev-sec dev-sec-team">
-            <div class="dev__inner">
-                <div class="dev-team__grid">
-                    <div class="dev-team__text">
-                        <h2 class="dev-team__jp">動画制作チーム</h2>
-                        <p class="dev-team__en">Video Production Team in Myanmar</p>
-                        <p class="dev-team__desc">A CAN SOLUTIONSは、ミャンマーに動画制作チームを構築・運用しています。日本側のマネジメントのもと、SNS向けの短尺動画編集やコンテンツ制作のサポートを行い、スピードと品質を両立の安定的な制作体制を実現しています。日本とミャンマーの協調を活かし、継続的に価値ある映像コンテンツをお届けします。</p>
+        <!-- IMAGE PRODUCTION TEAM -->
+        <section class="dsg-sec dsg-sec--tint">
+            <div class="dsg__inner">
+                <div class="dsg-team__grid dsg-team__i">
+                    <div class="dsg-team__text">
+                        <h2 class="dsg-team__jp">画像制作チーム</h2>
+                        <p class="dsg-team__en">Image Production Team in Myanmar</p>
+                        <p class="dsg-team__desc">A CAN SOLUTIONSでは、ミャンマーに自社の画像制作チームを構え、アパレル向けの画像編集・レタッチ・モデル合成・商品画像加工などを担当しています。日本側と日常的に連携しながら、確かなスキルの向上、業務の規律、そして品質意識を持ち、継続的に成長し続けています。</p>
 
-                        <div class="dev-team__points" style="margin-top:2.2rem;">
-                            <div class="dev-tp">
-                                <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="assets/img/ii1.png" alt="">
-                                </div>
-                                <p class="dev-tp__d" style="font-size:0.82rem;line-height:1.6;font-weight:600;margin-top:0.3rem;">SNS・広告向けの15〜20秒動画を効率よく制作。</p>
+                        <div class="dsg-team__points">
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.png" alt="" /></span>
+                                <p class="dsg-tp__t">高度な画像編集</p>
+                                <p class="dsg-tp__d">レタッチや合成、色調整など幅広い画像制作に対応</p>
                             </div>
-                            <div class="dev-tp">
-                                <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="assets/img/ii2.png" alt="">
-                                </div>
-                                <p class="dev-tp__d" style="font-size:0.82rem;line-height:1.6;font-weight:600;margin-top:0.3rem;">企画意図や品質基準を共有し、安定した制作体制を構築。</p>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.png" alt="" /></span>
+                                <p class="dsg-tp__t">日本側との連携</p>
+                                <p class="dsg-tp__d">日々のコミュニケーションで品質と納期を管理</p>
                             </div>
-                            <div class="dev-tp">
-                                <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="assets/img/ii4.png" alt="">
-                                </div>
-                                <p class="dev-tp__d" style="font-size:0.82rem;line-height:1.6;font-weight:600;margin-top:0.3rem;">日々の制作を通じて、編集品質とスピードを向上。</p>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.png" alt="" /></span>
+                                <p class="dsg-tp__t">継続的な技術教育</p>
+                                <p class="dsg-tp__d">最新の編集手法やAI活用を学び、成長を支援</p>
                             </div>
                         </div>
-
                     </div>
-                    <div class="dev-team__media">
-                        <img src="assets/img/fourgroup.png" alt="動画制作チーム" style="width:100%;height:100%;object-fit:cover;">
+
+                    <!-- <div class="dsg-team__media dsg-team__media--pair">
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                    </div> -->
+
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIDEO PRODUCTION TEAM -->
+        <section class="dsg-sec dsg-sec--tint">
+            <div class="dsg__inner">
+                <div class="dsg-team__grid">
+                    <div class="dsg-team__text">
+                        <h2 class="dsg-team__jp">動画制作チーム</h2>
+                        <p class="dsg-team__en">Video Production Team in Myanmar</p>
+                        <p class="dsg-team__desc">A CAN SOLUTIONSは、ミャンマーに動画制作チームを構築・運用しています。日本側のマネジメントのもと、SNS向けの短尺動画編集やコンテンツ制作のサポートを行い、スピードと品質を両立した安定的な制作体制を実現しています。日本とミャンマーの協働を活かし、継続的に価値ある映像コンテンツをお届けします。</p>
+
+                        <div class="dsg-team__points">
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.png" alt="" /></span>
+                                <p class="dsg-tp__d">SNS・広告向けの<br>15〜20秒動画を<br>効率よく制作。</p>
+                            </div>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.png" alt="" /></span>
+                                <p class="dsg-tp__d">企画意図や品質基準を<br>共有し、安定した<br>制作体制を構築。</p>
+                            </div>
+                            <div class="dsg-tp dsg-tp__card">
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.png" alt="" /></span>
+                                <p class="dsg-tp__d">日々の制作を通じて、<br>編集品質とスピードを<br>向上。</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dsg-team__media">
+                        <div class="dsg-team__shot dsg-ph" style="aspect-ratio:16/10"><img src="assets/img/design-team-video1.png" alt="ミャンマーの動画制作チーム"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-    </div>
+    </div><!-- /dsg -->
+
+    <script>
+        // Photos and icons for this page are still being prepared: if a placeholder image
+        // is missing, hide the <img> so the placeholder fill shows instead of a broken icon.
+        document.querySelectorAll('.dsg-ph img, .dsg-icon-ph img').forEach(function (img) {
+            function hide() {
+                img.style.display = 'none';
+                if (img.parentNode.classList.contains('dsg-icon-ph')) img.parentNode.classList.add('is-empty');
+            }
+            img.addEventListener('error', hide);
+            if (img.complete && img.naturalWidth === 0) hide();
+        });
+    </script>
 
 
 
