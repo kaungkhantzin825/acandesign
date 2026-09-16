@@ -528,10 +528,9 @@
 @media (max-width: 768px) {
   .svc-wrap { width: 92%; }
   .dl-hero { width: 92%; }
-  .ai-hero { width: 92%; }
-  .dev-hero { width: 92%; }
-  .ai-inner { width: 92%; }
-  .dev__inner { width: 92%; }
+  /* .ai-hero / .ai-inner / .dev-hero / .dev__inner are widened in the
+     max-width:768px block at the end of this stylesheet — their base rules
+     are declared further down, so an override up here never wins. */
   .svc-grid { grid-template-columns: 1fr; }
   .svc-features-row { grid-template-columns: 1fr; gap: 1.5rem; }
   .svc-feature-item { padding: 0; }
@@ -1002,7 +1001,6 @@
 }
 
 .ai-hero {
-  position: relative;
   width: 86%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -1027,8 +1025,6 @@
 
 .ai-hero__content {
   max-width: 520px;
-  position: relative;
-  z-index: 2;
 }
 
 .ai-hero__title {
@@ -1064,6 +1060,17 @@
   font-weight: 500;
 }
 
+/* Soft white halo so the copy stays legible wherever it overlaps the banner
+   graphic. Invisible against the white parts of the hero, so it is safe to
+   apply at every breakpoint rather than only on mobile. */
+.ai-hero .ai-bc,
+.ai-hero__title,
+.ai-hero__subtitle,
+.ai-hero__lead,
+.ai-hero__desc {
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.95), 0 0 5px rgba(255, 255, 255, 0.9);
+}
+
 .ai-sec {
   padding: 3.5rem 0;
 }
@@ -1079,14 +1086,17 @@
   color: #0038a8;
   margin: 0 0 1rem;
   display: inline-block;
+  /* Without this the 340px ::after underline forces the shrink-to-fit
+     heading wider than its container, scrolling the page sideways below
+     ~370px. */
+  max-width: 100%;
   position: relative;
 }
 
 .ai-sec__title::after {
   content: "";
   display: block;
-  width: 340px;
-  max-width: 90%;
+  width: 450px;
   height: 3px;
   background: #6b7280;
   margin: 0.8rem auto 0;
@@ -1099,7 +1109,7 @@
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.8;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
 }
 
@@ -1132,7 +1142,6 @@
   justify-content: center;
   margin: 0 auto 1.2rem;
   color: #1d4ed8;
-  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.08);
 }
 
 .ai-fcard__ic svg {
@@ -2194,6 +2203,19 @@
         grid-template-columns: 1fr;
         gap: 1.4rem;
     }
+}
+
+/* Mobile gutters for the sections whose base rules are declared above.
+   These must stay at the end of the stylesheet: the base .ai-hero /
+   .ai-inner / .dev-hero / .dev__inner rules have the same specificity, so
+   whichever is declared last wins. */
+@media (max-width: 768px) {
+  /* .ai-hero itself stays full-bleed below 992px; only its inner wrapper
+     takes the gutter, so the copy lines up with the sections below. */
+  .ai-hero .ai-inner { width: 92%; }
+  .ai-inner { width: 92%; }
+  .dev-hero { width: 92%; }
+  .dev__inner { width: 92%; }
 }
   </style>
   <!-- Google Tag Manager -->
