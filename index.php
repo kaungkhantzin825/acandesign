@@ -3389,7 +3389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             flex-wrap: nowrap;
             align-items: stretch;
             justify-content: center;
-            gap: 0.4rem;
+            gap:19px;
         }
 
         .dsg-why__item {
