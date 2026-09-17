@@ -557,7 +557,8 @@
 }
 
 .dev__inner {
-  width: 86%;
+  /* width: 86%; */
+  width: 95%;
   max-width: var(--container-max);
   margin: 0 auto;
   padding: 0;
@@ -723,7 +724,8 @@
 
 /* ── SECTION shell ── */
 .dev-sec { padding: 3.2rem 0; }
-.dev-sec--tint { background: #f5f8fd; }
+.dev-sec--tint {
+   background: #f5f8fd; }
 
 .dev-sec__head { text-align: center; margin-bottom: 2rem; }
 
@@ -3180,7 +3182,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         /* ── HERO (full-bleed background image) ── */
-        .dsg-hero {
+        .dsg-hero { 
+            margin: 0 auto;
+            width: 86%;
             position: relative;
             background-color: #eef4fc;
             background-image: url("assets/img/design-hero2.png");
@@ -3809,6 +3813,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.82) 45%, rgba(255, 255, 255, 0.64) 100%),
                     url("assets/img/design-hero.png");
                 background-position: center, center right;
+            }
+
+            /* .dsg-bg-1 / .dsg-bg-2 are nested wrapper divs that each carry
+               their own fixed-offset 700px background photo. The rule above
+               only fades .dsg-hero's own background, so on mobile these two
+               un-faded photos were still painting on top of it, burying the
+               text. Drop them here so only .dsg-hero's faded photo shows. */
+            .dsg-bg-1,
+            .dsg-bg-2 {
+                background-image: none;
+            }
+
+            .dsg-bg-2::after {
+                display: none;
             }
 
             .dsg-hero .dsg__inner {
