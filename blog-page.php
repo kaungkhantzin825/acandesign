@@ -935,6 +935,7 @@
         <button type="button" class="blog-filter-tab" data-filter="bpo-kpo">BPO/KPO活用ガイド</button>
         <button type="button" class="blog-filter-tab" data-filter="ai-bpo">AI × BPO/KPO</button>
         <button type="button" class="blog-filter-tab" data-filter="myanmar">ミャンマーアウトソーシング</button>
+        <button type="button" class="blog-filter-tab" data-filter="sunday-column">日曜コラム</button>
       </div>
 
       <!-- Left: Blog list -->
@@ -1594,6 +1595,91 @@
             </a>
           </li>
 
+          <!-- New: 日曜コラム -->
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="sunday-deadline.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/bb66.png" alt="「納期に間に合わせたい」と、自分たちで動くチーム ミャンマーのメンバーを見て、改めて思ったこと" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-20">2026/9/20</time>
+                </div>
+                <h3 class="blog-card__title">「納期に間に合わせたい」と、自分たちで動くチーム<br>ミャンマーのメンバーを見て、改めて思ったこと</h3>
+
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#海外BPO</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#ミャンマー人材</span>
+                  <span class="blog-card__tag">#海外アウトソーシング</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#チームマネジメント</span>
+                  <span class="blog-card__tag">#納期管理</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <!-- New: 日曜コラム -->
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="sunday-salary.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/bb77.png" alt="「この給料をもらっていて大丈夫ですか？」 あるメンバーの一言から、改めて考えたこと" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-20">2026/9/20</time>
+                </div>
+                <h3 class="blog-card__title">「この給料をもらっていて大丈夫ですか？」<br>あるメンバーの一言から、改めて考えたこと</h3>
+
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#ミャンマー人材</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#マネジメント</span>
+                  <span class="blog-card__tag">#企業文化</span>
+                  <span class="blog-card__tag">#成長</span>
+                  <span class="blog-card__tag">#コミュニケーション</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <!-- New: AI × BPO/KPO -->
+          <li class="blog-card" data-cat="ai-bpo">
+            <a href="ai-learning-loop.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/bb8.png" alt="AIの間違いを、会社の学びに変える 「なぜ直したのか」を残すと業務はどう変わるのか？" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-22">2026/9/22</time>
+                </div>
+                <h3 class="blog-card__title">AIの間違いを、会社の学びに変える<br>「なぜ直したのか」を残すと業務はどう変わるのか？</h3>
+
+                <div class="blog-card__category">AI × BPO/KPO</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#AI品質管理</span>
+                  <span class="blog-card__tag">#生成AI</span>
+                  <span class="blog-card__tag">#AI運用</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#ナレッジ管理</span>
+                  <span class="blog-card__tag">#業務改善</span>
+                  <span class="blog-card__tag">#Human in the Loop</span>
+                  <span class="blog-card__tag">#品質管理</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#AI学習データ</span>
+                  <span class="blog-card__tag">#プロンプト改善</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
@@ -1614,6 +1700,7 @@
           <li><button type="button" class="blog-category-item" data-filter="bpo-kpo">BPO/KPO活用ガイド<span>&rsaquo;</span></button></li>
           <li><button type="button" class="blog-category-item" data-filter="ai-bpo">AI × BPO/KPO<span>&rsaquo;</span></button></li>
           <li><button type="button" class="blog-category-item" data-filter="myanmar">ミャンマーアウトソーシング<span>&rsaquo;</span></button></li>
+          <li><button type="button" class="blog-category-item" data-filter="sunday-column">日曜コラム<span>&rsaquo;</span></button></li>
         </ul>
       </div>
 

@@ -657,7 +657,7 @@
           </tr>
           <tr>
             <th>設立</th>
-            <td>2025年11月日<br><span style="font-size:0.8rem;color:#6b7280;">※ミャンマー法人は2016年</span></td>
+            <td>2025年11月4日<br><span style="font-size:0.8rem;color:#6b7280;">＊ミャンマー進出は2016年</span></td>
           </tr>
           <tr>
             <th>所在地</th>

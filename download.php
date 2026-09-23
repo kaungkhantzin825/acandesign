@@ -1050,7 +1050,18 @@
 
         
 
-
+ <div class="dl-card">
+          <img src="assets/img/bbb99.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">安いBPOではなく、会社を強くす<br>るBPOを選ぶ</p>
+            <p class="dl-card__desc">AI,BPO,KPOを組み合わせて仕事を改善し、ナ<br>レッジを蓄積し会社の競争力を高めます。</p>
+            <p class="dl-card__meta">PDF/3.7MB</p>
+          </div>
+          <a href="assets/pdf/安いBPOではなく会社を強くするBPOを選ぶ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+          </a>
+        </div>
 
 
       </div>
