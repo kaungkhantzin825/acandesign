@@ -1,16 +1,40 @@
 <style>
-  /* ── Desktop nav gap ── */
-  .site-header__nav {
+  /* ── Header bar layout ──
+     Laid out left-to-right with the button pair pushed right by an auto
+     margin. `space-between` used to dump all spare width *between* the two
+     buttons, so the bar drifted apart when zoomed out and collided when
+     zoomed in. These rules load after each page's own <style>, so they also
+     neutralise the per-page nav spacing overrides. */
+  .site-header__inner {
+    justify-content: flex-start;
     gap: 0.9rem;
   }
 
-  /* Extra breathing room between logo and nav, only once the screen
-     is wide enough to spare it (prevents overflow on tablets/laptops,
-     e.g. iPad Pro at 1024px) */
-  @media (min-width: 1300px) {
+  .site-header__nav {
+    gap: clamp(1rem, 2.2vw, 2.75rem);
+    margin-left: clamp(1rem, 5vw, 8.5rem);
+    margin-right: auto;
+  }
+
+  .site-header__logo,
+  .site-header__cta {
+    flex-shrink: 0;
+  }
+
+  /* Tighten up before the bar runs out of room */
+  @media (max-width: 1200px) {
     .site-header__nav {
-      gap: 2.75rem;
-      margin-left: 8.5rem;
+      gap: 1.1rem;
+      margin-left: 1.25rem;
+    }
+
+    .site-header__nav a {
+      font-size: 14px;
+    }
+
+    .site-header__cta {
+      font-size: 14px;
+      padding: 0.42rem 0.9rem;
     }
   }
 
@@ -110,13 +134,16 @@
     background: #dc2626;
   }
 
-  /* ── Mobile breakpoint ── */
-  @media (max-width: 767px) {
+  /* ── Drawer breakpoint ──
+     The full bar needs ~1000px. Below that the links and both buttons move
+     into the drawer instead of colliding. */
+  @media (max-width: 1023px) {
     .site-header__hamburger { display: flex; }
+    .site-header__nav { display: none; }
     .site-header__cta { display: none; }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .site-nav-drawer { display: none !important; }
     .site-header__hamburger { display: none !important; }
   }
