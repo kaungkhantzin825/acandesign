@@ -11,8 +11,8 @@
   }
 
   .site-header__nav {
-    gap: clamp(1rem, 2.2vw, 2.75rem);
-    margin-left: clamp(1rem, 5vw, 8.5rem);
+    gap: clamp(2.5rem, 2.2vw, 2.75rem);
+    margin-left: clamp(9rem, 5vw, 8.5rem);
     margin-right: auto;
   }
 
@@ -25,7 +25,7 @@
   @media (max-width: 1200px) {
     .site-header__nav {
       gap: 1.1rem;
-      margin-left: 1.25rem;
+      margin-left: 7.25rem;
     }
 
     .site-header__nav a {
