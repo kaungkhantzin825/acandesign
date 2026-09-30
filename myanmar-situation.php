@@ -564,6 +564,11 @@
       .myanmar-dual { flex-direction: column; }
       .ms-stats__grid { flex-direction: column; }
       .ms-stat { min-width: auto; }
+      .ms-stat__icon {
+        width: 110px !important;
+        max-width: 110px !important;
+        margin: 0 auto 0.75rem !important;
+      }
       .ms-highlights__grid { flex-direction: column; gap: 1.5rem; }
       .ms-highlight__icon { width: 56px; height: 56px; }
       .ms-newsletter { min-height: 240px; }
@@ -631,7 +636,7 @@
                  <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/1</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260901.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260901</a></li>
            <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/9</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260909.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260909</a></li>
             <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260916.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260916</a></li>
-
+              <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260923.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260923</a></li>
               </ul>
             </div>
             <div class="myanmar-scrollbar" id="myanmar-scrollbar">

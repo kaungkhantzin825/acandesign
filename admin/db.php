@@ -4,9 +4,9 @@
  */
 
 $DB_HOST = 'localhost';
-$DB_USER = 'root';
-$DB_PASS = '';
-$DB_NAME = 'acanadmin';
+$DB_USER = 'zojtpszw_acanadmin';
+$DB_PASS = 'zojtpszw_acanadmin';
+$DB_NAME = 'zojtpszw_acanadmin';
 
 $conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
 

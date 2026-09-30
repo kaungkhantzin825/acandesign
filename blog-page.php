@@ -1680,6 +1680,37 @@
             </a>
           </li>
 
+
+
+
+          <li class="blog-card" data-cat="ai-bpo">
+            <a href="learning-loop.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/bbb6.png" alt="3か月ぶりのミャンマーで、あらためて感じたこと「任せる」ということは、信じることなのかもしれない" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-09-27">2026/9/27</time>
+                </div>
+                <h3 class="blog-card__title">3か月ぶりのミャンマーで、あらためて感じたこと<br>「任せる」ということは、信じることなのかもしれない</h3>
+
+                <div class="blog-card__category">AI × BPO/KPO</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#チームマネジメント</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#海外拠点</span>
+                  <span class="blog-card__tag">#企業文化</span>
+                  <span class="blog-card__tag">#自走型チーム</span>
+                  <span class="blog-card__tag">#経営</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">

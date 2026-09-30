@@ -5,9 +5,9 @@
  */
 
 $host   = 'localhost';
-$dbUser = 'root';
-$dbPass = '';
-$dbName = 'acanadmin';
+$dbUser = 'zojtpszw_acanadmin';
+$dbPass = 'zojtpszw_acanadmin';
+$dbName = 'zojtpszw_acanadmin';
 
 // Connect directly to the database already created via cPanel
 // (shared hosting DB users generally can't CREATE DATABASE)
