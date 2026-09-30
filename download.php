@@ -36,124 +36,7 @@
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
 
-    /* ══════════════════════════════
-       HERO
-    ══════════════════════════════ */
-    .dl-hero {
-      display: block;
-      width: 86%;
-      margin: 0 auto;
-      background: #ffffff;
-      line-height: 0;
-      padding: 0;
-    }
-
-    .dl-hero__img {
-      display: block;
-      width: 100% !important;
-      max-width: 100% !important;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* LEFT: character */
-    .dl-hero__char {
-      flex-shrink: 0;
-      width: 190px;
-      align-self: flex-end;
-      margin-right: 1.5rem;
-    }
-
-    .dl-hero__char img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* CENTER: text */
-    .dl-hero__text {
-      flex: 1;
-      padding: 2.5rem 2rem 2.5rem 0;
-      min-width: 0;
-    }
-
-    .dl-hero__label {
-      font-family: "Anonymous Pro", monospace;
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #12499e;
-      margin: 0 0 0.1rem;
-      letter-spacing: 0.04em;
-    }
-
-    .dl-hero__title {
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: #1a1a2e;
-      margin: 0 0 1rem;
-      line-height: 1.25;
-    }
-
-    .dl-hero__desc {
-      font-size: 0.84rem;
-      color: #374151;
-      line-height: 1.9;
-      margin: 0 0 1.4rem;
-    }
-
-    .dl-hero__badges {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .dl-hero__badge {
-      display: inline-flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      color: #374151;
-    }
-
-    .dl-hero__badge-icon {
-      width: 32px;
-      height: 32px;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-      background: #fff;
-    }
-
-    .dl-hero__badge-text {
-      line-height: 1.5;
-      padding-top: 0.2rem;
-    }
-
-    /* RIGHT: document images */
-    .dl-hero__docs {
-      flex-shrink: 0;
-      display: flex;
-      align-items: flex-end;
-      gap: 0.6rem;
-      padding: 1.5rem 2rem 0 1rem;
-      align-self: stretch;
-      align-items: center;
-    }
-
-    .dl-hero__doc-img {
-      border-radius: 4px;
-      object-fit: cover;
-    }
-
-    .dl-hero__doc-img:nth-child(1) { width: 140px; }
-    .dl-hero__doc-img:nth-child(2) { width: 155px; }
-    .dl-hero__doc-img:nth-child(3) { width: 80px; border-radius: 50%; }
+    /* Hero banner styles are managed in header/download-header.php */
 
     /* ══════════════════════════════
        BREADCRUMB
@@ -644,21 +527,7 @@
       .dl-contact { padding-left: 0; }
     }
 
-    @media (max-width: 900px) {
-      .dl-hero__char { width: 150px; }
-      .dl-hero__doc-img:nth-child(1) { width: 110px; }
-      .dl-hero__doc-img:nth-child(2) { width: 125px; }
-      .dl-hero__doc-img:nth-child(3) { display: none; }
-    }
-
     @media (max-width: 768px) {
-      /* Hero */
-      .dl-hero { width: 100%; }
-      .dl-hero__inner { flex-wrap: wrap; min-height: auto; }
-      .dl-hero__char { width: 140px; margin: 0 auto 0 0; }
-      .dl-hero__text { padding: 1.5rem 1rem; width: 100%; }
-      .dl-hero__docs { padding: 1rem; gap: 0.5rem; }
-      .dl-hero__badges { flex-direction: row; flex-wrap: wrap; }
 
       /* Breadcrumb */
       .dl-breadcrumb { width: 92%; margin: 0 auto; }
@@ -735,10 +604,9 @@
   <?php include 'menu.php'; ?>
 
   <!-- ── Hero ── -->
-  <section class="dl-hero">
-    <img src="assets/img/asdasd (1) (1).png" alt="営業資料ダウンロード" class="dl-hero__img" />
-  </section>
 
+    <?php include 'header/download-header.php'; ?>
+ 
 
   <!-- ── Breadcrumb ── -->
   <nav class="dl-breadcrumb" aria-label="Breadcrumb">
