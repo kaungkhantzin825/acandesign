@@ -1711,6 +1711,41 @@
           </li>
 
 
+
+
+
+           <li class="blog-card" data-cat="sunday-column">
+            <a href="sunday-support.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/newblog90.png" alt="支えるということ 厳しいミャンマーで、あらためて考えた「一緒に働く」という意味" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-03">2026/10/3</time>
+                </div>
+                <h3 class="blog-card__title">支えるということ</h3>
+
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#ミャンマー</span>
+                  <span class="blog-card__tag">#物価上昇</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#企業経営</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#ミャンマー人材</span>
+                  <span class="blog-card__tag">#給与</span>
+                  <span class="blog-card__tag">#キャリア形成</span>
+                  <span class="blog-card__tag">#海外拠点</span>
+                  <span class="blog-card__tag">#組織作り</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">

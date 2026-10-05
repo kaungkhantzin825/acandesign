@@ -637,6 +637,7 @@
            <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/9</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260909.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260909</a></li>
             <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260916.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260916</a></li>
               <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260923.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260923</a></li>
+               <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 261003.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 261003</a></li>
               </ul>
             </div>
             <div class="myanmar-scrollbar" id="myanmar-scrollbar">
@@ -660,6 +661,7 @@
                 <li class="myanmar-list__item"><span class="myanmar-list__date">2026/8/4</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/2025年8月4日ミャンマーレポート（概況、人材関連） .pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマーレポート26年8月</a></li>
                 <li class="myanmar-list__item"><span class="myanmar-list__date">2026/8/4</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/2025年8月25日ミャンマーレポート（人材関連） .pdf" target="_blank" rel="noopener" class="myanmar-list__link">ﾐｬﾝﾏｰﾚﾎﾟｰﾄ（号外）26年8月</a></li>
                                 <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/1</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/2025年9月1日ミャンマーレポート（概況、人材関連）.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマーレポート26年9月</a></li>
+                                <li class="myanmar-list__item"><span class="myanmar-list__date">2026/8/4</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/2025年10月3日ミャンマーレポート（概況、人材関連） .pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマーレポート26年10月</a></li>
 
               </ul>
             </div>

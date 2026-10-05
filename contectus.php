@@ -218,7 +218,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
       padding: 9px 1.4rem 0;
       font-size: 1.1rem;
       font-weight: 700;
-      color: #1a1a2e;
+      color: #13499e;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -524,7 +524,9 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
       gap: 0.9rem;
     }
 
-    .dl-contact__icon { width: 71px;  flex-shrink: 0; object-fit: contain; }
+    .dl-contact__icon {
+      margin-top: 10px;
+       width: 71px;  flex-shrink: 0; object-fit: contain; }
 
     .dl-contact__label {
       font-size: 15px;
@@ -834,7 +836,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
           <li class="dl-merits__item">
             <img src="assets/img/pim.png" alt="" class="dl-merits__icon" />
             <div class="dl-merits__body">
-              <strong>最適なプランもご提案</strong>
+              <strong>最適なプランをご提案</strong>
               <span>課題に合わせた最適なサービスをご提案<br />します</span>
             </div>
           </li>
@@ -842,7 +844,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
             <img src="assets/img/d867edbb-0ebd-464d-86c2-71884e2f291c.png" alt="" class="dl-merits__icon" />
             <div class="dl-merits__body">
               <strong>PoC・テスト運用も可能</strong>
-              <span>小規模試験から安心して進められます</span>
+              <span>小規模検証から安心して進められます</span>
             </div>
           </li>
           <li class="dl-merits__item">
@@ -860,7 +862,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
         <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text" style="text-align: left;">
-            ミャンマー・日本のリソースを<br>活かし合わせ、<br>業務改革を支援します。
+            ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
           <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>

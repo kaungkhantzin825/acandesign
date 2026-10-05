@@ -86,7 +86,7 @@
       padding: 9px 1.4rem 0;
       font-size: 1.1rem;
       font-weight: 700;
-      color: #1a1a2e;
+      color: #13499e;
       display: flex;
       align-items: center;
       gap: 0.6rem;
@@ -421,7 +421,12 @@
       gap: 0.9rem;
     }
 
-    .dl-contact__icon { width: 71px;  flex-shrink: 0; object-fit: contain; }
+    .dl-contact__icon { 
+      margin-top: 10px;
+      width: 71px;
+        flex-shrink: 0; 
+        object-fit: contain; 
+      }
 
     .dl-contact__label {
       font-size: 15px;
@@ -929,7 +934,25 @@
             ダウンロード
             <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
           </a>
-        </div>
+</div>
+
+
+
+
+
+
+<div class="dl-card">
+          <img src="assets/img/bbb999.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI導入で最初に決めるべきは正解の基準</p>
+            <p class="dl-card__desc">AIで業務を生かすには、何をもって正しいとす<br>るかを明確にすることがすべてのスタートです。</p>
+            <p class="dl-card__meta">PDF/4.1MB</p>
+          </div>
+          <a href="assets/pdf/AI導入で最初に決めるべきは正解の基準.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+          </a>
+</div>
 
 
       </div>
@@ -968,7 +991,7 @@
             <img src="assets/img/b59b74f3-a9ff-4188-80e6-3913ccbf1cb2.png" alt="" class="dl-merits__icon" />
             <div class="dl-merits__body">
               <strong>検討をスムーズに進められる</strong>
-              <span>比較検討や社内承認の資料として<br />ご活用いただけます。</span>
+              <span>比較検討や社内稟議の資料として<br />ご活用いただけます。</span>
             </div>
           </li>
           <li class="dl-merits__item">
@@ -986,7 +1009,7 @@
         <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text" style="text-align: left;">
-            ミャンマー・日本のリソースを<br>活かし合わせ、<br>業務改革を支援します。
+            ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
           <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>

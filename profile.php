@@ -186,8 +186,10 @@
       border: none;
       border-radius: 10px;
       padding: 2rem 1.8rem;
-      width: 630px;
+      width: 100%;
+      max-width: 630px;
       margin: 0 auto;
+      box-sizing: border-box;
     }
     .prof-philosophy__title {
       font-size: 22px;
