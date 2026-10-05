@@ -124,26 +124,6 @@
     }
 
     /* ══════════════════════════════
-       HERO IMAGE (full-width centered)
-    ══════════════════════════════ */
-    .ms-hero-image {
-      width: 88%;
-      max-width: 1240px;
-      margin: 0 auto;
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-    }
-
-    .ms-hero-image img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block !important;
-      margin: 0 auto !important;
-    }
-
-    /* ══════════════════════════════
        SECTION HEAD (shared)
     ══════════════════════════════ */
     .ms-section { margin-top: 3rem; }
@@ -595,10 +575,8 @@
   <!-- ── Site Header ── -->
   <?php include 'menu.php'; ?>
 
-  <!-- ── Hero (breadcrumb + title + description are baked into this image) ── -->
-  <section class="ms-hero-image">
-    <img src="assets/img/myanmar-situtation.png" alt="Myanmar situation ミャンマー情報" />
-  </section>
+  <!-- ── Hero ── -->
+  <?php include 'header/myanmar-situation-header.php'; ?>
 
   <div class="ms-wrap">
 
