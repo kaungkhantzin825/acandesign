@@ -1,8 +1,13 @@
 <?php
 require_once __DIR__ . '/newsletter-mail-config.php';
 require_once __DIR__ . '/subscriber-save.php';
-require_once __DIR__ . '/vendor/autoload.php';
-require_once __DIR__ . '/newsletter-mailer.php';
+$hasMailer = is_file(__DIR__ . '/vendor/autoload.php');
+if ($hasMailer) {
+    require_once __DIR__ . '/vendor/autoload.php';
+    require_once __DIR__ . '/newsletter-mailer.php';
+} else {
+    error_log('newsletter: vendor/autoload.php missing — run composer install');
+}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header('Location: myanmar-situation.php');
@@ -58,8 +63,10 @@ $body .= "――――――――――――――――\r\n\r\n";
 $body .= "※本メールは、A CAN SOLUTIONSのメールマガジンにご登録いただいた方へ自動送信しています。\r\n";
 $body .= "※お心当たりがない場合は、お手数ですが本メールを破棄してください。\r\n";
 
-send_newsletter_mail($email, $subject, $body);
-send_newsletter_mail(NEWSLETTER_ADMIN_EMAIL, $subject, $body);
+if ($hasMailer) {
+    send_newsletter_mail($email, $subject, $body);
+    send_newsletter_mail(NEWSLETTER_ADMIN_EMAIL, $subject, $body);
+}
 
 header('Location: confirm-page.php');
 exit;

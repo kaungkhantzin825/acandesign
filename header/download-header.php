@@ -24,9 +24,8 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
-    aspect-ratio: 2159 / 728;
+    min-height: min(29vw, 425px);
     position: relative;
-    overflow: hidden;
     max-width: 1260px;
     margin: 0 auto;
   }
@@ -214,6 +213,14 @@
     }
   }
 
+  /* Small laptops: the copy runs over the brochure, so extend the wash. */
+  @media (max-width: 1140px) {
+    .dl-banner__wrap::before {
+      background: linear-gradient(90deg, rgba(243,244,248,0.96) 0%, rgba(243,244,248,0.9) 50%, rgba(243,244,248,0.55) 75%, rgba(243,244,248,0.1) 100%);
+    }
+    .dl-banner__badges { flex-wrap: wrap; margin-left: 0; }
+  }
+
   @media (max-width: 680px) {
     .dl-banner {
       width: 100%;
@@ -231,51 +238,52 @@
       background: linear-gradient(90deg, rgba(243,244,248,0.97) 0%, rgba(243,244,248,0.92) 42%, rgba(243,244,248,0.55) 72%, rgba(243,244,248,0.15) 96%);
     }
     .dl-banner__mascot {
-      flex: 0 0 64px;
+      flex: 0 0 84px;
       padding-left: 0;
     }
     .dl-banner__mascot img {
-      width: 64px;
-      max-width: 64px;
+      width: 84px;
+      max-width: 84px;
       height: 100%;
-      max-height: 150px;
+      max-height: 260px;
     }
     .dl-banner__content {
-      max-width: calc(100% - 64px);
-      padding: 0.45rem 0.25rem 0.45rem 0.2rem;
+      max-width: calc(100% - 84px);
+      padding: 1rem 1rem 1rem 0.4rem;
       align-self: center;
     }
     .dl-banner__eyebrow {
-      font-size: 0.78rem;
-      margin: 0 0 0.1rem;
+      font-size: 1.3rem;
+      margin: 0 0 0.2rem;
     }
     .dl-banner__title {
-      font-size: 0.82rem;
-      line-height: 1.25;
-      margin: 0 0 0.25rem;
+      font-size: 1.15rem;
+      line-height: 1.3;
+      margin: 0 0 0.5rem;
       white-space: normal;
     }
     .dl-banner__desc {
-      font-size: 0.5rem;
-      line-height: 1.45;
-      margin: 0 0 0.4rem;
+      font-size: 0.78rem;
+      line-height: 1.7;
+      margin: 0 0 0.75rem;
     }
+    .dl-banner__desc br { display: none; }
     .dl-banner__badges {
       margin-left: 0;
       margin-top: 0;
-      gap: 0.3rem;
+      gap: 0.4rem;
     }
     .dl-banner__badge {
-      padding: 0.3rem 0.4rem;
-      gap: 0.25rem;
-      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
+      gap: 0.4rem;
+      border-radius: 10px;
     }
     .dl-banner__badge-icon img {
-      height: 14px;
+      height: 22px;
     }
     .dl-banner__badge-text {
-      font-size: 0.48rem;
-      line-height: 1.25;
+      font-size: 0.7rem;
+      line-height: 1.35;
     }
   }
 </style>

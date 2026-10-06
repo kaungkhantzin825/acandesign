@@ -39,121 +39,44 @@
     /* ══════════════════════════════
        HERO
     ══════════════════════════════ */
+    /* Text over background image (Canva: HPデザインリニューアル p.6).
+       Sizes use container units so the copy scales with the image. */
     .dl-hero {
-      display: block;
       width: 86%;
       margin: 0 auto;
-      background: #ffffff;
-      line-height: 0;
-      padding: 0;
+      background: #ffffff url("assets/img/blog-hero-bg.png") no-repeat center top / 100% auto;
+      aspect-ratio: 1300 / 455;
+      container-type: inline-size;
     }
 
-    .dl-hero__img {
-      display: block;
-      width: 100% !important;
-      max-width: 100% !important;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
-
-    /* LEFT: character */
-    .dl-hero__char {
-      flex-shrink: 0;
-      width: 190px;
-      align-self: flex-end;
-      margin-right: 1.5rem;
-    }
-
-    .dl-hero__char img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* CENTER: text */
-    .dl-hero__text {
-      flex: 1;
-      padding: 2.5rem 2rem 2.5rem 0;
-      min-width: 0;
+    .dl-hero__content {
+      padding: 2.9cqw 0 0 23.1%;
     }
 
     .dl-hero__label {
-      font-family: "Anonymous Pro", monospace;
-      font-size: 1.7rem;
+      margin: 0;
+      font-size: 2.45cqw;
       font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
       color: #12499e;
-      margin: 0 0 0.1rem;
-      letter-spacing: 0.04em;
     }
 
     .dl-hero__title {
-      font-size: 1.75rem;
-      font-weight: 900;
-      color: #1a1a2e;
-      margin: 0 0 1rem;
-      line-height: 1.25;
+      margin: 0;
+      font-size: 2.15cqw;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #000000;
     }
 
     .dl-hero__desc {
-      font-size: 0.84rem;
-      color: #374151;
-      line-height: 1.9;
-      margin: 0 0 1.4rem;
-    }
-
-    .dl-hero__badges {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .dl-hero__badge {
-      display: inline-flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      font-size: 0.78rem;
+      margin: 6.6cqw 0 0;
+      font-size: max(12px, 1.1cqw);
       font-weight: 700;
-      color: #374151;
+      line-height: 1.6;
+      color: #000000;
     }
-
-    .dl-hero__badge-icon {
-      width: 32px;
-      height: 32px;
-      border: 1.5px solid #cbd5e1;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-      background: #fff;
-    }
-
-    .dl-hero__badge-text {
-      line-height: 1.5;
-      padding-top: 0.2rem;
-    }
-
-    /* RIGHT: document images */
-    .dl-hero__docs {
-      flex-shrink: 0;
-      display: flex;
-      align-items: flex-end;
-      gap: 0.6rem;
-      padding: 1.5rem 2rem 0 1rem;
-      align-self: stretch;
-      align-items: center;
-    }
-
-    .dl-hero__doc-img {
-      border-radius: 4px;
-      object-fit: cover;
-    }
-
-    .dl-hero__doc-img:nth-child(1) { width: 140px; }
-    .dl-hero__doc-img:nth-child(2) { width: 155px; }
-    .dl-hero__doc-img:nth-child(3) { width: 80px; border-radius: 50%; }
 
     /* ══════════════════════════════
        BREADCRUMB
@@ -350,6 +273,8 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      flex: 0 0 364px;
+      min-width: 0;
     }
 
     /* Merits */
@@ -409,29 +334,39 @@
     /* ══════════════════════════════
        COMPACT BLOG CARD (panel list only — home page cards untouched)
     ══════════════════════════════ */
-    .dl-panel .blog-card {
-      border-radius: 0;
-      border: none;
-      border-bottom: 1px solid #eef1f7;
-      padding: 0.7rem 1.4rem;
+    /* Canva: every post is its own outlined, rounded card stacked inside the
+       scroll box (not a flat divided list). */
+    .dl-panel .blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-top: 0;
+      padding: 0.6rem 1.7rem 0.6rem 0.6rem;  /* right gutter clears the scrollbar */
     }
 
-    .dl-panel .blog-card:last-child { border-bottom: none; }
+    .dl-panel .blog-card {
+      border-radius: 8px;
+      border: 1px solid #3a3a3a;
+      padding: 0.35rem 0.6rem 0.35rem 0.35rem;
+      background: #fff;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .dl-panel .blog-card:last-child { border-bottom: 1px solid #3a3a3a; }
 
     .dl-panel .blog-card:hover {
       transform: none;
-      box-shadow: none;
-      border-color: transparent;
-      border-bottom: 1px solid #eef1f7;
+      box-shadow: 0 2px 10px rgba(18, 73, 158, 0.12);
+      border-color: #12499e;
     }
 
     .dl-panel .blog-card__link { gap: 0.9rem; }
 
     .dl-panel .blog-card__image {
-      width: 140px;
-      min-width: 140px;
-      height: 100px;
-      border-radius: 8px;
+      width: 180px;
+      min-width: 180px;
+      height: 82px;
+      border-radius: 4px;
     }
 
     .dl-panel .blog-card__header { padding-top: 0; }
@@ -505,7 +440,7 @@
       background: #f5f6f8;
       padding: 1.25rem 1.5rem;
       border-radius: 8px;
-      width: 364px;
+      width: 100%;
       margin-top: 95px;
     }
 
@@ -652,9 +587,9 @@
     .dl-main-col {
       display: flex;
       flex-direction: column;
-      width: 697px;
+      flex: 0 1 697px;
+      min-width: 0;
       margin-left: 77px;
-      flex-shrink: 0;
     }
 
     /* ══════════════════════════════
@@ -740,7 +675,7 @@
       font-weight: 400;
       color: #000000;
       text-decoration: none;
-      word-break: break-all;
+      overflow-wrap: anywhere;
       font-family: "Noto Sans JP", sans-serif;
     }
 
@@ -813,26 +748,36 @@
       .dl-panel { height: 600px; }
     }
 
-    @media (max-width: 900px) {
-      .dl-hero__char { width: 150px; }
-      .dl-hero__doc-img:nth-child(1) { width: 110px; }
-      .dl-hero__doc-img:nth-child(2) { width: 125px; }
-      .dl-hero__doc-img:nth-child(3) { display: none; }
+    /* Small laptops: shrink the fixed side margin so both columns fit. */
+    @media (max-width: 1300px) {
+      .dl-main-col { margin-left: 0; }
+      .dl-sidebar { flex-basis: 320px; }
     }
 
-    @media (max-width: 768px) {
-      /* Hero */
-      .dl-hero { width: 100%; }
-      .dl-hero__inner { flex-wrap: wrap; min-height: auto; }
-      .dl-hero__char { width: 140px; margin: 0 auto 0 0; }
-      .dl-hero__text { padding: 1.5rem 1rem; width: 100%; }
-      .dl-hero__docs { padding: 1rem; gap: 0.5rem; }
-      .dl-hero__badges { flex-direction: row; flex-wrap: wrap; }
+    /* Tablets: the copy collides with the hero artwork and the sidebar no
+       longer fits beside the list, so switch to the stacked layout. */
+    @media (max-width: 1023px) {
+      /* Banner is too short for the copy: let it grow, show the laptop side
+         and fade the left to white so the text stays legible. */
+      .dl-hero {
+        aspect-ratio: auto;
+        background-image:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.3) 100%),
+          url("assets/img/blog-hero-bg.png");
+        background-size: cover, cover;
+        background-position: center, 80% 20%;
+      }
+      .dl-hero__content { padding: 1.75rem 1.25rem 2rem; }
+      .dl-hero__label { font-size: 1.6rem; }
+      .dl-hero__title { font-size: 1.4rem; }
+      .dl-hero__desc { margin-top: 1rem; font-size: 0.85rem; max-width: 34em; }
+      .dl-hero__desc br { display: none; }
 
       /* Main column */
       .dl-main-col {
         width: 100%;
         margin-left: 0;
+        flex: none;  /* the 697px basis became a fixed height once .dl-body stacks */
       }
 
       /* Breadcrumb */
@@ -845,6 +790,16 @@
         gap: 1rem;
         align-items: stretch;
       }
+
+      /* Sidebar */
+      .dl-sidebar { width: 100%; flex-basis: auto; }
+      .blog-category-box { width: 100%; box-sizing: border-box; margin-top: 0; }
+      .dl-sidebar-cta { width: 100%; margin-top: 0; }
+      .blog-filter-tabs { width: 100%; margin: 0.75rem 0 1rem; }
+    }
+
+    @media (max-width: 768px) {
+      .dl-hero { width: 100%; }
 
       /* Panel */
       .dl-panel {
@@ -861,12 +816,9 @@
         overflow-y: auto;
       }
       .dl-scrollbar { display: block; }
+      .dl-panel .blog-list { padding: 0.5rem 1.4rem 0.5rem 0.4rem; }
+      .dl-panel .blog-card__image { order: -1; width: 100%; min-width: 0; height: 120px; }
 
-      /* Sidebar */
-      .dl-sidebar { width: 100%; }
-      .blog-category-box { width: 100%; box-sizing: border-box; margin-top: 0; }
-      .dl-sidebar-cta { width: 100%; margin-top: 0; }
-      .blog-filter-tabs { width: 100%; margin: 0.75rem 0 1rem; }
 
       /* Contact */
       .dl-contact {
@@ -906,6 +858,14 @@
       .site-footer__link { white-space: nowrap; }
       .site-footer__divider { display: none; }
     }
+
+    /* Contact cards are two fixed 333px columns + 77px offset: too wide for
+       tablets, so share the row instead. */
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .dl-contact__title { padding-left: 1.5rem; }
+      .dl-contact__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0.5rem 1.5rem 0; }
+      .dl-contact__value, .dl-contact__link { font-size: 20px; }
+    }
   </style>
 </head>
 <body>
@@ -915,7 +875,13 @@
 
   <!-- ── Hero ── -->
   <section class="dl-hero">
-    <img src="assets/img/blog-header.png" alt="BLOG" class="dl-hero__img" />
+    <div class="dl-hero__content">
+      <p class="dl-hero__label">BLOG</p>
+      <h1 class="dl-hero__title">ブログ</h1>
+      <p class="dl-hero__desc">
+        AI・BPO・KPO、ミャンマーのビジネス環境や<br />人材活用に関する最新情報、そして弊社の取り組み<br />を発信しています。
+      </p>
+    </div>
   </section>
 
   <!-- ── Main Body ── -->
@@ -1775,7 +1741,7 @@
         <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text" style="text-align: left;">
-            ミャンマー・日本のリソースを<br>活かし合わせ、<br>業務改革を支援します。
+            ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
           <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>

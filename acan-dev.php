@@ -244,6 +244,16 @@
             font-weight: bolder;
         }
 
+        @media (min-width: 641px) and (max-width: 1023px) {
+          /* Tablets: the copy runs over the busy photo — fade the left side. */
+          .dev-hero {
+            background-image:
+              linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
+              url("assets/img/dev-hero.png");
+            background-position: center, center right;
+          }
+        }
+
         @media (max-width: 640px) {
             .dev-hero {
 

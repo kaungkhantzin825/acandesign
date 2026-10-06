@@ -100,22 +100,57 @@
   display: block;
 }
 
+/* Text over background image (Canva: HPデザインリニューアル p.3) */
 .dl-hero {
-  display: block;
   width: 86%;
   margin: 0 auto;
-  background: #ffffff;
-  line-height: 0;
-  padding: 0;
+  background-color: #f4f7fc;
+  background-image: url("assets/img/service-hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
+  aspect-ratio: 1324 / 414;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
 }
 
-.dl-hero__img {
-  display: block;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: auto;
+.dl-hero__content {
+  padding: 0 0 0 3.6%;
+  max-width: 560px;
+}
+
+.dl-hero__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.25rem, 2.15vw, 1.85rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  color: #004aad;
+}
+
+.dl-hero__title {
+  margin: 0 0 0.6rem;
+  font-size: clamp(2.2rem, 3.75vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.4;
+  color: #000000;
+}
+
+.dl-hero__lead {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.05rem, 1.6vw, 1.37rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: #004aad;
+}
+
+.dl-hero__desc {
   margin: 0;
-  padding: 0;
+  font-size: clamp(0.8rem, 1.07vw, 0.92rem);
+  font-weight: 500;
+  line-height: 1.8;
+  color: #000000;
 }
 
 .svc-wrap {
@@ -518,16 +553,41 @@
   width: 49px;
 }
 
+/* Mid widths: the copy starts to overlap the AI illustration. */
+@media (max-width: 1200px) {
+  .dl-hero {
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0) 65%),
+      url("assets/img/service-hero-bg.png");
+    background-position: center, right center;
+  }
+}
+
 @media (max-width: 900px) {
   .svc-grid { grid-template-columns: repeat(2, 1fr); }
   .svc-card__features { grid-template-columns: repeat(2, 1fr); }
   .svc-cta { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
   .svc-cta__actions { width: 100%; max-width: 280px; }
+  .svc-features-row { grid-template-columns: 1fr; gap: 1.25rem; max-width: 560px; margin-inline: auto; }
+  .svc-feature-item + .svc-feature-item { border-left: none; }
 }
 
 @media (max-width: 768px) {
   .svc-wrap { width: 92%; }
-  .dl-hero { width: 92%; }
+  /* Banner is too short to hold the copy: let it grow and fade the left
+     side to white so the text stays legible over the illustration. */
+  .dl-hero {
+    width: 92%;
+    aspect-ratio: auto;
+    min-height: 0;
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.35) 100%),
+      url("assets/img/service-hero-bg.png");
+    background-position: center, 72% center;
+    padding: 2rem 0;
+  }
+  .dl-hero__content { padding: 0 1.25rem; max-width: 100%; }
+  .dl-hero__desc br { display: none; }
   /* .ai-hero / .ai-inner / .dev-hero / .dev__inner are widened in the
      max-width:768px block at the end of this stylesheet — their base rules
      are declared further down, so an override up here never wins. */
@@ -696,6 +756,16 @@
   line-height: 1.7;
   color: var(--dev-muted);
   font-weight: bolder;
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+  /* Tablets: the copy runs over the busy photo — fade the left side. */
+  .dev-hero {
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
+      url("assets/img/dev-hero.png");
+    background-position: center, center right;
+  }
 }
 
 @media (max-width: 640px) {
@@ -956,7 +1026,7 @@
 .prof-contact__label { font-size: 15px; font-weight: 700; color: #13499e; margin: 0 0 0.15rem; }
 .prof-contact__hours { font-size: 13px; color: #9ca3af; margin: 0 0 0.2rem; font-family: "Anonymous Pro", monospace; }
 .prof-contact__value { font-size: 25px; font-weight: 400; color: #000; margin: 0; line-height: 1.2; }
-.prof-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; word-break: break-all; }
+.prof-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; overflow-wrap: anywhere; }
 .prof-contact__link:hover { text-decoration: underline; color: #12499e; }
 
 @media (max-width: 768px) {
@@ -1098,7 +1168,7 @@
 .ai-sec__title::after {
   content: "";
   display: block;
-  width: 450px;
+  width: 450px; max-width: calc(100vw - 2.5rem);
   height: 3px;
   background: #6b7280;
   margin: 0.8rem auto 0;
@@ -1382,12 +1452,15 @@
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
-    background-image: url("assets/img/ai-header-banner.png");
+    background-image:
+      linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(min(60vw, 360px) - 80px), #ffffff min(60vw, 360px)),
+      url("assets/img/ai-header-banner.png") !important;
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 150% auto;
+    /* Artwork as a band across the top (right side = the AI brain), copy below it */
+    background-position: center top, right top;
+    background-size: 100% 100%, auto min(60vw, 360px);
     min-height: 0;
-    padding: 1rem 0 2rem;
+    padding: calc(min(60vw, 360px) - 1.5rem) 0 2rem;
   }
 
   .ai-hero__content {
@@ -1408,22 +1481,22 @@
   }
 
   .ai-hero__title {
-    font-size: 10px;
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
     margin: 0.15rem 0 0.15rem;
   }
 
   .ai-hero__subtitle {
     font-size: 0.95rem;
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.75rem;
   }
 
   .ai-hero__lead {
-    font-size:10px;
-    margin: 0 0 0.4rem;
+    font-size: 0.95rem;
+    margin: 0 0 0.6rem;
   }
 
   .ai-hero__desc {
-    font-size: 9px;
+    font-size: 0.8rem;
   }
 
   .ai-features-box {
@@ -4196,7 +4269,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="service-php-section" id="services">
       <!-- ── Hero Banner ── -->
       <div class="dl-hero">
-        <img src="assets/img/homepage.png" alt="サービス" class="dl-hero__img" />
+        <div class="dl-hero__content">
+          <p class="dl-hero__eyebrow">SERVICE</p>
+          <h2 class="dl-hero__title">サービス</h2>
+          <p class="dl-hero__lead">AI × Humanで、企業の業務を次のステージへ。</p>
+          <p class="dl-hero__desc">
+            AI・データ活用からBPO/KPO、Webサイト開発、デザイン、<br />ミャンマー進出支援まで。<br />日本品質のマネジメントとミャンマーの高度人材を組み合わせ、<br />企業の課題に最適なサービスをご提供します。
+          </p>
+        </div>
       </div>
 
       <div class="svc-wrap">
@@ -5685,6 +5765,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             font-size: 0.74rem;
             line-height: 1.7;
             color: var(--dsg-muted);
+        }
+
+        @media (min-width: 641px) and (max-width: 1023px) {
+          /* Tablets: the copy runs over the photo collage — fade the left side and
+             drop the two extra offset photos (they sit on top of the fade). */
+          .dsg-hero {
+            background-image:
+              linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
+              url("assets/img/design-hero2.png");
+            background-position: center, right center;
+          }
+          .dsg-bg-1,
+          .dsg-bg-2 { background-image: none; }
+          .dsg-bg-2:after { display: none; }
         }
 
         @media (max-width: 640px) {

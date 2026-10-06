@@ -441,6 +441,8 @@
       .svc-card__features { grid-template-columns: repeat(2, 1fr); }
       .svc-cta { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
       .svc-cta__actions { width: 100%; max-width: 280px; }
+      .svc-features-row { grid-template-columns: 1fr; gap: 1.25rem; max-width: 560px; margin-inline: auto; }
+      .svc-feature-item + .svc-feature-item { border-left: none; }
     }
 
     @media (max-width: 768px) {

@@ -740,6 +740,13 @@
       margin-bottom: 0.15rem;
     }
 
+    /* Phones: three columns leave ~60px each — stack them instead. */
+    @media (max-width: 600px) {
+      .why__bottom-bar { grid-template-columns: 1fr; gap: 0.6rem; }
+      .why__bottom-col { padding: 0; }
+      .why__bottom-col:not(:last-child) { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 0.6rem; }
+    }
+
     @media (max-width: 900px) {
       .why__grid {
         grid-template-columns: 1fr;

@@ -200,6 +200,17 @@
       margin: 0 auto;
     }
 
+    /* Keep all five stats on one row down to the phone breakpoint — with
+       flex-wrap the 5th item wrapped alone at ~830–1030px and its icon
+       ballooned to full width. */
+    @media (min-width: 769px) {
+      .ms-stats__grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .ms-stat__icon { max-width: 150px; }
+    }
+
     .ms-stat {
       flex: 1 1 150px;
       text-align: center;
@@ -232,6 +243,7 @@
 
     .ms-stat__value {
       font-size: 0.78rem;
+      font-weight: 700;
       color: #6b7280;
       line-height: 1.6;
       margin: 0;
@@ -299,6 +311,7 @@
     .ms-highlight__desc {
       font-size: 20px;
       font-family: "Anonymous Pro", monospace;
+      font-weight: 700;
       color: #6b7280;
       line-height: 1.8;
       margin: 0;
@@ -539,6 +552,11 @@
     /* ══════════════════════════════
        RESPONSIVE
     ══════════════════════════════ */
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .ms-contact__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .ms-contact__card.firstcard { grid-column: 1 / -1; padding-block: 0; }
+    }
+
     @media (max-width: 768px) {
       .ms-wrap { width: 92%; }
       .myanmar-dual { flex-direction: column; }
@@ -793,6 +811,15 @@
         btn.disabled = true;
         btn.classList.add('is-loading');
         if (label) label.textContent = '送信中...';
+      });
+
+      // Reset the button when the page is restored from the back/forward cache
+      // (otherwise it stays disabled on 送信中... after pressing Back).
+      window.addEventListener('pageshow', function (e) {
+        if (!e.persisted) return;
+        btn.disabled = false;
+        btn.classList.remove('is-loading');
+        if (label) label.innerHTML = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;登録する&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
       });
     });
   </script>

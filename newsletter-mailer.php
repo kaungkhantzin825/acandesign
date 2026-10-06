@@ -18,6 +18,9 @@ function send_newsletter_mail($to, $subject, $body) {
         $mail->SMTPSecure = NEWSLETTER_SMTP_SECURE;
         $mail->Port       = NEWSLETTER_SMTP_PORT;
         $mail->CharSet    = 'UTF-8';
+        // PHPMailer waits up to 300s per connection by default, which left the
+        // signup button stuck on 送信中... when the SMTP host was slow/unreachable.
+        $mail->Timeout    = 15;
 
         $mail->setFrom(NEWSLETTER_SMTP_USERNAME, 'A CAN SOLUTIONS');
         $mail->addAddress($to);

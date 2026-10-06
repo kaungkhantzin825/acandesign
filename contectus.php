@@ -557,7 +557,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
       font-weight: 400;
       color: #000000;
       text-decoration: none;
-      word-break: break-all;
+      overflow-wrap: anywhere;
       font-family: "Noto Sans JP", sans-serif;
     }
 
@@ -627,7 +627,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
        RESPONSIVE
     ══════════════════════════════ */
     @media (min-width: 769px) {
-      .dl-breadcrumb { margin: 0 auto; font-size: 0.78rem; margin-left: 249px; }
+      .dl-breadcrumb { width: auto; margin: 0 1rem 0 249px; font-size: 0.78rem; }
       .dl-panel { margin-left: 77px; width: 697px; min-height: 600px; height: auto; }
       .dl-contact { padding-left: 0; }
     }
@@ -690,6 +690,32 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
       .site-footer__nav { flex-wrap: wrap; justify-content: center; gap: 0.3rem 0.8rem; }
       .site-footer__link { white-space: nowrap; }
       .site-footer__divider { display: none; }
+    }
+
+    /* ── Tablet / small-laptop layout ──
+       The list panel (697px + 77px offset) and sidebar (364px) are fixed
+       widths, which overflow below ~1300px. Let them flex, then stack. */
+    @media (min-width: 769px) and (max-width: 1300px) {
+      .dl-breadcrumb { margin-left: 7%; }
+      .dl-panel { margin-left: 0; width: auto; flex: 0 1 697px; min-width: 0; }
+      .dl-sidebar { flex: 0 0 330px; min-width: 0; }
+      .dl-merits { width: 100%; }
+    }
+    @media (max-width: 1100px) {
+      .dl-breadcrumb { width: 92%; margin: 0 auto; }
+      .dl-body { flex-direction: column; width: 92%; gap: 1rem; align-items: stretch; }
+      .dl-panel { width: 100%; flex: none; }
+      .dl-sidebar { width: 100%; flex: none; }
+      .dl-merits, .dl-sidebar-cta { width: 100%; box-sizing: border-box; }
+      .dl-contact { width: 92%; }
+    }
+
+    /* Contact cards are two fixed 333px columns + 77px offset: too wide for
+       tablets, so share the row instead. */
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .dl-contact__title { padding-left: 1.5rem; }
+      .dl-contact__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0.5rem 1.5rem 0; }
+      .dl-contact__value, .dl-contact__link { font-size: 20px; }
     }
   </style>
 </head>

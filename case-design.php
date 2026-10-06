@@ -752,6 +752,20 @@
             color: var(--dsg-muted);
         }
 
+        @media (min-width: 641px) and (max-width: 1023px) {
+          /* Tablets: the copy runs over the photo collage — fade the left side and
+             drop the two extra offset photos (they sit on top of the fade). */
+          .dsg-hero {
+            background-image:
+              linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
+              url("assets/img/design-hero2.png");
+            background-position: center, right center;
+          }
+          .dsg-bg-1,
+          .dsg-bg-2 { background-image: none; }
+          .dsg-bg-2:after { display: none; }
+        }
+
         @media (max-width: 640px) {
             .dsg-hero {
                 background-image:
