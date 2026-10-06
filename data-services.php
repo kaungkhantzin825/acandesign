@@ -150,7 +150,7 @@
         .ai-sec__title::after {
             content: "";
             display: block;
-            width: 450px;
+            width: 450px; max-width: calc(100vw - 2.5rem);
             height: 3px;
             background: #6b7280;
             margin: 0.8rem auto 0;
@@ -434,12 +434,15 @@
                 width: 100vw;
                 margin-left: calc(50% - 50vw);
                 margin-right: calc(50% - 50vw);
-                background-image: url("assets/img/ai-header-banner.png");
-                background-repeat: no-repeat;
-                background-position: center top;
-                background-size: 150% auto;
-                min-height: 0;
-                padding: 1rem 0 2rem;
+                background-image:
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(min(60vw, 360px) - 80px), #ffffff min(60vw, 360px)),
+                              url("assets/img/ai-header-banner.png");
+                            background-repeat: no-repeat;
+                            /* Artwork as a band across the top (right side = the AI brain), copy below it */
+                            background-position: center top, right top;
+                            background-size: 100% 100%, auto min(60vw, 360px);
+                            min-height: 0;
+                            padding: calc(min(60vw, 360px) - 1.5rem) 0 2rem;
             }
 
             .ai-hero__content {

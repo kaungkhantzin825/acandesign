@@ -106,7 +106,7 @@ $f = [
     .dl-contact__label { font-size: 15px; font-weight: 700; color: #13499e; margin: 0 0 0.15rem; font-family: "Noto Sans JP", sans-serif; }
     .dl-contact__hours { font-size: 13px; color: #9ca3af; margin: 0 0 0.2rem; font-family: "Anonymous Pro", monospace; }
     .dl-contact__value { font-size: 25px; font-weight: 400; color: #000; margin: 0; line-height: 1.2; font-family: "Noto Sans JP", sans-serif; }
-    .dl-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; word-break: break-all; font-family: "Noto Sans JP", sans-serif; }
+    .dl-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; overflow-wrap: anywhere; font-family: "Noto Sans JP", sans-serif; }
     .site-footer { background: white; padding-block: 1.75rem; }
 
     @media (min-width: 769px) {
@@ -129,6 +129,32 @@ $f = [
       .site-footer__nav { flex-wrap: wrap; justify-content: center; gap: 0.3rem 0.8rem; }
       .site-footer__link { white-space: nowrap; }
       .site-footer__divider { display: none; }
+    }
+
+    /* ── Tablet / small-laptop layout ──
+       The list panel (697px + 77px offset) and sidebar (364px) are fixed
+       widths, which overflow below ~1300px. Let them flex, then stack. */
+    @media (min-width: 769px) and (max-width: 1300px) {
+      .dl-breadcrumb { margin-left: 7%; }
+      .dl-panel { margin-left: 0; width: auto; flex: 0 1 697px; min-width: 0; }
+      .dl-sidebar { flex: 0 0 330px; min-width: 0; }
+      .dl-merits { width: 100%; }
+    }
+    @media (max-width: 1100px) {
+      .dl-breadcrumb { width: 92%; margin: 0 auto; }
+      .dl-body { flex-direction: column; width: 92%; gap: 1rem; align-items: stretch; }
+      .dl-panel { width: 100%; flex: none; }
+      .dl-sidebar { width: 100%; flex: none; }
+      .dl-merits, .dl-sidebar-cta { width: 100%; box-sizing: border-box; }
+      .dl-contact { width: 92%; }
+    }
+
+    /* Contact cards are two fixed 333px columns + 77px offset: too wide for
+       tablets, so share the row instead. */
+    @media (min-width: 769px) and (max-width: 1100px) {
+      .dl-contact__title { padding-left: 1.5rem; }
+      .dl-contact__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 0.5rem 1.5rem 0; }
+      .dl-contact__value, .dl-contact__link { font-size: 20px; }
     }
   </style>
 </head>
@@ -235,7 +261,7 @@ $f = [
           </li>
           <li class="dl-merits__item">
             <img src="assets/img/d867edbb-0ebd-464d-86c2-71884e2f291c.png" alt="" class="dl-merits__icon" />
-            <div class="dl-merits__body"><strong>PoC・テスト運用も可能</strong><span>小規模試験から安心して進められます</span></div>
+            <div class="dl-merits__body"><strong>PoC・テスト運用も可能</strong><span>小規模検証から安心して進められます</span></div>
           </li>
           <li class="dl-merits__item">
             <img src="assets/img/290b4bd6-425f-4441-a35e-2cdddda2bd91.png" alt="" class="dl-merits__icon" />
@@ -246,7 +272,7 @@ $f = [
       <div class="dl-sidebar-cta">
         <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
         <div class="dl-sidebar-cta__content">
-          <p class="dl-sidebar-cta__text">ミャンマー・日本のリソースを<br>活かし合わせ、<br>業務改革を支援します。</p>
+          <p class="dl-sidebar-cta__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
           <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>
       </div>

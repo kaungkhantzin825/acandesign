@@ -1692,6 +1692,16 @@ button {
   opacity: 1;
 }
 
+/* Tablets / small laptops: five links + social logos don't fit on one row,
+   so stack them instead of letting the links wrap with stray dividers. */
+@media (min-width: 768px) and (max-width: 1180px) {
+  .site-footer .site-footer__row {
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.9rem;
+  }
+}
+
 /* =========================================================================
    DESKTOP STYLES (≥ 768px)
    Canva デスクトップ版モックアップ準拠 — モバイルとは別レイアウト
@@ -2719,3 +2729,10 @@ button {
     padding-block: 0.6rem;
   }
 }
+/* Contact cards: icon vertically centred against its text (checklist fix) */
+.dl-contact__card,
+.prof-contact__card,
+.ms-contact__card { align-items: center !important; }
+.dl-contact__icon,
+.prof-contact__icon,
+.ms-contact__icon { margin-top: 0 !important; align-self: center; }

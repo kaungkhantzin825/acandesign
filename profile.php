@@ -23,15 +23,36 @@
     a { color: inherit; }
 
     /* ── HERO ── */
+    /* Text over background image (Canva: HPデザインリニューアル p.10).
+       Sizes use container units so the copy scales with the image. */
     .prof-hero {
-      width: 100%;
-      background: #fff;
-      overflow: hidden;
-    }
-    .prof-hero__img {
-      display: block;
       width: 86%;
       margin: 0 auto;
+      background: #f2f2f2 url("assets/img/profile-hero-bg.png") no-repeat center / cover;
+      aspect-ratio: 1237 / 374;
+      container-type: inline-size;
+    }
+    .prof-hero__content { padding: 2.35cqw 0 0 19.8%; }
+    .prof-hero__label {
+      margin: 0;
+      font-size: 2.43cqw;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #1d4ea1;
+    }
+    .prof-hero__title {
+      margin: 1cqw 0 0;
+      font-size: 3.55cqw;
+      font-weight: 700;
+      line-height: 1.3;
+      color: #000;
+    }
+    .prof-hero__desc {
+      margin: 4.5cqw 0 0;
+      font-size: max(12px, 1.09cqw);
+      font-weight: 700;
+      line-height: 1.45;
+      color: #000;
     }
 
     /* ── BREADCRUMB ── */
@@ -583,14 +604,52 @@
     .prof-contact__label { font-size: 15px; font-weight: 700; color: #13499e; margin: 0 0 0.15rem; }
     .prof-contact__hours { font-size: 13px; color: #9ca3af; margin: 0 0 0.2rem; font-family: "Anonymous Pro", monospace; }
     .prof-contact__value { font-size: 25px; font-weight: 400; color: #000; margin: 0; line-height: 1.2; }
-    .prof-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; word-break: break-all; }
+    .prof-contact__link { font-size: 23px; font-weight: 400; color: #000; text-decoration: none; overflow-wrap: anywhere; }
     .prof-contact__link:hover { text-decoration: underline; color: #12499e; }
 
     .site-footer { background: white; padding-block: 1.75rem; }
 
     /* ── RESPONSIVE ── */
+    /* Small laptops / tablets: the CTA banner + two contact cards no longer
+       fit side by side, and the team stats need to wrap. */
+    @media (max-width: 1200px) {
+      .prof-bottom-row { flex-direction: column; }
+      .prof-cta-banner { flex: none; width: 100%; min-height: 220px; }
+      .prof-cta-banner__text { margin-left: 0; }
+      .prof-cta-banner__content { align-items: center; }
+      .prof-cta-banner__btns { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+      .prof-team__stats { padding: 1rem 0.5rem; align-items: stretch; }
+      .prof-team__stat { flex-direction: column; text-align: center; gap: 0.4rem; padding: 0 0.5rem; }
+      .prof-team__stat-content { align-items: center; }
+      .prof-team__stat-label { white-space: normal; }
+      .prof-contact__value, .prof-contact__link { font-size: 20px; }
+    }
+
+    /* Tablets: the side-by-side rows get too narrow for their content. */
+    @media (max-width: 1023px) {
+      .prof-row--stack-md { flex-direction: column; gap: 2rem; }
+      .prof-row--stack-md > div { flex: none !important; width: 100%; }
+      .prof-philosophy { max-width: 100%; }
+      .prof-philosophy__value-desc { font-size: 12px; }
+      .prof-exec__grid { gap: 4rem; }
+    }
+
     @media (max-width: 768px) {
-      .prof-hero__img { width: 100%; }
+      /* Banner is too short for the copy: let it grow, show the sign side
+         and fade the left to white so the text stays legible. */
+      .prof-hero {
+        width: 100%;
+        aspect-ratio: auto;
+        background-image:
+          linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.3) 100%),
+          url("assets/img/profile-hero-bg.png");
+        background-position: center, 78% center;
+      }
+      .prof-hero__content { padding: 1.75rem 1.25rem 2rem; }
+      .prof-hero__label { font-size: 1.5rem; }
+      .prof-hero__title { margin-top: 0.25rem; font-size: 2rem; }
+      .prof-hero__desc { margin-top: 1rem; font-size: 0.85rem; line-height: 1.7; }
+      .prof-hero__desc br { display: none; }
       .prof-breadcrumb { width: 92%; }
       .prof-wrap { width: 92%; }
       .prof-row { flex-direction: column; gap: 1.5rem; }
@@ -601,6 +660,8 @@
       .prof-team__stats { flex-direction: column; gap: 0; padding: 1rem; }
       .prof-team__stat { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.3); padding: 1rem 0.5rem; }
       .prof-team__stat:last-child { border-bottom: none; }
+      .prof-team__stat { flex-direction: row; text-align: left; gap: 0.8rem; }
+      .prof-team__stat-content { align-items: flex-start; }
       .prof-team__stat-icon { width: 45px; height: 45px; }
       .prof-team__stat-title { font-size: 14px; }
       .prof-team__stat-num { font-size: 18px; }
@@ -630,7 +691,11 @@
 
 <!-- Hero -->
 <section class="prof-hero">
-  <img src="assets/img/profile.png" alt="会社情報" class="prof-hero__img" />
+  <div class="prof-hero__content">
+    <p class="prof-hero__label">Company</p>
+    <h1 class="prof-hero__title">会社情報</h1>
+    <p class="prof-hero__desc">AI×Human≒Beyond Outsourcingを掲げ、<br />日本品質のマネジメントとミャンマーの高度人材、<br />日本のリソースを組み合わせ、企業の業務変革を支援します。</p>
+  </div>
 </section>
 
 <!-- Breadcrumb -->
@@ -731,7 +796,7 @@
   </div><!-- /row1 -->
 
   <!-- ROW 2: 経営理念 (left) + 選ばれる理由 (right) -->
-  <div class="prof-row prof-row--wide-gap">
+  <div class="prof-row prof-row--wide-gap prof-row--stack-md">
 
     <!-- 経営理念 -->
     <div class="prof-col-half">
@@ -803,7 +868,7 @@
   </div><!-- /row2 -->
 
   <!-- ROW 3: 沿革 + チーム紹介 -->
-  <div class="prof-row">
+  <div class="prof-row prof-row--stack-md">
 
     <!-- 沿革 -->
     <div class="prof-col-half">
