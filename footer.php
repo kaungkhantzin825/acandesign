@@ -27,3 +27,6 @@
     </p>
   </div>
 </footer>
+
+<!-- AI Chat Bot Widget -->
+<script src="https://acanchatbot.web.app/embed.js" defer></script>
