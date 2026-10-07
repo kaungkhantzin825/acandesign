@@ -4931,6 +4931,43 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- のページ。モバイルでは hero__mobile 側に表示済みのためここ -->
     <!-- では非表示。                                                  -->
     <!-- ========================================================== -->
+
+
+    <section class="hero" id="top" aria-labelledby="hero-title-m">
+      <!-- mobile-only hero -->
+      <div class="hero__mobile" aria-hidden="false" bis_skin_checked="1">
+        <p class="hero__pre">
+          <span class="hero__pre-inner">Benefit from our tried and tested solutions.</span>
+        </p>
+        <h1 class="hero__title" id="hero-title-m">
+          <span class="hero__title-line">
+            <span class="hero__title-word" data-text="Grow">GROW</span>
+            <span class="hero__title-word" data-text="Your">YOUR</span>
+          </span>
+          <span class="hero__title-line">
+            <span class="hero__title-word" data-text="Company">COMPANY</span>
+          </span>
+        </h1>
+        <p class="hero__sub">
+          <span class="hero__sub-inner">Your Trusted Partner in<br>Digital Transformation</span>
+        </p>
+        <p class="hero__company">
+          <span class="hero__company-inner">
+            <img src="assets/img/logo.webp" alt="" class="hero__logo" width="40" height="40">
+            <span>A CAN SOLUTIONS Co.,Ltd.</span>
+          </span>
+        </p>
+      </div>
+
+      <!-- desktop-only hero: small logo intro -->
+      <div class="hero__desktop" aria-hidden="true" bis_skin_checked="1">
+        <img src="assets/img/logo.webp" alt="" class="hero__desktop-logo reveal reveal--leaf reveal--ready is-visible" width="200" height="200">
+        <p class="hero__desktop-name reveal reveal--delay-1 reveal--ready is-visible"><span class="reveal__inner">A CAN SOLUTIONS</span></p>
+       
+      </div>
+    </section>
+
+    
    <section class="home-hero" id="top">
       <div class="home-hero__inner">
         <div class="home-hero__left">
