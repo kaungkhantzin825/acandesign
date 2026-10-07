@@ -2284,6 +2284,26 @@
    These must stay at the end of the stylesheet: the base .ai-hero /
    .ai-inner / .dev-hero / .dev__inner rules have the same specificity, so
    whichever is declared last wins. */
+/* Tablets (641–992px): keep the desktop composition — copy on the left over
+   the faded artwork, brain on the right — instead of the stacked phone band,
+   which left a tall image strip with the copy squeezed underneath it. */
+@media (min-width: 641px) and (max-width: 992px) {
+  .ai-hero {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:
+      linear-gradient(90deg, #ffffff 0%, #ffffff 38%, rgba(255, 255, 255, 0.85) 52%, rgba(255, 255, 255, 0) 80%),
+      url("assets/img/ai-header-banner.png") !important;
+    background-position: center, 70% center;
+    background-size: cover, cover;
+    min-height: 420px;
+    padding: 2.5rem 0;
+  }
+  .ai-hero .ai-inner { width: 100%; }
+  .ai-hero__content { max-width: 56%; padding: 0 0 0 1.5rem; }
+}
+
 @media (max-width: 768px) {
   /* .ai-hero itself stays full-bleed below 992px; only its inner wrapper
      takes the gutter, so the copy lines up with the sections below. */
@@ -5776,9 +5796,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               url("assets/img/design-hero2.png");
             background-position: center, right center;
           }
-          .dsg-bg-1,
-          .dsg-bg-2 { background-image: none; }
+          /* keep the designer photo (it IS the hero) — just shrink it to the
+             right-hand side so the copy has room on the left */
+          .dsg-bg-1 { background-image: none; }
+          .dsg-bg-2 {
+            background-size: min(44vw, 400px);
+            background-position: right 0 top 1.5rem;
+          }
           .dsg-bg-2:after { display: none; }
+          .dsg-hero__content { max-width: 54%; }
+          .dsg-hero__lead br, .dsg-hero__desc br { display: none; }
         }
 
         @media (max-width: 640px) {
