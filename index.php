@@ -4900,28 +4900,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="home-hero__services">
           <div class="home-hero__service home-hero__service--annotation reveal">
             <div class="home-hero__service-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">psychology</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xea4a;</span>
             </div>
             <span class="home-hero__service-label">AIアノテーション</span>
           </div>
-          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></span>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
           <div class="home-hero__service home-hero__service--bpo reveal reveal--delay-1">
             <div class="home-hero__service-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">headset_mic</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe311;</span>
             </div>
             <span class="home-hero__service-label">KPO/BPO</span>
           </div>
-          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></span>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
           <div class="home-hero__service home-hero__service--myanmar reveal reveal--delay-2">
             <div class="home-hero__service-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">groups</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xf233;</span>
             </div>
             <span class="home-hero__service-label">ミャンマー人材</span>
           </div>
-          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">chevron_right</span></span>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
           <div class="home-hero__service home-hero__service--dev reveal reveal--delay-3">
             <div class="home-hero__service-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">code</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe86f;</span>
             </div>
             <span class="home-hero__service-label">システム開発</span>
           </div>
@@ -4930,7 +4930,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="home-hero__features">
           <div class="home-hero__feature reveal">
             <span class="home-hero__feature-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">schedule</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xefd6;</span>
             </span>
             <div>
               <p class="home-hero__feature-title">365日24時間対応</p>
@@ -4939,7 +4939,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="home-hero__feature reveal reveal--delay-1">
             <span class="home-hero__feature-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">verified</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xef76;</span>
             </span>
             <div>
               <p class="home-hero__feature-title">日本品質</p>
@@ -4948,7 +4948,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="home-hero__feature reveal reveal--delay-2">
             <span class="home-hero__feature-icon">
-              <span class="material-symbols-outlined" aria-hidden="true">handshake</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xebcb;</span>
             </span>
             <div>
               <p class="home-hero__feature-title">ハイブリッド体制</p>
@@ -4964,9 +4964,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               class="home-hero__video" 
               autoplay 
               muted 
-              loop 
+              loop
               playsinline
-              poster="assets/img/video-poster.jpg"
             >
               <source src="assets/video/acansol02.mp4" type="video/mp4">
               お使いのブラウザは動画タグをサポートしていません。
@@ -5034,7 +5033,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="home-asks__grid">
           <button type="button" class="home-ask reveal" data-chat="AIアノテーションって何ですか？">
             <span class="home-ask__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">chat</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe0c9;</span>
             </span>
             <p class="home-ask__title">AIアノテーションって何ですか？</p>
             <p class="home-ask__body">サービス内容や事例をわかりやすくご説明します。</p>
@@ -5042,7 +5041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <button type="button" class="home-ask reveal reveal--delay-1" data-chat="AIアノテーションを5万件お願いしたいです。見積もりをください。">
             <span class="home-ask__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">request_quote</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xf1b6;</span>
             </span>
             <p class="home-ask__title">見積もりをお願いしたい。</p>
             <p class="home-ask__body">必要な情報をヒアリングし、概算費用をご提示します。</p>
@@ -5050,7 +5049,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <button type="button" class="home-ask reveal reveal--delay-2" data-chat="ミャンマーの体制について知りたいです。">
             <span class="home-ask__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">public</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe80b;</span>
             </span>
             <p class="home-ask__title">ミャンマーの体制について知りたい。</p>
             <p class="home-ask__body">拠点情報やセキュリティ体制をご案内します。</p>
@@ -5058,7 +5057,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <button type="button" class="home-ask reveal reveal--delay-3" data-chat="契約から納品までの流れを教えてください。">
             <span class="home-ask__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">account_tree</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe97a;</span>
             </span>
             <p class="home-ask__title">導入までの流れを教えてほしい。</p>
             <p class="home-ask__body">ご契約から納品までの流れを説明します。</p>
@@ -5066,7 +5065,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <button type="button" class="home-ask reveal reveal--delay-3" data-chat="資料をダウンロードしたいです。">
             <span class="home-ask__icon">
-              <span class="material-symbols-outlined" aria-hidden="true">description</span>
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe873;</span>
             </span>
             <p class="home-ask__title">資料をダウンロードしたい。</p>
             <p class="home-ask__body">各種資料をすぐにダウンロードできます。</p>
