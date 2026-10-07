@@ -1483,7 +1483,7 @@ button {
 
 /* ---------- 1. 既定: マスク wipe-up（GROW YOUR COMPANY と同じ） ---------- */
 .reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf) {
-  overflow: hidden;
+  overflow: ;
 }
 
 .reveal:not(.reveal--pop):not(.reveal--slide-l):not(.reveal--slide-r):not(.reveal--leaf)>* {

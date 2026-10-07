@@ -14,6 +14,33 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script>
+    (function () {
+      var reveal = function () {
+        document.documentElement.classList.add('ms-fonts-ready');
+      };
+      if (window.FontFace && document.fonts && document.fonts.load) {
+        document.fonts.load('400 24px "Material Symbols Outlined"').then(function () {
+          // load() can resolve slightly before the glyphs are actually
+          // paintable; confirm with check() before revealing.
+          if (document.fonts.check('24px "Material Symbols Outlined"')) {
+            reveal();
+          } else {
+            setTimeout(reveal, 250);
+          }
+        }, function () {
+          // load() can reject almost instantly for reasons unrelated to the
+          // download actually finishing — don't treat that as "ready",
+          // just fall through to the safety-net timeout below.
+        });
+      } else {
+        reveal();
+      }
+      // Absolute safety net so icons never stay hidden forever even if the
+      // above never fires (slow network, blocked request, etc.).
+      setTimeout(reveal, 4000);
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-P0PTLK09E6"></script>
 <script>
@@ -31,6 +58,8 @@
     gap: 1rem;
     margin-top: -1px;
 }
+
+
 .site-header__nav a {
     text-decoration: none;
     color: var(--color-ink);
@@ -4192,6 +4221,663 @@
             margin-left: 0;
         }
     }
+
+    /* ══════════════════════════════════════════
+       MATERIAL SYMBOLS (self-hosted icon font)
+       ══════════════════════════════════════════ */
+    @font-face {
+        font-family: "Material Symbols Outlined";
+        font-style: normal;
+        font-weight: 300 700;
+        font-display: swap;
+        src: url("assets/fonts/material-symbols-outlined.woff2") format("woff2");
+    }
+
+    .material-symbols-outlined {
+        font-family: "Material Symbols Outlined";
+        font-weight: normal;
+        font-style: normal;
+        display: inline-block;
+        line-height: 1;
+        letter-spacing: normal;
+        text-transform: none;
+        white-space: nowrap;
+        word-wrap: normal;
+        direction: ltr;
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 40;
+        -webkit-user-select: none;
+        user-select: none;
+        /* Hide the raw ligature keyword (e.g. "chevron_right") until the
+           self-hosted font has actually loaded, instead of flashing it as
+           plain text — see the ms-fonts-ready loader script below. */
+        opacity: 0;
+    }
+
+    html.ms-fonts-ready .material-symbols-outlined {
+        opacity: 1;
+        transition: opacity 0.2s ease;
+    }
+
+    /* ══════════════════════════════════════════
+       HOME HERO
+       ══════════════════════════════════════════ */
+    .home-hero {
+        width: 100%;
+        min-height: calc(100vh - 60px);
+        padding: 1rem 0;
+        background: #ffffff;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+    }
+
+    .home-hero__inner {
+        width: 86%;
+        max-width: 1480px;
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        gap: 3.5rem;
+    }
+
+    .home-hero__left {
+        flex: 1 1 0;
+        min-width: 0;
+    }   
+
+    .home-hero__title {
+        font-size: clamp(1.9rem, 4.4vw, 54px);
+        font-weight: 900;
+        line-height: 1.18;
+        color: #0a0f2e;
+        margin: 0 0 0.7rem;
+        letter-spacing: -0.01em;
+    }
+
+    .home-hero__accent--ai {
+        color: #1546A0;
+    }
+
+    .home-hero__accent--human {
+        color: #e8483c;
+    }
+
+    .home-hero__desc {
+        font-size: 0.98rem;
+        line-height: 1.6;
+        color: #5b6472;
+        margin: 0 0 1rem;
+        max-width: 640px;
+    }
+
+    /* ── Service pills row ── */
+    .home-hero__services {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 1.1rem;
+        flex-wrap: wrap;
+    }
+
+    .home-hero__service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        text-align: center;
+        flex: 0 0 auto;
+        transition: transform 0.3s ease;
+    }
+
+    .home-hero__service:hover {
+        transform: translateY(-8px);
+    }
+
+    .home-hero__service:hover .home-hero__service-icon {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+
+    .home-hero__arrow {
+        flex-shrink: 0;
+        color: #d1d5db;
+        margin: 0 0.5rem 1.1rem;
+    }
+
+    .home-hero__arrow svg {
+        width: 16px;
+        height: 16px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .home-hero__arrow .material-symbols-outlined {
+        font-size: 20px;
+        color: currentColor;
+    }
+
+    .home-hero__service-icon {
+        width: 64px;
+        height: 64px;
+        border-radius: 18px;
+        background: #f8f9fb;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .home-hero__service-icon svg {
+        width: 28px;
+        height: 28px;
+        stroke-width: 2;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .home-hero__service-icon .material-symbols-outlined {
+        font-size: 28px;
+    }
+
+    .home-hero__service-icon svg,
+    .home-hero__service-icon .material-symbols-outlined { color: #1546a0; stroke: #1546a0; }
+
+    .home-hero__service-label {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #1f2937;
+        white-space: nowrap;
+    }
+
+    /* ── Feature badges row ── */
+    .home-hero__features {
+        display: flex;
+        background: #ffffff;
+        border: 1px solid #e5e9f0;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+   .home-hero__feature {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.45rem;
+    padding: 0.5rem 1.2rem;
+    border-right: 1px solid #e5e9f0;
+}
+
+    .home-hero__feature:last-child {
+        border-right: none;
+    }
+
+    .home-hero__feature-icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        border-radius: 50%;
+        background: #eef2f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-hero__feature-icon svg {
+        width: 26px;
+        height: 26px;
+        stroke: #0a5cff;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .home-hero__feature-icon .material-symbols-outlined {
+        font-size: 26px;
+        color: #0a5cff;
+    }
+
+    .home-hero__feature-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #1a1a2e;
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    .home-hero__feature-desc {
+        font-size: 0.78rem;
+        color: #9ca3af;
+        margin: 0;
+        line-height: 1.5;
+    }
+
+    /* ── Right: placeholder visual panel ── */
+    .home-hero__right {
+        /* flex: 0 0 42%; */
+            flex: 0 2 39%;
+        max-width: 42%;
+        position: relative;
+    }
+
+    .home-hero__panel {
+        position: relative;
+        width: 100%;
+        /* aspect-ratio: 4 / 3.4; */
+        max-height: calc(206vh - 230px);
+
+        border-radius: 28px;
+        background: linear-gradient(150deg, #123a80, #1e5bbf 60%, #2a7fd4);
+            box-shadow: 0 0 90px -11px rgba(16, 42, 82, 0.4);
+        overflow: hidden;
+    }
+
+    .home-hero__video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        border-radius: 28px;
+    }
+
+    .home-hero__panel-mute {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(40, 44, 56, 0.55);
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        z-index: 10;
+    }
+
+    .home-hero__panel-mute:hover {
+        background: rgba(40, 44, 56, 0.75);
+    }
+
+    .home-hero__panel-mute svg {
+        width: 18px;
+        height: 18px;
+        stroke: #fff;
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    @media (max-width: 1140px) {
+        .home-hero__inner { gap: 2rem; }
+        .home-hero__service-icon { width: 68px; height: 68px; }
+        .home-hero__service-icon svg { width: 26px; height: 26px; }
+        .home-hero__service-icon .material-symbols-outlined { font-size: 26px; }
+    }
+
+    @media (max-width: 960px) {
+        .home-hero__inner { flex-direction: column; }
+        .home-hero__right { max-width: 100%; width: 100%; }
+        .home-hero__panel { aspect-ratio: 3 / 4; max-width: 420px; margin: 0 auto; }
+    }
+
+    @media (max-width: 680px) {
+        .home-hero { padding: 2.25rem 0 2rem; }
+        .home-hero__services {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem 1rem;
+        }
+        .home-hero__arrow { display: none; }
+        .home-hero__service-icon { width: 60px; height: 60px; margin: 0 auto; }
+        .home-hero__service-icon svg { width: 24px; height: 24px; }
+        .home-hero__service-icon .material-symbols-outlined { font-size: 24px; }
+        .home-hero__service-label { font-size: 0.8rem; }
+        .home-hero__features { flex-direction: column; }
+        .home-hero__feature {
+            border-right: none;
+            border-bottom: 1px solid #e5e9f0;
+        }
+        .home-hero__feature:last-child {
+            border-bottom: none;
+        }
+    }
+
+    /* ══════════════════════════════════════════
+       AI ASSISTANT STEPS (こんなご相談にお答えします)
+       ══════════════════════════════════════════ */
+    .home-ai-steps {
+        width: 100%;
+        padding: 4rem 0 4.5rem;
+        background: #ffffff;
+    }
+
+    .home-ai-steps__inner {
+        width: 86%;
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .home-ai-steps__title {
+        font-size: clamp(1.8rem, 3.2vw, 2.625rem);
+        font-weight: 900;
+        text-align: center;
+        color: #0a0f2e;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+
+    .home-ai-steps__title em {
+        font-style: normal;
+        color: #dc2626;
+    }
+
+    .home-ai-steps__desc {
+        font-size: 0.95rem;
+        text-align: center;
+        color: #6b7280;
+        margin: 0 0 2.5rem;
+    }
+
+    .home-ai-steps__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.1rem;
+    }
+
+    .home-ai-step {
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 14px;
+    padding: 1.6rem 0.3rem;
+    text-align: center;
+}
+
+    .home-ai-step__num {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #1546a0, #0f3576);
+        color: #ffffff;
+        font-size: 26px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.1rem;
+    }
+
+    .home-ai-step__title {
+        font-size: 1rem;
+        font-weight: 800;
+        color: #0a0f2e;
+        margin: 0 0 0.5rem;
+        line-height: 1.4;
+    }
+
+    .home-ai-step__desc {
+        font-size: 0.82rem;
+        color: #6b7280;
+        margin: 0;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 1080px) {
+        .home-ai-steps__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 680px) {
+        .home-ai-steps { padding: 3rem 0 3.5rem; }
+        .home-ai-steps__title { font-size: clamp(24px, 6.5vw, 32px); }
+        .home-ai-steps__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 420px) {
+        .home-ai-steps__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ══════════════════════════════════════════
+       こんなご相談にお答えします (chat prompt cards)
+       ══════════════════════════════════════════ */
+    .home-asks {
+        width: 100%;
+        padding: 4rem 0 4.5rem;
+        background: linear-gradient(180deg, rgba(242,246,252,0.55), rgba(242,246,252,0.95));
+    }
+
+    .home-asks__inner {
+        width: 86%;
+        max-width: 1320px;
+        margin: 0 auto;
+    }
+
+    .home-asks__title {
+        font-size: clamp(1.8rem, 3.2vw, 2.625rem);
+        font-weight: 900;
+        text-align: center;
+        color: #0a0f2e;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+
+    .home-asks__title em {
+        font-style: normal;
+        color: #e02b2b;
+    }
+
+    .home-asks__desc {
+        font-size: 0.95rem;
+        text-align: center;
+        color: #5a6b80;
+        margin: 0 0 2.5rem;
+    }
+
+    .home-asks__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1.1rem;
+    }
+
+    .home-ask {
+        background: #ffffff;
+        border: 1px solid #d8e0ec;
+        border-radius: 20px;
+        padding: 1.5rem 1rem 1.25rem;
+        text-align: center;
+        font-family: inherit;
+        cursor: pointer;
+        width: 100%;
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease;
+    }
+
+    .home-ask:hover {
+        transform: translateY(-6px);
+        border-color: #1546a0;
+        box-shadow: 0 18px 36px rgba(21, 70, 160, 0.12);
+    }
+
+    .home-ask:focus-visible {
+        outline: 2px solid #1546a0;
+        outline-offset: 2px;
+    }
+
+    .home-ask__icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto 0.9rem;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(21, 70, 160, 0.08);
+    }
+
+    .home-ask__icon svg {
+        width: 32px;
+        height: 32px;
+        stroke: #1546a0;
+        fill: none;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    .home-ask__icon .material-symbols-outlined {
+        font-size: 40px;
+        color: #1546a0;
+    }
+
+    .home-ask__title {
+        font-size: 0.9rem;
+        font-weight: 800;
+        color: #0f3576;
+        margin: 0 0 0.5rem;
+        letter-spacing: -0.01em;
+        line-height: 1.4;
+    }
+
+    .home-ask__body {
+        font-size: 0.78rem;
+        color: #5a6b80;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+    @media (max-width: 1080px) {
+        .home-asks__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 680px) {
+        .home-asks { padding: 3rem 0 3.5rem; }
+        .home-asks__title { font-size: clamp(24px, 6.5vw, 32px); }
+        .home-asks__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 420px) {
+        .home-asks__grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ══════════════════════════════════════════
+       AIアシスタントの主な機能
+       ══════════════════════════════════════════ */
+    .home-features {
+        width: 100%;
+        padding: 4rem 0 4.5rem;
+        background: #ffffff;
+    }
+
+    .home-features__inner {
+        width: 86%;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .home-features__title {
+        font-size: clamp(1.8rem, 3.2vw, 2.625rem);
+        font-weight: 900;
+        text-align: center;
+        color: #0a0f2e;
+        margin: 0 0 2.5rem;
+        letter-spacing: -0.01em;
+    }
+
+    .home-features__title em {
+        font-style: normal;
+        color: #e02b2b;
+    }
+
+    @media (max-width: 680px) {
+        .home-features__title { font-size: clamp(24px, 6.5vw, 32px); }
+    }
+
+    .home-features__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .home-feature {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        color: #0a0f2e;
+        padding: 1.4rem 1rem;
+        border-radius: 18px;
+        background: #ffffff;
+        border: 1px solid #d8e0ec;
+        transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .home-feature:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(21, 70, 160, 0.1);
+    }
+
+    .home-feature__check {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(22, 163, 74, 0.1);
+        flex-shrink: 0;
+    }
+
+    .home-feature__check svg {
+        display: block;
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+        stroke: #16a34a;
+        fill: none;
+        stroke-width: 2.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    @media (min-width: 640px) {
+        .home-features__grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+    }
+
+    @media (min-width: 960px) {
+        .home-features__grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+    }
   </style>
   <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -4216,39 +4902,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- PC 版: ロゴ + "A CAN SOLUTIONS" を中央に静かに配置           -->
     <!-- 両方の HTML をマークアップし CSS で表示切替する。           -->
     <!-- ========================================================== -->
-    <section class="hero" id="top" aria-labelledby="hero-title-m">
-      <!-- mobile-only hero -->
-      <div class="hero__mobile" aria-hidden="false">
-        <p class="hero__pre">
-          <span class="hero__pre-inner">Benefit from our tried and tested solutions.</span>
-        </p>
-        <h1 class="hero__title" id="hero-title-m">
-          <span class="hero__title-line">
-            <span class="hero__title-word" data-text="Grow">GROW</span>
-            <span class="hero__title-word" data-text="Your">YOUR</span>
-          </span>
-          <span class="hero__title-line">
-            <span class="hero__title-word" data-text="Company">COMPANY</span>
-          </span>
-        </h1>
-        <p class="hero__sub">
-          <span class="hero__sub-inner">Your Trusted Partner in<br />Digital Transformation</span>
-        </p>
-        <p class="hero__company">
-          <span class="hero__company-inner">
-            <img src="assets/img/logo.webp" alt="" class="hero__logo" width="40" height="40" />
-            <span>A CAN SOLUTIONS Co.,Ltd.</span>
-          </span>
-        </p>
-      </div>
-
-      <!-- desktop-only hero: small logo intro -->
-      <div class="hero__desktop" aria-hidden="true">
-        <img src="assets/img/logo.webp" alt="" class="hero__desktop-logo reveal" width="200" height="200" />
-        <p class="hero__desktop-name reveal reveal--delay-1">A CAN SOLUTIONS</p>
-        <p class="hero__desktop-tag reveal reveal--delay-2">Grow Your Company</p>
-      </div>
-    </section>
+   
 
     <!-- ========================================================== -->
     <!-- HERO MARKETING (desktop only)                                -->
@@ -4257,32 +4911,222 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- のページ。モバイルでは hero__mobile 側に表示済みのためここ -->
     <!-- では非表示。                                                  -->
     <!-- ========================================================== -->
-    <section class="hero-marketing" aria-labelledby="hero-title-d">
-      <div class="hero-marketing__inner">
-        <p class="hero-marketing__pre">
-          <span class="hero-marketing__pre-inner">Benefit from our tried and tested solutions.</span>
-        </p>
-        <h2 class="hero-marketing__title" id="hero-title-d">
-          <span class="hero-marketing__title-line">
-            <span class="hero-marketing__title-word" data-text="Grow">GROW</span>
-            <span class="hero-marketing__title-word" data-text="Your">YOUR</span>
-          </span>
-          <span class="hero-marketing__title-line">
-            <span class="hero-marketing__title-word" data-text="Company">COMPANY</span>
-          </span>
-        </h2>
-        <p class="hero-marketing__sub reveal">
-          <span class="reveal__inner">Your Trusted Partner in Digital Transformation</span>
-        </p>
-        <p class="hero-marketing__company reveal reveal--delay-1">
-          <span class="reveal__inner">
-            <img src="assets/img/logo.webp" alt="" class="hero-marketing__logo" width="48" height="48" />
-            <span>A CAN SOLUTIONS Co.,Ltd.</span>
-          </span>
-        </p>
+   <section class="home-hero" id="top">
+      <div class="home-hero__inner">
+        <div class="home-hero__left">
+        <h1 class="home-hero__title reveal reveal--pop"><span class="home-hero__accent--ai">AI</span>と<span class="home-hero__accent--human">人</span>の力で、<br>ビジネスの未来をつくる。</h1>
+        <p class="home-hero__desc reveal reveal--pop reveal--delay-1">AIアノテーション・KPO/BPO・ミャンマー人材・システム開発で<br>お客様の課題解決をワンストップで支援します。</p>
+
+        <div class="home-hero__services">
+          <div class="home-hero__service home-hero__service--annotation reveal">
+            <div class="home-hero__service-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xea4a;</span>
+            </div>
+            <span class="home-hero__service-label">AIアノテーション</span>
+          </div>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+          <div class="home-hero__service home-hero__service--bpo reveal reveal--delay-1">
+            <div class="home-hero__service-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe311;</span>
+            </div>
+            <span class="home-hero__service-label">KPO/BPO</span>
+          </div>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+          <div class="home-hero__service home-hero__service--myanmar reveal reveal--delay-2">
+            <div class="home-hero__service-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xf233;</span>
+            </div>
+            <span class="home-hero__service-label">ミャンマー人材</span>
+          </div>
+          <span class="home-hero__arrow"><span class="material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></span>
+          <div class="home-hero__service home-hero__service--dev reveal reveal--delay-3">
+            <div class="home-hero__service-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe86f;</span>
+            </div>
+            <span class="home-hero__service-label">システム開発</span>
+          </div>
+        </div>
+
+        <div class="home-hero__features">
+          <div class="home-hero__feature reveal">
+            <span class="home-hero__feature-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xefd6;</span>
+            </span>
+            <div>
+              <p class="home-hero__feature-title">365日24時間対応</p>
+              <p class="home-hero__feature-desc">いつでも安心のサポート体制</p>
+            </div>
+          </div>
+          <div class="home-hero__feature reveal reveal--delay-1">
+            <span class="home-hero__feature-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xef76;</span>
+            </span>
+            <div>
+              <p class="home-hero__feature-title">日本品質</p>
+              <p class="home-hero__feature-desc">世界基準の品質サービス</p>
+            </div>
+          </div>
+          <div class="home-hero__feature reveal reveal--delay-2">
+            <span class="home-hero__feature-icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xebcb;</span>
+            </span>
+            <div>
+              <p class="home-hero__feature-title">ハイブリッド体制</p>
+              <p class="home-hero__feature-desc">ミャンマー・日本の両軸でご提供</p>
+            </div>
+          </div>
+        </div>
+        </div><!-- /home-hero__left -->
+
+        <div class="home-hero__right reveal reveal--delay-1">
+          <div class="home-hero__panel" aria-hidden="true">
+            <video 
+              class="home-hero__video" 
+              autoplay 
+              muted 
+              loop
+              playsinline
+            >
+              <source src="assets/video/acansol02.mp4" type="video/mp4">
+              お使いのブラウザは動画タグをサポートしていません。
+            </video>
+            <button class="home-hero__panel-mute" id="heroVideoMute" aria-label="ミュート切り替え">
+              <svg class="mute-icon" viewBox="0 0 24 24">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+              <svg class="unmute-icon" viewBox="0 0 24 24" style="display: none;">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <polyline points="19 7 19 12 24 12"></polyline>
+                <polyline points="19 17 19 12"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
-  
+    
+
+    <section class="home-ai-steps">
+      <div class="home-ai-steps__inner">
+        <h2 class="home-ai-steps__title reveal reveal--pop">AIアシスタント<em>でできること</em></h2>
+        <p class="home-ai-steps__desc reveal reveal--pop reveal--delay-1">サイトに常駐するAIが、ヒアリングから商談予約まで一気通貫でご案内します。</p>
+
+        <div class="home-ai-steps__grid">
+          <div class="home-ai-step reveal">
+            <span class="home-ai-step__num">1</span>
+            <h3 class="home-ai-step__title">相談・ヒアリング</h3>
+            <p class="home-ai-step__desc">課題やご要望をAIがヒアリング</p>
+          </div>
+          <div class="home-ai-step reveal reveal--delay-1">
+            <span class="home-ai-step__num">2</span>
+            <h3 class="home-ai-step__title">最適なサービス提案</h3>
+            <p class="home-ai-step__desc">最適なサービスをご提案</p>
+          </div>
+          <div class="home-ai-step reveal reveal--delay-2">
+            <span class="home-ai-step__num">3</span>
+            <h3 class="home-ai-step__title">概算費用のご提示</h3>
+            <p class="home-ai-step__desc">条件に基づき概算費用を算出</p>
+          </div>
+          <div class="home-ai-step reveal reveal--delay-3">
+            <span class="home-ai-step__num">4</span>
+            <h3 class="home-ai-step__title">導入事例の紹介</h3>
+            <p class="home-ai-step__desc">類似事例や実績をご紹介</p>
+          </div>
+          <div class="home-ai-step reveal reveal--delay-3">
+            <span class="home-ai-step__num">5</span>
+            <h3 class="home-ai-step__title">問い合わせ・商談予約</h3>
+            <p class="home-ai-step__desc">担当者への連携までスムーズに</p>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+
+    <section class="home-asks">
+      <div class="home-asks__inner">
+        <h2 class="home-asks__title reveal reveal--pop">こんなご相談<em>にお答えします</em></h2>
+        <p class="home-asks__desc reveal reveal--pop reveal--delay-1">下のカードをクリックすると、AIアシスタントがその場で回答します。</p>
+
+        <div class="home-asks__grid">
+          <button type="button" class="home-ask reveal" data-chat="AIアノテーションって何ですか？">
+            <span class="home-ask__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe0c9;</span>
+            </span>
+            <p class="home-ask__title">AIアノテーションって何ですか？</p>
+            <p class="home-ask__body">サービス内容や事例をわかりやすくご説明します。</p>
+          </button>
+
+          <button type="button" class="home-ask reveal reveal--delay-1" data-chat="AIアノテーションを5万件お願いしたいです。見積もりをください。">
+            <span class="home-ask__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xf1b6;</span>
+            </span>
+            <p class="home-ask__title">見積もりをお願いしたい。</p>
+            <p class="home-ask__body">必要な情報をヒアリングし、概算費用をご提示します。</p>
+          </button>
+
+          <button type="button" class="home-ask reveal reveal--delay-2" data-chat="ミャンマーの体制について知りたいです。">
+            <span class="home-ask__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe80b;</span>
+            </span>
+            <p class="home-ask__title">ミャンマーの体制について知りたい。</p>
+            <p class="home-ask__body">拠点情報やセキュリティ体制をご案内します。</p>
+          </button>
+
+          <button type="button" class="home-ask reveal reveal--delay-3" data-chat="契約から納品までの流れを教えてください。">
+            <span class="home-ask__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe97a;</span>
+            </span>
+            <p class="home-ask__title">導入までの流れを教えてほしい。</p>
+            <p class="home-ask__body">ご契約から納品までの流れを説明します。</p>
+          </button>
+
+          <button type="button" class="home-ask reveal reveal--delay-3" data-chat="資料をダウンロードしたいです。">
+            <span class="home-ask__icon">
+              <span class="material-symbols-outlined" aria-hidden="true">&#xe873;</span>
+            </span>
+            <p class="home-ask__title">資料をダウンロードしたい。</p>
+            <p class="home-ask__body">各種資料をすぐにダウンロードできます。</p>
+          </button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="home-features">
+      <div class="home-features__inner">
+        <h2 class="home-features__title reveal reveal--pop">AIアシスタント<em>の主な機能</em></h2>
+
+        <div class="home-features__grid">
+          <div class="home-feature reveal">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>サービス診断・提案</span>
+          </div>
+          <div class="home-feature reveal reveal--delay-1">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>概算費用シミュレーション</span>
+          </div>
+          <div class="home-feature reveal reveal--delay-2">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>AIチャット相談（FAQ対応）</span>
+          </div>
+          <div class="home-feature reveal reveal--delay-1">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>資料ダウンロード案内</span>
+          </div>
+          <div class="home-feature reveal reveal--delay-2">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>問い合わせフォーム自動生成</span>
+          </div>
+          <div class="home-feature reveal reveal--delay-3">
+            <div class="home-feature__check"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12.5 11 15.5 16 9"></polyline></svg></div>
+            <span>オンライン商談予約（カレンダー連携）</span>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- ========================================================== -->
     <!-- SERVICE.PHP UI SECTION                                       -->
     <!-- ========================================================== -->
@@ -7213,6 +8057,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="assets/js/main.js" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      // Hero Video Mute Toggle
+      const heroVideo = document.querySelector('.home-hero__video');
+      const muteBtn = document.getElementById('heroVideoMute');
+      const muteIcon = muteBtn.querySelector('.mute-icon');
+      const unmuteIcon = muteBtn.querySelector('.unmute-icon');
+
+      if (heroVideo && muteBtn) {
+        muteBtn.addEventListener('click', function() {
+          if (heroVideo.muted) {
+            heroVideo.muted = false;
+            muteIcon.style.display = 'none';
+            unmuteIcon.style.display = 'block';
+            muteBtn.setAttribute('aria-label', 'ミュート');
+          } else {
+            heroVideo.muted = true;
+            muteIcon.style.display = 'block';
+            unmuteIcon.style.display = 'none';
+            muteBtn.setAttribute('aria-label', 'ミュート解除');
+          }
+        });
+      }
+
+      // Contact Form
       const form        = document.getElementById('contactForm');
       const email       = document.getElementById('email');
       const emailCfm    = document.getElementById('email-confirm');
@@ -7279,5 +8146,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   gtag('config', 'G-P0PTLK09E6');
 </script>
+
+<!-- A CAN SOLUTIONS AI Chat Assistant Configuration -->
+<script>
+  // Configure chatbot before it loads
+  window.ACanChatConfig = {
+    title: "A CAN AIアシスタント",
+    subtitle: "オンライン・24時間対応",
+    launcherLabel: "AIアシスタントに相談する",
+    teaser: "ご相談内容を教えてください。AIが最適なサービスをご案内します！",
+    primaryColor: "#1546a0",
+    primaryDark: "#0f3576",
+    accentColor: "#e02b2b",
+    position: "right",
+    autoOpen: false,
+    teaserDelay: 5000
+  };
+  
+  // Override the bootstrap API call to provide custom greeting
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      if (window.__acanChat && window.__acanChat.api) {
+        const originalBootstrap = window.__acanChat.api.bootstrap;
+        window.__acanChat.api.bootstrap = async function() {
+          // Return custom greeting instead of calling the API
+          return {
+            conversationId: 'local-' + Date.now(),
+            greeting: {
+              text: "こんにちは！A CAN SOLUTIONSのAIアシスタントです。\nどのようなご相談でしょうか？\nお客様に最適なサービスをご提案します！",
+              quickReplies: [
+                { label: "サービスについて相談したい", value: "サービスについて相談したい" },
+                { label: "見積もりをしてほしい", value: "見積もりをしてほしい" },
+                { label: "AIアノテーションについて知りたい", value: "AIアノテーションについて知りたい" },
+                { label: "ミャンマー人材について知りたい", value: "ミャンマー人材について知りたい" },
+                { label: "その他の質問をする", value: "その他の質問をする" }
+              ]
+            }
+          };
+        };
+      }
+    }, 500);
+  });
+</script>
+<script src="https://acanchatbot.web.app/embed.js" defer></script>
+
 </body>
 </html>
