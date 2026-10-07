@@ -202,7 +202,7 @@
 .svc-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem 1.75rem;
+  gap: 3.5rem 1.75rem;  /* row gap = the old spacing between the two card sections */
 }
 
 .svc-card {
@@ -593,7 +593,7 @@
 }
 
 @media (max-width: 900px) {
-  .svc-grid { grid-template-columns: repeat(2, 1fr); }
+  .svc-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.5rem; }
   .svc-card__features { grid-template-columns: repeat(2, 1fr); }
   .svc-cta { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
   .svc-cta__actions { width: 100%; max-width: 280px; }
@@ -5284,12 +5284,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </a>
             </div>
 
-          </div>
-        </section>
 
-        <!-- ── Secondary Service Cards ── -->
-        <section class="svc-section">
-          <div class="svc-grid">
+            <!-- ── Secondary Service Cards (same grid, so tablets flow 2 / 2 / 2) ── -->
 
             <!-- Technology -->
             <div class="svc-card svc-card--purple">
@@ -6632,24 +6628,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }
 
         @media (min-width: 641px) and (max-width: 1023px) {
-          /* Tablets: the copy runs over the photo collage — fade the left side and
-             drop the two extra offset photos (they sit on top of the fade). */
+          /* Tablets: same treatment as the BPO hero (.dev-hero) — the photo
+             covers the whole hero and a white fade from the left keeps the
+             copy readable. The two offset collage layers are dropped. */
           .dsg-hero {
             background-image:
               linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
+              url("assets/img/design-hero.png"),
               url("assets/img/design-hero2.png");
-            background-position: center, right center;
+            background-size: cover, cover, cover;
+            background-position: center, center right, center;
           }
-          /* keep the designer photo (it IS the hero) — just shrink it to the
-             right-hand side so the copy has room on the left */
-          .dsg-bg-1 { background-image: none; }
-          .dsg-bg-2 {
-            background-size: min(44vw, 400px);
-            background-position: right 0 top 1.5rem;
-          }
+          .dsg-bg-1,
+          .dsg-bg-2 { background-image: none; }
           .dsg-bg-2:after { display: none; }
-          .dsg-hero__content { max-width: 54%; }
-          .dsg-hero__lead br, .dsg-hero__desc br { display: none; }
         }
 
         @media (max-width: 640px) {

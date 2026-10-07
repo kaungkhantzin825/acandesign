@@ -70,7 +70,7 @@
     .svc-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem 1.75rem;
+      gap: 3.5rem 1.75rem;  /* row gap = the old spacing between the two card sections */
     }
 
     .svc-card {
@@ -437,7 +437,7 @@
        RESPONSIVE
     ══════════════════════════════ */
     @media (max-width: 900px) {
-      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); row-gap: 2.5rem; }
       .svc-card__features { grid-template-columns: repeat(2, 1fr); }
       .svc-cta { flex-direction: column; text-align: center; padding: 2rem 1.5rem; }
       .svc-cta__actions { width: 100%; max-width: 280px; }
@@ -612,12 +612,8 @@
           </a>
         </div>
 
-      </div>
-    </section>
 
-    <!-- ── Secondary Service Cards ── -->
-    <section class="svc-section">
-      <div class="svc-grid">
+        <!-- ── Secondary Service Cards (same grid, so tablets flow 2 / 2 / 2) ── -->
 
         <!-- Technology -->
         <div class="svc-card svc-card--purple">
@@ -712,7 +708,7 @@
         <!-- Myanmar Business Support -->
         <div class="svc-card svc-card--teal">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/Untibbbtled.png" alt="Myanmar Business Support" />
+            <img class="iconimage" src="assets/img/Untibbbtled (2).png" alt="Myanmar Business Support" />
           </div>
           <h3 class="svc-card__title">Myanmar Business Support</h3>
           <p class="svc-card__subtitle">&nbsp;</p>
