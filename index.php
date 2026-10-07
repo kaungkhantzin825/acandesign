@@ -2313,6 +2313,26 @@
    These must stay at the end of the stylesheet: the base .ai-hero /
    .ai-inner / .dev-hero / .dev__inner rules have the same specificity, so
    whichever is declared last wins. */
+/* Phones (≤640px): same treatment as the BPO / Technology heroes on phones —
+   the artwork covers the whole hero and a white vertical wash keeps the copy
+   readable on top of it (replaces the old image strip + copy-underneath). */
+@media (max-width: 640px) {
+  .ai-hero {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.62) 100%),
+      url("assets/img/ai-header-banner.png") !important;
+    background-position: center, 62% center;
+    background-size: cover, cover;
+    min-height: 0;
+    padding: 2rem 0;
+  }
+  .ai-hero .ai-inner { width: 100%; }
+  .ai-hero__content { max-width: 100%; padding: 0 1.1rem; }
+}
+
 /* Tablets (641–992px): keep the desktop composition — copy on the left over
    the faded artwork, brain on the right — instead of the stacked phone band,
    which left a tall image strip with the copy squeezed underneath it. */
