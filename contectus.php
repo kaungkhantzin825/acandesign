@@ -54,24 +54,6 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
     /* ══════════════════════════════
        HERO
     ══════════════════════════════ */
-    .dl-hero {
-      display: block;
-      width: 86%;
-      margin: 0 auto;
-      background: #ffffff;
-      line-height: 0;
-      padding: 0;
-    }
-
-    .dl-hero__img {
-      display: block;
-      width: 100% !important;
-      max-width: 100% !important;
-      height: auto;
-      margin: 0;
-      padding: 0;
-    }
-
     /* LEFT: character */
     .dl-hero__char {
       flex-shrink: 0;
@@ -641,7 +623,6 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
 
     @media (max-width: 768px) {
       /* Hero */
-      .dl-hero { width: 100%; }
       .dl-hero__inner { flex-wrap: wrap; min-height: auto; }
       .dl-hero__char { width: 140px; margin: 0 auto 0 0; }
       .dl-hero__text { padding: 1.5rem 1rem; width: 100%; }
@@ -725,8 +706,31 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
   <?php include 'menu.php'; ?>
 
   <!-- ── Hero ── -->
-  <section class="dl-hero">
-    <img src="assets/img/cc.png" alt="営業資料ダウンロード" class="dl-hero__img" />
+  <section class="ct-hero">
+    <div class="ct-hero__content">
+      <p class="ct-hero__label">CONTACT US</p>
+      <h1 class="ct-hero__title">まずはお気軽に<br />ご相談ください</h1>
+      <p class="ct-hero__desc">業務に関するお悩みやご質問、サービスの詳細、お見積りのご依頼など、スタッフが丁寧に対応いたします。</p>
+    </div>
+    <ul class="ct-hero__badges">
+      <li class="ct-hero__badge">
+        <svg viewBox="0 0 36 44" fill="none" stroke="#004aad" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 6V2h18l6 6v28h-6" />
+          <path d="M2 8h18l6 6v28H2z" />
+          <path d="M20 8v6h6" />
+          <rect x="6" y="15" width="6" height="4" />
+          <path d="M6 25h16M6 30h16M6 35h16" />
+        </svg>
+        <span>24時間以内に<br />ご返信します</span>
+      </li>
+      <li class="ct-hero__badge">
+        <svg viewBox="0 0 36 42" fill="none" stroke="#004aad" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2 33 7v13c0 9.5-6.4 16.5-15 20C9.4 36.5 3 29.5 3 20V7z" />
+          <path d="m11 21 5 5 9-10" />
+        </svg>
+        <span>秘密厳守・<br />安心のセキュリティー</span>
+      </li>
+    </ul>
   </section>
 
 

@@ -56,8 +56,6 @@ $f = [
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
 
-    .dl-hero { display: block; width: 86%; margin: 0 auto; background: #ffffff; line-height: 0; padding: 0; }
-    .dl-hero__img { display: block; width: 100% !important; max-width: 100% !important; height: auto; margin: 0; padding: 0; }
 
     .dl-breadcrumb { padding: 0.55rem 0; width: 86%; margin: 0 auto; font-size: 0.78rem; }
     .dl-breadcrumb a { color: #12499e; text-decoration: none; }
@@ -115,7 +113,6 @@ $f = [
       .dl-contact { padding-left: 0; }
     }
     @media (max-width: 768px) {
-      .dl-hero { width: 100%; }
       .dl-breadcrumb { width: 92%; margin: 0 auto; }
       .dl-body { flex-direction: column; width: 92%; gap: 1rem; align-items: stretch; }
       .dl-panel { width: 100% !important; margin-left: 0 !important; height: auto !important; }
@@ -162,8 +159,31 @@ $f = [
 
   <?php include 'menu.php'; ?>
 
-  <section class="dl-hero">
-    <img src="assets/img/cc.png" alt="お問い合わせ確認" class="dl-hero__img" />
+  <section class="ct-hero">
+    <div class="ct-hero__content">
+      <p class="ct-hero__label">CONTACT US</p>
+      <h1 class="ct-hero__title">まずはお気軽に<br />ご相談ください</h1>
+      <p class="ct-hero__desc">業務に関するお悩みやご質問、サービスの詳細、お見積りのご依頼など、スタッフが丁寧に対応いたします。</p>
+    </div>
+    <ul class="ct-hero__badges">
+      <li class="ct-hero__badge">
+        <svg viewBox="0 0 36 44" fill="none" stroke="#004aad" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10 6V2h18l6 6v28h-6" />
+          <path d="M2 8h18l6 6v28H2z" />
+          <path d="M20 8v6h6" />
+          <rect x="6" y="15" width="6" height="4" />
+          <path d="M6 25h16M6 30h16M6 35h16" />
+        </svg>
+        <span>24時間以内に<br />ご返信します</span>
+      </li>
+      <li class="ct-hero__badge">
+        <svg viewBox="0 0 36 42" fill="none" stroke="#004aad" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M18 2 33 7v13c0 9.5-6.4 16.5-15 20C9.4 36.5 3 29.5 3 20V7z" />
+          <path d="m11 21 5 5 9-10" />
+        </svg>
+        <span>秘密厳守・<br />安心のセキュリティー</span>
+      </li>
+    </ul>
   </section>
 
   <nav class="dl-breadcrumb" aria-label="Breadcrumb"></nav>

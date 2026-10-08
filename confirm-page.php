@@ -37,19 +37,94 @@
 
     /* ══════════════════════════════
        HERO — registration complete
-       (breadcrumb + title + description baked into the image)
+       Text over background image (Canva: HPデザインリニューアル p.8).
+       Sizes use container units so the copy scales with the image.
     ══════════════════════════════ */
-    .cp-hero-image {
-      width: 100%;
-      margin: 0;
-      line-height: 0;
-    }
-
-    .cp-hero-image img {
-      display: block;
+    .cp-hero {
+      position: relative;
       width: 86%;
       margin: 0 auto;
-      height: auto;
+      background: #eef0f8 url("assets/img/confirm-hero-bg.png") no-repeat center top / 100% auto;
+      aspect-ratio: 1228 / 541;
+      container-type: inline-size;
+    }
+
+    .cp-hero__crumb {
+      position: absolute;
+      top: 1.1cqw;
+      left: 1.5cqw;
+      margin: 0;
+      font-family: "Anonymous Pro", monospace;
+      font-size: max(11px, 1cqw);
+      font-weight: 700;
+      line-height: 1.4;
+      color: #101010;
+    }
+
+    .cp-hero__crumb a { color: inherit; text-decoration: none; }
+    .cp-hero__crumb a:hover { text-decoration: underline; }
+    .cp-hero__crumb span[aria-current] { color: #0a66c2; }
+
+    .cp-hero__content {
+      width: 69.7%;
+      padding-top: 4.48cqw;
+      text-align: center;
+    }
+
+    .cp-hero__check {
+      display: block;
+      width: 7.5cqw;
+      height: 7.5cqw;
+      margin: 0 auto;
+    }
+
+    .cp-hero__title {
+      margin: 2.24cqw 0 0;
+      font-size: 3.1cqw;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      color: #13499e;
+    }
+
+    .cp-hero__desc {
+      margin: 3.34cqw 0 0;
+      font-size: 1.95cqw;
+      font-weight: 700;
+      line-height: 2.8;
+      color: #000000;
+    }
+
+    /* Tablets: the copy would run into the girl, so let the banner grow,
+       fade the left to white and keep the artwork on the right. */
+    @media (max-width: 1023px) {
+      .cp-hero {
+        width: 92%;
+        aspect-ratio: auto;
+        background-image:
+          linear-gradient(90deg, rgba(238, 240, 248, 0.96) 0%, rgba(238, 240, 248, 0.88) 55%, rgba(238, 240, 248, 0.15) 100%),
+          url("assets/img/confirm-hero-bg.png");
+        background-size: cover, cover;
+        background-position: center, 85% center;
+      }
+      .cp-hero__crumb { position: static; padding: 0.75rem 1rem 0; font-size: 0.75rem; }
+      .cp-hero__content { width: 100%; max-width: 34rem; padding: 1.25rem 1.25rem 2.25rem; }
+      .cp-hero__check { width: 64px; height: 64px; }
+      .cp-hero__title { margin-top: 1rem; font-size: 1.6rem; }
+      .cp-hero__desc { margin-top: 1rem; font-size: 1rem; line-height: 2; }
+    }
+
+    @media (max-width: 640px) {
+      .cp-hero {
+        background-image:
+          linear-gradient(180deg, rgba(238, 240, 248, 0.94) 0%, rgba(238, 240, 248, 0.84) 45%, rgba(238, 240, 248, 0.6) 100%),
+          url("assets/img/confirm-hero-bg.png");
+        background-position: center, 80% center;
+      }
+      .cp-hero__content { max-width: none; padding: 1rem 1rem 1.75rem; }
+      .cp-hero__check { width: 52px; height: 52px; }
+      .cp-hero__title { font-size: 1.3rem; letter-spacing: 0.02em; }
+      .cp-hero__desc { font-size: 0.9rem; line-height: 1.9; }
     }
 
     /* ══════════════════════════════
@@ -280,7 +355,6 @@
        RESPONSIVE
     ══════════════════════════════ */
     @media (max-width: 768px) {
-      .cp-hero-image img { width: 100%; }
 
       .cp-content { width: 92%; }
       .cp-content__grid { padding: 1.75rem 1rem; gap: 1.5rem 1rem; }
@@ -314,8 +388,22 @@
   <?php include 'menu.php'; ?>
 
   <!-- ── Hero: registration complete ── -->
-  <section class="cp-hero-image">
-    <img src="assets/img/header-8.png" alt="ご登録ありがとうございます メルマガ登録完了" />
+  <section class="cp-hero">
+    <nav class="cp-hero__crumb" aria-label="Breadcrumb">
+      <a href="index.php">HOME</a> &rsaquo; <a href="myanmar-situation.php">Myanmar situation</a> &rsaquo; <span aria-current="page">メルマガ登録完了</span>
+    </nav>
+    <div class="cp-hero__content">
+      <svg class="cp-hero__check" viewBox="0 0 92 92" aria-hidden="true">
+        <circle cx="46" cy="46" r="46" fill="#2583ef" />
+        <path d="M24 47 L39 62 L68 31" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <h1 class="cp-hero__title">ご登録ありがとうございます！</h1>
+      <p class="cp-hero__desc">
+        メールマガジンのご登録が終了しました。<br />
+        ご登録いただいたメールアドレスへ、<br />
+        最新情報を定期的にお届けします。
+      </p>
+    </div>
   </section>
 
   <!-- ── Newsletter content ── -->

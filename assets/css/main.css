@@ -243,6 +243,41 @@ button {
   max-width: 480px;
 }
 
+/* Below 768px: show the desktop logo hero instead of GROW YOUR COMPANY (client request: logo only at every size) */
+@media (max-width: 767px) {
+  .hero {
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .hero__mobile {
+    display: none;
+  }
+
+  .hero__desktop {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .hero__desktop-logo {
+    width: clamp(120px, 32vw, 160px);
+    height: auto;
+  }
+
+  .hero__desktop-name {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: clamp(1.35rem, 6vw, 2rem);
+    letter-spacing: 0.08em;
+    margin: 0;
+    color: var(--color-ink);
+  }
+}
+
 /* ---------- hero ロゴ要素の共通 wipe-up アニメーション ---------- */
 /* Canva モバイル版の各テキストが上からスライドインして順番に現れる振る舞いを再現する */
 /* ため、各要素を overflow:hidden と inner span の translateY で maskインさせる。 */
@@ -2736,3 +2771,105 @@ button {
 .dl-contact__icon,
 .prof-contact__icon,
 .ms-contact__icon { margin-top: 0 !important; align-self: center; }
+
+/* ── Contact hero (contectus.php / confirm.php) ──
+   Text over background image (Canva: HPデザインリニューアル p.2).
+   Sizes use container units so the copy scales with the image. */
+.ct-hero {
+  position: relative;
+  width: 86%;
+  margin: 0 auto;
+  background: #ffffff url("../img/contact-hero-bg.png") no-repeat center top / 100% auto;
+  aspect-ratio: 1237 / 428;
+  container-type: inline-size;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.ct-hero__content { position: absolute; top: 3.4cqw; left: 19.08%; }
+.ct-hero__label {
+  margin: 0;
+  font-size: 2.35cqw;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #13499e;
+}
+.ct-hero__title {
+  margin: 0.9cqw 0 0;
+  font-size: 2.26cqw;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #000000;
+}
+.ct-hero__desc {
+  width: 27.4cqw;
+  margin: 0.44cqw 0 0;
+  font-size: 1.08cqw;
+  font-weight: 700;
+  line-height: 1.7;
+  color: #000000;
+}
+.ct-hero__badges {
+  position: absolute;
+  top: 23.5cqw;
+  left: 15.76%;
+  display: flex;
+  gap: 1.3cqw;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.ct-hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 1.5cqw;
+  height: 4.04cqw;
+  padding: 0 1.3cqw 0 1.2cqw;
+  background: #ffffff;
+  border-radius: 0.8cqw;
+  font-size: 1.01cqw;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #000000;
+}
+.ct-hero__badge svg { width: 2.75cqw; height: 2.75cqw; flex-shrink: 0; }
+
+/* Tablets: the copy would sit on the girl and laptop, so let the banner
+   grow, keep the laptop side and fade the left to white. */
+@media (max-width: 1023px) {
+  .ct-hero {
+    width: 92%;
+    aspect-ratio: auto;
+    background-image:
+      linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.86) 55%, rgba(255, 255, 255, 0.2) 100%),
+      url("../img/contact-hero-bg.png");
+    background-size: cover, cover;
+    background-position: center, 85% top;
+    padding: 2rem 1.5rem 2.25rem;
+  }
+  .ct-hero__content, .ct-hero__badges { position: static; }
+  .ct-hero__content { max-width: 30rem; }
+  .ct-hero__label { font-size: 1.6rem; }
+  .ct-hero__title { margin-top: 0.4rem; font-size: 1.5rem; }
+  .ct-hero__desc { width: auto; margin-top: 0.6rem; font-size: 0.9rem; }
+  .ct-hero__badges { flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+  .ct-hero__badge {
+    height: auto;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem 0.6rem 0.8rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 10px rgba(18, 73, 158, 0.08);
+  }
+  .ct-hero__badge svg { width: 30px; height: 30px; }
+}
+@media (max-width: 640px) {
+  .ct-hero {
+    background-image:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.84) 45%, rgba(255, 255, 255, 0.65) 100%),
+      url("../img/contact-hero-bg.png");
+    background-position: center, 75% top;
+    padding: 1.5rem 1rem 1.75rem;
+  }
+  .ct-hero__label { font-size: 1.35rem; }
+  .ct-hero__title { font-size: 1.3rem; }
+  .ct-hero__desc { font-size: 0.85rem; }
+}
