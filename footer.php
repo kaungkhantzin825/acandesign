@@ -28,5 +28,22 @@
   </div>
 </footer>
 
-<!-- AI Chat Bot Widget -->
-<script src="https://acanchatbot.web.app/embed.js" defer></script>
+<!-- AI Chat Bot Widget (backend: Cloud Run) -->
+<script>
+  window.ACanChatConfig = {
+    apiBase: "https://api-p2ednb2kcq-dt.a.run.app",
+    avatarUrl: "assets/img/chat-avatar.png",
+    avatarTalkingUrl: "assets/img/chat-avatar-talking.png",
+    title: "A CAN AIアシスタント",
+    subtitle: "オンライン・24時間対応",
+    launcherLabel: "AIアシスタントに相談する",
+    teaser: "ご相談内容を教えてください。AIが最適なサービスをご案内します！",
+    primaryColor: "#1546a0",
+    primaryDark: "#0f3576",
+    accentColor: "#e02b2b",
+    position: "right",
+    autoOpen: false,
+    teaserDelay: 5000
+  };
+</script>
+<script src="assets/js/embed.js"></script>
