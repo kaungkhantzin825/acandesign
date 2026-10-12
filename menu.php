@@ -1,3 +1,4 @@
+<?php include_once __DIR__ . '/chat-widget.php'; ?>
 <style>
   /* ── Header bar layout ──
      Laid out left-to-right with the button pair pushed right by an auto

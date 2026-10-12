@@ -28,5 +28,4 @@
   </div>
 </footer>
 
-<!-- AI Chat Bot Widget -->
-<script src="https://acanchatbot.web.app/embed.js" defer></script>
+<?php include_once __DIR__ . '/chat-widget.php'; ?>

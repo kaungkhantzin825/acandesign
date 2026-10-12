@@ -8196,48 +8196,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   gtag('config', 'G-P0PTLK09E6');
 </script>
 
-<!-- A CAN SOLUTIONS AI Chat Assistant Configuration -->
-<script>
-  // Configure chatbot before it loads
-  window.ACanChatConfig = {
-    title: "A CAN AIアシスタント",
-    subtitle: "オンライン・24時間対応",
-    launcherLabel: "AIアシスタントに相談する",
-    teaser: "ご相談内容を教えてください。AIが最適なサービスをご案内します！",
-    primaryColor: "#1546a0",
-    primaryDark: "#0f3576",
-    accentColor: "#e02b2b",
-    position: "right",
-    autoOpen: false,
-    teaserDelay: 5000
-  };
-  
-  // Override the bootstrap API call to provide custom greeting
-  window.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-      if (window.__acanChat && window.__acanChat.api) {
-        const originalBootstrap = window.__acanChat.api.bootstrap;
-        window.__acanChat.api.bootstrap = async function() {
-          // Return custom greeting instead of calling the API
-          return {
-            conversationId: 'local-' + Date.now(),
-            greeting: {
-              text: "こんにちは！A CAN SOLUTIONSのAIアシスタントです。\nどのようなご相談でしょうか？\nお客様に最適なサービスをご提案します！",
-              quickReplies: [
-                { label: "サービスについて相談したい", value: "サービスについて相談したい" },
-                { label: "見積もりをしてほしい", value: "見積もりをしてほしい" },
-                { label: "AIアノテーションについて知りたい", value: "AIアノテーションについて知りたい" },
-                { label: "ミャンマー人材について知りたい", value: "ミャンマー人材について知りたい" },
-                { label: "その他の質問をする", value: "その他の質問をする" }
-              ]
-            }
-          };
-        };
-      }
-    }, 500);
-  });
-</script>
-<script src="https://acanchatbot.web.app/embed.js" defer></script>
-
 </body>
 </html>
