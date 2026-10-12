@@ -1712,6 +1712,45 @@
 
 
 
+
+            <li class="blog-card" data-cat="sunday-column">
+            <a href="organization.php" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/newblog81.png" alt="「できることをやる」に変えたら、組織が回り始めた 日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方" width="300" height="170" loading="lazy" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-11">2026/10/11</time>
+                </div>
+                <h3 class="blog-card__title">「できることをやる」に変えたら、組織が回り始めた<br>
+                <p style="font-size: 8px;">日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方
+</p>
+
+</h3>
+
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">＃ミャンマー</span>
+                  <span class="blog-card__tag">＃人材育成</span>
+                  <span class="blog-card__tag">＃人材育成</span>
+                  <span class="blog-card__tag">＃日本品質</span>
+                  <span class="blog-card__tag">＃BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                   <span class="blog-card__tag">＃現地リーダー</span>
+                   <span class="blog-card__tag">＃離職率</span>
+                   <span class="blog-card__tag">＃企業文化</span>
+                   <span class="blog-card__tag">＃組織作り</span>
+                   <span class="blog-card__tag">＃海外マネジメント</span>
+                   <span class="blog-card__tag">＃マネジメント</span>
+                  
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">

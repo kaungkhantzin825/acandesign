@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Static corporate website for **A CAN SOLUTIONS Co.,Ltd.** — a Myanmar-based IT outsourcing company targeting Japanese clients. The site is bilingual (Japanese primary, English secondary) and is a single-page PHP/HTML site with a contact form.
+Corporate website for **A CAN SOLUTIONS Co.,Ltd.** — a Myanmar-based IT outsourcing company targeting Japanese clients. The site is bilingual (Japanese primary, English secondary).
+
+Despite the "single-page" framing, this is a **flat multi-page PHP site**: ~70 `*.php` pages at the repo root, served directly by PHP/Apache. There is **no framework, no router, and no build step** — each page is a standalone PHP file that composes shared partials.
 
 ## Running Locally
 
@@ -16,33 +18,61 @@ Open `http://localhost:8000/index.php` in a browser. No build step required.
 
 ## File Structure
 
-| File | Purpose |
+There are too many pages to list individually. The pattern is what matters:
+
+| Path | Purpose |
 |---|---|
-| `index.php` | Main single-page site (hero, services, blog, about, contact) |
-| `privacy.php` | Privacy policy page |
-| `newpage.php` | Blog post page |
-| `send-mail.php` | SMTP email handler (PHPMailer, AJAX endpoint) |
-| `mail-config.php` | SMTP credentials — **never commit this file** |
-| `mail-config.example.php` | Template for `mail-config.php` |
-| `thank-you.html` | Fallback success page (unused when AJAX mode is active) |
-| `assets/css/main.css` | All site styles |
-| `assets/css/blog-post.css` | Blog post page styles |
-| `assets/js/main.js` | Scroll-reveal animations + contact form AJAX |
+| `index.php` | Home page — hero, services, AI/data/dev/design/BPO/KPO/consulting sections, contact |
+| `menu.php` | **The site header** (logo, nav, CTA buttons, mobile drawer + hamburger JS) |
+| `footer.php` | Shared footer — also injects the AI chatbot embed script |
+| `3buttonsection.php` | Shared "3-button" CTA strip, included near the bottom of most content pages |
+| `header/*.php` | Per-page header bands (`download-header.php`, `myanmar-situation-header.php`), included *after* `menu.php` |
+| `contectus.php` → `confirm.php` → `send-contact.php` | Contact form: input → confirm → send |
+| `myanmar-situation.php` → `newsletter-subscribe.php` | Newsletter signup entry + handler |
+| `admin/` | Admin panel (login, dashboard, CSV export, delete) |
+| `assets/css/main.css` | Global stylesheet (per-page CSS is inline in each page's `<style>`) |
+| `assets/js/main.js` | Scroll-reveal animations |
+| `db_setup.php` | One-time DB bootstrap — **dev only, delete on production** |
 
-## Contact Form — Two Modes
+**Page composition convention:** every page includes `menu.php` near the top and `footer.php` at the bottom, optionally with `3buttonsection.php` and/or a `header/*.php` band in between.
 
-The contact form operates in **AJAX mode via FormSubmit.co** (configured in `index.php`). The `send-mail.php` file is an alternative **PHPMailer/SMTP backend** that is NOT currently wired to the form — it exists as a fallback.
+## Contact Form — Three-Step PHP Flow
 
-- **Active mode:** `index.php` POSTs to `https://formsubmit.co/ajax/info@acan-sol.com` via `fetch()`.
-- **SMTP mode (inactive):** `send-mail.php` reads `mail-config.php` constants (`SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD`, etc.) and sends via PHPMailer. To switch to SMTP, update the `fetch()` target in `index.php` to point to `send-mail.php` and set up `mail-config.php` from the example template.
+The active contact form is a **PHP + PHPMailer/SMTP** flow (not FormSubmit):
+
+1. `contectus.php` — input form, `action="confirm.php"`. Field names are Japanese: `会社名`, `ご担当者名`, `メールアドレス`, `電話番号`, `お問い合わせ内容`.
+2. `confirm.php` — read-only confirmation screen. "送信する" posts to `send-contact.php`; "編集に戻る" posts back to `contectus.php`.
+3. `send-contact.php` — validates, saves to the `subscribers` table, sends via PHPMailer, and renders the success/error page.
+
+> Note: `index.php` also contains a separate inline form that still POSTs to **FormSubmit.co** via `fetch()`. Both mechanisms coexist in the codebase.
+
+`send-mail.php` is an older/alternative SMTP handler kept as a fallback; it is **not** wired to any form.
+
+## Newsletter — Double Opt-In Scaffolding
+
+- `myanmar-situation.php` signup form → `newsletter-subscribe.php` → dedupe check → `save_subscriber_to_db(..., 'newsletter')` → auto-reply mail → redirect to `confirm-page.php`.
+- Duplicate address → `newsletter-already-registered.php?email=...`.
+- `newsletter-mailer.php` holds the shared `send_newsletter_mail()` helper (SMTP timeout is deliberately capped at 15s).
+- **Watch out:** `confirm.php` (contact confirmation) and `confirm-page.php` (newsletter success) are different files.
+
+## Database
+
+MySQL accessed via `mysqli`. Schema (created by `db_setup.php`) has two tables:
+
+- `subscribers` — `id, email, name, company, phone, message, source, created_at, verify_token, verified_at` (UNIQUE on `email`). `source` is `'contact'` or `'newsletter'`.
+- `admin_users` — `username`, `password` (bcrypt). Default seed login: `admin / admin123`.
+
+**Credentials are duplicated across `admin/db.php`, `db_setup.php`, and `subscriber-save.php` and are currently NOT in sync** (the admin files use `zojtpszw_acanadmin`; `subscriber-save.php` uses `root`/`acanadmin`). Update all three together.
 
 ## Email Configuration (SMTP)
 
-Copy `mail-config.example.php` → `mail-config.php` and fill in credentials. Required constants: `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_AUTH`, `SMTP_USERNAME`, `SMTP_PASSWORD`, `MAIL_TO`, `MAIL_FROM_NAME`, `COMPANY_NAME`, `AUTO_REPLY_ENABLED`.
+SMTP credentials live in `newsletter-mail-config.php` (`NEWSLETTER_SMTP_HOST/PORT/SECURE/USERNAME/PASSWORD`, `NEWSLETTER_ADMIN_EMAIL`), consumed by `send-contact.php` and `newsletter-mailer.php`. `contact-config.example.php` is a template for the older `contact-config.php`.
+
+> `.gitignore` excludes `mail-config.php` but **not** `newsletter-mail-config.php` — do not commit real credentials there.
 
 ## Animation System
 
-`assets/js/main.js` implements a scroll-triggered reveal system using `IntersectionObserver`. Elements get CSS classes to control entrance animations:
+`assets/js/main.js` implements a scroll-triggered reveal system using `IntersectionObserver`:
 
 - `.reveal--pop` — text split character-by-character, each `<span class="reveal__char">` animates with a staggered `--reveal-char-delay` CSS variable
 - `.reveal--slide-l` / `.reveal--slide-r` — slide from left/right, content wrapped in `<span class="reveal__inner">`
@@ -53,16 +83,12 @@ The observer adds `.is-visible` when an element enters the viewport (threshold 0
 
 ## Dependencies
 
-- **phpmailer/phpmailer ^6.9** (Composer) — only needed for SMTP mode
+- **phpmailer/phpmailer ^6.9** (Composer) — used for contact + newsletter SMTP mail
 - No frontend build tools, no npm, no bundler
 - Fonts: Noto Sans JP + Roboto Mono from Google Fonts
 
 ## Deployment
 
-Update the FormSubmit redirect URL before going live:
+Shared cPanel hosting (Apache). `.htaccess` handles gzip, asset caching, security headers, and blocks direct access to `mail-config.php`.
 
-```html
-<input type="hidden" name="_next" value="https://acan-sol.com/thank-you.html">
-```
-
-The first FormSubmit submission requires a one-time email activation at `info@acan-sol.com`.
+Before going live, make sure dev-only files are removed from the server: `db_setup.php`, `smtp_test.php`.
