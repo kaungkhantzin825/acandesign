@@ -4,8 +4,5 @@
     "type": "project",
     "require": {
         "phpmailer/phpmailer": "^6.9"
-    },
-    "autoload": {
-        "files": ["mail-config.php"]
     }
 }

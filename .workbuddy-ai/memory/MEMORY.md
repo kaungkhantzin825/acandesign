@@ -57,3 +57,5 @@ Pages that follow it (47 include footer.php): index, service, profile, blog-page
 - `db_setup.php`, `smtp_test.php` are dev-only files that should not ship to production.
 - Header layout: `menu.php` loads AFTER each page's own `<style>`, deliberately overriding per-page nav spacing. Nav needs ~1000px; below 1023px links collapse into the drawer.
 - `main.css` is global; per-page styling lives in inline `<style>` blocks — check both when changing a page's look.
+- **`vendor/` is gitignored → every server needs `composer install`.** If `vendor/` is missing, any page that loads PHPMailer fatals with HTTP 500. Live entry points `send-contact.php` and `newsletter-subscribe.php` now guard the require (`is_file()` check) so they degrade to the error page instead of 500.
+- **`composer.json` must NOT autoload `mail-config.php`.** It used to (`autoload.files: ["mail-config.php"]`), which made `vendor/autoload.php` itself `require` a *gitignored* file — so even a correctly installed `vendor/` fataled on the server. Removed; nothing needs it (send-mail.php requires it explicitly). If composer.json changes, re-run `composer dump-autoload` and re-upload `vendor/`.

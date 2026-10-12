@@ -4,7 +4,16 @@ error_reporting(0);
 
 require_once __DIR__ . '/newsletter-mail-config.php';
 require_once __DIR__ . '/subscriber-save.php';
-require_once __DIR__ . '/vendor/autoload.php';
+
+// PHPMailer lives in Composer's vendor/ folder, which is gitignored and must be
+// installed on the server (`composer install`). Guard it here so a missing
+// vendor/ shows the normal error page instead of a blank HTTP 500.
+$hasMailer = is_file(__DIR__ . '/vendor/autoload.php');
+if ($hasMailer) {
+    require_once __DIR__ . '/vendor/autoload.php';
+} else {
+    error_log('send-contact: vendor/autoload.php missing — run composer install');
+}
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -65,26 +74,30 @@ $body .= "送信日時: " . date('Y年m月d日 H:i:s') . "\r\n";
 $body .= "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\r\n";
 
 $sent = false;
-try {
-    $mail = new PHPMailer(true);
-    $mail->isSMTP();
-    $mail->Host       = NEWSLETTER_SMTP_HOST;
-    $mail->SMTPAuth   = true;
-    $mail->Username   = NEWSLETTER_SMTP_USERNAME;
-    $mail->Password   = NEWSLETTER_SMTP_PASSWORD;
-    $mail->SMTPSecure = NEWSLETTER_SMTP_SECURE;
-    $mail->Port       = NEWSLETTER_SMTP_PORT;
-    $mail->CharSet    = 'UTF-8';
+if ($hasMailer) {
+    try {
+        $mail = new PHPMailer(true);
+        $mail->isSMTP();
+        $mail->Host       = NEWSLETTER_SMTP_HOST;
+        $mail->SMTPAuth   = true;
+        $mail->Username   = NEWSLETTER_SMTP_USERNAME;
+        $mail->Password   = NEWSLETTER_SMTP_PASSWORD;
+        $mail->SMTPSecure = NEWSLETTER_SMTP_SECURE;
+        $mail->Port       = NEWSLETTER_SMTP_PORT;
+        $mail->CharSet    = 'UTF-8';
 
-    $mail->setFrom(NEWSLETTER_SMTP_USERNAME, 'A CAN SOLUTIONS');
-    $mail->addAddress($to);
-    $mail->addReplyTo($email, $name);
-    $mail->Subject = $subject;
-    $mail->Body    = $body;
-    $mail->send();
-    $sent = true;
-} catch (Exception $e) {
-    error_log('send-contact mail failed: ' . $mail->ErrorInfo);
+        $mail->setFrom(NEWSLETTER_SMTP_USERNAME, 'A CAN SOLUTIONS');
+        $mail->addAddress($to);
+        $mail->addReplyTo($email, $name);
+        $mail->Subject = $subject;
+        $mail->Body    = $body;
+        $mail->send();
+        $sent = true;
+    } catch (Exception $e) {
+        error_log('send-contact mail failed: ' . $mail->ErrorInfo);
+    }
+} else {
+    error_log('send-contact: mail not sent — PHPMailer (vendor/) not installed');
 }
 ?>
 <!DOCTYPE html>
