@@ -6781,8 +6781,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         .dsg-dl-banner__text {
             margin: 0;
             font-weight: 700;
-            font-size: 1.05rem;
-            color: var(--dsg-ink);
+            font-size: 1.1rem;
+            color: #1a1a1a;
         }
 
         .dsg-dl-banner__btn {
@@ -7535,7 +7535,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h3 class="bpo-team-feat__t">24時間365日対応</h3>
                                 <p class="bpo-team-feat__d">土日・深夜も含めて<br>柔軟に対応。</p>
                             </div>
+                            
                         </div>
+                        
                     </div>
 
                     <!-- Right: Myanmar Team Image -->
@@ -7545,7 +7547,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </div>
+                <div class="dsg-dl-banner" style="background-color: white;">
+                    <p class="dsg-dl-banner__text">ミャンマーBPOチームの資料はこちら→</p>
+                    <a href="assets/pdf/BPOチーム営業資料.pdf" class="dsg-dl-banner__btn">ダウンロード</a>
+                </div>
             </div>
+            
         </section>
 
     </div>
