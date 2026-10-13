@@ -468,7 +468,7 @@
 
   <!-- ── Hero ── -->
   <section class="dl-hero">
-    <img src="assets/img/homepage.png" alt="サービス" class="dl-hero__img" />
+    <img src="assets/img/homepage.webp" alt="サービス" class="dl-hero__img" loading="eager" fetchpriority="high" decoding="async" width="1324" height="414" />
   </section>
 
   <div class="svc-wrap">
@@ -480,7 +480,7 @@
         <!-- AI・データサービス -->
         <div class="svc-card svc-card--blue">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/36008214-3d96-42d4-90c8-ca6ba62e20dd.png" alt="AI・データサービス" />
+            <img class="iconimage" src="assets/img/36008214-3d96-42d4-90c8-ca6ba62e20dd.webp" alt="AI・データサービス" loading="lazy" decoding="async" width="750" height="800" />
           </div>
           <h3 class="svc-card__title">AI・データサービス</h3>
           <p class="svc-card__subtitle">AI &amp; Data Services</p>
@@ -491,25 +491,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/ig-1.png" alt="AIアノテーション" class="feature-img-icon" />
+                <img src="assets/img/ig-1.webp" alt="AIアノテーション" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
               </span>
               <span class="svc-card__feature-label">AI<br />アノテーション</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/ig-2.png" alt="AI学習データ作成" class="feature-img-icon" />
+                <img src="assets/img/ig-2.webp" alt="AI学習データ作成" class="feature-img-icon" loading="lazy" decoding="async" width="78" height="70" />
               </span>
               <span class="svc-card__feature-label">AI学習データ<br />作成</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/ig-3.png" alt="LLM Evaluation" class="feature-img-icon" />
+                <img src="assets/img/ig-3.webp" alt="LLM Evaluation" class="feature-img-icon" loading="lazy" decoding="async" width="650" height="800" />
               </span>
               <span class="svc-card__feature-label">LLM<br />Evaluation</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/ig-4.png" alt="OCR×AI・データ確認" class="feature-img-icon" />
+                <img src="assets/img/ig-4.webp" alt="OCR×AI・データ確認" class="feature-img-icon" loading="lazy" decoding="async" width="80" height="82" />
               </span>
               <span class="svc-card__feature-label">OCR×AI・<br />データ確認</span>
             </div>
@@ -525,7 +525,7 @@
         <!-- BPOサービス -->
         <div class="svc-card svc-card--navy">
           <div class="svc-card__icon">
-           <img class="iconimage" src="assets/img/718519d4-f896-4328-acc6-3e6d15dd0790.png" alt="BPOサービス" />
+           <img class="iconimage" src="assets/img/718519d4-f896-4328-acc6-3e6d15dd0790.webp" alt="BPOサービス" loading="lazy" decoding="async" width="536" height="800" />
           </div>
           <h3 class="svc-card__title">BPOサービス</h3>
           <p class="svc-card__subtitle">Business Process Outsourcing</p>
@@ -536,25 +536,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/b-1.png" alt="データ入力・加工" class="feature-img-icon" />
+                <img src="assets/img/b-1.webp" alt="データ入力・加工" class="feature-img-icon" loading="lazy" decoding="async" width="762" height="800" />
               </span>
               <span class="svc-card__feature-label">データ入力・<br />加工</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/b-2.png" alt="カスタマーサポート" class="feature-img-icon" />
+                <img src="assets/img/b-2.webp" alt="カスタマーサポート" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="661" />
               </span>
               <span class="svc-card__feature-label">カスタマー<br />サポート</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/b-3.png" alt="Webリサーチ・情報収集" class="feature-img-icon" />
+                <img src="assets/img/b-3.webp" alt="Webリサーチ・情報収集" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="770" />
               </span>
               <span class="svc-card__feature-label">Webリサーチ・<br />情報収集</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/b-4.png" alt="OCR・データ確認" class="feature-img-icon" />
+                <img src="assets/img/b-4.webp" alt="OCR・データ確認" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
               </span>
               <span class="svc-card__feature-label">OCR・<br />データ確認</span>
             </div>
@@ -570,7 +570,7 @@
         <!-- KPOサービス -->
         <div class="svc-card svc-card--green">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/fb3d79f9-3a90-4007-a14a-719e8df1a8c1.png" alt="KPOサービス" />
+            <img class="iconimage" src="assets/img/fb3d79f9-3a90-4007-a14a-719e8df1a8c1.webp" alt="KPOサービス" loading="lazy" decoding="async" width="800" height="770" />
           </div>
           <h3 class="svc-card__title">KPOサービス</h3>
           <p class="svc-card__subtitle">Knowledge Process Outsourcing</p>
@@ -581,25 +581,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/k-1.png" alt="データ分析・レポート作成" class="feature-img-icon" />
+                <img src="assets/img/k-1.webp" alt="データ分析・レポート作成" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="636" />
               </span>
               <span class="svc-card__feature-label">データ分析・<br />レポート作成</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/k-2.png" alt="市場調査・競合分析" class="feature-img-icon" />
+                <img src="assets/img/k-2.webp" alt="市場調査・競合分析" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="781" />
               </span>
               <span class="svc-card__feature-label">市場調査・<br />競合分析</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/k-3.png" alt="業務改善・プロセス設計" class="feature-img-icon" />
+                <img src="assets/img/k-3.webp" alt="業務改善・プロセス設計" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="782" />
               </span>
               <span class="svc-card__feature-label">業務改善・<br />プロセス設計</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/k-4.png" alt="プロンプト設計・AI活用支援" class="feature-img-icon" />
+                <img src="assets/img/k-4.webp" alt="プロンプト設計・AI活用支援" class="feature-img-icon" loading="lazy" decoding="async" width="1254" height="1254" />
               </span>
               <span class="svc-card__feature-label">プロンプト設計・<br />AI活用支援</span>
             </div>
@@ -618,7 +618,7 @@
         <!-- Technology -->
         <div class="svc-card svc-card--purple">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/1609111b-24c2-4eff-b654-f0261413f595.png" alt="Technology" />
+            <img class="iconimage" src="assets/img/1609111b-24c2-4eff-b654-f0261413f595.webp" alt="Technology" loading="lazy" decoding="async" width="800" height="800" />
           </div>
           <h3 class="svc-card__title">Technology</h3>
           <p class="svc-card__subtitle">&nbsp;</p>
@@ -629,25 +629,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/T-1.png" alt="Webサイト構築" class="feature-img-icon" />
+                <img src="assets/img/T-1.webp" alt="Webサイト構築" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
               </span>
               <span class="svc-card__feature-label">Webサイト<br />構築</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/T-2.png" alt="システム開発" class="feature-img-icon" />
+                <img src="assets/img/T-2.webp" alt="システム開発" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="767" />
               </span>
               <span class="svc-card__feature-label">システム開発</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/T-3.png" alt="業務自動化・効率化" class="feature-img-icon" />
+                <img src="assets/img/T-3.webp" alt="業務自動化・効率化" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="771" />
               </span>
               <span class="svc-card__feature-label">業務自動化・<br />効率化</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/T-4.png" alt="データベース構築" class="feature-img-icon" />
+                <img src="assets/img/T-4.webp" alt="データベース構築" class="feature-img-icon" loading="lazy" decoding="async" width="726" height="800" />
               </span>
               <span class="svc-card__feature-label">データベース<br />構築</span>
             </div>
@@ -663,7 +663,7 @@
         <!-- Design / Creative -->
         <div class="svc-card svc-card--orange">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/917bbb21-4687-4d29-9c41-fe7518b3ca49.png" alt="Design / Creative" />
+            <img class="iconimage" src="assets/img/917bbb21-4687-4d29-9c41-fe7518b3ca49.webp" alt="Design / Creative" loading="lazy" decoding="async" width="800" height="789" />
           </div>
           <h3 class="svc-card__title">Design / Creative</h3>
           <p class="svc-card__subtitle">&nbsp;</p>
@@ -674,25 +674,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/D-1.png" alt="画像加工・編集" class="feature-img-icon" />
+                <img src="assets/img/D-1.webp" alt="画像加工・編集" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="634" />
               </span>
               <span class="svc-card__feature-label">画像加工・<br />編集</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/D-2.png" alt="動画制作・モーショングラフィックス" class="feature-img-icon" />
+                <img src="assets/img/D-2.webp" alt="動画制作・モーショングラフィックス" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
               </span>
               <span class="svc-card__feature-label">動画制作・<br />モーション<br />グラフィックス</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/D-3.png" alt="Webデザイン" class="feature-img-icon" />
+                <img src="assets/img/D-3.webp" alt="Webデザイン" class="feature-img-icon" loading="lazy" decoding="async" width="789" height="800" />
               </span>
               <span class="svc-card__feature-label">Webデザイン</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/D-4.png" alt="コンテンツ制作・ライティング" class="feature-img-icon" />
+                <img src="assets/img/D-4.webp" alt="コンテンツ制作・ライティング" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="675" />
               </span>
               <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
             </div>
@@ -708,7 +708,7 @@
         <!-- Myanmar Business Support -->
         <div class="svc-card svc-card--teal">
           <div class="svc-card__icon">
-            <img class="iconimage" src="assets/img/Untibbbtled (2).png" alt="Myanmar Business Support" />
+            <img class="iconimage" src="assets/img/Untibbbtled (2).webp" alt="Myanmar Business Support" loading="lazy" decoding="async" width="133" height="128" />
           </div>
           <h3 class="svc-card__title">Myanmar Business Support</h3>
           <p class="svc-card__subtitle">&nbsp;</p>
@@ -719,25 +719,25 @@
           <div class="svc-card__features">
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/M-1.png" alt="ミャンマー進出支援" class="feature-img-icon" />
+                <img src="assets/img/M-1.webp" alt="ミャンマー進出支援" class="feature-img-icon" loading="lazy" decoding="async" width="782" height="800" />
               </span>
               <span class="svc-card__feature-label">ミャンマー<br />進出支援</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/M-2.png" alt="現地市場調査・分析" class="feature-img-icon" />
+                <img src="assets/img/M-2.webp" alt="現地市場調査・分析" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="781" />
               </span>
               <span class="svc-card__feature-label">現地市場調査・<br />分析</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/M-3.png" alt="人材採用・教育支援" class="feature-img-icon" />
+                <img src="assets/img/M-3.webp" alt="人材採用・教育支援" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="533" />
               </span>
               <span class="svc-card__feature-label">人材採用・<br />教育支援</span>
             </div>
             <div class="svc-card__feature">
               <span class="svc-card__feature-icon">
-                <img src="assets/img/M-4.png" alt="業務体制構築支援" class="feature-img-icon" />
+                <img src="assets/img/M-4.webp" alt="業務体制構築支援" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="502" />
               </span>
               <span class="svc-card__feature-label">業務体制構築<br />支援</span>
             </div>
@@ -798,7 +798,7 @@
     <div class="svc-features-row">
       <div class="svc-feature-item">
         <span class="svc-feature-item__icon">
-          <img src="assets/img/FF-1.png" alt="日本品質の管理体制" class="feature-row-img-icon" />
+          <img src="assets/img/FF-1.webp" alt="日本品質の管理体制" class="feature-row-img-icon" loading="lazy" decoding="async" width="171" height="200" />
         </span>
         <div>
           <strong>日本品質の管理体制</strong>
@@ -807,7 +807,7 @@
       </div>
       <div class="svc-feature-item">
         <span class="svc-feature-item__icon">
-          <img src="assets/img/FF-2.png" alt="ミャンマーの高度人材" class="feature-row-img-icon" />
+          <img src="assets/img/FF-2.webp" alt="ミャンマーの高度人材" class="feature-row-img-icon" loading="lazy" decoding="async" width="200" height="166" />
         </span>
         <div>
           <strong>ミャンマーの高度人材</strong>
@@ -816,7 +816,7 @@
       </div>
       <div class="svc-feature-item">
         <span class="svc-feature-item__icon">
-          <img src="assets/img/FF-3.png" alt="柔軟な対応力" class="feature-row-img-icon" />
+          <img src="assets/img/FF-3.webp" alt="柔軟な対応力" class="feature-row-img-icon" loading="lazy" decoding="async" width="198" height="200" />
         </span>
         <div>
           <strong>柔軟な対応力</strong>

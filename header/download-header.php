@@ -292,7 +292,7 @@
   <div class="dl-banner__wrap">
     <!-- Left: Mascot Girl (full height, bottom-aligned) -->
     <div class="dl-banner__mascot">
-      <img src="assets/img/download-mascot.png" alt="A CAN SOLUTIONS キャラクター" />
+      <img src="assets/img/download-mascot.webp" alt="A CAN SOLUTIONS キャラクター" loading="lazy" decoding="async" width="213" height="410" />
     </div>
 
     <!-- Center: Content -->
@@ -310,7 +310,7 @@
       <div class="dl-banner__badges">
         <div class="dl-banner__badge">
           <span class="dl-banner__badge-icon">
-            <img src="assets/img/download-icon-doc.png" alt="無料" />
+            <img src="assets/img/download-icon-doc.webp" alt="無料" loading="lazy" decoding="async" width="34" height="41" />
           </span>
           <span class="dl-banner__badge-text">
             すべて無料で<br />ダウンロード可能
@@ -319,7 +319,7 @@
 
         <div class="dl-banner__badge">
           <span class="dl-banner__badge-icon">
-            <img src="assets/img/download-icon-shield.png" alt="登録不要" />
+            <img src="assets/img/download-icon-shield.webp" alt="登録不要" loading="lazy" decoding="async" width="36" height="44" />
           </span>
           <span class="dl-banner__badge-text">
             会員登録・個人情報の<br />入力は不要です
@@ -330,7 +330,7 @@
 
     <!-- Right: Visual (Brochures & Mug) — fills full right half -->
     <div class="dl-banner__visual">
-      <img src="assets/img/Clean Corporate Brochure Mockup.png" alt="営業資料・サービスガイド・会社案内" />
+      <img src="assets/img/Clean Corporate Brochure Mockup.webp" alt="営業資料・サービスガイド・会社案内" loading="lazy" decoding="async" width="2159" height="728" />
     </div>
   </div>
 </section>

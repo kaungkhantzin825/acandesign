@@ -980,7 +980,7 @@
       text-align: left;
       padding: 2.5rem 2rem 1.8rem;
       color: #ffffff;
-      background: url('assets/img/mandalay.jpg') center/cover no-repeat;
+      background: url('assets/img/mandalay.webp') center/cover no-repeat;
     }
 
     .about__cta-banner h3 {
@@ -1134,7 +1134,7 @@
   <!-- NAV -->
   <nav class="nav">
     <a href="/" class="nav__logo">
-      <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" class="nav__logo-img" width="40" height="40" />
+      <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" class="nav__logo-img" width="40" height="40" loading="eager" decoding="async" />
       <span>A CAN SOLUTIONS</span>
     </a>
     <ul class="nav__links">
@@ -1161,7 +1161,7 @@
 
   <!-- HERO -->
   <section class="hero">
-    <img src="assets/img/width_1536.png" alt="A CAN SOLUTIONS チーム" class="hero__bg-img" />
+    <img src="assets/img/width_1536.webp" alt="A CAN SOLUTIONS チーム" class="hero__bg-img" loading="eager" fetchpriority="high" decoding="async" width="1534" height="468" />
     <div class="hero__content">
       <div class="hero__text-area">
         <h1 class="hero__title" style="
@@ -1177,13 +1177,13 @@
       <div class="hero__actions">
         <a href="/#contact" class="hero-btn hero-btn--orange">
           <span class="hero-btn__icon">
-            <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.png" alt="" width="45" height="36" style="display:block;" />
+            <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.webp" alt="" width="45" height="36" style="display:block;" loading="lazy" decoding="async" />
           </span>
           <span>お問い合わせ</span>
         </a>
         <a href="/#services" class="hero-btn hero-btn--white">
           <span class="hero-btn__icon">
-            <img src="assets/img/5e260550-b6ab-465e-b3d1-973dc8286696.png" alt="" width="26" height="36" style="display:block;" />
+            <img src="assets/img/5e260550-b6ab-465e-b3d1-973dc8286696.webp" alt="" width="26" height="36" style="display:block;" loading="lazy" decoding="async" />
           </span>
           <span style="
     color: #342eaa;
@@ -1191,7 +1191,7 @@
         </a>
         <a href="/#cases" class="hero-btn hero-btn--white">
           <span class="hero-btn__icon">
-            <img src="assets/img/7f3bc30f-93a6-4cfa-be00-4399bee983dd.png" alt="" width="29" height="36" style="display:block;" />
+            <img src="assets/img/7f3bc30f-93a6-4cfa-be00-4399bee983dd.webp" alt="" width="29" height="36" style="display:block;" loading="lazy" decoding="async" />
           </span>
           <span style="
     color: #342eaa;
@@ -1206,8 +1206,8 @@
     <div class="stats__grid">
       <div class="stats__item">
         <div class="stats__icon">
-          <img src="assets/img/591b712e-e026-44cc-a394-d4602f8758e8.png" alt="日本語対応スタッフ" />
-          <!-- <img src="assets/img/8972bded-b06e-4662-93c8-b2e08b8ae7ed.png" alt="ミャンマー運営" /> -->
+          <img src="assets/img/591b712e-e026-44cc-a394-d4602f8758e8.webp" alt="日本語対応スタッフ" loading="lazy" decoding="async" width="800" height="785" />
+          <!-- <img src="assets/img/8972bded-b06e-4662-93c8-b2e08b8ae7ed.webp" alt="ミャンマー運営" loading="lazy" decoding="async" width="800" height="440" /> -->
         </div>
         <div class="stats__text-box">
           <div class="stats__value" style="
@@ -1220,7 +1220,7 @@
       </div>
       <div class="stats__item">
         <div class="stats__icon">
-         <img src="assets/img/8972bded-b06e-4662-93c8-b2e08b8ae7ed.png" alt="ミャンマー運営" />
+         <img src="assets/img/8972bded-b06e-4662-93c8-b2e08b8ae7ed.webp" alt="ミャンマー運営" loading="lazy" decoding="async" width="800" height="440" />
         </div>
         <div class="stats__text-box">
           <div class="stats__value" style="
@@ -1275,7 +1275,7 @@
         <!-- AIアノテーション -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/11.png" alt="AIアノテーション" width="48" height="48" style="object-fit:contain;" />
+            <img src="assets/img/11.webp" alt="AIアノテーション" width="48" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">AIアノテーション</div>
           <div class="service-card__desc">高精度なアノテーションで<br />AIの精度向上に貢献</div>
@@ -1283,7 +1283,7 @@
         <!-- AI学習データ作成 -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/22.png" alt="AI学習データ作成" width="35" height="48" style="object-fit:contain;" />
+            <img src="assets/img/22.webp" alt="AI学習データ作成" width="35" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">AI学習データ作成</div>
           <div class="service-card__desc">多様なデータを整備し、<br />学習データを高品質で提供</div>
@@ -1291,7 +1291,7 @@
         <!-- 画像・動画加工 -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/33.png" alt="画像・動画加工" width="42" height="48" style="object-fit:contain;" />
+            <img src="assets/img/33.webp" alt="画像・動画加工" width="42" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">画像・動画加工</div>
           <div class="service-card__desc">仕様書がなくとも<br />高品質な加工を実現</div>
@@ -1299,7 +1299,7 @@
         <!-- データ入力 -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/44.png" alt="データ入力" width="48" height="48" style="object-fit:contain;" />
+            <img src="assets/img/44.webp" alt="データ入力" width="48" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">データ入力</div>
           <div class="service-card__desc">正確・迅速なデータ入力で<br />業務を効率化</div>
@@ -1307,7 +1307,7 @@
         <!-- KPO -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/55.png" alt="KPO（知識業務）" width="40" height="48" style="object-fit:contain;" />
+            <img src="assets/img/55.webp" alt="KPO（知識業務）" width="40" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">KPO（知識業務）</div>
           <div class="service-card__desc">専門知識を必要とする<br />業務をサポート</div>
@@ -1315,7 +1315,7 @@
         <!-- 業務自動化 -->
         <div class="service-card">
           <div class="service-card__icon">
-            <img src="assets/img/66.png" alt="業務自動化・効率化" width="48" height="48" style="object-fit:contain;" />
+            <img src="assets/img/66.webp" alt="業務自動化・効率化" width="48" height="48" style="object-fit:contain;" loading="lazy" decoding="async" />
           </div>
           <div class="service-card__title">業務自動化・効率化</div>
           <div class="service-card__desc">RPA・スクリプト等で<br />業務プロセスを効率化</div>
@@ -1396,7 +1396,7 @@
         </div>
 
         <div class="why__photo-card">
-          <img src="assets/img/human.png" alt="A CAN SOLUTIONS チーム集合写真" />
+          <img src="assets/img/human.webp" alt="A CAN SOLUTIONS チーム集合写真" loading="lazy" decoding="async" width="799" height="532" />
           <div class="why__bottom-bar" style="background-color: #004aad !important;">
             <div class="why__bottom-col">
               <span class="why__bottom-col-title">日本法人</span>
@@ -1447,7 +1447,7 @@
 
             <a href="ocr-dx" class="blog-card">
               <div class="blog-card__img">
-                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AI×OCR記事" />
+                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.webp" alt="AI×OCR記事" loading="lazy" decoding="async" width="800" height="517" />
               </div>
               <div class="blog-card__body">
                 <div class="blog-card__meta">
@@ -1460,7 +1460,7 @@
 
             <a href="ai-agent" class="blog-card">
               <div class="blog-card__img">
-                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AIエージェント記事" />
+                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.webp" alt="AIエージェント記事" loading="lazy" decoding="async" width="800" height="517" />
               </div>
               <div class="blog-card__body">
                 <div class="blog-card__meta">
@@ -1473,7 +1473,7 @@
 
             <a href="genai-tips" class="blog-card">
               <div class="blog-card__img">
-                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="生成AI導入記事" />
+                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.webp" alt="生成AI導入記事" loading="lazy" decoding="async" width="800" height="517" />
               </div>
               <div class="blog-card__body">
                 <div class="blog-card__meta">
@@ -1486,7 +1486,7 @@
 
             <a href="post" class="blog-card">
               <div class="blog-card__img">
-                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AI学習データ記事" />
+                <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.webp" alt="AI学習データ記事" loading="lazy" decoding="async" width="800" height="517" />
               </div>
               <div class="blog-card__body">
                 <div class="blog-card__meta">
@@ -1531,7 +1531,7 @@
           <p>業務のお悩みやご相談を、専門スタッフが丁寧にヒアリングします。</p>
           <a href="/#contact" class="hero-btn hero-btn--orange" style="width: fit-content;">
             <span class="hero-btn__icon">
-              <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.png" alt="" width="36" height="36" style="display:block;" />
+              <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.webp" alt="" width="36" height="36" style="display:block;" loading="lazy" decoding="async" />
             </span>
             <span>お問い合わせ</span>
           </a>
@@ -1545,7 +1545,7 @@
     <div class="footer__grid-new">
       <div>
         <div class="footer__brand-title">
-          <img src="assets/img/logo.webp" alt="Logo" width="32" height="32" style="background:#fff; border-radius:50%; padding:2px;" />
+          <img src="assets/img/logo.webp" alt="Logo" width="32" height="32" style="background:#fff; border-radius:50%; padding:2px;" loading="lazy" decoding="async" />
           <span>A CAN SOLUTIONS</span>
         </div>
         <p class="footer__brand-sub">AI×HUMAN<br />Beyond Outsourcing</p>
@@ -1574,10 +1574,10 @@
         <p class="footer__contact-info">✉ info@acan-sol.com</p>
         <p class="footer__contact-info">営業時間：平日 9:00 - 18:00</p>
         <div class="footer__social-badge-wrap">
-          <a href="https://substack.com/@acankado" target="_blank" rel="noopener"><img src="assets/img/Substack_logo.png" style="
+          <a href="https://substack.com/@acankado" target="_blank" rel="noopener"><img src="assets/img/Substack_logo.webp" style="
     height: 15px;
-" alt="Substack" /></a>
-          <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener"><img src="assets/img/linkedin-removebg-preview.png" alt="LinkedIn" /></a>
+" alt="Substack" loading="lazy" decoding="async" width="1920" height="330" /></a>
+          <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener"><img src="assets/img/linkedin-removebg-preview.webp" alt="LinkedIn" loading="lazy" decoding="async" width="287" height="78" /></a>
         </div>
       </div>
     </div>

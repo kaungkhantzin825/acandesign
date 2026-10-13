@@ -66,6 +66,37 @@ form. **`include`/`require` statements must keep the real `.php` filename** — 
 server-side file paths, not URLs. When adding a new page, link to it as `/newpage`, never
 `newpage.php`.
 
+## Images & performance
+
+All raster images are served as **WebP**. The source PNG/JPG files are kept next to them
+in `assets/img/` but are no longer referenced by anything — they can be deleted once the
+live site has been verified.
+
+- Converted with Pillow: quality 82 for JPEG, 85 for opaque PNG, 88 for PNG with alpha
+  (lossy WebP still carries the alpha channel). 370 images: **122 MB → 15.7 MB (−87%)**.
+- **Do not rasterise the SVG placeholders.** `blog-outsourcing`, `blog-bpo` and
+  `team-meeting` were SVG content carrying a `.jpg` extension; they are now `.svg` and
+  their references were updated. Rasterising them would have been a downgrade.
+- **`assets/img copy/` is an unreferenced duplicate** of ~73 images. Safe to delete.
+- `.svg` files are left alone — already vector, already small.
+
+Loading attributes are applied to every `<img>`:
+
+| Condition | Attributes added |
+|---|---|
+| `hero__bg-img`, `hero__desktop-logo`, `dl-hero__img` | `loading="eager" fetchpriority="high"` |
+| `hero__*`, `nav__logo`, `site-footer__logo` | `loading="eager"` |
+| everything else | `loading="lazy"` |
+
+Plus `decoding="async"` and intrinsic `width`/`height` on every image. The width/height are
+safe to add because `main.css` sets a global `img { max-width: 100%; height: auto; }` — they
+supply only the aspect ratio, so the browser reserves space and avoids layout shift without
+changing the rendered size.
+
+**When adding an image:** export it as `.webp`. If you *replace* an existing one, **give it a
+new filename** — `.htaccess` caches assets for a year with no filename fingerprinting, so
+reusing a name keeps serving the stale copy.
+
 ## Contact Form — Three-Step PHP Flow
 
 The active contact form is a **PHP + PHPMailer/SMTP** flow (not FormSubmit):

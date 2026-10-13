@@ -650,7 +650,7 @@
     <!-- Left: Download list -->
     <div class="dl-panel">
       <div class="dl-panel__head">
-        <span class="dl-panel__head-icon"><img src="assets/img/cacb3930-f2a0-4c51-a120-b09b169a4851.png" alt="" style="width: 42px;height: 38px;" /></span>
+        <span class="dl-panel__head-icon"><img src="assets/img/cacb3930-f2a0-4c51-a120-b09b169a4851.webp" alt="" style="width: 42px;height: 38px;" loading="lazy" decoding="async" width="800" height="800" /></span>
         ダウンロード資料一覧
       </div>
       <div class="dl-panel__sub">資料の概要をご確認の上、ダウンロードしてください。</div>
@@ -659,7 +659,7 @@
 
         <!-- Card 1 -->
         <div class="dl-card">
-          <img src="assets/img/width_800 (1).png" alt="失敗しない海外BPO導入" class="dl-card__thumb" />
+          <img src="assets/img/width_800 (1).webp" alt="失敗しない海外BPO導入" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">失敗しない海外BPO導入</p>
             <p class="dl-card__desc">正しいステップで進めれば、海外旅行BPOは<br />企業の強い味方になります</p>
@@ -667,13 +667,13 @@
           </div>
           <a href="assets/pdf/失敗しない海外BPO導入.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <!-- Card 2 -->
         <div class="dl-card">
-          <img src="assets/img/2-p.png" alt="AIを入れるだけでは、会社は変わらない" class="dl-card__thumb" />
+          <img src="assets/img/2-p.webp" alt="AIを入れるだけでは、会社は変わらない" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIを入れるだけでは、会社は変わらない</p>
             <p class="dl-card__desc">大切なのは仕事の「やり方そのもの」を<br />変えること</p>
@@ -681,13 +681,13 @@
           </div>
           <a href="assets/pdf/2-p.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <!-- Card 3 -->
         <div class="dl-card">
-          <img src="assets/img/3-p.png" alt="AIに任せる仕事、人が担う仕事" class="dl-card__thumb" />
+          <img src="assets/img/3-p.webp" alt="AIに任せる仕事、人が担う仕事" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIに任せる仕事、人が担う仕事</p>
             <p class="dl-card__desc">AIと人の強みを活かして、より価値のある<br />仕事へ</p>
@@ -695,13 +695,13 @@
           </div>
           <a href="assets/pdf/3-p.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <!-- Card 4 -->
         <div class="dl-card">
-          <img src="assets/img/4-p.png" alt="100%自動化を目指さない AI×BPOという考え方" class="dl-card__thumb" />
+          <img src="assets/img/4-p.webp" alt="100%自動化を目指さない AI×BPOという考え方" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">100%自動化を目指さない AI×BPOという考え方</p>
             <p class="dl-card__desc">AIと人が一緒に成長し、より価値のある<br />仕事へ</p>
@@ -709,13 +709,13 @@
           </div>
           <a href="assets/pdf/4-p.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <!-- Card 5 -->
         <div class="dl-card">
-          <img src="assets/img/5-p.png" alt="AIエージェントで、仕事はどう変わるのか?" class="dl-card__thumb" />
+          <img src="assets/img/5-p.webp" alt="AIエージェントで、仕事はどう変わるのか?" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="530" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIエージェントで、仕事はどう変わるのか?</p>
             <p class="dl-card__desc">AIが「考え、動き、仕事を進める」時代へ</p>
@@ -723,13 +723,13 @@
           </div>
           <a href="assets/pdf/5-p.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <!-- Card 6 -->
         <div class="dl-card">
-          <img src="assets/img/6-p.png" alt="AI時代に企業が本当に育てるべき人材とは?" class="dl-card__thumb" />
+          <img src="assets/img/6-p.webp" alt="AI時代に企業が本当に育てるべき人材とは?" class="dl-card__thumb" loading="lazy" decoding="async" width="799" height="525" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI時代に企業が本当に育てるべき人材とは?</p>
             <p class="dl-card__desc">AIが進化するほど、人の価値は<br />「考える力」にシフトする</p>
@@ -737,12 +737,12 @@
           </div>
           <a href="assets/pdf/6-p.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
           <div class="dl-card">
-          <img src="assets/img/card6.png" alt="その仕事、AIに説明できますか？" class="dl-card__thumb" />
+          <img src="assets/img/card6.webp" alt="その仕事、AIに説明できますか？" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">その仕事、AIに説明できますか？</p>
             <p class="dl-card__desc">AI導入の第一歩は、自分たちの仕事を理解<br />「し直すことから</p>
@@ -750,13 +750,13 @@
           </div>
           <a href="assets/pdf/その仕事、AIに説明できますか？.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
         <div class="dl-card">
-          <img src="assets/img/card7.png" alt="マニュアルに書けない仕事こそ、企業のノウハウ" class="dl-card__thumb" />
+          <img src="assets/img/card7.webp" alt="マニュアルに書けない仕事こそ、企業のノウハウ" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">マニュアルに書けない仕事こそ、企業のノウハウ</p>
             <p class="dl-card__desc">経験の中で培われた「暗黙知」を見える化し、<br />AI時代の会社の資産に変えていく</p>
@@ -764,13 +764,13 @@
           </div>
           <a href="assets/pdf/マニュアルに書けない仕事こそ、 企業のノウハウ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
          <div class="dl-card">
-          <img src="assets/img/width_80000.png" alt="例外処理を集めると、AI導入の答えが見えてくる" class="dl-card__thumb" />
+          <img src="assets/img/width_80000.webp" alt="例外処理を集めると、AI導入の答えが見えてくる" class="dl-card__thumb" loading="lazy" decoding="async" width="799" height="533" />
           <div class="dl-card__info">
             <p class="dl-card__title">例外処理を集めると、AI導入の答えが見えてくる</p>
             <p class="dl-card__desc">例外は、AIを育てるヒントの宝庫。
@@ -779,7 +779,7 @@
           </div>
           <a href="assets/pdf/例外処理を集めると、AI導入の答えが見えてくる.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
@@ -787,7 +787,7 @@
 
 
          <div class="dl-card">
-          <img src="assets/img/width_800000.png" alt="AI時代、BPOの役割は作業代行だけではなくなる" class="dl-card__thumb" />
+          <img src="assets/img/width_800000.webp" alt="AI時代、BPOの役割は作業代行だけではなくなる" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI時代、BPOの役割は作業代行だけではなくなる</p>
             <p class="dl-card__desc">BPO／KPOは、AIを育て、業務を賢くする現場へ</p>
@@ -795,7 +795,7 @@
           </div>
           <a href="assets/pdf/AI時代、BPOの役割は作業代行だけではなくなる.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
        
@@ -803,7 +803,7 @@
 
 
          <div class="dl-card">
-          <img src="assets/img/width_77700.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/width_77700.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIで本当に変えるべきなのは、<br>ツールではなく仕事の仕組み</p>
             <p class="dl-card__desc">仕事を分解し、人の判断をKnowledgeにし、AI・BPO・KPOが<br>成長し続ける循環を作る</p>
@@ -811,14 +811,14 @@
           </div>
           <a href="assets/pdf/AI導入で本当に変えるべきなのは、ツールではなく仕事の仕組み.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
         
 
 
         <div class="dl-card">
-          <img src="assets/img/width_66600.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/width_66600.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIを使える会社と、AIで強くな<br>る会社は違う</p>
             <p class="dl-card__desc">AIを使いこなすだけでは終わらない。知識を蓄積し、会社<br>そのものが学習する仕組みを作る。</p>
@@ -826,13 +826,13 @@
           </div>
           <a href="assets/pdf/AIを使える会社と、AIで強くなる会社は違う.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
          <div class="dl-card">
-          <img src="assets/img/width_82200.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/width_82200.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI時代に会社のノウハウをどう残すか</p>
             <p class="dl-card__desc">人の経験を、会社に知識へ。<br>知識が資産になる会社を作る</p>
@@ -840,7 +840,7 @@
           </div>
           <a href="assets/pdf/AI時代に会社のノウハウをどう残すか.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
@@ -848,7 +848,7 @@
 
         
          <div class="dl-card">
-          <img src="assets/img/111.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/111.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIの回答を「直す仕事」に価値がある</p>
             <p class="dl-card__desc">人がAIの回答を評価し、修正理由を残すことで、会社の知識が集積され、AIも会社も賢くなる。</p>
@@ -856,14 +856,14 @@
           </div>
           <a href="assets/pdf/AIの回答を「直す仕事」に価値がある.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
 
         <div class="dl-card">
-          <img src="assets/img/222.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/222.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIを使える人より、AIを評価できる人が必要になる</p>
             <p class="dl-card__desc">AIの答えを正しく判断し、理由を説明し、仕事とAIを改善できる人材が、これからの主役になる。</p>
@@ -871,13 +871,13 @@
           </div>
           <a href="assets/pdf/AIを使える人より、AIを評価できる人が必要になる.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
          <div class="dl-card">
-          <img src="assets/img/333.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/333.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIが賢くなる会社は、人も成長する会社</p>
             <p class="dl-card__desc">AIと人が一緒に成長する仕組みを作る</p>
@@ -885,12 +885,12 @@
           </div>
           <a href="assets/pdf/AIが賢くなる会社は、人も成長する会社.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         <div class="dl-card">
-          <img src="assets/img/444.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/444.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI時代、BPOは人を出す仕事から会社を<br>強くする仕組みへ</p>
             <p class="dl-card__desc">AIを活用し、人の判断・分析・改善で業務のスピード<br>を高め、お客様の成長に貢献します。</p>
@@ -898,13 +898,13 @@
           </div>
           <a href="assets/pdf/AI時代、BPOは人を出す仕事から会社を強くする仕組みへ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
         
         <div class="dl-card">
-          <img src="assets/img/555.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/555.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIに任せる仕事、人に任せる仕事をどう決めるか</p>
             <p class="dl-card__desc">AIと人の強みを活かした役割分担で、効率と品質<br>を両立し、会社の成長につなげます。
@@ -913,13 +913,13 @@
           </div>
           <a href="assets/pdf/AIに任せる仕事、人に任せる仕事をどう決めるか.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
 
           <div class="dl-card">
-          <img src="assets/img/666.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/666.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">例外処理こそ、これからのBPOの価値になる</p>
             <p class="dl-card__desc">AIが処理できなかった「例外」の中に改<br>善のヒントが隠れています。</p>
@@ -927,13 +927,13 @@
           </div>
           <a href="assets/pdf/例外処理こそ、これからのBPOの価値になる.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
 
      
           <div class="dl-card">
-          <img src="assets/img/777.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/777.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">BPOからKPOへ<br>
 作業するチームから考えるチームへ。</p>
@@ -942,7 +942,7 @@
           </div>
           <a href="assets/pdf/BPOからKPOへ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
         </div>
            
@@ -950,7 +950,7 @@
         
 
  <div class="dl-card">
-          <img src="assets/img/bbb99.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/bbb99.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">安いBPOではなく、会社を強くす<br>るBPOを選ぶ</p>
             <p class="dl-card__desc">AI,BPO,KPOを組み合わせて仕事を改善し、ナ<br>レッジを蓄積し会社の競争力を高めます。</p>
@@ -958,7 +958,7 @@
           </div>
           <a href="assets/pdf/安いBPOではなく会社を強くするBPOを選ぶ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
 </div>
 
@@ -968,7 +968,7 @@
 
 
 <div class="dl-card">
-          <img src="assets/img/bbb999.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" />
+          <img src="assets/img/bbb999.webp" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI導入で最初に決めるべきは正解の基準</p>
             <p class="dl-card__desc">AIで業務を生かすには、何をもって正しいとす<br>るかを明確にすることがすべてのスタートです。</p>
@@ -976,7 +976,7 @@
           </div>
           <a href="assets/pdf/AI導入で最初に決めるべきは正解の基準.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
-            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.png" alt="" style="width: 16px; height: 16px;" />
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
 </div>
 
@@ -1000,28 +1000,28 @@
         <div class="dl-merits__head">資料ダウンロードのメリット</div>
         <ul class="dl-merits__list">
           <li class="dl-merits__item">
-            <img src="assets/img/cacb3930-f2a0-4c51-a120-b09b169a4851.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/cacb3930-f2a0-4c51-a120-b09b169a4851.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="800" height="800" />
             <div class="dl-merits__body">
               <strong>サービス内容を詳しく理解できる</strong>
               <span>各サービスの特徴や強みを詳しく<br />ご確認いただけます。</span>
             </div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/d24756c1-608c-4f9b-a6c0-7931d2f4f8c9.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/d24756c1-608c-4f9b-a6c0-7931d2f4f8c9.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="749" height="800" />
             <div class="dl-merits__body">
               <strong>導入事例から成果をイメージ</strong>
               <span>実際の事例を通じて、導入後の効果を<br />具体的に把握できます。</span>
             </div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/b59b74f3-a9ff-4188-80e6-3913ccbf1cb2.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/b59b74f3-a9ff-4188-80e6-3913ccbf1cb2.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="657" height="800" />
             <div class="dl-merits__body">
               <strong>検討をスムーズに進められる</strong>
               <span>比較検討や社内稟議の資料として<br />ご活用いただけます。</span>
             </div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/6369fc6a-3bf6-4295-9cc8-4f66cc301a18.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/6369fc6a-3bf6-4295-9cc8-4f66cc301a18.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="800" height="800" />
             <div class="dl-merits__body">
               <strong>いつでも自由にダウンロード</strong>
               <span>お好きな時間に、すぐに資料を<br />ダウンロードいただけます。</span>
@@ -1032,7 +1032,7 @@
  
       <!-- Myanmar CTA card -->
       <div class="dl-sidebar-cta">
-        <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
+        <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.webp" alt="ミャンマー" class="dl-sidebar-cta__bg" loading="lazy" decoding="async" width="800" height="530" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text" style="text-align: left;">
             ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
@@ -1050,7 +1050,7 @@
     <div class="dl-contact__cards">
 
       <div class="dl-contact__card">
-        <img src="assets/img/t.png" alt="電話" class="dl-contact__icon" />
+        <img src="assets/img/t.webp" alt="電話" class="dl-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
         <div>
           <p class="dl-contact__label">電話で相談する</p>
           <p class="dl-contact__hours">平日 10:00〜17:00</p>
@@ -1059,7 +1059,7 @@
       </div>
 
       <div class="dl-contact__card">
-        <img src="assets/img/t (1).png" alt="メール" class="dl-contact__icon" />
+        <img src="assets/img/t (1).webp" alt="メール" class="dl-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
         <div>
           <p class="dl-contact__label">メールで相談する</p>
        

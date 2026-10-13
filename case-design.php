@@ -132,7 +132,7 @@
         .dsg-hero {
             position: relative;
             background-color: #eef4fc;
-            background-image: url("assets/img/design-hero2.png");
+            background-image: url("assets/img/design-hero2.webp");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right center;
@@ -140,7 +140,7 @@
 
         .dsg-bg-1 {
             position: relative;
-            background-image: url("assets/img/design-hero3.png");
+            background-image: url("assets/img/design-hero3.webp");
             background-repeat: no-repeat;
             background-size: 700px;
             background-position: right 350px top -75px;
@@ -148,7 +148,7 @@
 
         .dsg-bg-2 {
             position: relative;
-            background-image: url("assets/img/design-hero.png");
+            background-image: url("assets/img/design-hero.webp");
             background-repeat: no-repeat;
             background-size: 700px;
             background-position: right 10px;
@@ -160,7 +160,7 @@
             height: 100px;
 
             position: absolute;
-            background: url("assets/img/acan-logo-small.png") no-repeat center;
+            background: url("assets/img/acan-logo-small.webp") no-repeat center;
             background-size: 45px;
 
             right: 405px;
@@ -758,7 +758,7 @@
           .dsg-hero {
             background-image:
               linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
-              url("assets/img/design-hero2.png");
+              url("assets/img/design-hero2.webp");
             background-position: center, right center;
           }
           .dsg-bg-1,
@@ -770,7 +770,7 @@
             .dsg-hero {
                 background-image:
                     linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.82) 45%, rgba(255, 255, 255, 0.64) 100%),
-                    url("assets/img/design-hero.png");
+                    url("assets/img/design-hero.webp");
                 background-position: center, center right;
             }
 
@@ -855,21 +855,21 @@
                         <div class="dsg-hcards">
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.webp" alt="" loading="lazy" decoding="async" width="57" height="74" /></span>
                                     <h3 class="dsg-hcard__title">高難度画像編集</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">シースルー素材や影調整など<br>高難易度な編集に対応します。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.webp" alt="" loading="lazy" decoding="async" width="75" height="74" /></span>
                                     <h3 class="dsg-hcard__title">24時間365日対応</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">ミャンマー拠点で<br>24時間365日体制を実現。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.webp" alt="" loading="lazy" decoding="async" width="75" height="73" /></span>
                                     <h3 class="dsg-hcard__title">AIによる品質安定</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">編集・チェックプロセスに<br>AIを活用し品質を安定化。</p>
@@ -895,10 +895,10 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">アパレル商品の特性を理解し、シースルー素材やアクセサリー等の質感も高い精度で編集します。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.webp" alt="" loading="lazy" decoding="async" width="651" height="800" /></span>
                         </div>
                     </div>
-                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dsg-why__item">
                         <span class="dsg-why__num">2</span>
                         <h3 class="dsg-why__title">量産と短納期に対応</h3>
@@ -906,10 +906,10 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">金曜データアップ、翌週月曜日納品など大量データ・短納期案件でも対応します。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.webp" alt="" loading="lazy" decoding="async" width="800" height="781" /></span>
                         </div>
                     </div>
-                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dsg-why__item">
                         <span class="dsg-why__num">3</span>
                         <h3 class="dsg-why__title">AIと人のチェックで品質を安定化</h3>
@@ -917,7 +917,7 @@
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">AIによる一次チェックと、人の目視チェックを組み合わせ、品質を安定化させます。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.webp" alt="" loading="lazy" decoding="async" width="173" height="173" /></span>
                         </div>
                     </div>
                 </div>
@@ -933,11 +933,11 @@
                 <div class="dsg-serv">
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.webp" alt="" loading="lazy" decoding="async" width="800" height="710" /></span>
                             <h3 class="dsg-scard__title">高難度画像編集</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service1.jpg" alt="シースルー素材の合成やモデル着せ替えなどの高難度画像編集" />
+                            <img src="assets/img/design-service1.webp" alt="シースルー素材の合成やモデル着せ替えなどの高難度画像編集" loading="lazy" decoding="async" width="546" height="800" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>シースルー素材の合成</li>
@@ -948,11 +948,11 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.webp" alt="" loading="lazy" decoding="async" width="800" height="523" /></span>
                             <h3 class="dsg-scard__title">画像編集、レタッチ</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service2.png" alt="大量の商品画像編集・レタッチ" />
+                            <img src="assets/img/design-service2.webp" alt="大量の商品画像編集・レタッチ" loading="lazy" decoding="async" width="1536" height="1024" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>金曜データUP→翌月曜納品</li>
@@ -962,11 +962,11 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.webp" alt="" loading="lazy" decoding="async" width="800" height="741" /></span>
                             <h3 class="dsg-scard__title">動画編集・短尺量産</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service3.png" alt="短尺ファッション動画の編集・量産" />
+                            <img src="assets/img/design-service3.webp" alt="短尺ファッション動画の編集・量産" loading="lazy" decoding="async" width="371" height="191" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>高級アパレルブランド向け、実績5年以上</li>
@@ -976,11 +976,11 @@
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.webp" alt="" loading="lazy" decoding="async" width="763" height="800" /></span>
                             <h3 class="dsg-scard__title">仕様作りから伴走</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service4.png" alt="お客様と仕様を整理しながら伴走" />
+                            <img src="assets/img/design-service4.webp" alt="お客様と仕様を整理しながら伴走" loading="lazy" decoding="async" width="1536" height="1024" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>「良い感じ」に仕上げてからスタート可能</li>
@@ -1000,27 +1000,27 @@
                 </div>
                 <div class="dsg-stats">
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">24</span>時間<span class="dsg-stat__n">365</span>日<br>体制で対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">1,000</span>枚以上<br>／週末対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.webp" alt="" loading="lazy" decoding="async" width="621" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">5</span>年以上の<br>動画制作実績</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.webp" alt="" loading="lazy" decoding="async" width="779" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">50</span>本/日の<br>短尺動画制作</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.webp" alt="" loading="lazy" decoding="async" width="788" height="800" /></span>
                         <p class="dsg-stat__label">夕方入稿→<br>翌朝納品対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.webp" alt="" loading="lazy" decoding="async" width="173" height="173" /></span>
                         <p class="dsg-stat__label">AI活用による<br>編集・チェック</p>
                     </div>
                 </div>
@@ -1037,29 +1037,29 @@
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">アパレル画像編集・レタッチ</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work1.png" alt="アパレル画像編集・レタッチの制作イメージ" 
+                            <img src="assets/img/design-work1.webp" alt="アパレル画像編集・レタッチの制作イメージ" 
                                 style="
                                     object-fit: cover;
                                     object-position: center -40px;
-                                "/>
+                                " loading="lazy" decoding="async" width="800" height="600" />
                         </div>
                         <p class="dsg-wcard__desc">シースルー素材の合成・影調整・レタッチでラグジュアリーな質感を表現。</p>
                     </div>
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">商品・モデル合成</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work2.png" alt="商品とモデルの合成の制作イメージ" />
+                            <img src="assets/img/design-work2.webp" alt="商品とモデルの合成の制作イメージ" loading="lazy" decoding="async" width="800" height="450" />
                         </div>
                         <p class="dsg-wcard__desc">商品とモデルの自然な合成で、統一感のあるビジュアル制作</p>
                     </div>
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">短尺ファッション動画</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work3.png" alt="短尺ファッション動画の制作イメージ" 
+                            <img src="assets/img/design-work3.webp" alt="短尺ファッション動画の制作イメージ" 
                                 style="
                                     margin: 0 auto;
                                     width: 80%;
-                                "/>
+                                " loading="lazy" decoding="async" width="800" height="450" />
                         </div>
                         <p class="dsg-wcard__desc">15〜20秒のショート動画を大量制作。SNS・広告・ECで高い訴求力を発揮</p>
                     </div>
@@ -1078,17 +1078,17 @@
 
                         <div class="dsg-team__points">
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.webp" alt="" loading="lazy" decoding="async" width="142" height="101" /></span>
                                 <p class="dsg-tp__t">高度な画像編集</p>
                                 <p class="dsg-tp__d">レタッチや合成、色調整など幅広い画像制作に対応</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.webp" alt="" loading="lazy" decoding="async" width="141" height="121" /></span>
                                 <p class="dsg-tp__t">日本側との連携</p>
                                 <p class="dsg-tp__d">日々のコミュニケーションで品質と納期を管理</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.webp" alt="" loading="lazy" decoding="async" width="142" height="121" /></span>
                                 <p class="dsg-tp__t">継続的な技術教育</p>
                                 <p class="dsg-tp__d">最新の編集手法やAI活用を学び、成長を支援</p>
                             </div>
@@ -1096,12 +1096,12 @@
                     </div>
 
                     <!-- <div class="dsg-team__media dsg-team__media--pair">
-                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
-                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
                     </div> -->
 
-                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
-                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
                 </div>
             </div>
         </section>
@@ -1117,22 +1117,22 @@
 
                         <div class="dsg-team__points">
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.webp" alt="" loading="lazy" decoding="async" width="800" height="741" /></span>
                                 <p class="dsg-tp__d">SNS・広告向けの<br>15〜20秒動画を<br>効率よく制作。</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.webp" alt="" loading="lazy" decoding="async" width="141" height="121" /></span>
                                 <p class="dsg-tp__d">企画意図や品質基準を<br>共有し、安定した<br>制作体制を構築。</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                                 <p class="dsg-tp__d">日々の制作を通じて、<br>編集品質とスピードを<br>向上。</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="dsg-team__media">
-                        <div class="dsg-team__shot dsg-ph" style="aspect-ratio:16/10"><img src="assets/img/design-team-video1.png" alt="ミャンマーの動画制作チーム"></div>
+                        <div class="dsg-team__shot dsg-ph" style="aspect-ratio:16/10"><img src="assets/img/design-team-video1.webp" alt="ミャンマーの動画制作チーム" loading="lazy" decoding="async" width="1600" height="1198" ></div>
                     </div>
                 </div>
             </div>
@@ -1142,7 +1142,7 @@
 
     <script>
         // Photos and icons for this page are still being prepared: if a placeholder image
-        // is missing, hide the <img> so the placeholder fill shows instead of a broken icon.
+        // is missing, hide the <img loading="lazy" decoding="async" > so the placeholder fill shows instead of a broken icon.
         document.querySelectorAll('.dsg-ph img, .dsg-icon-ph img').forEach(function (img) {
             function hide() {
                 img.style.display = 'none';

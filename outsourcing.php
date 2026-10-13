@@ -39,7 +39,7 @@
       height: 267px;
       background-image:
         linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-        url("assets/img/newblog-8.jpg");
+        url("assets/img/newblog-8.webp");
       background-size: cover;
       background-position: center;
       -webkit-mask-image: none;
@@ -163,10 +163,10 @@
         </div>
         <div class="blog-post__share">
           <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="share-btn share-btn--substack">
-            <img src="assets/img/Substack_logo.png" alt="Substack" />
+            <img src="assets/img/Substack_logo.webp" alt="Substack" loading="lazy" decoding="async" width="1920" height="330" />
           </a>
           <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener" class="share-btn share-btn--linkedin">
-            <img src="assets/img/linkedin-removebg-preview.png" alt="LinkedIn" />
+            <img src="assets/img/linkedin-removebg-preview.webp" alt="LinkedIn" loading="lazy" decoding="async" width="287" height="78" />
           </a>
         </div>
       </header>

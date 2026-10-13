@@ -134,7 +134,7 @@
   width: 86%;
   margin: 0 auto;
   background-color: #f4f7fc;
-  background-image: url("assets/img/service-hero-bg.png");
+  background-image: url("assets/img/service-hero-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
@@ -587,7 +587,7 @@
   .dl-hero {
     background-image:
       linear-gradient(90deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.7) 45%, rgba(255, 255, 255, 0) 65%),
-      url("assets/img/service-hero-bg.png");
+      url("assets/img/service-hero-bg.webp");
     background-position: center, right center;
   }
 }
@@ -611,7 +611,7 @@
     min-height: 0;
     background-image:
       linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.35) 100%),
-      url("assets/img/service-hero-bg.png");
+      url("assets/img/service-hero-bg.webp");
     background-position: center, 72% center;
     padding: 2rem 0;
   }
@@ -673,7 +673,7 @@
         rgba(255, 255, 255, 0.30) 30%,
         rgba(255, 255, 255, 0.35) 40%
     ), */
-    url("assets/img/dev-hero.png");
+    url("assets/img/dev-hero.webp");
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     background-position: center, right center;
@@ -792,7 +792,7 @@
   .dev-hero {
     background-image:
       linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
-      url("assets/img/dev-hero.png");
+      url("assets/img/dev-hero.webp");
     background-position: center, center right;
   }
 }
@@ -801,7 +801,7 @@
   .dev-hero {
     background-image:
       linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.62) 100%),
-      url("assets/img/dev-hero.png");
+      url("assets/img/dev-hero.webp");
     background-position: center, center right;
   }
   .dev-hero .dev__inner { min-height: 0; }
@@ -1107,7 +1107,7 @@
   background-color: #ffffff;
   background-image:
     linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 90%),
-    url("assets/img/ai-header-banner.png") !important;
+    url("assets/img/ai-header-banner.webp") !important;
   background-repeat: no-repeat, no-repeat;
   background-position: center, right center;
   background-size: cover, cover;
@@ -1483,7 +1483,7 @@
     margin-right: calc(50% - 50vw);
     background-image:
       linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(min(60vw, 360px) - 80px), #ffffff min(60vw, 360px)),
-      url("assets/img/ai-header-banner.png") !important;
+      url("assets/img/ai-header-banner.webp") !important;
     background-repeat: no-repeat;
     /* Artwork as a band across the top (right side = the AI brain), copy below it */
     background-position: center top, right top;
@@ -2323,7 +2323,7 @@
     margin-right: auto;
     background-image:
       linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.62) 100%),
-      url("assets/img/ai-header-banner.png") !important;
+      url("assets/img/ai-header-banner.webp") !important;
     background-position: center, 62% center;
     background-size: cover, cover;
     min-height: 0;
@@ -2343,7 +2343,7 @@
     margin-right: auto;
     background-image:
       linear-gradient(90deg, #ffffff 0%, #ffffff 38%, rgba(255, 255, 255, 0.85) 52%, rgba(255, 255, 255, 0) 80%),
-      url("assets/img/ai-header-banner.png") !important;
+      url("assets/img/ai-header-banner.webp") !important;
     background-position: center, 70% center;
     background-size: cover, cover;
     min-height: 420px;
@@ -2432,7 +2432,7 @@
 .kpo-hero {
     position: relative;
     min-height: calc(701 * var(--u));
-    background: #ffffff url("assets/img/kpo/kpo-hero-bg.png") no-repeat center top / cover;
+    background: #ffffff url("assets/img/kpo/kpo-hero-bg.webp") no-repeat center top / cover;
     width: 86%;
     margin: 0 auto;
 }
@@ -3117,7 +3117,7 @@
     .kpo-hero {
         background-image:
             linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 55%, rgba(255, 255, 255, 0.2) 100%),
-            url("assets/img/kpo/kpo-hero-bg.png");
+            url("assets/img/kpo/kpo-hero-bg.webp");
     }
 
     .kpo-hero,
@@ -3379,7 +3379,7 @@
         margin: 0 auto;
         overflow: hidden;
         container-type: inline-size;
-        background: #dfeaf5 url("assets/img/cs-hero-photo.jpg") no-repeat center top / cover;
+        background: #dfeaf5 url("assets/img/cs-hero-photo.webp") no-repeat center top / cover;
     }
 
     /* The stage holds the artboard at 1387 * --u. --u is the smaller of the
@@ -4953,7 +4953,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
         <p class="hero__company">
           <span class="hero__company-inner">
-            <img src="assets/img/logo.webp" alt="" class="hero__logo" width="40" height="40">
+            <img src="assets/img/logo.webp" alt="" class="hero__logo" width="40" height="40" loading="eager" decoding="async" >
             <span>A CAN SOLUTIONS Co.,Ltd.</span>
           </span>
         </p>
@@ -4961,7 +4961,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       <!-- desktop-only hero: small logo intro -->
       <div class="hero__desktop" aria-hidden="true" bis_skin_checked="1">
-        <img src="assets/img/logo.webp" alt="" class="hero__desktop-logo reveal reveal--leaf reveal--ready is-visible" width="200" height="200">
+        <img src="assets/img/logo.webp" alt="" class="hero__desktop-logo reveal reveal--leaf reveal--ready is-visible" width="200" height="200" loading="eager" fetchpriority="high" decoding="async" >
         <p class="hero__desktop-name reveal reveal--delay-1 reveal--ready is-visible"><span class="reveal__inner">A CAN SOLUTIONS</span></p>
        
       </div>
@@ -5209,7 +5209,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- AI・データサービス -->
             <div class="svc-card svc-card--blue blue-50">
               <div class="svc-card__icon">
-                <img class="iconimage" src="assets/img/36008214-3d96-42d4-90c8-ca6ba62e20dd.png" alt="AI・データサービス" />
+                <img class="iconimage" src="assets/img/36008214-3d96-42d4-90c8-ca6ba62e20dd.webp" alt="AI・データサービス" loading="lazy" decoding="async" width="750" height="800" />
               </div>
               <h3 class="svc-card__title">AI・データサービス</h3>
               <p class="svc-card__subtitle">AI &amp; Data Services</p>
@@ -5220,25 +5220,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/ig-1.png" alt="AIアノテーション" class="feature-img-icon" />
+                    <img src="assets/img/ig-1.webp" alt="AIアノテーション" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
                   </span>
                   <span class="svc-card__feature-label">AI<br />アノテーション</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/ig-2.png" alt="AI学習データ作成" class="feature-img-icon" />
+                    <img src="assets/img/ig-2.webp" alt="AI学習データ作成" class="feature-img-icon" loading="lazy" decoding="async" width="78" height="70" />
                   </span>
                   <span class="svc-card__feature-label">AI学習データ<br />作成</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/ig-3.png" alt="LLM Evaluation" class="feature-img-icon" />
+                    <img src="assets/img/ig-3.webp" alt="LLM Evaluation" class="feature-img-icon" loading="lazy" decoding="async" width="650" height="800" />
                   </span>
                   <span class="svc-card__feature-label">LLM<br />Evaluation</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/ig-4.png" alt="OCR×AI・データ確認" class="feature-img-icon" />
+                    <img src="assets/img/ig-4.webp" alt="OCR×AI・データ確認" class="feature-img-icon" loading="lazy" decoding="async" width="80" height="82" />
                   </span>
                   <span class="svc-card__feature-label">OCR×AI・<br />データ確認</span>
                 </div>
@@ -5254,7 +5254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- BPOサービス -->
             <div class="svc-card svc-card--navy">
               <div class="svc-card__icon">
-               <img class="iconimage" src="assets/img/718519d4-f896-4328-acc6-3e6d15dd0790.png" alt="BPOサービス" />
+               <img class="iconimage" src="assets/img/718519d4-f896-4328-acc6-3e6d15dd0790.webp" alt="BPOサービス" loading="lazy" decoding="async" width="536" height="800" />
               </div>
               <h3 class="svc-card__title">BPOサービス</h3>
               <p class="svc-card__subtitle">Business Process Outsourcing</p>
@@ -5265,25 +5265,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/b-1.png" alt="データ入力・加工" class="feature-img-icon" />
+                    <img src="assets/img/b-1.webp" alt="データ入力・加工" class="feature-img-icon" loading="lazy" decoding="async" width="762" height="800" />
                   </span>
                   <span class="svc-card__feature-label">データ入力・<br />加工</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/b-2.png" alt="カスタマーサポート" class="feature-img-icon" />
+                    <img src="assets/img/b-2.webp" alt="カスタマーサポート" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="661" />
                   </span>
                   <span class="svc-card__feature-label">カスタマー<br />サポート</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/b-3.png" alt="Webリサーチ・情報収集" class="feature-img-icon" />
+                    <img src="assets/img/b-3.webp" alt="Webリサーチ・情報収集" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="770" />
                   </span>
                   <span class="svc-card__feature-label">Webリサーチ・<br />情報収集</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/b-4.png" alt="OCR・データ確認" class="feature-img-icon" />
+                    <img src="assets/img/b-4.webp" alt="OCR・データ確認" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
                   </span>
                   <span class="svc-card__feature-label">OCR・<br />データ確認</span>
                 </div>
@@ -5299,7 +5299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- KPOサービス -->
             <div class="svc-card svc-card--green">
               <div class="svc-card__icon">
-                <img class="iconimage" src="assets/img/fb3d79f9-3a90-4007-a14a-719e8df1a8c1.png" alt="KPOサービス" />
+                <img class="iconimage" src="assets/img/fb3d79f9-3a90-4007-a14a-719e8df1a8c1.webp" alt="KPOサービス" loading="lazy" decoding="async" width="800" height="770" />
               </div>
               <h3 class="svc-card__title">KPOサービス</h3>
               <p class="svc-card__subtitle">Knowledge Process Outsourcing</p>
@@ -5310,25 +5310,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/k-1.png" alt="データ分析・レポート作成" class="feature-img-icon" />
+                    <img src="assets/img/k-1.webp" alt="データ分析・レポート作成" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="636" />
                   </span>
                   <span class="svc-card__feature-label">データ分析・<br />レポート作成</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/k-2.png" alt="市場調査・競合分析" class="feature-img-icon" />
+                    <img src="assets/img/k-2.webp" alt="市場調査・競合分析" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="781" />
                   </span>
                   <span class="svc-card__feature-label">市場調査・<br />競合分析</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/k-3.png" alt="業務改善・プロセス設計" class="feature-img-icon" />
+                    <img src="assets/img/k-3.webp" alt="業務改善・プロセス設計" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="782" />
                   </span>
                   <span class="svc-card__feature-label">業務改善・<br />プロセス設計</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/k-4.png" alt="プロンプト設計・AI活用支援" class="feature-img-icon" />
+                    <img src="assets/img/k-4.webp" alt="プロンプト設計・AI活用支援" class="feature-img-icon" loading="lazy" decoding="async" width="1254" height="1254" />
                   </span>
                   <span class="svc-card__feature-label">プロンプト設計・<br />AI活用支援</span>
                 </div>
@@ -5347,7 +5347,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Technology -->
             <div class="svc-card svc-card--purple">
               <div class="svc-card__icon">
-                <img class="iconimage" src="assets/img/1609111b-24c2-4eff-b654-f0261413f595.png" alt="Technology" />
+                <img class="iconimage" src="assets/img/1609111b-24c2-4eff-b654-f0261413f595.webp" alt="Technology" loading="lazy" decoding="async" width="800" height="800" />
               </div>
               <h3 class="svc-card__title">Technology</h3>
               <p class="svc-card__subtitle">&nbsp;</p>
@@ -5358,25 +5358,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/T-1.png" alt="Webサイト構築" class="feature-img-icon" />
+                    <img src="assets/img/T-1.webp" alt="Webサイト構築" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
                   </span>
                   <span class="svc-card__feature-label">Webサイト<br />構築</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/T-2.png" alt="システム開発" class="feature-img-icon" />
+                    <img src="assets/img/T-2.webp" alt="システム開発" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="767" />
                   </span>
                   <span class="svc-card__feature-label">システム開発</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/T-3.png" alt="業務自動化・効率化" class="feature-img-icon" />
+                    <img src="assets/img/T-3.webp" alt="業務自動化・効率化" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="771" />
                   </span>
                   <span class="svc-card__feature-label">業務自動化・<br />効率化</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/T-4.png" alt="データベース構築" class="feature-img-icon" />
+                    <img src="assets/img/T-4.webp" alt="データベース構築" class="feature-img-icon" loading="lazy" decoding="async" width="726" height="800" />
                   </span>
                   <span class="svc-card__feature-label">データベース<br />構築</span>
                 </div>
@@ -5392,7 +5392,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Design / Creative -->
             <div class="svc-card svc-card--orange">
               <div class="svc-card__icon">
-                <img class="iconimage" src="assets/img/917bbb21-4687-4d29-9c41-fe7518b3ca49.png" alt="Design / Creative" />
+                <img class="iconimage" src="assets/img/917bbb21-4687-4d29-9c41-fe7518b3ca49.webp" alt="Design / Creative" loading="lazy" decoding="async" width="800" height="789" />
               </div>
               <h3 class="svc-card__title">Design / Creative</h3>
               <p class="svc-card__subtitle">&nbsp;</p>
@@ -5403,25 +5403,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/D-1.png" alt="画像加工・編集" class="feature-img-icon" />
+                    <img src="assets/img/D-1.webp" alt="画像加工・編集" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="634" />
                   </span>
                   <span class="svc-card__feature-label">画像加工・<br />編集</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/D-2.png" alt="動画制作・モーショングラフィックス" class="feature-img-icon" />
+                    <img src="assets/img/D-2.webp" alt="動画制作・モーショングラフィックス" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="800" />
                   </span>
                   <span class="svc-card__feature-label">動画制作・<br />モーション<br />グラフィックス</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/D-3.png" alt="Webデザイン" class="feature-img-icon" />
+                    <img src="assets/img/D-3.webp" alt="Webデザイン" class="feature-img-icon" loading="lazy" decoding="async" width="789" height="800" />
                   </span>
                   <span class="svc-card__feature-label">Webデザイン</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/D-4.png" alt="コンテンツ制作・ライティング" class="feature-img-icon" />
+                    <img src="assets/img/D-4.webp" alt="コンテンツ制作・ライティング" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="675" />
                   </span>
                   <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
                 </div>
@@ -5437,7 +5437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- Myanmar Business Support -->
             <div class="svc-card svc-card--teal">
               <div class="svc-card__icon">
-                <img class="iconimage" src="assets/img/Untibbbtled (2).png" alt="Myanmar Business Support" />
+                <img class="iconimage" src="assets/img/Untibbbtled (2).webp" alt="Myanmar Business Support" loading="lazy" decoding="async" width="133" height="128" />
               </div>
               <h3 class="svc-card__title">Myanmar Business Support</h3>
               <p class="svc-card__subtitle">&nbsp;</p>
@@ -5448,25 +5448,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="svc-card__features">
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/M-1.png" alt="ミャンマー進出支援" class="feature-img-icon" />
+                    <img src="assets/img/M-1.webp" alt="ミャンマー進出支援" class="feature-img-icon" loading="lazy" decoding="async" width="782" height="800" />
                   </span>
                   <span class="svc-card__feature-label">ミャンマー<br />進出支援</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/M-2.png" alt="現地市場調査・分析" class="feature-img-icon" />
+                    <img src="assets/img/M-2.webp" alt="現地市場調査・分析" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="781" />
                   </span>
                   <span class="svc-card__feature-label">現地市場調査・<br />分析</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/M-3.png" alt="人材採用・教育支援" class="feature-img-icon" />
+                    <img src="assets/img/M-3.webp" alt="人材採用・教育支援" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="533" />
                   </span>
                   <span class="svc-card__feature-label">人材採用・<br />教育支援</span>
                 </div>
                 <div class="svc-card__feature">
                   <span class="svc-card__feature-icon">
-                    <img src="assets/img/M-4.png" alt="業務体制構築支援" class="feature-img-icon" />
+                    <img src="assets/img/M-4.webp" alt="業務体制構築支援" class="feature-img-icon" loading="lazy" decoding="async" width="800" height="502" />
                   </span>
                   <span class="svc-card__feature-label">業務体制構築<br />支援</span>
                 </div>
@@ -5527,7 +5527,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="svc-features-row">
           <div class="svc-feature-item">
             <span class="svc-feature-item__icon">
-              <img src="assets/img/FF-1.png" alt="日本品質の管理体制" class="feature-row-img-icon" />
+              <img src="assets/img/FF-1.webp" alt="日本品質の管理体制" class="feature-row-img-icon" loading="lazy" decoding="async" width="171" height="200" />
             </span>
             <div>
               <strong>日本品質の管理体制</strong>
@@ -5536,7 +5536,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="svc-feature-item">
             <span class="svc-feature-item__icon">
-              <img src="assets/img/FF-2.png" alt="ミャンマーの高度人材" class="feature-row-img-icon" />
+              <img src="assets/img/FF-2.webp" alt="ミャンマーの高度人材" class="feature-row-img-icon" loading="lazy" decoding="async" width="200" height="166" />
             </span>
             <div>
               <strong>ミャンマーの高度人材</strong>
@@ -5545,7 +5545,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="svc-feature-item">
             <span class="svc-feature-item__icon">
-              <img src="assets/img/FF-3.png" alt="柔軟な対応力" class="feature-row-img-icon" />
+              <img src="assets/img/FF-3.webp" alt="柔軟な対応力" class="feature-row-img-icon" loading="lazy" decoding="async" width="198" height="200" />
             </span>
             <div>
               <strong>柔軟な対応力</strong>
@@ -5601,7 +5601,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="ai-features-box">
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-1.png" alt="高品質なデータ作成" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-1.webp" alt="高品質なデータ作成" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1288" height="1221" />
                         </div>
                         <h3 class="ai-fcard__title">高品質なデータ作成</h3>
                         <p class="ai-fcard__desc">専門のアノテーターが正確かつ一貫性のあるデータを作成します。</p>
@@ -5609,7 +5609,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-2.png" alt="多様なデータ形式に対応" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-2.webp" alt="多様なデータ形式に対応" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1263" height="1246" />
                         </div>
                         <h3 class="ai-fcard__title">多様なデータ形式に対応</h3>
                         <p class="ai-fcard__desc">画像・テキスト・音声・動画など、様々なデータ形式に対応します。</p>
@@ -5617,7 +5617,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-3.png" alt="厳格な品質管理" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-3.webp" alt="厳格な品質管理" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1378" height="1141" />
                         </div>
                         <h3 class="ai-fcard__title">厳格な品質管理</h3>
                         <p class="ai-fcard__desc">日本品質の理解と複数チェックで、高い品質を保証します。</p>
@@ -5625,7 +5625,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-4.png" alt="AI開発の全工程を支援" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-4.webp" alt="AI開発の全工程を支援" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1254" height="1254" />
                         </div>
                         <h3 class="ai-fcard__title">AI開発の全工程を支援</h3>
                         <p class="ai-fcard__desc">データ作成から評価まで、AI開発の各フェーズをサポートします。</p>
@@ -5642,9 +5642,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="ai-services-grid">
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-1.png" alt="AIアノテーション" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-1.webp" alt="AIアノテーション" class="ai-scard__img" loading="lazy" decoding="async" width="1604" height="981" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-1.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-1.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1288" height="1221" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -5663,9 +5663,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-2.png" alt="AI学習データ作成" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-2.webp" alt="AI学習データ作成" class="ai-scard__img" loading="lazy" decoding="async" width="1663" height="945" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-2.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-2.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1263" height="1246" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -5683,9 +5683,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-3.png" alt="OCR×AI・データ確認" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-3.webp" alt="OCR×AI・データ確認" class="ai-scard__img" loading="lazy" decoding="async" width="1607" height="979" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-4.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-4.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1254" height="1254" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -5715,7 +5715,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">1</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-1.png" alt="" />
+                                    <img src="assets/img/fff-1.webp" alt="" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">ヒアリング・要件定義</h3>
@@ -5726,7 +5726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">2</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-2.png" alt="" />
+                                    <img src="assets/img/fff-2.webp" alt="" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ準備</h3>
@@ -5737,7 +5737,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">3</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-3.png" alt="" />
+                                    <img src="assets/img/fff-3.webp" alt="" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ作成・評価</h3>
@@ -5748,7 +5748,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">4</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-4.png" alt="" />
+                                    <img src="assets/img/fff-4.webp" alt="" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">納品・検収</h3>
@@ -5759,7 +5759,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">5</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-5.png" alt="" />
+                                    <img src="assets/img/fff-5.webp" alt="" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">改善・運用サポート</h3>
@@ -5798,21 +5798,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dev-hcards">
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero3.png" alt="">
+                            <img src="./assets/img/dev-hero3.webp" alt="" loading="lazy" decoding="async" width="64" height="62" >
                         </span>
                         <h3 class="dev-hcard__title">Web制作・開発に対応</h3>
                         <p class="dev-hcard__desc ">コーポレートサイト、LP<br>システム開発まで幅広く対応。</p>
                     </div>
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero1.png" alt="">
+                            <img src="./assets/img/dev-hero1.webp" alt="" loading="lazy" decoding="async" width="64" height="49" >
                         </span>
                         <h3 class="dev-hcard__title">ミャンマーIT人材</h3>
                         <p class="dev-hcard__desc">若く優秀な人材を育成し、<br>開発チームとして活躍。</p>
                     </div>
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero2.png" alt="">
+                            <img src="./assets/img/dev-hero2.webp" alt="" loading="lazy" decoding="async" width="44" height="54" >
                         </span>
                         <h3 class="dev-hcard__title">日本品質のサポート</h3>
                         <p class="dev-hcard__desc">日本側が品質管理・進行管理<br>を行い、安心の体制を構築。</p>
@@ -5835,10 +5835,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h3 class="dev-why__title">IT人材不足への課題</h3>
                                 <p class="dev-why__desc">日本国内では、IT人材の不足が深刻であり、開発コストの高騰や納期遅延が問題となっていました。</p>
                             </div>
-                            <img class="dev-why__ic" src="assets/img/dev-sectioin2.1.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic" src="assets/img/dev-sectioin2.1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="59" height="70" />
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dev-why__item">
                         <span class="dev-why__num">2</span>
                         <div class="dev-why__main">
@@ -5846,10 +5846,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h3 class="dev-why__title">ミャンマーとの出会い</h3>
                                 <p class="dev-why__desc">現地視察を通じて、若い人材の学習意欲やポテンシャルの高さ、誠実さに大きな可能性を感じました。</p>
                             </div>
-                            <img class="dev-why__ic myanmar-flag" src="assets/img/dev-section-2.2.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic myanmar-flag" src="assets/img/dev-section-2.2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="76" height="140" />
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dev-why__item">
                         <span class="dev-why__num">3</span>
                         <div class="dev-why__main">
@@ -5857,7 +5857,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 <h3 class="dev-why__title">日本の案件で人材を育成</h3>
                                 <p class="dev-why__desc">単なる外注先ではなく、共に成長し、長期的に信頼できるITチームを育成しています。</p>
                             </div>
-                            <img class="dev-why__ic" src="assets/img/dev-section2.3.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic" src="assets/img/dev-section2.3.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="78" height="60" />
                         </div>
                     </div>
                 </div>
@@ -5872,25 +5872,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="dev-serv">
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service1.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service1.webp" alt="" loading="lazy" decoding="async" width="89" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイトデザイン</h3>
                         <p class="dev-scard__desc">UI/UX設計、デザインカンプ作<br>成、レスポンシブデザインなど、<br>ユーザーに伝わるデザインを<br>ご提案します。</p>
                         <span class="dev-scard__tag">対応例：コーポレートサイト / LP</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service2.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service2.webp" alt="" loading="lazy" decoding="async" width="77" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイト構築</h3>
                         <p class="dev-scard__desc">WordPress等のCMS構築や、<br>独自システム開発まで対応。<br>要件に合わせて最適な技術で<br>開発します。</p>
                         <span class="dev-scard__tag">対応例：WordPress / PHP / Laravel</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service3.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service3.webp" alt="" loading="lazy" decoding="async" width="78" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイト保守・更新</h3>
                         <p class="dev-scard__desc">定期更新、バグ修正、セキュリティ<br>対応など、公開後の運用保守を<br>サポートし、安定稼働を支えます。</p>
                         <span class="dev-scard__tag">対応例：更新代行 / 障害対応</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service4.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service4.webp" alt="" loading="lazy" decoding="async" width="56" height="76" /></div>
                         <h3 class="dev-scard__title">データ比較・システム開発</h3>
                         <p class="dev-scard__desc">新旧データの比較プログラムや<br>業務システムの開発、レポート<br>自動化など、業務効率化を支援<br>します。</p>
                         <span class="dev-scard__tag">対応例：データ比較 / 業務システム</span>
@@ -5911,21 +5911,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="dev-team__points" style="margin-top:2.2rem;">
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.1.png" alt="">
+                                    <img src="./assets/img/dev-team1.1.webp" alt="" loading="lazy" decoding="async" width="1366" height="1152" >
                                 </div>
                                 <p class="dev-tp__t">若手人材の育成</p>
                                 <p class="dev-tp__d">継続的な教育とOJT<br>でスキルを向上</p>
                             </div>
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.2.png" alt="">
+                                    <img src="./assets/img/dev-team1.2.webp" alt="" loading="lazy" decoding="async" width="1330" height="1182" >
                                 </div>
                                 <p class="dev-tp__t">日本側との連携</p>
                                 <p class="dev-tp__d">日々のコミュニケーション<br>で品質と納期を徹底管理</p>
                             </div>
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.3.png" alt="">
+                                    <img src="./assets/img/dev-team1.3.webp" alt="" loading="lazy" decoding="async" width="1223" height="864" >
                                 </div>
                                 <p class="dev-tp__t">継続的な技術教育</p>
                                 <p class="dev-tp__d">最新技術の学習機会を提<br>供し、高い技術力を保持</p>
@@ -5933,7 +5933,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
 
                     </div>
-                    <div class="dev-team__media"><img src="./assets/img/dev-team.png" alt=""></div>
+                    <div class="dev-team__media"><img src="./assets/img/dev-team.webp" alt="" loading="lazy" decoding="async" width="1024" height="768" ></div>
                 </div>
             </div>
         </section>
@@ -5948,7 +5948,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dev-work">
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.1.png" alt="制作実績 1">
+                            <img src="./assets/img/dev-team2.1.webp" alt="制作実績 1" loading="lazy" decoding="async" width="250" height="141" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：介護・福祉</p>
@@ -5958,7 +5958,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.2.png" alt="制作実績 2">
+                            <img src="./assets/img/dev-team2.2.webp" alt="制作実績 2" loading="lazy" decoding="async" width="250" height="141" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：教育機関</p>
@@ -5968,7 +5968,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.3.png" alt="制作実績 3">
+                            <img src="./assets/img/dev-team2.3.webp" alt="制作実績 3" loading="lazy" decoding="async" width="254" height="143" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：玩具メーカー</p>
@@ -6064,7 +6064,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             width: 86%;
             position: relative;
             background-color: #eef4fc;
-            background-image: url("assets/img/design-hero2.png");
+            background-image: url("assets/img/design-hero2.webp");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: right center;
@@ -6072,7 +6072,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         .dsg-bg-1 {
             position: relative;
-            background-image: url("assets/img/design-hero3.png");
+            background-image: url("assets/img/design-hero3.webp");
             background-repeat: no-repeat;
             background-size: 700px;
             background-position: right 350px top -75px;
@@ -6080,7 +6080,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         .dsg-bg-2 {
             position: relative;
-            background-image: url("assets/img/design-hero.png");
+            background-image: url("assets/img/design-hero.webp");
             background-repeat: no-repeat;
             background-size: 700px;
             background-position: right 10px;
@@ -6092,7 +6092,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             height: 100px;
 
             position: absolute;
-            background: url("assets/img/acan-logo-small.png") no-repeat center;
+            background: url("assets/img/acan-logo-small.webp") no-repeat center;
             background-size: 45px;
 
             right: 405px;
@@ -6691,8 +6691,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           .dsg-hero {
             background-image:
               linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
-              url("assets/img/design-hero.png"),
-              url("assets/img/design-hero2.png");
+              url("assets/img/design-hero.webp"),
+              url("assets/img/design-hero2.webp");
             background-size: cover, cover, cover;
             background-position: center, center right, center;
           }
@@ -6705,7 +6705,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             .dsg-hero {
                 background-image:
                     linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.82) 45%, rgba(255, 255, 255, 0.64) 100%),
-                    url("assets/img/design-hero.png");
+                    url("assets/img/design-hero.webp");
                 background-position: center, center right;
             }
 
@@ -6840,21 +6840,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="dsg-hcards">
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero1.webp" alt="" loading="lazy" decoding="async" width="57" height="74" /></span>
                                     <h3 class="dsg-hcard__title">高難度画像編集</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">シースルー素材や影調整など<br>高難易度な編集に対応します。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero2.webp" alt="" loading="lazy" decoding="async" width="75" height="74" /></span>
                                     <h3 class="dsg-hcard__title">24時間365日対応</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">ミャンマー拠点で<br>24時間365日体制を実現。</p>
                             </div>
                             <div class="dsg-hcard">
                                 <div class="dsg-hcard__head">
-                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.png" alt="" /></span>
+                                    <span class="dsg-hcard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-hero3.webp" alt="" loading="lazy" decoding="async" width="75" height="73" /></span>
                                     <h3 class="dsg-hcard__title">AIによる品質安定</h3>
                                 </div>
                                 <p class="dsg-hcard__desc">編集・チェックプロセスに<br>AIを活用し品質を安定化。</p>
@@ -6880,10 +6880,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">アパレル商品の特性を理解し、シースルー素材やアクセサリー等の質感も高い精度で編集します。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why1.webp" alt="" loading="lazy" decoding="async" width="651" height="800" /></span>
                         </div>
                     </div>
-                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dsg-why__item">
                         <span class="dsg-why__num">2</span>
                         <h3 class="dsg-why__title">量産と短納期に対応</h3>
@@ -6891,10 +6891,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">金曜データアップ、翌週月曜日納品など大量データ・短納期案件でも対応します。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why2.webp" alt="" loading="lazy" decoding="async" width="800" height="781" /></span>
                         </div>
                     </div>
-                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dsg-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dsg-why__item">
                         <span class="dsg-why__num">3</span>
                         <h3 class="dsg-why__title">AIと人のチェックで品質を安定化</h3>
@@ -6902,7 +6902,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="dsg-why__text">
                                 <p class="dsg-why__desc">AIによる一次チェックと、人の目視チェックを組み合わせ、品質を安定化させます。</p>
                             </div>
-                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.png" alt="" /></span>
+                            <span class="dsg-why__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-why3.webp" alt="" loading="lazy" decoding="async" width="173" height="173" /></span>
                         </div>
                     </div>
                 </div>
@@ -6918,11 +6918,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dsg-serv">
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service1.webp" alt="" loading="lazy" decoding="async" width="800" height="710" /></span>
                             <h3 class="dsg-scard__title">高難度画像編集</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service1.jpg" alt="シースルー素材の合成やモデル着せ替えなどの高難度画像編集" />
+                            <img src="assets/img/design-service1.webp" alt="シースルー素材の合成やモデル着せ替えなどの高難度画像編集" loading="lazy" decoding="async" width="546" height="800" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>シースルー素材の合成</li>
@@ -6933,11 +6933,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service2.webp" alt="" loading="lazy" decoding="async" width="800" height="523" /></span>
                             <h3 class="dsg-scard__title">画像編集、レタッチ</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service2.png" alt="大量の商品画像編集・レタッチ" />
+                            <img src="assets/img/design-service2.webp" alt="大量の商品画像編集・レタッチ" loading="lazy" decoding="async" width="1536" height="1024" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>金曜データUP→翌月曜納品</li>
@@ -6947,11 +6947,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service3.webp" alt="" loading="lazy" decoding="async" width="800" height="741" /></span>
                             <h3 class="dsg-scard__title">動画編集・短尺量産</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service3.png" alt="短尺ファッション動画の編集・量産" />
+                            <img src="assets/img/design-service3.webp" alt="短尺ファッション動画の編集・量産" loading="lazy" decoding="async" width="371" height="191" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>高級アパレルブランド向け、実績5年以上</li>
@@ -6961,11 +6961,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                     <div class="dsg-scard">
                         <div class="dsg-scard__head">
-                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.png" alt="" /></span>
+                            <span class="dsg-scard__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-service4.webp" alt="" loading="lazy" decoding="async" width="763" height="800" /></span>
                             <h3 class="dsg-scard__title">仕様作りから伴走</h3>
                         </div>
                         <div class="dsg-scard__media">
-                            <img src="assets/img/design-service4.png" alt="お客様と仕様を整理しながら伴走" />
+                            <img src="assets/img/design-service4.webp" alt="お客様と仕様を整理しながら伴走" loading="lazy" decoding="async" width="1536" height="1024" />
                         </div>
                         <ul class="dsg-scard__list">
                             <li>「良い感じ」に仕上げてからスタート可能</li>
@@ -6985,27 +6985,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="dsg-stats">
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat1.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">24</span>時間<span class="dsg-stat__n">365</span>日<br>体制で対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat2.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">1,000</span>枚以上<br>／週末対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat3.webp" alt="" loading="lazy" decoding="async" width="621" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">5</span>年以上の<br>動画制作実績</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat4.webp" alt="" loading="lazy" decoding="async" width="779" height="800" /></span>
                         <p class="dsg-stat__label"><span class="dsg-stat__n">50</span>本/日の<br>短尺動画制作</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat5.webp" alt="" loading="lazy" decoding="async" width="788" height="800" /></span>
                         <p class="dsg-stat__label">夕方入稿→<br>翌朝納品対応</p>
                     </div>
                     <div class="dsg-stat">
-                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.png" alt="" /></span>
+                        <span class="dsg-stat__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-stat6.webp" alt="" loading="lazy" decoding="async" width="173" height="173" /></span>
                         <p class="dsg-stat__label">AI活用による<br>編集・チェック</p>
                     </div>
                 </div>
@@ -7022,29 +7022,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">アパレル画像編集・レタッチ</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work1.png" alt="アパレル画像編集・レタッチの制作イメージ" 
+                            <img src="assets/img/design-work1.webp" alt="アパレル画像編集・レタッチの制作イメージ" 
                                 style="
                                     object-fit: cover;
                                     object-position: center -40px;
-                                "/>
+                                " loading="lazy" decoding="async" width="800" height="600" />
                         </div>
                         <p class="dsg-wcard__desc">シースルー素材の合成・影調整・レタッチでラグジュアリーな質感を表現。</p>
                     </div>
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">商品・モデル合成</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work2.png" alt="商品とモデルの合成の制作イメージ" />
+                            <img src="assets/img/design-work2.webp" alt="商品とモデルの合成の制作イメージ" loading="lazy" decoding="async" width="800" height="450" />
                         </div>
                         <p class="dsg-wcard__desc">商品とモデルの自然な合成で、統一感のあるビジュアル制作</p>
                     </div>
                     <div class="dsg-wcard">
                         <h3 class="dsg-wcard__title">短尺ファッション動画</h3>
                         <div class="dsg-wcard__media">
-                            <img src="assets/img/design-work3.png" alt="短尺ファッション動画の制作イメージ" 
+                            <img src="assets/img/design-work3.webp" alt="短尺ファッション動画の制作イメージ" 
                                 style="
                                     margin: 0 auto;
                                     width: 80%;
-                                "/>
+                                " loading="lazy" decoding="async" width="800" height="450" />
                         </div>
                         <p class="dsg-wcard__desc">15〜20秒のショート動画を大量制作。SNS・広告・ECで高い訴求力を発揮</p>
                     </div>
@@ -7063,17 +7063,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <div class="dsg-team__points">
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image1.webp" alt="" loading="lazy" decoding="async" width="142" height="101" /></span>
                                 <p class="dsg-tp__t">高度な画像編集</p>
                                 <p class="dsg-tp__d">レタッチや合成、色調整など幅広い画像制作に対応</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image2.webp" alt="" loading="lazy" decoding="async" width="141" height="121" /></span>
                                 <p class="dsg-tp__t">日本側との連携</p>
                                 <p class="dsg-tp__d">日々のコミュニケーションで品質と納期を管理</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-image3.webp" alt="" loading="lazy" decoding="async" width="142" height="121" /></span>
                                 <p class="dsg-tp__t">継続的な技術教育</p>
                                 <p class="dsg-tp__d">最新の編集手法やAI活用を学び、成長を支援</p>
                             </div>
@@ -7081,12 +7081,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <!-- <div class="dsg-team__media dsg-team__media--pair">
-                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
-                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image1.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
+                        <div class="dsg-team__shot dsg-ph"><img src="assets/img/design-team-image2.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
                     </div> -->
 
-                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.png" alt="ミャンマーの画像制作チーム"></div>
-                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.png" alt="ミャンマーの画像制作チーム"></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image1.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
+                    <div class="dsg-team__shot dsg-ph dsg-i"><img src="assets/img/design-team-image2.webp" alt="ミャンマーの画像制作チーム" loading="lazy" decoding="async" width="800" height="450" ></div>
                 </div>
             </div>
         </section>
@@ -7102,22 +7102,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                         <div class="dsg-team__points">
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video1.webp" alt="" loading="lazy" decoding="async" width="800" height="741" /></span>
                                 <p class="dsg-tp__d">SNS・広告向けの<br>15〜20秒動画を<br>効率よく制作。</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video2.webp" alt="" loading="lazy" decoding="async" width="141" height="121" /></span>
                                 <p class="dsg-tp__d">企画意図や品質基準を<br>共有し、安定した<br>制作体制を構築。</p>
                             </div>
                             <div class="dsg-tp dsg-tp__card">
-                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.png" alt="" /></span>
+                                <span class="dsg-tp__ic dsg-icon-ph" aria-hidden="true"><img src="assets/img/design-icon-team-video3.webp" alt="" loading="lazy" decoding="async" width="800" height="800" /></span>
                                 <p class="dsg-tp__d">日々の制作を通じて、<br>編集品質とスピードを<br>向上。</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="dsg-team__media">
-                        <div class="dsg-team__shot dsg-ph" style="aspect-ratio:16/10"><img src="assets/img/design-team-video1.png" alt="ミャンマーの動画制作チーム"></div>
+                        <div class="dsg-team__shot dsg-ph" style="aspect-ratio:16/10"><img src="assets/img/design-team-video1.webp" alt="ミャンマーの動画制作チーム" loading="lazy" decoding="async" width="1600" height="1198" ></div>
                     </div>
                      
                 </div>
@@ -7134,7 +7134,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <script>
         // Photos and icons for this page are still being prepared: if a placeholder image
-        // is missing, hide the <img> so the placeholder fill shows instead of a broken icon.
+        // is missing, hide the <img loading="lazy" decoding="async" > so the placeholder fill shows instead of a broken icon.
         document.querySelectorAll('.dsg-ph img, .dsg-icon-ph img').forEach(function (img) {
             function hide() {
                 img.style.display = 'none';
@@ -7436,7 +7436,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">01</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic1.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="83" height="70" >
                         </div>
                         <h3 class="bpo-flow-card__title">動画共有で理解</h3>
                         <p class="bpo-flow-card__desc">実際の業務動画を共有し、作業内容を視覚的に理解。</p>
@@ -7452,7 +7452,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">02</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic2.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="87" height="65" >
                         </div>
                         <h3 class="bpo-flow-card__title">日本語ブリッジが整理・指示</h3>
                         <p class="bpo-flow-card__desc">日本語での指示を整理し、現場に正確に展開。</p>
@@ -7468,7 +7468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">03</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic3.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic3.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="73" height="80" >
                         </div>
                         <h3 class="bpo-flow-card__title">現場オペレーション</h3>
                         <p class="bpo-flow-card__desc">経験豊富なオペレーターが作業を実施。</p>
@@ -7484,7 +7484,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">04</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic4.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic4.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="64" height="81" >
                         </div>
                         <h3 class="bpo-flow-card__title">確認・修正して納品</h3>
                         <p class="bpo-flow-card__desc">品質チェックを行い、データを納品。</p>
@@ -7512,7 +7512,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <!-- Feature 1 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic1.png" alt="確認・修正業務" />
+                                    <img src="assets/img/bpo/team-ic1.webp" alt="確認・修正業務" loading="lazy" decoding="async" width="71" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">確認・修正業務</h3>
                                 <p class="bpo-team-feat__d">OCR・AI処理後の<br>データ確認・修正に対応。</p>
@@ -7521,7 +7521,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <!-- Feature 2 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic2.png" alt="日本語ブリッジ" />
+                                    <img src="assets/img/bpo/team-ic2.webp" alt="日本語ブリッジ" loading="lazy" decoding="async" width="100" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">日本語ブリッジ</h3>
                                 <p class="bpo-team-feat__d">日本語の指示を現場へ<br>正確に展開。</p>
@@ -7530,7 +7530,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <!-- Feature 3 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic3.png" alt="24時間365日対応" />
+                                    <img src="assets/img/bpo/team-ic3.webp" alt="24時間365日対応" loading="lazy" decoding="async" width="86" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">24時間365日対応</h3>
                                 <p class="bpo-team-feat__d">土日・深夜も含めて<br>柔軟に対応。</p>
@@ -7543,7 +7543,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <!-- Right: Myanmar Team Image -->
                     <div class="bpo-team-right">
                         <div class="bpo-team-media">
-                            <img src="assets/img/bpo/team-photo.png" alt="ミャンマーBPOチーム" />
+                            <img src="assets/img/bpo/team-photo.webp" alt="ミャンマーBPOチーム" loading="lazy" decoding="async" width="1672" height="941" />
                         </div>
                     </div>
                 </div>
@@ -7592,37 +7592,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="kpo-chips" aria-hidden="true">
                     <span class="kpo-chip-link kpo-chip-link--1"></span>
                     <span class="kpo-chip-link kpo-chip-link--2"></span>
-                    <div class="kpo-chip kpo-chip--1"><img src="assets/img/kpo/chip-ic1.svg" alt="" />検索理解</div>
-                    <div class="kpo-chip kpo-chip--2"><img src="assets/img/kpo/chip-ic2.png" alt="" />データ分析</div>
-                    <div class="kpo-chip kpo-chip--3"><img src="assets/img/kpo/chip-ic3.png" alt="" />レポート作成</div>
-                    <div class="kpo-chip kpo-chip--4"><img src="assets/img/kpo/chip-ic4.png" alt="" />ダッシュボード</div>
+                    <div class="kpo-chip kpo-chip--1"><img src="assets/img/kpo/chip-ic1.svg" alt="" loading="lazy" decoding="async" />検索理解</div>
+                    <div class="kpo-chip kpo-chip--2"><img src="assets/img/kpo/chip-ic2.webp" alt="" loading="lazy" decoding="async" width="800" height="636" />データ分析</div>
+                    <div class="kpo-chip kpo-chip--3"><img src="assets/img/kpo/chip-ic3.webp" alt="" loading="lazy" decoding="async" width="800" height="800" />レポート作成</div>
+                    <div class="kpo-chip kpo-chip--4"><img src="assets/img/kpo/chip-ic4.webp" alt="" loading="lazy" decoding="async" width="800" height="601" />ダッシュボード</div>
                 </div>
 
                 <!-- 4-item feature bar -->
                 <div class="kpo-hero-bar">
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic1.svg" alt="" width="62" height="71" />
+                        <img src="assets/img/kpo/hero-ic1.svg" alt="" width="62" height="71" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">手書き帳票対応</p>
                             <p class="kpo-hero-item__sub">難読な帳票の理解・分別に対応</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic2.png" alt="" width="77" height="73" />
+                        <img src="assets/img/kpo/hero-ic2.webp" alt="" width="77" height="73" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">提案型運用</p>
                             <p class="kpo-hero-item__sub">動画共有で理解し<br>出力方法も提案</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic3.png" alt="" width="64" height="64" />
+                        <img src="assets/img/kpo/hero-ic3.webp" alt="" width="64" height="64" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">日本語ブリッジ</p>
                             <p class="kpo-hero-item__sub">指示理解から現場展開まで対応</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic4.png" alt="" width="73" height="61" />
+                        <img src="assets/img/kpo/hero-ic4.webp" alt="" width="73" height="61" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">24時間365日対応</p>
                             <p class="kpo-hero-item__sub">土日・深夜も柔軟に対応</p>
@@ -7643,8 +7643,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="kpo-why-wrap">
                     <div class="kpo-why-card">
                         <span class="kpo-badge">01</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic1.png" alt="" style="left:110px;top:17px;width:78px;height:72px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm1.png" alt="" style="right:34px;top:36px;width:73px;height:86px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic1.webp" alt="" style="left:110px;top:17px;width:78px;height:72px" loading="lazy" decoding="async" width="800" height="733" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm1.webp" alt="" style="right:34px;top:36px;width:73px;height:86px" loading="lazy" decoding="async" width="121" height="143" />
                         <h3 class="kpo-why-card__title">入力だけで終わらない</h3>
                         <p class="kpo-why-card__desc">AI入力後の確認だけでなく、<br>求められたフォーマットへの整形・<br>レポート化まで対応。</p>
                     </div>
@@ -7655,8 +7655,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-why-card">
                         <span class="kpo-badge">02</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic2.png" alt="" style="left:100px;top:21px;width:84px;height:71px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm2.png" alt="" style="right:8px;top:46px;width:73px;height:68px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic2.webp" alt="" style="left:100px;top:21px;width:84px;height:71px" loading="lazy" decoding="async" width="800" height="675" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm2.webp" alt="" style="right:8px;top:46px;width:73px;height:68px" loading="lazy" decoding="async" width="121" height="112" />
                         <h3 class="kpo-why-card__title">動画共有ですぐ開始</h3>
                         <p class="kpo-why-card__desc">開始時に詳細マニュアルが<br>なくても、動画共有で理解し、<br>作業内容と出力結果を提案可能。</p>
                     </div>
@@ -7667,8 +7667,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-why-card">
                         <span class="kpo-badge">03</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic3.png" alt="" style="left:100px;top:25px;width:64px;height:64px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm3.png" alt="" style="right:17px;top:8px;width:91px;height:162px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic3.webp" alt="" style="left:100px;top:25px;width:64px;height:64px" loading="lazy" decoding="async" width="800" height="800" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm3.webp" alt="" style="right:17px;top:8px;width:91px;height:162px" loading="lazy" decoding="async" width="151" height="269" />
                         <h3 class="kpo-why-card__title">日本語と現場運用を橋渡し</h3>
                         <p class="kpo-why-card__desc">日本語が堪能なブリッジが<br>指示を理解し、現場へ正確に展開。</p>
                     </div>
@@ -7686,35 +7686,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="kpo-tasks-grid">
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic1.png" alt="" width="71" height="71" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic1.webp" alt="" width="71" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">構造物検査データ整備</h3>
                         <p class="kpo-task-card__desc">各種フォーマットへの<br>落とし込み</p>
                         <span class="kpo-task-card__badge">対応実績：200件/年以上</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic2.png" alt="" width="78" height="72" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic2.webp" alt="" width="78" height="72" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">EC価格調査・報告</h3>
                         <p class="kpo-task-card__desc">商品価格データ収集と<br>客先報告</p>
                         <span class="kpo-task-card__badge">実績：10,000件以上</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic3.svg" alt="" width="62" height="71" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic3.svg" alt="" width="62" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">高難度手書き帳票対応</h3>
                         <p class="kpo-task-card__desc">登記簿・契約書の理解、<br>分類、報告書作成</p>
                         <span class="kpo-task-card__badge">市町村関連業務にも対応</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic4.png" alt="" width="56" height="78" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic4.webp" alt="" width="56" height="78" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">アンケート集計・可視化</h3>
                         <p class="kpo-task-card__desc">集計・分析・ダッシュボード化</p>
                         <span class="kpo-task-card__badge">1案件2,000件〜対応</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic5.png" alt="" width="75" height="66" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic5.webp" alt="" width="75" height="66" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">資料デザイン・PR動画制作</h3>
                         <p class="kpo-task-card__desc">在ミャンマー日本政府機関<br>向けの資料・動画制作</p>
                     </div>
@@ -7733,7 +7733,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="kpo-flow-wrap">
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">01</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic1.png" alt="" width="84" height="71" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic1.webp" alt="" width="84" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">動画共有で理解</h3>
                         <p class="kpo-flow-card__desc">実際の業務動画を共有し、<br>作業内容を視覚的に理解。</p>
                     </div>
@@ -7744,7 +7744,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">02</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic2.png" alt="" width="87" height="66" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic2.webp" alt="" width="87" height="66" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">日本語ブリッジが整理・指示</h3>
                         <p class="kpo-flow-card__desc">日本語での指示を整理<br>し、現場に正確に展開。</p>
                     </div>
@@ -7755,7 +7755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">03</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic3.png" alt="" width="74" height="81" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic3.webp" alt="" width="74" height="81" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">現場オペレーション</h3>
                         <p class="kpo-flow-card__desc">経験豊富なオペレーター<br>が作業を実施。</p>
                     </div>
@@ -7766,7 +7766,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">04</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic4.png" alt="" width="64" height="82" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic4.webp" alt="" width="64" height="82" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">確認・修正して納品</h3>
                         <p class="kpo-flow-card__desc">品質チェックを行い、<br>データを納品。</p>
                     </div>
@@ -7789,19 +7789,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="kpo-team__features">
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic1.png" alt="" width="78" height="72" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic1.webp" alt="" width="78" height="72" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">内容理解・データ整形</h3>
                             <p class="kpo-team-feat__d">手書き帳票や複雑な資料も理解<br>し、必要な形式へ整理・変換。</p>
                         </div>
 
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic2.png" alt="" width="81" height="60" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic2.webp" alt="" width="81" height="60" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">日本語ブリッジ</h3>
                             <p class="kpo-team-feat__d">日本語の指示を理解し<br>現場へ正確に展開。</p>
                         </div>
 
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic3.png" alt="" width="56" height="78" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic3.webp" alt="" width="56" height="78" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">分析・レポート対応</h3>
                             <p class="kpo-team-feat__d">集計・分析・ダッシュボード化<br>など、入力後の工程まで対応。</p>
                         </div>
@@ -7810,7 +7810,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="kpo-team-right">
                     <div class="kpo-team-media">
-                        <img src="assets/img/kpo/kpo-team.jpg" alt="ミャンマーKPOチーム" width="687" height="386" />
+                        <img src="assets/img/kpo/kpo-team.webp" alt="ミャンマーKPOチーム" width="687" height="386" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -7875,12 +7875,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="cs-hero">
             <div class="cs-stage">
                 <span class="cs-layer cs-layer--white" aria-hidden="true"></span>
-                <img class="cs-layer cs-layer--map" src="assets/img/cs-hero-map.png" alt="" />
+                <img class="cs-layer cs-layer--map" src="assets/img/cs-hero-map.webp" alt="" loading="lazy" decoding="async" width="490" height="248" />
                 <span class="cs-layer cs-layer--band" aria-hidden="true"></span>
                 <svg class="cs-layer cs-layer--arc" viewBox="0 0 92 32" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M7.4 28.8 Q44.3 13 88 9.3" stroke="rgba(15,56,119,0.32)" stroke-width="1.4" stroke-linecap="round" />
                 </svg>
-                <img class="cs-layer cs-layer--figure" src="assets/img/cs-hero-figure.png" alt="ミャンマーの伝統衣装を着たキャラクター" />
+                <img class="cs-layer cs-layer--figure" src="assets/img/cs-hero-figure.webp" alt="ミャンマーの伝統衣装を着たキャラクター" loading="lazy" decoding="async" width="1292" height="1218" />
                 <svg class="cs-layer cs-layer--swoosh" viewBox="0 0 64 13" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M2 8 Q32 5.4 62 7.2" stroke="rgba(249,227,183,0.6)" stroke-width="1.3" stroke-linecap="round" />
                 </svg>
@@ -7928,24 +7928,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="cs-cards">
             <div class="cs-cards__inner">
                 <a class="cs-fcard" href="#cs-reasons">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic1.png" alt="" width="60" height="74" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic1.webp" alt="" width="60" height="74" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">ミャンマー進出支援</span>
                     <span class="cs-fcard__desc">会社設立から事業立ち上げまで<br>現地の実情に即したサポートで<br>スムーズな進出を実現します。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
                 <a class="cs-fcard" href="#cs-reasons">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic2.png" alt="" width="78" height="65" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic2.webp" alt="" width="78" height="65" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">人材確保・育成</span>
                     <span class="cs-fcard__desc">ミャンマー人材の採用・育成を通じ<br>て、貴社の事業の成長を支援します。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
                 <a class="cs-fcard" href="#cs-achievements">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic3.png" alt="" width="88" height="56" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic3.webp" alt="" width="88" height="56" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">現地ネットワーク活用</span>
                     <span class="cs-fcard__desc">長年の現地ネットワークを活かし、<br>信頼できるパートナー・機関と<br>つなぎます。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
             </div>
         </section>
@@ -7962,7 +7962,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
 
                     <div class="cs-reason-lead">
-                        <img src="assets/img/cs-icon-person.png" alt="" />
+                        <img src="assets/img/cs-icon-person.webp" alt="" loading="lazy" decoding="async" width="118" height="92" />
                         <p>ミャンマー（東南アジア）事業を管理できる<br>人材を確保し育てたい</p>
                     </div>
 
@@ -7970,15 +7970,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="cs-checks">
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>ミャンマーでの会社設立を支援してほしい</p>
                         </div>
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>委託先のミャンマー事業撤退で、リソースの確保に困っている</p>
                         </div>
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>ミャンマー人材を日本国内の事業に導入したい</p>
                         </div>
                     </div>
@@ -7994,22 +7994,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                     <div class="cs-achieves">
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic1.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic1.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>ミャンマー人材（IT）紹介とビザ取得</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve cs-achieve--2">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic2.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic2.webp" alt="" loading="lazy" decoding="async" width="72" height="70" /></span>
                             <p>外国人材の導入に向けた、適正な送り出し機関の紹介とアテンド</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic3.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic3.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>電子部品加工工場向け、作業者のリクルーティング</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic4.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic4.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>商店立ち上げ（洋服販売業）などの事業開始支援</p>
                         </div>
                     </div>
@@ -8020,7 +8020,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- ── CTA ── -->
         <section class="cs-cta">
             <div class="cs-cta__inner">
-                <img class="cs-cta__photo" src="assets/img/cs-cta-photo.png" alt="" width="432" height="234" />
+                <img class="cs-cta__photo" src="assets/img/cs-cta-photo.webp" alt="" width="432" height="234" loading="lazy" decoding="async" />
 
                 <div class="cs-cta__text">
                     <p class="cs-cta__title">ミャンマーでのビジネス展開を、<br>確かなパートナーとともに。</p>
@@ -8029,14 +8029,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="cs-btns">
                     <a class="cs-btn cs-btn--primary" href="contectus">
-                        <img class="cs-btn__ic" src="assets/img/cs-btn-mail.png" alt="" />
+                        <img class="cs-btn__ic" src="assets/img/cs-btn-mail.webp" alt="" loading="lazy" decoding="async" width="72" height="64" />
                         お問い合わせ
-                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.png" alt="" />
+                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.webp" alt="" loading="lazy" decoding="async" width="72" height="34" />
                     </a>
                     <a class="cs-btn cs-btn--ghost" href="download">
-                        <img class="cs-btn__ic" src="assets/img/cs-btn-dl.png" alt="" />
+                        <img class="cs-btn__ic" src="assets/img/cs-btn-dl.webp" alt="" loading="lazy" decoding="async" width="72" height="80" />
                         資料ダウンロード
-                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.png" alt="" />
+                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                     </a>
                 </div>
             </div>

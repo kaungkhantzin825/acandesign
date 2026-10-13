@@ -129,7 +129,7 @@
     <h1 class="blog-post__title--sr">国を越えて働く、すべての人へ。</h1>
 
     <div class="blog-post__hero-image">
-      <img src="assets/img/width_166600.png" alt="国を越えて働く、すべての人へ。環境も言葉も違う場所で、毎日を積み重ねているあなたを、心から応援しています。" />
+      <img src="assets/img/width_166600.webp" alt="国を越えて働く、すべての人へ。環境も言葉も違う場所で、毎日を積み重ねているあなたを、心から応援しています。" loading="lazy" decoding="async" width="1600" height="900" />
     </div>
 
     <div class="blog-post__container">

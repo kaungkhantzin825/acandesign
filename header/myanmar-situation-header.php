@@ -32,7 +32,7 @@
     position: relative;
     container-type: inline-size;
     aspect-ratio: 1243 / 398;
-    background-image: url('assets/img/myanmar-situation-hero-bg.png');
+    background-image: url('assets/img/myanmar-situation-hero-bg.webp');
     background-size: cover;
     background-position: center right;
     background-repeat: no-repeat;

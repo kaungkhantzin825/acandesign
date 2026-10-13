@@ -45,7 +45,7 @@
       height: 267px;
       background-image:
         linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
-        url("assets/img/width_800_12.png");
+        url("assets/img/width_800_12.webp");
       background-size: cover;
       background-position: center;
       -webkit-mask-image: none;
@@ -172,10 +172,10 @@
         </div>
         <div class="blog-post__share">
           <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="share-btn share-btn--substack">
-            <img src="assets/img/Substack_logo.png" alt="Substack" />
+            <img src="assets/img/Substack_logo.webp" alt="Substack" loading="lazy" decoding="async" width="1920" height="330" />
           </a>
           <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener" class="share-btn share-btn--linkedin">
-            <img src="assets/img/linkedin-removebg-preview.png" alt="LinkedIn" />
+            <img src="assets/img/linkedin-removebg-preview.webp" alt="LinkedIn" loading="lazy" decoding="async" width="287" height="78" />
           </a>
         </div>
       </header>
@@ -364,7 +364,7 @@
     <div class="blog-post__container">
       <section class="blog-post__content">
         <!-- <figure class="blog-post__content-image">
-          <img src="assets/img/width_800.jpg" alt="A CAN SOLUTIONS ミャンマーチーム" width="800" height="600" />
+          <img src="assets/img/width_800.webp" alt="A CAN SOLUTIONS ミャンマーチーム" width="800" height="600" loading="lazy" decoding="async" />
         </figure> -->
         <?php include '3buttonsection.php'; ?>
       </section>

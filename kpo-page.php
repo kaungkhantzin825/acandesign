@@ -125,7 +125,7 @@
         .kpo-hero {
             position: relative;
             min-height: calc(701 * var(--u));
-            background: #ffffff url("assets/img/kpo/kpo-hero-bg.png") no-repeat center top / cover;
+            background: #ffffff url("assets/img/kpo/kpo-hero-bg.webp") no-repeat center top / cover;
             width: 86%;
             margin: 0 auto;
         }
@@ -811,7 +811,7 @@
             .kpo-hero {
                 background-image:
                     linear-gradient(90deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.75) 55%, rgba(255, 255, 255, 0.2) 100%),
-                    url("assets/img/kpo/kpo-hero-bg.png");
+                    url("assets/img/kpo/kpo-hero-bg.webp");
             }
 
             .kpo-hero,
@@ -1068,37 +1068,37 @@
                 <div class="kpo-chips" aria-hidden="true">
                     <span class="kpo-chip-link kpo-chip-link--1"></span>
                     <span class="kpo-chip-link kpo-chip-link--2"></span>
-                    <div class="kpo-chip kpo-chip--1"><img src="assets/img/kpo/chip-ic1.svg" alt="" />検索理解</div>
-                    <div class="kpo-chip kpo-chip--2"><img src="assets/img/kpo/chip-ic2.png" alt="" />データ分析</div>
-                    <div class="kpo-chip kpo-chip--3"><img src="assets/img/kpo/chip-ic3.png" alt="" />レポート作成</div>
-                    <div class="kpo-chip kpo-chip--4"><img src="assets/img/kpo/chip-ic4.png" alt="" />ダッシュボード</div>
+                    <div class="kpo-chip kpo-chip--1"><img src="assets/img/kpo/chip-ic1.svg" alt="" loading="lazy" decoding="async" />検索理解</div>
+                    <div class="kpo-chip kpo-chip--2"><img src="assets/img/kpo/chip-ic2.webp" alt="" loading="lazy" decoding="async" width="800" height="636" />データ分析</div>
+                    <div class="kpo-chip kpo-chip--3"><img src="assets/img/kpo/chip-ic3.webp" alt="" loading="lazy" decoding="async" width="800" height="800" />レポート作成</div>
+                    <div class="kpo-chip kpo-chip--4"><img src="assets/img/kpo/chip-ic4.webp" alt="" loading="lazy" decoding="async" width="800" height="601" />ダッシュボード</div>
                 </div>
 
                 <!-- 4-item feature bar -->
                 <div class="kpo-hero-bar">
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic1.svg" alt="" width="62" height="71" />
+                        <img src="assets/img/kpo/hero-ic1.svg" alt="" width="62" height="71" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">手書き帳票対応</p>
                             <p class="kpo-hero-item__sub">難読な帳票の理解・分別に対応</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic2.png" alt="" width="77" height="73" />
+                        <img src="assets/img/kpo/hero-ic2.webp" alt="" width="77" height="73" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">提案型運用</p>
                             <p class="kpo-hero-item__sub">動画共有で理解し<br>出力方法も提案</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic3.png" alt="" width="64" height="64" />
+                        <img src="assets/img/kpo/hero-ic3.webp" alt="" width="64" height="64" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">日本語ブリッジ</p>
                             <p class="kpo-hero-item__sub">指示理解から現場展開まで対応</p>
                         </div>
                     </div>
                     <div class="kpo-hero-item">
-                        <img src="assets/img/kpo/hero-ic4.png" alt="" width="73" height="61" />
+                        <img src="assets/img/kpo/hero-ic4.webp" alt="" width="73" height="61" loading="lazy" decoding="async" />
                         <div>
                             <p class="kpo-hero-item__title">24時間365日対応</p>
                             <p class="kpo-hero-item__sub">土日・深夜も柔軟に対応</p>
@@ -1119,8 +1119,8 @@
                 <div class="kpo-why-wrap">
                     <div class="kpo-why-card">
                         <span class="kpo-badge">01</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic1.png" alt="" style="left:110px;top:17px;width:78px;height:72px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm1.png" alt="" style="right:34px;top:36px;width:73px;height:86px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic1.webp" alt="" style="left:110px;top:17px;width:78px;height:72px" loading="lazy" decoding="async" width="800" height="733" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm1.webp" alt="" style="right:34px;top:36px;width:73px;height:86px" loading="lazy" decoding="async" width="121" height="143" />
                         <h3 class="kpo-why-card__title">入力だけで終わらない</h3>
                         <p class="kpo-why-card__desc">AI入力後の確認だけでなく、<br>求められたフォーマットへの整形・<br>レポート化まで対応。</p>
                     </div>
@@ -1131,8 +1131,8 @@
 
                     <div class="kpo-why-card">
                         <span class="kpo-badge">02</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic2.png" alt="" style="left:100px;top:21px;width:84px;height:71px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm2.png" alt="" style="right:8px;top:46px;width:73px;height:68px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic2.webp" alt="" style="left:100px;top:21px;width:84px;height:71px" loading="lazy" decoding="async" width="800" height="675" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm2.webp" alt="" style="right:8px;top:46px;width:73px;height:68px" loading="lazy" decoding="async" width="121" height="112" />
                         <h3 class="kpo-why-card__title">動画共有ですぐ開始</h3>
                         <p class="kpo-why-card__desc">開始時に詳細マニュアルが<br>なくても、動画共有で理解し、<br>作業内容と出力結果を提案可能。</p>
                     </div>
@@ -1143,8 +1143,8 @@
 
                     <div class="kpo-why-card">
                         <span class="kpo-badge">03</span>
-                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic3.png" alt="" style="left:100px;top:25px;width:64px;height:64px" />
-                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm3.png" alt="" style="right:17px;top:8px;width:91px;height:162px" />
+                        <img class="kpo-why-card__icon" src="assets/img/kpo/why-ic3.webp" alt="" style="left:100px;top:25px;width:64px;height:64px" loading="lazy" decoding="async" width="800" height="800" />
+                        <img class="kpo-why-card__wm" src="assets/img/kpo/why-wm3.webp" alt="" style="right:17px;top:8px;width:91px;height:162px" loading="lazy" decoding="async" width="151" height="269" />
                         <h3 class="kpo-why-card__title">日本語と現場運用を橋渡し</h3>
                         <p class="kpo-why-card__desc">日本語が堪能なブリッジが<br>指示を理解し、現場へ正確に展開。</p>
                     </div>
@@ -1162,35 +1162,35 @@
 
                 <div class="kpo-tasks-grid">
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic1.png" alt="" width="71" height="71" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic1.webp" alt="" width="71" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">構造物検査データ整備</h3>
                         <p class="kpo-task-card__desc">各種フォーマットへの<br>落とし込み</p>
                         <span class="kpo-task-card__badge">対応実績：200件/年以上</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic2.png" alt="" width="78" height="72" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic2.webp" alt="" width="78" height="72" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">EC価格調査・報告</h3>
                         <p class="kpo-task-card__desc">商品価格データ収集と<br>客先報告</p>
                         <span class="kpo-task-card__badge">実績：10,000件以上</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic3.svg" alt="" width="62" height="71" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic3.svg" alt="" width="62" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">高難度手書き帳票対応</h3>
                         <p class="kpo-task-card__desc">登記簿・契約書の理解、<br>分類、報告書作成</p>
                         <span class="kpo-task-card__badge">市町村関連業務にも対応</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic4.png" alt="" width="56" height="78" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic4.webp" alt="" width="56" height="78" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">アンケート集計・可視化</h3>
                         <p class="kpo-task-card__desc">集計・分析・ダッシュボード化</p>
                         <span class="kpo-task-card__badge">1案件2,000件〜対応</span>
                     </div>
 
                     <div class="kpo-task-card">
-                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic5.png" alt="" width="75" height="66" /></div>
+                        <div class="kpo-task-card__ic"><img src="assets/img/kpo/task-ic5.webp" alt="" width="75" height="66" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-task-card__title">資料デザイン・PR動画制作</h3>
                         <p class="kpo-task-card__desc">在ミャンマー日本政府機関<br>向けの資料・動画制作</p>
                     </div>
@@ -1209,7 +1209,7 @@
                 <div class="kpo-flow-wrap">
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">01</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic1.png" alt="" width="84" height="71" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic1.webp" alt="" width="84" height="71" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">動画共有で理解</h3>
                         <p class="kpo-flow-card__desc">実際の業務動画を共有し、<br>作業内容を視覚的に理解。</p>
                     </div>
@@ -1220,7 +1220,7 @@
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">02</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic2.png" alt="" width="87" height="66" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic2.webp" alt="" width="87" height="66" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">日本語ブリッジが整理・指示</h3>
                         <p class="kpo-flow-card__desc">日本語での指示を整理<br>し、現場に正確に展開。</p>
                     </div>
@@ -1231,7 +1231,7 @@
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">03</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic3.png" alt="" width="74" height="81" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic3.webp" alt="" width="74" height="81" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">現場オペレーション</h3>
                         <p class="kpo-flow-card__desc">経験豊富なオペレーター<br>が作業を実施。</p>
                     </div>
@@ -1242,7 +1242,7 @@
 
                     <div class="kpo-flow-card">
                         <span class="kpo-badge">04</span>
-                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic4.png" alt="" width="64" height="82" /></div>
+                        <div class="kpo-flow-card__ic"><img src="assets/img/kpo/flow-ic4.webp" alt="" width="64" height="82" loading="lazy" decoding="async" /></div>
                         <h3 class="kpo-flow-card__title">確認・修正して納品</h3>
                         <p class="kpo-flow-card__desc">品質チェックを行い、<br>データを納品。</p>
                     </div>
@@ -1265,19 +1265,19 @@
 
                     <div class="kpo-team__features">
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic1.png" alt="" width="78" height="72" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic1.webp" alt="" width="78" height="72" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">内容理解・データ整形</h3>
                             <p class="kpo-team-feat__d">手書き帳票や複雑な資料も理解<br>し、必要な形式へ整理・変換。</p>
                         </div>
 
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic2.png" alt="" width="81" height="60" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic2.webp" alt="" width="81" height="60" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">日本語ブリッジ</h3>
                             <p class="kpo-team-feat__d">日本語の指示を理解し<br>現場へ正確に展開。</p>
                         </div>
 
                         <div class="kpo-team-feat">
-                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic3.png" alt="" width="56" height="78" /></div>
+                            <div class="kpo-team-feat__ic"><img src="assets/img/kpo/team-ic3.webp" alt="" width="56" height="78" loading="lazy" decoding="async" /></div>
                             <h3 class="kpo-team-feat__t">分析・レポート対応</h3>
                             <p class="kpo-team-feat__d">集計・分析・ダッシュボード化<br>など、入力後の工程まで対応。</p>
                         </div>
@@ -1286,7 +1286,7 @@
 
                 <div class="kpo-team-right">
                     <div class="kpo-team-media">
-                        <img src="assets/img/kpo/kpo-team.jpg" alt="ミャンマーKPOチーム" width="687" height="386" />
+                        <img src="assets/img/kpo/kpo-team.webp" alt="ミャンマーKPOチーム" width="687" height="386" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>

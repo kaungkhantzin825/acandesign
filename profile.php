@@ -28,7 +28,7 @@
     .prof-hero {
       width: 86%;
       margin: 0 auto;
-      background: #f2f2f2 url("assets/img/profile-hero-bg.png") no-repeat center / cover;
+      background: #f2f2f2 url("assets/img/profile-hero-bg.webp") no-repeat center / cover;
       aspect-ratio: 1237 / 374;
       container-type: inline-size;
     }
@@ -642,7 +642,7 @@
         aspect-ratio: auto;
         background-image:
           linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.3) 100%),
-          url("assets/img/profile-hero-bg.png");
+          url("assets/img/profile-hero-bg.webp");
         background-position: center, 78% center;
       }
       .prof-hero__content { padding: 1.75rem 1.25rem 2rem; }
@@ -762,7 +762,7 @@
     <div class="prof-col-right">
       <div class="prof-sec-head">グループ会社（ミャンマー）</div>
       <div class="prof-myanmar__box">
-      <img src="assets/img/office.png" alt="ヤンゴンオフィス" class="prof-myanmar__photo" />
+      <img src="assets/img/office.webp" alt="ヤンゴンオフィス" class="prof-myanmar__photo" loading="lazy" decoding="async" width="867" height="298" />
       <p class="prof-myanmar__name">A CAN SOLUTIONS MYANMAR CO.,Ltd.</p>
       <dl class="prof-dl">
         <div class="prof-dl__row">
@@ -808,7 +808,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/4509c7c7-fff1-4e10-9460-a688c2478e93.png" alt="人を大切に" style="height: 67px;" />
+              <img src="assets/img/4509c7c7-fff1-4e10-9460-a688c2478e93.webp" alt="人を大切に" style="height: 67px;" loading="lazy" decoding="async" width="800" height="445" />
             </div>
             <span class="prof-philosophy__value-label">人を大切に</span>
             <p class="prof-philosophy__value-desc">多様な人材の力を信じ、<br>成長と活躍を支援します。</p>
@@ -816,7 +816,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/8bab3d59-20e2-4181-b78c-5adf05de440c.png" alt="品質にこだわる" style="height: 67px;" />
+              <img src="assets/img/8bab3d59-20e2-4181-b78c-5adf05de440c.webp" alt="品質にこだわる" style="height: 67px;" loading="lazy" decoding="async" width="657" height="800" />
             </div>
             <span class="prof-philosophy__value-label">品質にこだわる</span>
             <p class="prof-philosophy__value-desc">日本品質のマネジメントで、<br>高品質なサービスを提供します。</p>
@@ -824,7 +824,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/73468981-f617-4e11-955c-0b94f3e87770.png" alt="未来を創る" style="height: 67px;" />
+              <img src="assets/img/73468981-f617-4e11-955c-0b94f3e87770.webp" alt="未来を創る" style="height: 67px;" loading="lazy" decoding="async" width="786" height="800" />
             </div>
             <span class="prof-philosophy__value-label">未来を創る</span>
             <p class="prof-philosophy__value-desc">AIとテクノロジーで、<br>新しい価値を創造します。</p>
@@ -839,27 +839,27 @@
       <div class="prof-sec-head prof-sec-head--red">A CAN SOLUTIONS が選ばれる理由</div>
       <ul class="prof-why__list">
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">ミャンマーで365日24時間の業務対応が可能<span>人とAIの力を融合し、日本品質のマネジメントで、お客様のビジネスの未来を共に創造します。</span></div>
         </li>
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">日本の業務に精通、日本語堪能スタッフを多数配置<span>日本語検定取得者が半数、日本のビジネスプロセスを深く理解しています。</span></div>
         </li>
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">日本の言葉に精通、日本語検定スタッフを多数配置<span>日本語検定取得者が多く、日本のビジネスプロセスを深く理解しています。</span></div>
         </li>
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">日本リソース（就労支援含む）を活用し、顧客ニーズを社内に蓄積しやすい体制<span>国内外のリソースを最適に組み合わせ、ニーズに素早く対応します。</span></div>
         </li>
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">ミャンマー進出10年の実績と信頼<span>2016年の活動開始以来、現地での確かな実績とネットワークを構築。</span></div>
         </li>
         <li class="prof-why__item">
-          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.png" alt="" style="width: 26px; height: 26px;" /></div>
+          <div class="prof-why__check"><img src="assets/img/ChatGPT_Image_Aug_14__2026__11_03_28_AM-removebg-preview.webp" alt="" style="width: 26px; height: 26px;" loading="lazy" decoding="async" width="510" height="489" /></div>
           <div class="prof-why__text">情報セキュリティの徹底<span>厳格なセキュリティ管理で、安心・安全なサービスを提供します。</span></div>
         </li>
       </ul>
@@ -906,7 +906,7 @@
     <div class="prof-col-half" style="flex: 0 0 57%;">
       <div class="prof-sec-head">チーム紹介</div>
       <div class="prof-team__container">
-        <img src="assets/img/width_800_22.png" alt="チーム写真" class="prof-team__photo" />
+        <img src="assets/img/width_800_22.webp" alt="チーム写真" class="prof-team__photo" loading="lazy" decoding="async" width="800" height="450" />
         <div class="prof-team__stats">
           <div class="prof-team__stat">
             <svg class="prof-team__stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -967,12 +967,12 @@
         <p class="prof-exec__role">CEO</p>
          <p class="prof-exec__role" style="visibility: hidden;">CEO</p>
         
-        <img src="assets/img/kado.jpg" alt="MASAHITO KADO" class="prof-exec__photo" />
+        <img src="assets/img/kado.webp" alt="MASAHITO KADO" class="prof-exec__photo" loading="lazy" decoding="async" width="1500" height="2250" />
       </div>
       <div class="prof-exec__card">
         <p class="prof-exec__name">KYAWI KAY KHINE</p>
         <p class="prof-exec__role">A CAN SOLUTION MYANMAR CO.,Ltd<br>MANAGING DIRECTOR</p>
-        <img src="assets/img/khine.jpg" alt="KYAWI KAY KHINE" class="prof-exec__photo" />
+        <img src="assets/img/khine.webp" alt="KYAWI KAY KHINE" class="prof-exec__photo" loading="lazy" decoding="async" width="1047" height="1563" />
       </div>
     </div>
   </div>
@@ -985,7 +985,7 @@
 
   <!-- CTA Banner -->
   <div class="prof-cta-banner">
-    <img src="assets/img/profile-bagoda.jpg" alt="" class="prof-cta-banner__bg" />
+    <img src="assets/img/profile-bagoda.webp" alt="" class="prof-cta-banner__bg" loading="lazy" decoding="async" width="359" height="189" />
     <div class="prof-cta-banner__content">
       <p class="prof-cta-banner__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
       <div class="prof-cta-banner__btns">
@@ -1000,7 +1000,7 @@
     <h2 class="prof-contact__title">お急ぎの方はこちらからもご連絡いただけます</h2>
     <div class="prof-contact__cards">
       <div class="prof-contact__card">
-        <img src="assets/img/t.png" alt="電話" class="prof-contact__icon" />
+        <img src="assets/img/t.webp" alt="電話" class="prof-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
         <div>
           <p class="prof-contact__label">電話で相談する</p>
           <p class="prof-contact__hours">平日 10:00〜17:00</p>
@@ -1008,7 +1008,7 @@
         </div>
       </div>
       <div class="prof-contact__card">
-        <img src="assets/img/t (1).png" alt="メール" class="prof-contact__icon" />
+        <img src="assets/img/t (1).webp" alt="メール" class="prof-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
         <div>
           <p class="prof-contact__label">メールで相談する</p>
           <a href="mailto:info@acan-sol.com" class="prof-contact__link">info@acan-sol.com</a>

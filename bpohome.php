@@ -954,7 +954,7 @@
                             <path d="M3 50 v-8 c0-9 7-15 16-15 h8 c9 0 16 6 16 15 v8 z" />
                             <path d="M23 28 l-3 4 3 12 3-12 z" fill="#ffffff" opacity="0.85" />
                         </svg>
-                        <!-- <img src="assets/img/bpo/why-card-2-deco.png" class="bpo-why-card__deco" alt="" aria-hidden="true"> -->
+                        <!-- <img src="assets/img/bpo/why-card-2-deco.webp" class="bpo-why-card__deco" alt="" aria-hidden="true" loading="lazy" decoding="async" width="71" height="87" > -->
                         <h3 class="bpo-why-card__title">日本語堪能なブリッジ</h3>
                         <p class="bpo-why-card__desc">日本語での指示を正確に理解し現場へ展開</p>
                     </div>
@@ -1120,7 +1120,7 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">01</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic1.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="83" height="70" >
                         </div>
                         <h3 class="bpo-flow-card__title">動画共有で理解</h3>
                         <p class="bpo-flow-card__desc">実際の業務動画を共有し、作業内容を視覚的に理解。</p>
@@ -1136,7 +1136,7 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">02</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic2.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="87" height="65" >
 
                             <!-- <svg viewBox="0 0 58 52" fill="currentColor" aria-hidden="true">
                                 <circle cx="38" cy="15" r="8.5" />
@@ -1159,7 +1159,7 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">03</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic3.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic3.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="73" height="80" >
                             <!-- <svg viewBox="0 0 58 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <rect x="5" y="4" width="48" height="32" rx="2.5" />
                                 <path d="M25 8.5h8v9h6L29 28 19 17.5h6z" fill="currentColor" stroke-width="1.5" />
@@ -1180,7 +1180,7 @@
                     <div class="bpo-flow-card">
                         <span class="bpo-flow-card__badge">04</span>
                         <div class="bpo-flow-card__ic">
-                            <img src="assets/img/bpo/flow-ic4.png" alt="" aria-hidden="true">
+                            <img src="assets/img/bpo/flow-ic4.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="64" height="81" >
                             <!-- <svg viewBox="0 0 58 52" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M24 48H10a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h22l8 8v7" />
                                 <path d="M14 13h14M14 20h9M14 27h6" />
@@ -1215,7 +1215,7 @@
                             <!-- Feature 1 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic1.png" alt="確認・修正業務" />
+                                    <img src="assets/img/bpo/team-ic1.webp" alt="確認・修正業務" loading="lazy" decoding="async" width="71" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">確認・修正業務</h3>
                                 <p class="bpo-team-feat__d">OCR・AI処理後の<br>データ確認・修正に対応。</p>
@@ -1224,7 +1224,7 @@
                             <!-- Feature 2 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic2.png" alt="日本語ブリッジ" />
+                                    <img src="assets/img/bpo/team-ic2.webp" alt="日本語ブリッジ" loading="lazy" decoding="async" width="100" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">日本語ブリッジ</h3>
                                 <p class="bpo-team-feat__d">日本語の指示を現場へ<br>正確に展開。</p>
@@ -1233,7 +1233,7 @@
                             <!-- Feature 3 -->
                             <div class="bpo-team-feat">
                                 <div class="bpo-team-feat__ic">
-                                    <img src="assets/img/bpo/team-ic3.png" alt="24時間365日対応" />
+                                    <img src="assets/img/bpo/team-ic3.webp" alt="24時間365日対応" loading="lazy" decoding="async" width="86" height="64" />
                                 </div>
                                 <h3 class="bpo-team-feat__t">24時間365日対応</h3>
                                 <p class="bpo-team-feat__d">土日・深夜も含めて<br>柔軟に対応。</p>
@@ -1244,7 +1244,7 @@
                     <!-- Right: Myanmar Team Image -->
                     <div class="bpo-team-right">
                         <div class="bpo-team-media">
-                            <img src="assets/img/bpo/team-photo.png" alt="ミャンマーBPOチーム" />
+                            <img src="assets/img/bpo/team-photo.webp" alt="ミャンマーBPOチーム" loading="lazy" decoding="async" width="1672" height="941" />
                         </div>
                     </div>
                 </div>

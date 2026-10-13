@@ -678,7 +678,7 @@
 
         <div class="ms-stat">
           <div class="ms-stat__icon" style="width: 58%;">
-            <img src="assets/img/1-log.png" alt="人口" />
+            <img src="assets/img/1-log.webp" alt="人口" loading="lazy" decoding="async" width="578" height="432" />
           </div>
           <p class="ms-stat__label">人口</p>
           <p class="ms-stat__value">約 2,400万人<br />(2024年推計)</p>
@@ -686,7 +686,7 @@
 
         <div class="ms-stat">
           <div class="ms-stat__icon" style="width: 45%;">
-            <img src="assets/img/2-log.png" alt="首都" />
+            <img src="assets/img/2-log.webp" alt="首都" loading="lazy" decoding="async" width="310" height="300" />
           </div>
           <p class="ms-stat__label">首都</p>
           <p class="ms-stat__value">ネーピードー<br />(最大都市はヤンゴン)</p>
@@ -694,7 +694,7 @@
 
         <div class="ms-stat">
           <div class="ms-stat__icon" style="width: 52%;">
-            <img src="assets/img/3-log.png"  alt="GDP成長率" />
+            <img src="assets/img/3-log.webp"  alt="GDP成長率" loading="lazy" decoding="async" width="545" height="458" />
           </div>
           <p class="ms-stat__label">GDP成長率</p>
           <p class="ms-stat__value">約 3.0%<br />(2024年予測)</p>
@@ -702,7 +702,7 @@
 
         <div class="ms-stat">
           <div class="ms-stat__icon" style="width: 56%;">
-            <img src="assets/img/4-log.png"  alt="通貨" />
+            <img src="assets/img/4-log.webp"  alt="通貨" loading="lazy" decoding="async" width="562" height="444" />
           </div>
           <p class="ms-stat__label">通貨</p>
           <p class="ms-stat__value">チャット (MMK)<br />1JPY=約25.3MMK</p>
@@ -710,7 +710,7 @@
 
         <div class="ms-stat">
           <div class="ms-stat__icon" style="width: 54%;">
-            <img src="assets/img/5-log.png" alt="時差"  />
+            <img src="assets/img/5-log.webp" alt="時差" loading="lazy" decoding="async" width="500" height="410" />
           </div>
           <p class="ms-stat__label">時差</p>
           <p class="ms-stat__value">日本より2.5時間<br />遅れています</p>
@@ -726,7 +726,7 @@
 
         <div class="ms-highlight">
           <div class="ms-highlight__icon">
-            <img src="assets/img/11-log.png" alt="若く豊富な労働力" />
+            <img src="assets/img/11-log.webp" alt="若く豊富な労働力" loading="lazy" decoding="async" width="875" height="829" />
           </div>
           <p class="ms-highlight__title">若く豊富な労働力</p>
           <p class="ms-highlight__desc">平均年齢は約29歳と<br>若く、豊富な労働力が<br>魅力です。</p>
@@ -734,7 +734,7 @@
 
         <div class="ms-highlight">
           <div class="ms-highlight__icon">
-            <img src="assets/img/22-log.png" alt="親日的な国民性" />
+            <img src="assets/img/22-log.webp" alt="親日的な国民性" loading="lazy" decoding="async" width="1178" height="1104" />
           </div>
           <p class="ms-highlight__title">親日的な国民性</p>
           <p class="ms-highlight__desc">日本への関心が高く、<br>親日的な国民性が特徴<br>です。</p>
@@ -742,7 +742,7 @@
 
         <div class="ms-highlight">
           <div class="ms-highlight__icon" style="width: 102px;">
-            <img src="assets/img/33-log.png" alt="経済成長の可能性" />
+            <img src="assets/img/33-log.webp" alt="経済成長の可能性" loading="lazy" decoding="async" width="866" height="1054" />
           </div>
           <p class="ms-highlight__title">経済成長の可能性</p>
           <p class="ms-highlight__desc">今後、安定した経済成長<br>が期待されています。</p>
@@ -753,7 +753,7 @@
 
     <!-- ── Newsletter CTA ── -->
     <section class="ms-newsletter" id="newsletter">
-      <img src="assets/img/bagoda.png" alt="" class="ms-newsletter__bg" />
+      <img src="assets/img/bagoda.webp" alt="" class="ms-newsletter__bg" loading="lazy" decoding="async" width="1599" height="900" />
       <div class="ms-newsletter__content">
         <h2 class="ms-newsletter__title">ミャンマーの最新情報を<br />定期的にお届けします。</h2>
         <p class="ms-newsletter__desc">ビジネスに役立つ現地情報をメールマガジンで配信中。</p>
@@ -777,7 +777,7 @@
           <p class="ms-contact__intro-text">ミャンマーでのビジネス展開やBPOサービスについて、お気軽にご相談ください。</p>
         </div>
         <div class="ms-contact__card">
-          <img src="assets/img/t.png" alt="電話" class="ms-contact__icon" />
+          <img src="assets/img/t.webp" alt="電話" class="ms-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
           <div>
             <p class="ms-contact__label">電話で相談する</p>
             <p class="ms-contact__hours">平日 10:00〜17:00</p>
@@ -785,7 +785,7 @@
           </div>
         </div>
         <div class="ms-contact__card">
-          <img src="assets/img/t (1).png" alt="メール" class="ms-contact__icon" />
+          <img src="assets/img/t (1).webp" alt="メール" class="ms-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
           <div>
             <p class="ms-contact__label">メールで相談する</p>
             <a href="mailto:info@acan-sol.com" class="ms-contact__link">info@acan-sol.com</a>

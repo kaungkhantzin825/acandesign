@@ -60,7 +60,7 @@
             margin: 0 auto;
             overflow: hidden;
             container-type: inline-size;
-            background: #dfeaf5 url("assets/img/cs-hero-photo.jpg") no-repeat center top / cover;
+            background: #dfeaf5 url("assets/img/cs-hero-photo.webp") no-repeat center top / cover;
         }
 
         /* The stage holds the artboard at 1387 * --u. --u is the smaller of the
@@ -949,12 +949,12 @@
         <section class="cs-hero">
             <div class="cs-stage">
                 <span class="cs-layer cs-layer--white" aria-hidden="true"></span>
-                <img class="cs-layer cs-layer--map" src="assets/img/cs-hero-map.png" alt="" />
+                <img class="cs-layer cs-layer--map" src="assets/img/cs-hero-map.webp" alt="" loading="lazy" decoding="async" width="490" height="248" />
                 <span class="cs-layer cs-layer--band" aria-hidden="true"></span>
                 <svg class="cs-layer cs-layer--arc" viewBox="0 0 92 32" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M7.4 28.8 Q44.3 13 88 9.3" stroke="rgba(15,56,119,0.32)" stroke-width="1.4" stroke-linecap="round" />
                 </svg>
-                <img class="cs-layer cs-layer--figure" src="assets/img/cs-hero-figure.png" alt="ミャンマーの伝統衣装を着たキャラクター" />
+                <img class="cs-layer cs-layer--figure" src="assets/img/cs-hero-figure.webp" alt="ミャンマーの伝統衣装を着たキャラクター" loading="lazy" decoding="async" width="1292" height="1218" />
                 <svg class="cs-layer cs-layer--swoosh" viewBox="0 0 64 13" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M2 8 Q32 5.4 62 7.2" stroke="rgba(249,227,183,0.6)" stroke-width="1.3" stroke-linecap="round" />
                 </svg>
@@ -1002,24 +1002,24 @@
         <section class="cs-cards">
             <div class="cs-cards__inner">
                 <a class="cs-fcard" href="#reasons">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic1.png" alt="" width="60" height="74" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic1.webp" alt="" width="60" height="74" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">ミャンマー進出支援</span>
                     <span class="cs-fcard__desc">会社設立から事業立ち上げまで<br>現地の実情に即したサポートで<br>スムーズな進出を実現します。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
                 <a class="cs-fcard" href="#reasons">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic2.png" alt="" width="78" height="65" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic2.webp" alt="" width="78" height="65" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">人材確保・育成</span>
                     <span class="cs-fcard__desc">ミャンマー人材の採用・育成を通じ<br>て、貴社の事業の成長を支援します。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
                 <a class="cs-fcard" href="#achievements">
-                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic3.png" alt="" width="88" height="56" /></span>
+                    <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic3.webp" alt="" width="88" height="56" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">現地ネットワーク活用</span>
                     <span class="cs-fcard__desc">長年の現地ネットワークを活かし、<br>信頼できるパートナー・機関と<br>つなぎます。</span>
-                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.png" alt="" />
+                    <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
             </div>
         </section>
@@ -1036,7 +1036,7 @@
                     </div>
 
                     <div class="cs-reason-lead">
-                        <img src="assets/img/cs-icon-person.png" alt="" />
+                        <img src="assets/img/cs-icon-person.webp" alt="" loading="lazy" decoding="async" width="118" height="92" />
                         <p>ミャンマー（東南アジア）事業を管理できる<br>人材を確保し育てたい</p>
                     </div>
 
@@ -1044,15 +1044,15 @@
 
                     <div class="cs-checks">
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>ミャンマーでの会社設立を支援してほしい</p>
                         </div>
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>委託先のミャンマー事業撤退で、リソースの確保に困っている</p>
                         </div>
                         <div class="cs-check">
-                            <img src="assets/img/cs-icon-check.png" alt="" />
+                            <img src="assets/img/cs-icon-check.webp" alt="" loading="lazy" decoding="async" width="94" height="90" />
                             <p>ミャンマー人材を日本国内の事業に導入したい</p>
                         </div>
                     </div>
@@ -1068,22 +1068,22 @@
 
                     <div class="cs-achieves">
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic1.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic1.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>ミャンマー人材（IT）紹介とビザ取得</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve cs-achieve--2">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic2.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic2.webp" alt="" loading="lazy" decoding="async" width="72" height="70" /></span>
                             <p>外国人材の導入に向けた、適正な送り出し機関の紹介とアテンド</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic3.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic3.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>電子部品加工工場向け、作業者のリクルーティング</p>
                         </div>
                         <div class="cs-rule" aria-hidden="true"></div>
                         <div class="cs-achieve">
-                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic4.png" alt="" /></span>
+                            <span class="cs-achieve__ic"><img src="assets/img/cs-ach-ic4.webp" alt="" loading="lazy" decoding="async" width="72" height="68" /></span>
                             <p>商店立ち上げ（洋服販売業）などの事業開始支援</p>
                         </div>
                     </div>
@@ -1094,7 +1094,7 @@
         <!-- ── CTA ── -->
         <section class="cs-cta">
             <div class="cs-cta__inner">
-                <img class="cs-cta__photo" src="assets/img/cs-cta-photo.png" alt="" width="432" height="234" />
+                <img class="cs-cta__photo" src="assets/img/cs-cta-photo.webp" alt="" width="432" height="234" loading="lazy" decoding="async" />
 
                 <div class="cs-cta__text">
                     <p class="cs-cta__title">ミャンマーでのビジネス展開を、<br>確かなパートナーとともに。</p>
@@ -1103,14 +1103,14 @@
 
                 <div class="cs-btns">
                     <a class="cs-btn cs-btn--primary" href="contectus">
-                        <img class="cs-btn__ic" src="assets/img/cs-btn-mail.png" alt="" />
+                        <img class="cs-btn__ic" src="assets/img/cs-btn-mail.webp" alt="" loading="lazy" decoding="async" width="72" height="64" />
                         お問い合わせ
-                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.png" alt="" />
+                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.webp" alt="" loading="lazy" decoding="async" width="72" height="34" />
                     </a>
                     <a class="cs-btn cs-btn--ghost" href="download">
-                        <img class="cs-btn__ic" src="assets/img/cs-btn-dl.png" alt="" />
+                        <img class="cs-btn__ic" src="assets/img/cs-btn-dl.webp" alt="" loading="lazy" decoding="async" width="72" height="80" />
                         資料ダウンロード
-                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.png" alt="" />
+                        <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                     </a>
                 </div>
             </div>

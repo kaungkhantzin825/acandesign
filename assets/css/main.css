@@ -438,7 +438,7 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('../img/myanmarmap.jpg');
+  background-image: url('../img/myanmarmap.webp');
   background-size: cover;
   background-position: center;
   opacity: 0.08;
@@ -614,19 +614,19 @@ button {
 }
 
 .case--tech::before {
-  background-image: url("../img/1.jpg");
+  background-image: url("../img/1.webp");
 }
 
 .case--design::before {
-  background-image: url("../img/2.jpg");
+  background-image: url("../img/2.webp");
 }
 
 .case--kpo::before {
-  background-image: url("../img/3.jpg");
+  background-image: url("../img/3.webp");
 }
 
 .case--consulting::before {
-  background-image: url("../img/4.jpg");
+  background-image: url("../img/4.webp");
 }
 
 /* 各サービス詳細セクションの上下端を背景色（白）にフェードさせ、
@@ -2779,7 +2779,7 @@ button {
   position: relative;
   width: 86%;
   margin: 0 auto;
-  background: #ffffff url("../img/contact-hero-bg.png") no-repeat center top / 100% auto;
+  background: #ffffff url("../img/contact-hero-bg.webp") no-repeat center top / 100% auto;
   aspect-ratio: 1237 / 428;
   container-type: inline-size;
   font-family: "Noto Sans JP", sans-serif;
@@ -2840,7 +2840,7 @@ button {
     aspect-ratio: auto;
     background-image:
       linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.86) 55%, rgba(255, 255, 255, 0.2) 100%),
-      url("../img/contact-hero-bg.png");
+      url("../img/contact-hero-bg.webp");
     background-size: cover, cover;
     background-position: center, 85% top;
     padding: 2rem 1.5rem 2.25rem;
@@ -2865,7 +2865,7 @@ button {
   .ct-hero {
     background-image:
       linear-gradient(180deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.84) 45%, rgba(255, 255, 255, 0.65) 100%),
-      url("../img/contact-hero-bg.png");
+      url("../img/contact-hero-bg.webp");
     background-position: center, 75% top;
     padding: 1.5rem 1rem 1.75rem;
   }

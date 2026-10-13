@@ -153,7 +153,7 @@
 <header class="site-header">
   <div class="site-header__inner">
     <a href="/#top" class="site-header__logo">
-      <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" width="34" height="34" />
+      <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" width="34" height="34" loading="lazy" decoding="async" />
       <span>A CAN SOLUTIONS</span>
     </a>
     <nav class="site-header__nav" aria-label="Main navigation">

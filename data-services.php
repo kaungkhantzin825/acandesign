@@ -79,7 +79,7 @@
             background-color: #ffffff;
             background-image:
                 linear-gradient(90deg, #ffffff 0%, #ffffff 42%, rgba(255, 255, 255, 0.92) 50%, rgba(255, 255, 255, 0) 65%),
-                url("assets/img/ai-header-banner.png");
+                url("assets/img/ai-header-banner.webp");
             background-repeat: no-repeat, no-repeat;
             background-position: center, right center;
             background-size: cover, cover;
@@ -436,7 +436,7 @@
                 margin-right: calc(50% - 50vw);
                 background-image:
                               linear-gradient(to bottom, rgba(255, 255, 255, 0) calc(min(60vw, 360px) - 80px), #ffffff min(60vw, 360px)),
-                              url("assets/img/ai-header-banner.png");
+                              url("assets/img/ai-header-banner.webp");
                             background-repeat: no-repeat;
                             /* Artwork as a band across the top (right side = the AI brain), copy below it */
                             background-position: center top, right top;
@@ -553,7 +553,7 @@
                     <!-- Feature 1 -->
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-1.png" alt="高品質なデータ作成" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-1.webp" alt="高品質なデータ作成" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1288" height="1221" />
                         </div>
                         <h3 class="ai-fcard__title">高品質なデータ作成</h3>
                         <p class="ai-fcard__desc">専門のアノテーターが正確かつ一貫性のあるデータを作成します。</p>
@@ -562,7 +562,7 @@
                     <!-- Feature 2 -->
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-2.png" alt="多様なデータ形式に対応" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-2.webp" alt="多様なデータ形式に対応" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1263" height="1246" />
                         </div>
                         <h3 class="ai-fcard__title">多様なデータ形式に対応</h3>
                         <p class="ai-fcard__desc">画像・テキスト・音声・動画など、様々なデータ形式に対応します。</p>
@@ -571,7 +571,7 @@
                     <!-- Feature 3 -->
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-3.png" alt="厳格な品質管理" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-3.webp" alt="厳格な品質管理" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1378" height="1141" />
                         </div>
                         <h3 class="ai-fcard__title">厳格な品質管理</h3>
                         <p class="ai-fcard__desc">日本品質の理解と複数チェックで、高い品質を保証します。</p>
@@ -580,7 +580,7 @@
                     <!-- Feature 4 -->
                     <div class="ai-fcard">
                         <div class="ai-fcard__ic" aria-hidden="true">
-                            <img src="assets/img/dd-4.png" alt="AI開発の全工程を支援" style="width: 44px; height: 44px;" />
+                            <img src="assets/img/dd-4.webp" alt="AI開発の全工程を支援" style="width: 44px; height: 44px;" loading="lazy" decoding="async" width="1254" height="1254" />
                         </div>
                         <h3 class="ai-fcard__title">AI開発の全工程を支援</h3>
                         <p class="ai-fcard__desc">データ作成から評価まで、AI開発の各フェーズをサポートします。</p>
@@ -598,9 +598,9 @@
                     <!-- Service Card 1 -->
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-1.png" alt="AIアノテーション" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-1.webp" alt="AIアノテーション" class="ai-scard__img" loading="lazy" decoding="async" width="1604" height="981" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-1.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-1.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1288" height="1221" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -620,9 +620,9 @@
                     <!-- Service Card 2 -->
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-2.png" alt="AI学習データ作成" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-2.webp" alt="AI学習データ作成" class="ai-scard__img" loading="lazy" decoding="async" width="1663" height="945" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-2.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-2.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1263" height="1246" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -641,9 +641,9 @@
                     <!-- Service Card 3 -->
                     <div class="ai-scard">
                         <div class="ai-scard__media">
-                            <img src="assets/img/blogpost-3.png" alt="OCR×AI・データ確認" class="ai-scard__img" />
+                            <img src="assets/img/blogpost-3.webp" alt="OCR×AI・データ確認" class="ai-scard__img" loading="lazy" decoding="async" width="1607" height="979" />
                             <div class="ai-scard__badge-ic" aria-hidden="true">
-                                <img src="assets/img/dd-4.png" alt="" style="width: 28px; height: 28px;" />
+                                <img src="assets/img/dd-4.webp" alt="" style="width: 28px; height: 28px;" loading="lazy" decoding="async" width="1254" height="1254" />
                             </div>
                         </div>
                         <div class="ai-scard__body">
@@ -674,7 +674,7 @@
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">1</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-1.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-1.webp" alt="" style="width: 42px; height: 42px;" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">ヒアリング・要件定義</h3>
@@ -686,7 +686,7 @@
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">2</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-2.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-2.webp" alt="" style="width: 42px; height: 42px;" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ準備</h3>
@@ -698,7 +698,7 @@
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">3</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-3.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-3.webp" alt="" style="width: 42px; height: 42px;" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">データ作成・評価</h3>
@@ -710,7 +710,7 @@
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">4</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-4.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-4.webp" alt="" style="width: 42px; height: 42px;" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">納品・検収</h3>
@@ -722,7 +722,7 @@
                             <div class="ai-step__icon-wrap">
                                 <div class="ai-step__num">5</div>
                                 <div class="ai-step__ic" aria-hidden="true">
-                                    <img src="assets/img/fff-5.png" alt="" style="width: 42px; height: 42px;" />
+                                    <img src="assets/img/fff-5.webp" alt="" style="width: 42px; height: 42px;" loading="lazy" decoding="async" width="1254" height="1254" />
                                 </div>
                             </div>
                             <h3 class="ai-step__title">改善・運用サポート</h3>

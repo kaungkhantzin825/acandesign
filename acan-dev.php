@@ -112,7 +112,7 @@
             position: relative;
             background-image:
                 linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.78) 30%, rgba(255, 255, 255, 0.2) 52%, rgba(255, 255, 255, 0) 66%),
-                url("assets/img/dev-hero.png");
+                url("assets/img/dev-hero.webp");
             background-repeat: no-repeat, no-repeat;
             background-size: cover, cover;
             background-position: center, right center;
@@ -249,7 +249,7 @@
           .dev-hero {
             background-image:
               linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.82) 55%, rgba(255, 255, 255, 0.2) 100%),
-              url("assets/img/dev-hero.png");
+              url("assets/img/dev-hero.webp");
             background-position: center, center right;
           }
         }
@@ -259,7 +259,7 @@
 
                 background-image:
                     linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.8) 40%, rgba(255, 255, 255, 0.62) 100%),
-                    url("assets/img/dev-hero.png");
+                    url("assets/img/dev-hero.webp");
                 background-position: center, center right;
             }
 
@@ -943,21 +943,21 @@
                 <div class="dev-hcards">
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero3.png" alt="">
+                            <img src="./assets/img/dev-hero3.webp" alt="" loading="lazy" decoding="async" width="64" height="62" >
                         </span>
                         <h3 class="dev-hcard__title">Web制作・開発に対応</h3>
                         <p class="dev-hcard__desc ">コーポレートサイト、LP<br>システム開発まで幅広く対応。</p>
                     </div>
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero1.png" alt="">
+                            <img src="./assets/img/dev-hero1.webp" alt="" loading="lazy" decoding="async" width="64" height="49" >
                         </span>
                         <h3 class="dev-hcard__title">ミャンマーIT人材</h3>
                         <p class="dev-hcard__desc">若く優秀な人材を育成し、<br>開発チームとして活躍。</p>
                     </div>
                     <div class="dev-hcard">
                         <span class="dev-hcard__ic" aria-hidden="true">
-                            <img src="./assets/img/dev-hero2.png" alt="">
+                            <img src="./assets/img/dev-hero2.webp" alt="" loading="lazy" decoding="async" width="44" height="54" >
                         </span>
                         <h3 class="dev-hcard__title">日本品質のサポート</h3>
                         <p class="dev-hcard__desc">日本側が品質管理・進行管理<br>を行い、安心の体制を構築。</p>
@@ -980,10 +980,10 @@
                                 <h3 class="dev-why__title">IT人材不足への課題</h3>
                                 <p class="dev-why__desc">日本国内では、IT人材の不足が深刻であり、開発コストの高騰や納期遅延が問題となっていました。</p>
                             </div>
-                            <img class="dev-why__ic" src="assets/img/dev-sectioin2.1.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic" src="assets/img/dev-sectioin2.1.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="59" height="70" />
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dev-why__item">
                         <span class="dev-why__num">2</span>
                         <div class="dev-why__main">
@@ -991,10 +991,10 @@
                                 <h3 class="dev-why__title">ミャンマーとの出会い</h3>
                                 <p class="dev-why__desc">現地視察を通じて、若い人材の学習意欲やポテンシャルの高さ、誠実さに大きな可能性を感じました。</p>
                             </div>
-                            <img class="dev-why__ic myanmar-flag" src="assets/img/dev-section-2.2.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic myanmar-flag" src="assets/img/dev-section-2.2.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="76" height="140" />
                         </div>
                     </div>
-                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.png" alt="" aria-hidden="true" />
+                    <img class="dev-why__arrow" src="assets/img/dev-section-arrow.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="47" height="26" />
                     <div class="dev-why__item">
                         <span class="dev-why__num">3</span>
                         <div class="dev-why__main">
@@ -1002,7 +1002,7 @@
                                 <h3 class="dev-why__title">日本の案件で人材を育成</h3>
                                 <p class="dev-why__desc">単なる外注先ではなく、共に成長し、長期的に信頼できるITチームを育成しています。</p>
                             </div>
-                            <img class="dev-why__ic" src="assets/img/dev-section2.3.png" alt="" aria-hidden="true" />
+                            <img class="dev-why__ic" src="assets/img/dev-section2.3.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="78" height="60" />
                         </div>
                     </div>
                 </div>
@@ -1017,25 +1017,25 @@
                 </div>
                 <div class="dev-serv">
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service1.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service1.webp" alt="" loading="lazy" decoding="async" width="89" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイトデザイン</h3>
                         <p class="dev-scard__desc">UI/UX設計、デザインカンプ作<br>成、レスポンシブデザインなど、<br>ユーザーに伝わるデザインを<br>ご提案します。</p>
                         <span class="dev-scard__tag">対応例：コーポレートサイト / LP</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service2.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service2.webp" alt="" loading="lazy" decoding="async" width="77" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイト構築</h3>
                         <p class="dev-scard__desc">WordPress等のCMS構築や、<br>独自システム開発まで対応。<br>要件に合わせて最適な技術で<br>開発します。</p>
                         <span class="dev-scard__tag">対応例：WordPress / PHP / Laravel</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service3.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service3.webp" alt="" loading="lazy" decoding="async" width="78" height="76" /></div>
                         <h3 class="dev-scard__title">Webサイト保守・更新</h3>
                         <p class="dev-scard__desc">定期更新、バグ修正、セキュリティ<br>対応など、公開後の運用保守を<br>サポートし、安定稼働を支えます。</p>
                         <span class="dev-scard__tag">対応例：更新代行 / 障害対応</span>
                     </div>
                     <div class="dev-scard">
-                        <div class="dev-scard__ic"><img src="assets/img/dev-service4.png" alt="" /></div>
+                        <div class="dev-scard__ic"><img src="assets/img/dev-service4.webp" alt="" loading="lazy" decoding="async" width="56" height="76" /></div>
                         <h3 class="dev-scard__title">データ比較・システム開発</h3>
                         <p class="dev-scard__desc">新旧データの比較プログラムや<br>業務システムの開発、レポート<br>自動化など、業務効率化を支援<br>します。</p>
                         <span class="dev-scard__tag">対応例：データ比較 / 業務システム</span>
@@ -1056,21 +1056,21 @@
                         <div class="dev-team__points" style="margin-top:2.2rem;">
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.1.png" alt="">
+                                    <img src="./assets/img/dev-team1.1.webp" alt="" loading="lazy" decoding="async" width="1366" height="1152" >
                                 </div>
                                 <p class="dev-tp__t">若手人材の育成</p>
                                 <p class="dev-tp__d">継続的な教育とOJT<br>でスキルを向上</p>
                             </div>
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.2.png" alt="">
+                                    <img src="./assets/img/dev-team1.2.webp" alt="" loading="lazy" decoding="async" width="1330" height="1182" >
                                 </div>
                                 <p class="dev-tp__t">日本側との連携</p>
                                 <p class="dev-tp__d">日々のコミュニケーション<br>で品質と納期を徹底管理</p>
                             </div>
                             <div class="dev-tp">
                                 <div class="dev-tp__ic" aria-hidden="true">
-                                    <img src="./assets/img/dev-team1.3.png" alt="">
+                                    <img src="./assets/img/dev-team1.3.webp" alt="" loading="lazy" decoding="async" width="1223" height="864" >
                                 </div>
                                 <p class="dev-tp__t">継続的な技術教育</p>
                                 <p class="dev-tp__d">最新技術の学習機会を提<br>供し、高い技術力を保持</p>
@@ -1079,7 +1079,7 @@
 
                     </div>
                     <!-- 画像差し替え用: assets/img/dev-team.jpg -->
-                    <div class="dev-team__media dev-ph"><img src="./assets/img/dev-team.png" alt=""></div>
+                    <div class="dev-team__media dev-ph"><img src="./assets/img/dev-team.webp" alt="" loading="lazy" decoding="async" width="1024" height="768" ></div>
                 </div>
 
 
@@ -1097,7 +1097,7 @@
                     <!-- 画像差し替え用: assets/img/dev-work1.jpg 等 -->
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.1.png" alt="制作実績 1">
+                            <img src="./assets/img/dev-team2.1.webp" alt="制作実績 1" loading="lazy" decoding="async" width="250" height="141" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：介護・福祉</p>
@@ -1107,7 +1107,7 @@
                     </div>
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.2.png" alt="制作実績 2">
+                            <img src="./assets/img/dev-team2.2.webp" alt="制作実績 2" loading="lazy" decoding="async" width="250" height="141" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：教育機関</p>
@@ -1117,7 +1117,7 @@
                     </div>
                     <div class="dev-wcard">
                         <div class="dev-wcard__media">
-                            <img src="./assets/img/dev-team2.3.png" alt="制作実績 3">
+                            <img src="./assets/img/dev-team2.3.webp" alt="制作実績 3" loading="lazy" decoding="async" width="254" height="143" >
                         </div>
                         <div class="dev-wcard__body">
                             <p class="dev-wcard__row">業種：玩具メーカー</p>
@@ -1134,7 +1134,7 @@
     <!-- Bottom: CTA Banner + Contact -->
     <!-- <div class="prof-bottom-row">
   <div class="prof-cta-banner">
-    <img src="assets/img/profile-bagoda.jpg" alt="" class="prof-cta-banner__bg" />
+    <img src="assets/img/profile-bagoda.webp" alt="" class="prof-cta-banner__bg" loading="lazy" decoding="async" width="359" height="189" />
     <div class="prof-cta-banner__content">
       <p class="prof-cta-banner__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
       <div class="prof-cta-banner__btns">
@@ -1148,7 +1148,7 @@
     <h2 class="prof-contact__title">お急ぎの方はこちらからもご連絡いただけます</h2>
     <div class="prof-contact__cards">
       <div class="prof-contact__card">
-        <img src="assets/img/t.png" alt="電話" class="prof-contact__icon" />
+        <img src="assets/img/t.webp" alt="電話" class="prof-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
         <div>
           <p class="prof-contact__label">電話で相談する</p>
           <p class="prof-contact__hours">平日 10:00〜17:00</p>
@@ -1156,7 +1156,7 @@
         </div>
       </div>
       <div class="prof-contact__card">
-        <img src="assets/img/t (1).png" alt="メール" class="prof-contact__icon" />
+        <img src="assets/img/t (1).webp" alt="メール" class="prof-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
         <div>
           <p class="prof-contact__label">メールで相談する</p>
           <a href="mailto:info@acan-sol.com" class="prof-contact__link">info@acan-sol.com</a>

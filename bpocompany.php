@@ -129,7 +129,7 @@
     <h1 class="blog-post__title--sr">BPOは「丸投げ」では成功しない 業務移管を成功させる最初の30日間とは？</h1>
 
     <div class="blog-post__hero-image">
-      <img src="assets/img/blog-page5.png" alt="BPOは「丸投げ」では成功しない 業務移管を成功させる最初の30日間とは？" />
+      <img src="assets/img/blog-page5.webp" alt="BPOは「丸投げ」では成功しない 業務移管を成功させる最初の30日間とは？" loading="lazy" decoding="async" width="1536" height="1024" />
     </div>
 
     <div class="blog-post__container">
@@ -145,10 +145,10 @@
             <!-- Social Share Buttons -->
             <div class="blog-post__share">
               <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="share-btn share-btn--substack">
-                <img src="assets/img/Substack_logo.png" alt="Substack" />
+                <img src="assets/img/Substack_logo.webp" alt="Substack" loading="lazy" decoding="async" width="1920" height="330" />
               </a>
               <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener" class="share-btn share-btn--linkedin">
-                <img src="assets/img/linkedin-removebg-preview.png" alt="LinkedIn" />
+                <img src="assets/img/linkedin-removebg-preview.webp" alt="LinkedIn" loading="lazy" decoding="async" width="287" height="78" />
               </a>
             </div>
           </div>

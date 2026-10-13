@@ -193,7 +193,7 @@ $f = [
     <div class="dl-panel">
       <div class="dl-panel__head">
         <span class="dl-panel__head-icon">
-          <img src="assets/img/49833589-5606-4cb4-96c9-0bf2f899ec99.png" alt="" style="width:42px;height:38px;" />
+          <img src="assets/img/49833589-5606-4cb4-96c9-0bf2f899ec99.webp" alt="" style="width:42px;height:38px;" loading="lazy" decoding="async" width="800" height="736" />
         </span>
         お問い合わせ
       </div>
@@ -268,29 +268,29 @@ $f = [
         <div class="dl-merits__head">お問い合わせのメリット</div>
         <ul class="dl-merits__list">
           <li class="dl-merits__item">
-            <img src="assets/img/6369fc6a-3bf6-4295-9cc8-4f66cc301a18.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/6369fc6a-3bf6-4295-9cc8-4f66cc301a18.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="800" height="800" />
             <div class="dl-merits__body"><strong>24時間以内にご返信します</strong><span>専門スタッフが迅速に対応します</span></div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/b59b74f3-a9ff-4188-80e6-3913ccbf1cb2.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/b59b74f3-a9ff-4188-80e6-3913ccbf1cb2.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="657" height="800" />
             <div class="dl-merits__body"><strong>秘密厳守・安心のセキュリティ</strong><span>情報は厳重に管理します</span></div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/pim.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/pim.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="500" height="500" />
             <div class="dl-merits__body"><strong>最適なプランもご提案</strong><span>課題に合わせた最適なサービスをご提案します</span></div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/d867edbb-0ebd-464d-86c2-71884e2f291c.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/d867edbb-0ebd-464d-86c2-71884e2f291c.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="800" height="716" />
             <div class="dl-merits__body"><strong>PoC・テスト運用も可能</strong><span>小規模検証から安心して進められます</span></div>
           </li>
           <li class="dl-merits__item">
-            <img src="assets/img/290b4bd6-425f-4441-a35e-2cdddda2bd91.png" alt="" class="dl-merits__icon" />
+            <img src="assets/img/290b4bd6-425f-4441-a35e-2cdddda2bd91.webp" alt="" class="dl-merits__icon" loading="lazy" decoding="async" width="773" height="800" />
             <div class="dl-merits__body"><strong>24時間×365日対応</strong><span>いつでもお問い合わせください</span></div>
           </li>
         </ul>
       </div>
       <div class="dl-sidebar-cta">
-        <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
+        <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.webp" alt="ミャンマー" class="dl-sidebar-cta__bg" loading="lazy" decoding="async" width="800" height="530" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
           <a href="/#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
@@ -304,7 +304,7 @@ $f = [
     <h2 class="dl-contact__title">お急ぎの方はこちらからもご連絡いただけます</h2>
     <div class="dl-contact__cards">
       <div class="dl-contact__card">
-        <img src="assets/img/t.png" alt="電話" class="dl-contact__icon" />
+        <img src="assets/img/t.webp" alt="電話" class="dl-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
         <div>
           <p class="dl-contact__label">電話で相談する</p>
           <p class="dl-contact__hours">平日 10:00〜17:00</p>
@@ -312,7 +312,7 @@ $f = [
         </div>
       </div>
       <div class="dl-contact__card">
-        <img src="assets/img/t (1).png" alt="メール" class="dl-contact__icon" />
+        <img src="assets/img/t (1).webp" alt="メール" class="dl-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
         <div>
           <p class="dl-contact__label">メールで相談する</p>
           <a href="mailto:info@acan-sol.com" class="dl-contact__link">info@acan-sol.com</a>

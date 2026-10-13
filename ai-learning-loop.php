@@ -129,7 +129,7 @@
     <h1 class="blog-post__title--sr">AIの「間違い」は失敗なのか？</h1>
 
     <div class="blog-post__hero-image">
-      <img src="assets/img/bb8.png" alt="AIの間違いは失敗なのか？修正理由の裏にこそ、価値あるデータがある" />
+      <img src="assets/img/bb8.webp" alt="AIの間違いは失敗なのか？修正理由の裏にこそ、価値あるデータがある" loading="lazy" decoding="async" width="800" height="450" />
     </div>
 
     <div class="blog-post__container">
@@ -145,10 +145,10 @@
             <!-- Social Share Buttons -->
             <div class="blog-post__share">
               <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="share-btn share-btn--substack">
-                <img src="assets/img/Substack_logo.png" alt="Substack" />
+                <img src="assets/img/Substack_logo.webp" alt="Substack" loading="lazy" decoding="async" width="1920" height="330" />
               </a>
               <a href="https://www.linkedin.com/in/mkado-acan-sol/" target="_blank" rel="noopener" class="share-btn share-btn--linkedin">
-                <img src="assets/img/linkedin-removebg-preview.png" alt="LinkedIn" />
+                <img src="assets/img/linkedin-removebg-preview.webp" alt="LinkedIn" loading="lazy" decoding="async" width="287" height="78" />
               </a>
             </div>
           </div>

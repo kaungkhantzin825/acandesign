@@ -43,7 +43,7 @@
   position: relative;
   overflow: hidden;
   z-index: 2;
-  background-image: url('assets/img/BLOG.png');
+  background-image: url('assets/img/BLOG.webp');
   background-size: cover;
   background-position: center;
   min-height: 320px;

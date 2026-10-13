@@ -44,7 +44,7 @@
       position: relative;
       width: 86%;
       margin: 0 auto;
-      background: #eef0f8 url("assets/img/confirm-hero-bg.png") no-repeat center top / 100% auto;
+      background: #eef0f8 url("assets/img/confirm-hero-bg.webp") no-repeat center top / 100% auto;
       aspect-ratio: 1228 / 541;
       container-type: inline-size;
     }
@@ -103,7 +103,7 @@
         aspect-ratio: auto;
         background-image:
           linear-gradient(90deg, rgba(238, 240, 248, 0.96) 0%, rgba(238, 240, 248, 0.88) 55%, rgba(238, 240, 248, 0.15) 100%),
-          url("assets/img/confirm-hero-bg.png");
+          url("assets/img/confirm-hero-bg.webp");
         background-size: cover, cover;
         background-position: center, 85% center;
       }
@@ -118,7 +118,7 @@
       .cp-hero {
         background-image:
           linear-gradient(180deg, rgba(238, 240, 248, 0.94) 0%, rgba(238, 240, 248, 0.84) 45%, rgba(238, 240, 248, 0.6) 100%),
-          url("assets/img/confirm-hero-bg.png");
+          url("assets/img/confirm-hero-bg.webp");
         background-position: center, 80% center;
       }
       .cp-hero__content { max-width: none; padding: 1rem 1rem 1.75rem; }
@@ -416,31 +416,31 @@
     <div class="cp-content__grid">
       <div class="cp-content__item">
         <span class="cp-content__icon">
-          <img src="assets/img/1-ig.png" alt="ミャンマーの最新ビジネス動向" />
+          <img src="assets/img/1-ig.webp" alt="ミャンマーの最新ビジネス動向" loading="lazy" decoding="async" width="629" height="800" />
         </span>
         <p>ミャンマーの<br />最新ビジネス<br />動向</p>
       </div>
       <div class="cp-content__item">
         <span class="cp-content__icon">
-          <img src="assets/img/2-ig.png" alt="人材・労務に関する情報" />
+          <img src="assets/img/2-ig.webp" alt="人材・労務に関する情報" loading="lazy" decoding="async" width="800" height="445" />
         </span>
         <p>人材・労務に<br />関する情報</p>
       </div>
       <div class="cp-content__item">
         <span class="cp-content__icon">
-          <img src="assets/img/3-ig.png" alt="サービス・事例のご紹介" />
+          <img src="assets/img/3-ig.webp" alt="サービス・事例のご紹介" loading="lazy" decoding="async" width="800" height="800" />
         </span>
         <p>サービス・事例<br />のご紹介</p>
       </div>
       <div class="cp-content__item">
         <span class="cp-content__icon">
-          <img src="assets/img/4-ig.png" alt="セミナー・イベント情報のご案内" />
+          <img src="assets/img/4-ig.webp" alt="セミナー・イベント情報のご案内" loading="lazy" decoding="async" width="800" height="666" />
         </span>
         <p>セミナー・イベン<br />ト情報のご案内</p>
       </div>
       <div class="cp-content__item">
         <span class="cp-content__icon">
-          <img src="assets/img/5-ig.png" alt="その他、お役立ち情報を配信" />
+          <img src="assets/img/5-ig.webp" alt="その他、お役立ち情報を配信" loading="lazy" decoding="async" width="800" height="573" />
         </span>
         <p>その他、お役立ち<br />情報を配信</p>
       </div>
@@ -478,7 +478,7 @@
     <div class="dl-contact__cards">
 
       <div class="dl-contact__card">
-        <img src="assets/img/t.png" alt="電話" class="dl-contact__icon" />
+        <img src="assets/img/t.webp" alt="電話" class="dl-contact__icon" loading="lazy" decoding="async" width="196" height="200" />
         <div>
           <p class="dl-contact__label">電話で相談する</p>
           <p class="dl-contact__hours">平日 10:00〜17:00</p>
@@ -487,7 +487,7 @@
       </div>
 
       <div class="dl-contact__card">
-        <img src="assets/img/t (1).png" alt="メール" class="dl-contact__icon" />
+        <img src="assets/img/t (1).webp" alt="メール" class="dl-contact__icon" loading="lazy" decoding="async" width="200" height="143" />
         <div>
           <p class="dl-contact__label">メールで相談する</p>
           <a href="mailto:info@acan-sol.com" class="dl-contact__link">info@acan-sol.com</a>
