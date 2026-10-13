@@ -5471,7 +5471,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <span class="svc-card__feature-label">業務体制構築<br />支援</span>
                 </div>
               </div>
-              <a href="myanmar-situation.php" class="svc-card__btn">
+              <a href="myanmar-situation" class="svc-card__btn">
                 <span>ミャンマー進出支援の詳細を<br />見る</span>
                 <span class="svc-card__btn-icon">
                   <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -5508,13 +5508,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
           <div class="svc-cta__actions">
-            <a href="contectus.php" class="svc-cta__btn svc-cta__btn--primary">
+            <a href="contectus" class="svc-cta__btn svc-cta__btn--primary">
               <span>お問い合わせ</span>
               <span class="svc-cta__btn-icon">
                 <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </span>
             </a>
-            <a href="download.php" class="svc-cta__btn svc-cta__btn--secondary">
+            <a href="download" class="svc-cta__btn svc-cta__btn--secondary">
               <span>資料ダウンロード</span>
               <span class="svc-cta__btn-icon">
                 <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -5570,7 +5570,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="ai-inner">
                 <div class="ai-hero__content">
                     <p class="ai-bc">
-                        <a href="index.php">HOME</a> ＞ <a href="index.php#services">サービス</a> ＞ <span>AI・データサービス</span>
+                        <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>AI・データサービス</span>
                     </p>
                     <h1 class="ai-hero__title">AI・データサービス</h1>
                     <p class="ai-hero__subtitle">AI &amp; Data Services</p>
@@ -5783,7 +5783,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- HERO -->
         <section class="dev-hero">
             <div class="dev__inner">
-                <p class="dev-bc"><a href="index.php" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="index.php#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
+                <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="/#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
 
                 <div class="dev-hero__content">
                     <p class="dev-hero__eyebrow">Technology</p>
@@ -6823,7 +6823,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="dsg-bg-2">
                     <div class="dsg__inner">
                         <!-- <p class="dsg-bc">
-                            <a href="index.php">HOME</a> ＞ <a href="index.php#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
+                            <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
                         </p> -->
 
                         <div class="dsg-hero__content">
@@ -7159,8 +7159,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="bpo-hero">
             <div class="bpo__inner">
                 <p class="bpo-bc">
-                    <a href="index.php">HOME</a> <span class="bpo-bc__sep">／</span>
-                    <a href="service.php">サービス</a> <span class="bpo-bc__sep">／</span>
+                    <a href="/">HOME</a> <span class="bpo-bc__sep">／</span>
+                    <a href="service">サービス</a> <span class="bpo-bc__sep">／</span>
                     <span class="bpo-bc__current">BPOサービス</span>
                 </p>
 
@@ -7559,8 +7559,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <section class="kpo-hero">
             <div class="kpo-hero__inner">
                 <p class="kpo-bc">
-                    <a href="index.php">HOME</a> ／
-                    <a href="service.php">サービス</a> ／
+                    <a href="/">HOME</a> ／
+                    <a href="service">サービス</a> ／
                     <span class="kpo-bc__current">KPOサービス</span>
                 </p>
 
@@ -7880,7 +7880,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="cs-hero__content">
                     <p class="cs-bc">
-                        <a href="index.php">HOME</a> ／ <a href="service.php">サービス</a> ／ <span>ミャンマー進出支援</span>
+                        <a href="/">HOME</a> ／ <a href="service">サービス</a> ／ <span>ミャンマー進出支援</span>
                     </p>
                     <p class="cs-hero__eyebrow">Consulting services</p>
                     <h1 class="cs-hero__title">
@@ -8021,12 +8021,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="cs-btns">
-                    <a class="cs-btn cs-btn--primary" href="contectus.php">
+                    <a class="cs-btn cs-btn--primary" href="contectus">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-mail.png" alt="" />
                         お問い合わせ
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.png" alt="" />
                     </a>
-                    <a class="cs-btn cs-btn--ghost" href="download.php">
+                    <a class="cs-btn cs-btn--ghost" href="download">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-dl.png" alt="" />
                         資料ダウンロード
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.png" alt="" />

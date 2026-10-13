@@ -291,7 +291,7 @@
     <div class="nas__grid">
 
       <!-- 01 Blue Card -->
-      <a href="index.php#services" class="nas__card nas__card--blue">
+      <a href="/#services" class="nas__card nas__card--blue">
         <span class="nas__badge">01</span>
         <div class="nas__card-inner">
           <div class="nas__card-body">
@@ -330,7 +330,7 @@
       </a>
 
       <!-- 02 Green Card -->
-      <a href="download.php" class="nas__card nas__card--green">
+      <a href="download" class="nas__card nas__card--green">
         <span class="nas__badge">02</span>
         <div class="nas__card-inner">
           <div class="nas__card-body">
@@ -373,7 +373,7 @@
       </a>
 
       <!-- 03 Orange Card -->
-      <a href="contectus.php" class="nas__card nas__card--orange">
+      <a href="contectus" class="nas__card nas__card--orange">
         <span class="nas__badge">03</span>
         <div class="nas__card-inner">
           <div class="nas__card-body">

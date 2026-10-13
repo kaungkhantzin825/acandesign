@@ -521,7 +521,7 @@
                 <div class="ai-hero__content">
                     <!-- Breadcrumbs -->
                     <p class="ai-bc">
-                        <a href="index.php">HOME</a> ＞ <a href="index.php#services">サービス</a> ＞ <span>AI・データサービス</span>
+                        <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>AI・データサービス</span>
                     </p>
                     <h1 class="ai-hero__title">AI・データサービス</h1>
                     <p class="ai-hero__subtitle">AI &amp; Data Services</p>

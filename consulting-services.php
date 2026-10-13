@@ -961,7 +961,7 @@
 
                 <div class="cs-hero__content">
                     <p class="cs-bc">
-                        <a href="index.php">HOME</a> ／ <a href="service.php">サービス</a> ／ <span>ミャンマー進出支援</span>
+                        <a href="/">HOME</a> ／ <a href="service">サービス</a> ／ <span>ミャンマー進出支援</span>
                     </p>
                     <p class="cs-hero__eyebrow">Consulting services</p>
                     <h1 class="cs-hero__title">
@@ -1102,12 +1102,12 @@
                 </div>
 
                 <div class="cs-btns">
-                    <a class="cs-btn cs-btn--primary" href="contectus.php">
+                    <a class="cs-btn cs-btn--primary" href="contectus">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-mail.png" alt="" />
                         お問い合わせ
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.png" alt="" />
                     </a>
-                    <a class="cs-btn cs-btn--ghost" href="download.php">
+                    <a class="cs-btn cs-btn--ghost" href="download">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-dl.png" alt="" />
                         資料ダウンロード
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-gold.png" alt="" />

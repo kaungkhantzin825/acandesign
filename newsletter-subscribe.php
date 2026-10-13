@@ -10,27 +10,27 @@ if ($hasMailer) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: myanmar-situation.php');
+    header('Location: myanmar-situation');
     exit;
 }
 
 // Honeypot check
 if (!empty($_POST['_honey'])) {
-    header('Location: myanmar-situation.php');
+    header('Location: myanmar-situation');
     exit;
 }
 
 $email = filter_var(trim($_POST['email'] ?? ''), FILTER_VALIDATE_EMAIL);
 
 if (!$email) {
-    header('Location: myanmar-situation.php');
+    header('Location: myanmar-situation');
     exit;
 }
 
 // One signup per email — block if this address already exists at all,
 // whether it was verified or is still sitting unconfirmed.
 if (subscriber_email_exists($email, 'newsletter')) {
-    header('Location: newsletter-already-registered.php?email=' . urlencode($email));
+    header('Location: newsletter-already-registered?email=' . urlencode($email));
     exit;
 }
 
@@ -68,5 +68,5 @@ if ($hasMailer) {
     send_newsletter_mail(NEWSLETTER_ADMIN_EMAIL, $subject, $body);
 }
 
-header('Location: confirm-page.php');
+header('Location: confirm-page');
 exit;

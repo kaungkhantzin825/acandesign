@@ -928,7 +928,7 @@
         <!-- HERO -->
         <section class="dev-hero">
             <div class="dev__inner">
-                <p class="dev-bc"><a href="index.php" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="index.php#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
+                <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="/#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
 
                 <div class="dev-hero__content">
                     <p class="dev-hero__eyebrow">Technology</p>
@@ -1138,8 +1138,8 @@
     <div class="prof-cta-banner__content">
       <p class="prof-cta-banner__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
       <div class="prof-cta-banner__btns">
-        <a href="download.php" class="prof-cta-banner__btn prof-cta-banner__btn--dl">資料ダウンロード</a>
-        <a href="contectus.php" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="download" class="prof-cta-banner__btn prof-cta-banner__btn--dl">資料ダウンロード</a>
+        <a href="contectus" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </div>
     </div>
   </div>

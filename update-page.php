@@ -1133,18 +1133,18 @@
 
   <!-- NAV -->
   <nav class="nav">
-    <a href="index.php" class="nav__logo">
+    <a href="/" class="nav__logo">
       <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" class="nav__logo-img" width="40" height="40" />
       <span>A CAN SOLUTIONS</span>
     </a>
     <ul class="nav__links">
-      <li><a href="index.php#services">サービス</a></li>
-      <li><a href="index.php#cases">導入事例</a></li>
-      <li><a href="index.php#blog">ブログ</a></li>
-      <li><a href="index.php#myanmar">ミャンマー状況</a></li>
-      <li><a href="index.php#about">会社情報</a></li>
+      <li><a href="/#services">サービス</a></li>
+      <li><a href="/#cases">導入事例</a></li>
+      <li><a href="/#blog">ブログ</a></li>
+      <li><a href="/#myanmar">ミャンマー状況</a></li>
+      <li><a href="/#about">会社情報</a></li>
       <li>
-        <a href="index.php#contact" style="
+        <a href="/#contact" style="
     background-color: #004aad;
 " class="nav__cta">
           <span>お問い合わせ</span>
@@ -1175,13 +1175,13 @@
 ">日本品質のマネジメントとミャンマーの高度人材で、<br />企業の業務変革と成長をサポートします。</p>
       </div>
       <div class="hero__actions">
-        <a href="index.php#contact" class="hero-btn hero-btn--orange">
+        <a href="/#contact" class="hero-btn hero-btn--orange">
           <span class="hero-btn__icon">
             <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.png" alt="" width="45" height="36" style="display:block;" />
           </span>
           <span>お問い合わせ</span>
         </a>
-        <a href="index.php#services" class="hero-btn hero-btn--white">
+        <a href="/#services" class="hero-btn hero-btn--white">
           <span class="hero-btn__icon">
             <img src="assets/img/5e260550-b6ab-465e-b3d1-973dc8286696.png" alt="" width="26" height="36" style="display:block;" />
           </span>
@@ -1189,7 +1189,7 @@
     color: #342eaa;
 ">概算見積依頼</span>
         </a>
-        <a href="index.php#cases" class="hero-btn hero-btn--white">
+        <a href="/#cases" class="hero-btn hero-btn--white">
           <span class="hero-btn__icon">
             <img src="assets/img/7f3bc30f-93a6-4cfa-be00-4399bee983dd.png" alt="" width="29" height="36" style="display:block;" />
           </span>
@@ -1325,7 +1325,7 @@
       <div class="services__more">
         <a style="
     background: #342eaa !important;
-" href="index.php#services" class="btn-pill-blue">
+" href="/#services" class="btn-pill-blue">
           <span >サービスの詳細を見る</span>
           <span class="btn-pill-blue__arrow">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -1430,7 +1430,7 @@
     <div class="section__inner">
       <div class="blog__header-row">
         <h2 class="section-head-title" style="margin-bottom:0">最新のブログ</h2>
-        <a href="index.php#blog" class="blog__more-link" style="
+        <a href="/#blog" class="blog__more-link" style="
     color: #004aad !important;
 ">ブログ一覧を見る →</a>
       </div>
@@ -1445,7 +1445,7 @@
         <div class="blog__track-wrap">
           <div class="blog__track" id="blogTrack">
 
-            <a href="ocr-dx.php" class="blog-card">
+            <a href="ocr-dx" class="blog-card">
               <div class="blog-card__img">
                 <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AI×OCR記事" />
               </div>
@@ -1458,7 +1458,7 @@
               </div>
             </a>
 
-            <a href="ai-agent.php" class="blog-card">
+            <a href="ai-agent" class="blog-card">
               <div class="blog-card__img">
                 <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AIエージェント記事" />
               </div>
@@ -1471,7 +1471,7 @@
               </div>
             </a>
 
-            <a href="genai-tips.php" class="blog-card">
+            <a href="genai-tips" class="blog-card">
               <div class="blog-card__img">
                 <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="生成AI導入記事" />
               </div>
@@ -1484,7 +1484,7 @@
               </div>
             </a>
 
-            <a href="post.php" class="blog-card">
+            <a href="post" class="blog-card">
               <div class="blog-card__img">
                 <img src="assets/img/uri_ifs___M_cZ7_50J4vE1HZe2Hga6MGir5nuCSSnytMB6wIVVK440.jpg" alt="AI学習データ記事" />
               </div>
@@ -1520,7 +1520,7 @@
             AI時代の到来とともに、AIアノテーションやKPOなど専門性の高いサービスへと事業を拡大してきました。<br />
             日本品質の運営体制と、ミャンマーの優秀な人材を組み合わせ、お客様の業務変革と成長を支えるパートナーであり続けます。
           </p>
-          <a href="index.php#about" class="btn-outline-blue">
+          <a href="/#about" class="btn-outline-blue">
             <span>会社情報を見る</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
@@ -1529,7 +1529,7 @@
         <div class="about__cta-banner">
           <h3>まずはお気軽にご相談ください</h3>
           <p>業務のお悩みやご相談を、専門スタッフが丁寧にヒアリングします。</p>
-          <a href="index.php#contact" class="hero-btn hero-btn--orange" style="width: fit-content;">
+          <a href="/#contact" class="hero-btn hero-btn--orange" style="width: fit-content;">
             <span class="hero-btn__icon">
               <img src="assets/img/8f82ce6e-276e-4993-b754-f8bbb242834c.png" alt="" width="36" height="36" style="display:block;" />
             </span>
@@ -1554,18 +1554,18 @@
       <div>
         <p class="footer__col-heading">メニュー</p>
         <ul class="footer__link-list">
-          <li><a href="index.php#services">サービス一覧</a></li>
-          <li><a href="index.php#cases">導入事例</a></li>
-          <li><a href="index.php#blog">ブログ</a></li>
-          <li><a href="index.php#myanmar">ミャンマー状況</a></li>
+          <li><a href="/#services">サービス一覧</a></li>
+          <li><a href="/#cases">導入事例</a></li>
+          <li><a href="/#blog">ブログ</a></li>
+          <li><a href="/#myanmar">ミャンマー状況</a></li>
         </ul>
       </div>
 
       <div>
         <p class="footer__col-heading">会社情報</p>
         <ul class="footer__link-list">
-          <li><a href="index.php#about">会社概要</a></li>
-          <li><a href="privacy.php">プライバシーポリシー</a></li>
+          <li><a href="/#about">会社概要</a></li>
+          <li><a href="privacy">プライバシーポリシー</a></li>
         </ul>
       </div>
 

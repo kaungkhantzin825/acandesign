@@ -180,7 +180,7 @@
 <section class="ms-header" aria-label="ミャンマー情報">
   <div class="ms-header__inner">
 
-    <nav class="ms-header__crumb" aria-label="パンくずリスト"><a href="index.php">HOME</a> <span class="ms-header__crumb-sep" aria-hidden="true">&gt;</span> <span class="ms-header__crumb-current" aria-current="page">Myanmar situation</span></nav>
+    <nav class="ms-header__crumb" aria-label="パンくずリスト"><a href="/">HOME</a> <span class="ms-header__crumb-sep" aria-hidden="true">&gt;</span> <span class="ms-header__crumb-current" aria-current="page">Myanmar situation</span></nav>
 
     <p class="ms-header__eyebrow">Myanmar situation</p>
 

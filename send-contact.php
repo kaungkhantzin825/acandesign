@@ -20,13 +20,13 @@ use PHPMailer\PHPMailer\Exception;
 
 // Reject non-POST requests outright
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: contectus.php');
+    header('Location: contectus');
     exit;
 }
 
 // Honeypot check
 if (!empty($_POST['_honey'])) {
-    header('Location: index.php');
+    header('Location: /');
     exit;
 }
 
@@ -38,20 +38,20 @@ $content = strip_tags(trim($_POST['お問い合わせ内容'] ?? ''));
 
 // Required fields (whitespace-only input is treated as empty)
 if ($company === '' || $name === '' || $email === '') {
-    header('Location: contectus.php?error=required');
+    header('Location: contectus?error=required');
     exit;
 }
 
 // Strict email format check
 $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 if (!$email || !preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $email)) {
-    header('Location: contectus.php?error=email');
+    header('Location: contectus?error=email');
     exit;
 }
 
 // Phone is optional, but if provided must be digits only
 if ($tel !== '' && !preg_match('/^[0-9]{9,11}$/', $tel)) {
-    header('Location: contectus.php?error=phone');
+    header('Location: contectus?error=phone');
     exit;
 }
 
@@ -181,7 +181,7 @@ if ($hasMailer) {
       内容確認の上、返信させて頂きます。<br>
       引き続きどうぞ宜しくお願い致します。
     </p>
-    <a href="index.php" class="result-btn result-btn--home">トップページへ戻る</a>
+    <a href="/" class="result-btn result-btn--home">トップページへ戻る</a>
 <?php else: ?>
     <div class="result-icon result-icon--error">⚠️</div>
     <h1 class="result-title">送信に失敗しました</h1>
@@ -190,7 +190,7 @@ if ($hasMailer) {
       お手数ですが、もう一度お試しいただくか、<br>
       直接 <strong>info@acan-sol.com</strong> までご連絡ください。
     </p>
-    <a href="contectus.php" class="result-btn result-btn--back">入力画面に戻る</a>
+    <a href="contectus" class="result-btn result-btn--back">入力画面に戻る</a>
 <?php endif; ?>
   </div>
 </section>

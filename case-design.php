@@ -838,7 +838,7 @@
                 <div class="dsg-bg-2">
                     <div class="dsg__inner">
                         <!-- <p class="dsg-bc">
-                            <a href="index.php">HOME</a> ＞ <a href="index.php#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
+                            <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
                         </p> -->
 
                         <div class="dsg-hero__content">

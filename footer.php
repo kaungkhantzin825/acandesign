@@ -2,15 +2,15 @@
   <div class="container site-footer__inner">
     <div class="site-footer__row">
       <nav class="site-footer__nav" aria-label="フッター">
-        <a class="site-footer__link" href="privacy.php">プライバシーポリシー</a>
+        <a class="site-footer__link" href="privacy">プライバシーポリシー</a>
         <span class="site-footer__divider" aria-hidden="true"></span>
-        <a class="site-footer__link" href="index.php">トップページ</a>
+        <a class="site-footer__link" href="/">トップページ</a>
         <span class="site-footer__divider" aria-hidden="true"></span>
-        <a class="site-footer__link" href="blog-page.php">BLOG</a>
+        <a class="site-footer__link" href="blog-page">BLOG</a>
         <span class="site-footer__divider" aria-hidden="true"></span>
-        <a class="site-footer__link" href="download.php">資料ダウンロード</a>
+        <a class="site-footer__link" href="download">資料ダウンロード</a>
         <span class="site-footer__divider" aria-hidden="true"></span>
-        <a class="site-footer__link" href="contectus.php">お問い合わせ</a>
+        <a class="site-footer__link" href="contectus">お問い合わせ</a>
       </nav>
       <div class="site-footer__social">
         <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="site-footer__social-link">

@@ -759,7 +759,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
       <?php endif; ?>
       <div class="dl-panel__scroll">
         
-        <form action="confirm.php" method="POST" style="padding: 1.2rem 1.4rem;">
+        <form action="confirm" method="POST" style="padding: 1.2rem 1.4rem;">
           
           <!-- 会社名 -->
           <div style="margin-bottom: 1.5rem;">
@@ -894,7 +894,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
           <p class="dl-sidebar-cta__text" style="text-align: left;">
             ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
-          <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
+          <a href="/#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>
       </div>
 

@@ -641,7 +641,7 @@
 
   <!-- ── Breadcrumb ── -->
   <nav class="dl-breadcrumb" aria-label="Breadcrumb">
-    <a href="index.php">HOME</a> &rsaquo; 営業資料
+    <a href="/">HOME</a> &rsaquo; 営業資料
   </nav>
 
   <!-- ── Main Body ── -->
@@ -986,7 +986,7 @@
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>
       </div>
       </div>
-      <a href="index.php#contact" class="dl-panel__notice">
+      <a href="/#contact" class="dl-panel__notice">
         <span class="dl-panel__notice-icon">!</span>
         その他の資料やご不明点がございましたら、お気軽にお問い合わせください
       </a>
@@ -1037,7 +1037,7 @@
           <p class="dl-sidebar-cta__text" style="text-align: left;">
             ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
-          <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
+          <a href="/#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>
       </div>
 

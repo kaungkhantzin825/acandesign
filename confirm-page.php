@@ -390,7 +390,7 @@
   <!-- ── Hero: registration complete ── -->
   <section class="cp-hero">
     <nav class="cp-hero__crumb" aria-label="Breadcrumb">
-      <a href="index.php">HOME</a> &rsaquo; <a href="myanmar-situation.php">Myanmar situation</a> &rsaquo; <span aria-current="page">メルマガ登録完了</span>
+      <a href="/">HOME</a> &rsaquo; <a href="myanmar-situation">Myanmar situation</a> &rsaquo; <span aria-current="page">メルマガ登録完了</span>
     </nav>
     <div class="cp-hero__content">
       <svg class="cp-hero__check" viewBox="0 0 92 92" aria-hidden="true">

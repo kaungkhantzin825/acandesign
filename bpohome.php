@@ -842,8 +842,8 @@
         <section class="bpo-hero">
             <div class="bpo__inner">
                 <p class="bpo-bc">
-                    <a href="index.php">HOME</a> <span class="bpo-bc__sep">／</span>
-                    <a href="service.php">サービス</a> <span class="bpo-bc__sep">／</span>
+                    <a href="/">HOME</a> <span class="bpo-bc__sep">／</span>
+                    <a href="service">サービス</a> <span class="bpo-bc__sep">／</span>
                     <span class="bpo-bc__current">BPOサービス</span>
                 </p>
 

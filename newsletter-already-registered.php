@@ -212,7 +212,7 @@
         お手数ですが <a href="mailto:info@acan-sol.com">info@acan-sol.com</a> までご連絡ください。
       </p>
       <div class="result-actions">
-        <a href="myanmar-situation.php" class="result-btn result-btn--primary">トップページへ戻る</a>
+        <a href="myanmar-situation" class="result-btn result-btn--primary">トップページへ戻る</a>
         <a href="mailto:info@acan-sol.com" class="result-btn result-btn--ghost">お問い合わせ</a>
       </div>
     </div>

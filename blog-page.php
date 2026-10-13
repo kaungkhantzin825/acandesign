@@ -892,7 +892,7 @@
 
       <!-- ── Breadcrumb ── -->
       <nav class="dl-breadcrumb" aria-label="Breadcrumb">
-        <a href="index.php">HOME</a> &rsaquo; BLOG
+        <a href="/">HOME</a> &rsaquo; BLOG
       </nav>
 
       <!-- ── Category Filter Tabs ── -->
@@ -910,7 +910,7 @@
       <div class="dl-panel__scroll" id="dl-scroll">
         <ul class="blog-list" role="list">
           <li class="blog-card" data-cat="bpo-kpo">
-            <a href="management.php" class="blog-card__link">
+            <a href="management" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-1.webp" alt="Outsourcing" width="300" height="170" loading="lazy" />
               </div>
@@ -934,7 +934,7 @@
           </li>
 
           <li class="blog-card" data-cat="bpo-kpo">
-            <a href="business.php" class="blog-card__link">
+            <a href="business" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blg-image.png" alt="BPO業務選定" width="300" height="170" loading="lazy" />
               </div>
@@ -958,7 +958,7 @@
           </li>
 
           <li class="blog-card" data-cat="bpo-kpo">
-            <a href="companies.php" class="blog-card__link">
+            <a href="companies" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/3blog.webp" alt="BPO導入失敗" width="300" height="170" loading="lazy" />
               </div>
@@ -985,7 +985,7 @@
           </li>
 
           <li class="blog-card" data-cat="bpo-kpo">
-            <a href="bpo.php" class="blog-card__link">
+            <a href="bpo" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-6.webp" alt="海外BPO比較" width="300" height="170" loading="lazy" />
               </div>
@@ -1012,7 +1012,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="necessary.php" class="blog-card__link">
+            <a href="necessary" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-5.webp" alt="AI時代のBPO/KPO" width="300" height="170" loading="lazy" />
               </div>
@@ -1039,7 +1039,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="blog.php" class="blog-card__link">
+            <a href="blog" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-8.jpg" alt="AIアノテーション" width="300" height="170" loading="lazy" />
               </div>
@@ -1066,7 +1066,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="post.php" class="blog-card__link">
+            <a href="post" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-10.jpg" alt="AI学習データ作成" width="300" height="170" loading="lazy" />
               </div>
@@ -1093,7 +1093,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="genai-tips.php" class="blog-card__link">
+            <a href="genai-tips" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/ai-11.jpg" alt="生成AI導入のポイント" width="300" height="170" loading="lazy" />
               </div>
@@ -1120,7 +1120,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="ai-agent.php" class="blog-card__link">
+            <a href="ai-agent" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/ai-22.jpg" alt="AIエージェントとは" width="300" height="170" loading="lazy" />
               </div>
@@ -1147,7 +1147,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="ocr-dx.php" class="blog-card__link">
+            <a href="ocr-dx" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-new3.jpg" alt="AI×OCRで紙業務自動化" width="300" height="170" loading="lazy" />
               </div>
@@ -1179,7 +1179,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="llm-eval.php" class="blog-card__link">
+            <a href="llm-eval" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/new-blog-4.jpg" alt="AI品質評価LLM Evaluation" width="300" height="170" loading="lazy" />
               </div>
@@ -1208,7 +1208,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="ai-human-jobs.php" class="blog-card__link">
+            <a href="ai-human-jobs" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/newblog-66.jpg" alt="AI時代でも人が担う仕事" width="300" height="170" loading="lazy" />
               </div>
@@ -1236,7 +1236,7 @@
           </li>
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="ai-bpo-roles.php" class="blog-card__link">
+            <a href="ai-bpo-roles" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/s.jpg" alt="AI×BPO役割分担" width="300" height="170" loading="lazy" />
               </div>
@@ -1265,7 +1265,7 @@
           </li>
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="myanmar-outsourcing.php" class="blog-card__link">
+            <a href="myanmar-outsourcing" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/s3.jpg" alt="ミャンマーアウトソーシング" width="300" height="170" loading="lazy" />
               </div>
@@ -1293,7 +1293,7 @@
           </li>
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="myanmar-talent.php" class="blog-card__link">
+            <a href="myanmar-talent" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/s2.png" alt="ミャンマー人材の可能性" width="300" height="170" loading="lazy" />
               </div>
@@ -1321,7 +1321,7 @@
           </li>
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="japan-quality.php" class="blog-card__link">
+            <a href="japan-quality" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/width_800_12.png" alt="日本品質を海外で実現するには？" width="300" height="170" loading="lazy" />
               </div>
@@ -1349,7 +1349,7 @@
           </li>
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="outsourcing.php" class="blog-card__link">
+            <a href="outsourcing" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/newblog-8.jpg" alt="海外アウトソーシング選定ポイント" width="300" height="170" loading="lazy" />
               </div>
@@ -1378,7 +1378,7 @@
           </li>
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="quality.php" class="blog-card__link">
+            <a href="quality" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-new-2.png" alt="日本とミャンマー、二つのチームで品質をつくる" width="300" height="170" loading="lazy" />
               </div>
@@ -1404,7 +1404,7 @@
           </li>
 
            <li class="blog-card" data-cat="myanmar">
-            <a href="bpocompany.php" class="blog-card__link">
+            <a href="bpocompany" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/blog-page5.png" alt="BPOは「丸投げ」では成功しない　業務移管を成功させる最初の30日間とは？" width="300" height="170" loading="lazy" />
               </div>
@@ -1436,7 +1436,7 @@
 
 
             <li class="blog-card" data-cat="myanmar">
-            <a href="bpo-post.php" class="blog-card__link">
+            <a href="bpo-post" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/width_blog5.png" alt="BPO導入後、どこまで任せるべきか？「作業代行」から「自走するチーム」へ育てる方法" width="300" height="170" loading="lazy" />
               </div>
@@ -1477,7 +1477,7 @@
 
 
            <li class="blog-card" data-cat="myanmar">
-            <a href="ai-page.php" class="blog-card__link">
+            <a href="ai-page" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/width_166600.png" alt="BPO導入後、どこまで任せるべきか？「作業代行」から「自走するチーム」へ育てる方法" width="300" height="170" loading="lazy" />
               </div>
@@ -1499,7 +1499,7 @@
 
 
           <li class="blog-card" data-cat="myanmar">
-            <a href="blog-quality-team.php" class="blog-card__link">
+            <a href="blog-quality-team" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/width_8B0.png" alt="BPOの品質は「人」で決まるのか？属人化しないチームをつくる5つの仕組み" width="300" height="170" loading="lazy" />
               </div>
@@ -1530,7 +1530,7 @@
           </li>
 
   <li class="blog-card" data-cat="myanmar">
-            <a href="blog-quality-pbo.php" class="blog-card__link">
+            <a href="blog-quality-pbo" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/width_888880.png" alt="マニュアルを作ったのにBPOがうまくいかないのはなぜ？「作業手順」より重要な業務設計とは" width="300" height="170" loading="lazy" />
               </div>
@@ -1563,7 +1563,7 @@
 
           <!-- New: 日曜コラム -->
           <li class="blog-card" data-cat="sunday-column">
-            <a href="sunday-deadline.php" class="blog-card__link">
+            <a href="sunday-deadline" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/bb66.png" alt="「納期に間に合わせたい」と、自分たちで動くチーム ミャンマーのメンバーを見て、改めて思ったこと" width="300" height="170" loading="lazy" />
               </div>
@@ -1589,7 +1589,7 @@
 
           <!-- New: 日曜コラム -->
           <li class="blog-card" data-cat="sunday-column">
-            <a href="sunday-salary.php" class="blog-card__link">
+            <a href="sunday-salary" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/bb77.png" alt="「この給料をもらっていて大丈夫ですか？」 あるメンバーの一言から、改めて考えたこと" width="300" height="170" loading="lazy" />
               </div>
@@ -1617,7 +1617,7 @@
 
           <!-- New: AI × BPO/KPO -->
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="ai-learning-loop.php" class="blog-card__link">
+            <a href="ai-learning-loop" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/bb8.png" alt="AIの間違いを、会社の学びに変える 「なぜ直したのか」を残すと業務はどう変わるのか？" width="300" height="170" loading="lazy" />
               </div>
@@ -1650,7 +1650,7 @@
 
 
           <li class="blog-card" data-cat="ai-bpo">
-            <a href="learning-loop.php" class="blog-card__link">
+            <a href="learning-loop" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/bbb6.png" alt="3か月ぶりのミャンマーで、あらためて感じたこと「任せる」ということは、信じることなのかもしれない" width="300" height="170" loading="lazy" />
               </div>
@@ -1681,7 +1681,7 @@
 
 
            <li class="blog-card" data-cat="sunday-column">
-            <a href="sunday-support.php" class="blog-card__link">
+            <a href="sunday-support" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/newblog90.png" alt="支えるということ 厳しいミャンマーで、あらためて考えた「一緒に働く」という意味" width="300" height="170" loading="lazy" />
               </div>
@@ -1714,7 +1714,7 @@
 
 
             <li class="blog-card" data-cat="sunday-column">
-            <a href="organization.php" class="blog-card__link">
+            <a href="organization" class="blog-card__link">
               <div class="blog-card__image">
                 <img src="assets/img/newblog81.png" alt="「できることをやる」に変えたら、組織が回り始めた 日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方" width="300" height="170" loading="lazy" />
               </div>
@@ -1782,7 +1782,7 @@
           <p class="dl-sidebar-cta__text" style="text-align: left;">
             ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。
           </p>
-          <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
+          <a href="/#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>
       </div>
 

@@ -757,7 +757,7 @@
       <div class="ms-newsletter__content">
         <h2 class="ms-newsletter__title">ミャンマーの最新情報を<br />定期的にお届けします。</h2>
         <p class="ms-newsletter__desc">ビジネスに役立つ現地情報をメールマガジンで配信中。</p>
-        <form id="newsletterForm" class="ms-newsletter__form" action="newsletter-subscribe.php" method="POST">
+        <form id="newsletterForm" class="ms-newsletter__form" action="newsletter-subscribe" method="POST">
           <input type="email" id="newsletterEmail" name="email" class="ms-newsletter__input" placeholder="メールアドレスを入力" required />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <button type="submit" id="newsletterBtn" class="ms-newsletter__btn">

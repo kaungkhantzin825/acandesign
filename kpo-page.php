@@ -1042,8 +1042,8 @@
         <section class="kpo-hero">
             <div class="kpo-hero__inner">
                 <p class="kpo-bc">
-                    <a href="index.php">HOME</a> ／
-                    <a href="service.php">サービス</a> ／
+                    <a href="/">HOME</a> ／
+                    <a href="service">サービス</a> ／
                     <span class="kpo-bc__current">KPOサービス</span>
                 </p>
 

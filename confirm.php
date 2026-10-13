@@ -9,19 +9,19 @@ $content = trim($_POST['お問い合わせ内容'] ?? '');
 
 // Required fields (whitespace-only input is treated as empty)
 if ($company === '' || $name === '' || $email === '') {
-    header('Location: contectus.php?error=required');
+    header('Location: contectus?error=required');
     exit;
 }
 
 // Strict email format check
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $email)) {
-    header('Location: contectus.php?error=email');
+    header('Location: contectus?error=email');
     exit;
 }
 
 // Phone is optional, but if provided must be digits only
 if ($tel !== '' && !preg_match('/^[0-9]{9,11}$/', $tel)) {
-    header('Location: contectus.php?error=phone');
+    header('Location: contectus?error=phone');
     exit;
 }
 
@@ -233,7 +233,7 @@ $f = [
 
         <!-- 送信する -->
         <div class="cf-actions">
-          <form action="send-contact.php" method="POST" style="width:100%;max-width:280px;">
+          <form action="send-contact" method="POST" style="width:100%;max-width:280px;">
             <input type="hidden" name="会社名"           value="<?= $f['会社名'] ?>" />
             <input type="hidden" name="ご担当者名"       value="<?= $f['ご担当者名'] ?>" />
             <input type="hidden" name="メールアドレス"   value="<?= $f['メールアドレス'] ?>" />
@@ -246,7 +246,7 @@ $f = [
           </form>
 
           <!-- 編集に戻る -->
-          <form action="contectus.php" method="POST" style="width:100%;max-width:280px;">
+          <form action="contectus" method="POST" style="width:100%;max-width:280px;">
             <input type="hidden" name="_editing"          value="1" />
             <input type="hidden" name="会社名"           value="<?= $f['会社名'] ?>" />
             <input type="hidden" name="ご担当者名"       value="<?= $f['ご担当者名'] ?>" />
@@ -293,7 +293,7 @@ $f = [
         <img src="assets/img/uri_ifs___M_udNq4QUo4H9V2Dwz57bjkSbSM7n5L5NYbOnl6LDudbw.jpg" alt="ミャンマー" class="dl-sidebar-cta__bg" />
         <div class="dl-sidebar-cta__content">
           <p class="dl-sidebar-cta__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
-          <a href="index.php#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
+          <a href="/#services" class="dl-sidebar-cta__btn">サービス一覧を見る <span>›</span></a>
         </div>
       </div>
     </aside>

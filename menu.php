@@ -152,18 +152,18 @@
 
 <header class="site-header">
   <div class="site-header__inner">
-    <a href="index.php#top" class="site-header__logo">
+    <a href="/#top" class="site-header__logo">
       <img src="assets/img/logo.webp" alt="A CAN SOLUTIONS" width="34" height="34" />
       <span>A CAN SOLUTIONS</span>
     </a>
     <nav class="site-header__nav" aria-label="Main navigation">
-      <a href="index.php#services">サービス</a>
-      <a href="blog-page.php">BLOG</a>
-      <a href="myanmar-situation.php">Myanmar situation</a>
-      <a href="profile.php">会社情報&nbsp;&nbsp;</a>
+      <a href="/#services">サービス</a>
+      <a href="blog-page">BLOG</a>
+      <a href="myanmar-situation">Myanmar situation</a>
+      <a href="profile">会社情報&nbsp;&nbsp;</a>
     </nav>
-    <a href="download.php" class="site-header__cta site-header__cta--dl">資料ダウンロード <span class="site-header__cta-icon">&rarr;</span></a>
-    <a href="contectus.php" class="site-header__cta">お問い合わせ <span class="site-header__cta-icon">&rarr;</span></a>
+    <a href="download" class="site-header__cta site-header__cta--dl">資料ダウンロード <span class="site-header__cta-icon">&rarr;</span></a>
+    <a href="contectus" class="site-header__cta">お問い合わせ <span class="site-header__cta-icon">&rarr;</span></a>
     <button class="site-header__hamburger" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span>
       <span></span>
@@ -174,13 +174,13 @@
 
 <!-- Mobile drawer (outside header so it drops below the fixed bar) -->
 <nav class="site-nav-drawer" id="navDrawer" aria-label="モバイルナビゲーション">
-  <a href="index.php#services" class="site-nav-drawer__link">サービス</a>
-  <a href="blog-page.php" class="site-nav-drawer__link">BLOG</a>
-  <a href="myanmar-situation.php" class="site-nav-drawer__link">Myanmar situation</a>
-  <a href="profile.php" class="site-nav-drawer__link">会社情報</a>
+  <a href="/#services" class="site-nav-drawer__link">サービス</a>
+  <a href="blog-page" class="site-nav-drawer__link">BLOG</a>
+  <a href="myanmar-situation" class="site-nav-drawer__link">Myanmar situation</a>
+  <a href="profile" class="site-nav-drawer__link">会社情報</a>
   <div class="site-nav-drawer__ctas">
-    <a href="download.php" class="site-nav-drawer__cta site-nav-drawer__cta--dl">資料ダウンロード &rarr;</a>
-    <a href="contectus.php" class="site-nav-drawer__cta">お問い合わせ &rarr;</a>
+    <a href="download" class="site-nav-drawer__cta site-nav-drawer__cta--dl">資料ダウンロード &rarr;</a>
+    <a href="contectus" class="site-nav-drawer__cta">お問い合わせ &rarr;</a>
   </div>
 </nav>
 

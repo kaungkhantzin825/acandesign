@@ -514,7 +514,7 @@
               <span class="svc-card__feature-label">OCR×AI・<br />データ確認</span>
             </div>
           </div>
-          <a href="ai-agent.php" class="svc-card__btn">
+          <a href="ai-agent" class="svc-card__btn">
             <span>AI・データサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -559,7 +559,7 @@
               <span class="svc-card__feature-label">OCR・<br />データ確認</span>
             </div>
           </div>
-          <a href="bpocompany.php" class="svc-card__btn">
+          <a href="bpocompany" class="svc-card__btn">
             <span>BPOサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -604,7 +604,7 @@
               <span class="svc-card__feature-label">プロンプト設計・<br />AI活用支援</span>
             </div>
           </div>
-          <a href="ai-agent.php" class="svc-card__btn">
+          <a href="ai-agent" class="svc-card__btn">
             <span>KPOサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -652,7 +652,7 @@
               <span class="svc-card__feature-label">データベース<br />構築</span>
             </div>
           </div>
-          <a href="index.php#services" class="svc-card__btn">
+          <a href="/#services" class="svc-card__btn">
             <span>Technologyの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -697,7 +697,7 @@
               <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
             </div>
           </div>
-          <a href="index.php#services" class="svc-card__btn">
+          <a href="/#services" class="svc-card__btn">
             <span>Designの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -742,7 +742,7 @@
               <span class="svc-card__feature-label">業務体制構築<br />支援</span>
             </div>
           </div>
-          <a href="myanmar-situation.php" class="svc-card__btn">
+          <a href="myanmar-situation" class="svc-card__btn">
             <span>ミャンマー進出支援の詳細を<br />見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -779,13 +779,13 @@
         </svg>
       </div>
       <div class="svc-cta__actions">
-        <a href="contectus.php" class="svc-cta__btn svc-cta__btn--primary">
+        <a href="contectus" class="svc-cta__btn svc-cta__btn--primary">
           <span>お問い合わせ</span>
           <span class="svc-cta__btn-icon">
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </span>
         </a>
-        <a href="download.php" class="svc-cta__btn svc-cta__btn--secondary">
+        <a href="download" class="svc-cta__btn svc-cta__btn--secondary">
           <span>資料ダウンロード</span>
           <span class="svc-cta__btn-icon">
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

@@ -11,10 +11,14 @@ Despite the "single-page" framing, this is a **flat multi-page PHP site**: ~70 `
 ## Running Locally
 
 ```bash
-php -S localhost:8000
+php -S localhost:8000 router.php
 ```
 
-Open `http://localhost:8000/index.php` in a browser. No build step required.
+Open `http://localhost:8000/` in a browser. No build step required.
+
+The `router.php` argument is **required**, not optional. The site uses extension-less
+URLs (see *Clean URLs* below), and PHP's built-in server ignores `.htaccess`, so without
+the router every clean URL such as `/service` would return 404 locally.
 
 ## File Structure
 
@@ -33,8 +37,34 @@ There are too many pages to list individually. The pattern is what matters:
 | `assets/css/main.css` | Global stylesheet (per-page CSS is inline in each page's `<style>`) |
 | `assets/js/main.js` | Scroll-reveal animations |
 | `db_setup.php` | One-time DB bootstrap — **dev only, delete on production** |
+| `router.php` | Dev-server router reproducing the `.htaccess` clean-URL rules under `php -S` |
 
 **Page composition convention:** every page includes `menu.php` near the top and `footer.php` at the bottom, optionally with `3buttonsection.php` and/or a `header/*.php` band in between.
+
+## Clean URLs
+
+Public pages are served **without the `.php` extension** — `https://acan-sol.com/service`,
+not `/service.php`. This is done entirely in `.htaccess` (mod_rewrite). **No files are
+moved and no folders are created**, so relative asset paths (`assets/...`) and relative
+`include` statements keep working unchanged.
+
+The rules, in order:
+
+1. `/index.php` → `/` (301)
+2. `/page.php` → `/page` (301) — **GET only**. A 301 on a POST makes some browsers
+   re-issue it as GET and silently drop the form body, which would break the contact form.
+3. `/page/` → `/page` (301) — a trailing slash would change the browser's base URL and
+   break every relative asset path on the page.
+4. `/page` → served internally by `page.php` (no redirect).
+
+Rules 2 and 4 are keyed on `%{THE_REQUEST}` and single-segment patterns, so they apply
+only to **root-level pages**. Requests under `admin/` keep their `.php` URLs and are
+untouched.
+
+Internal links (`href`, form `action`, `header('Location: …')`) are written in the clean
+form. **`include`/`require` statements must keep the real `.php` filename** — they are
+server-side file paths, not URLs. When adding a new page, link to it as `/newpage`, never
+`newpage.php`.
 
 ## Contact Form — Three-Step PHP Flow
 
@@ -89,6 +119,6 @@ The observer adds `.is-visible` when an element enters the viewport (threshold 0
 
 ## Deployment
 
-Shared cPanel hosting (Apache). `.htaccess` handles gzip, asset caching, security headers, and blocks direct access to `mail-config.php`.
+Shared cPanel hosting (Apache). `.htaccess` handles the clean-URL rewrites (see *Clean URLs*), gzip, asset caching, security headers, and blocks direct access to `mail-config.php`.
 
 Before going live, make sure dev-only files are removed from the server: `db_setup.php`, `smtp_test.php`.
