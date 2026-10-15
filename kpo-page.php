@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/kpo: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/kpo" />
     <meta name="description" content="手書き帳票も、分析業務も。AI×人で、求められた形式まで仕上げるKPOサービス。日本語ブリッジと24時間365日体制で、安心の運用を実現します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>KPOサービス | A CAN SOLUTIONS</title>
@@ -1043,7 +1046,7 @@
             <div class="kpo-hero__inner">
                 <p class="kpo-bc">
                     <a href="/">HOME</a> ／
-                    <a href="service">サービス</a> ／
+                    <a href="/services">サービス</a> ／
                     <span class="kpo-bc__current">KPOサービス</span>
                 </p>
 

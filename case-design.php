@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/design: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/design" />
     <meta name="description" content="アパレルに特化した高難度の画像・動画編集を、24時間365日体制で。ミャンマー拠点の専任デザイナーと日本側の管理体制で、高品質・短納期の画像レタッチ・合成・短尺動画制作をご提供します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>デザインチーム（画像・動画編集） | A CAN SOLUTIONS</title>
@@ -838,7 +841,7 @@
                 <div class="dsg-bg-2">
                     <div class="dsg__inner">
                         <!-- <p class="dsg-bc">
-                            <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
+                            <a href="/">HOME</a> ＞ <a href="/services">サービス</a> ＞ <span>Design（デザインチーム）</span>
                         </p> -->
 
                         <div class="dsg-hero__content">

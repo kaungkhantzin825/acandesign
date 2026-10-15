@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/ai: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/ai" />
     <meta name="description" content="AI開発やデータ活用を支える高品質なデータ作成・評価サービスを提供します。データの収集・アノテーションからAIモデルの評価まで、AI開発の全プロセスを支援します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>AI・データサービス | A CAN SOLUTIONS</title>
@@ -521,7 +524,7 @@
                 <div class="ai-hero__content">
                     <!-- Breadcrumbs -->
                     <p class="ai-bc">
-                        <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>AI・データサービス</span>
+                        <a href="/">HOME</a> ＞ <a href="/services">サービス</a> ＞ <span>AI・データサービス</span>
                     </p>
                     <h1 class="ai-hero__title">AI・データサービス</h1>
                     <p class="ai-hero__subtitle">AI &amp; Data Services</p>

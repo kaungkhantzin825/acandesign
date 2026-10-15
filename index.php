@@ -7160,7 +7160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="bpo__inner">
                 <p class="bpo-bc">
                     <a href="/">HOME</a> <span class="bpo-bc__sep">／</span>
-                    <a href="service">サービス</a> <span class="bpo-bc__sep">／</span>
+                    <a href="/services">サービス</a> <span class="bpo-bc__sep">／</span>
                     <span class="bpo-bc__current">BPOサービス</span>
                 </p>
 
@@ -7567,7 +7567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="kpo-hero__inner">
                 <p class="kpo-bc">
                     <a href="/">HOME</a> ／
-                    <a href="service">サービス</a> ／
+                    <a href="/services">サービス</a> ／
                     <span class="kpo-bc__current">KPOサービス</span>
                 </p>
 
@@ -7887,7 +7887,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="cs-hero__content">
                     <p class="cs-bc">
-                        <a href="/">HOME</a> ／ <a href="service">サービス</a> ／ <span>ミャンマー進出支援</span>
+                        <a href="/">HOME</a> ／ <a href="/services">サービス</a> ／ <span>ミャンマー進出支援</span>
                     </p>
                     <p class="cs-hero__eyebrow">Consulting services</p>
                     <h1 class="cs-hero__title">

@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/myanmar-support: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/myanmar-support" />
     <meta name="description" content="ミャンマーでビジネスを行うためのノウハウがある弊社が、戦略的パートナーとしてミャンマーでの事業を強力に支援します。会社設立から人材確保・育成、現地ネットワークの活用まで。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>ミャンマー進出支援 | A CAN SOLUTIONS</title>
@@ -961,7 +964,7 @@
 
                 <div class="cs-hero__content">
                     <p class="cs-bc">
-                        <a href="/">HOME</a> ／ <a href="service">サービス</a> ／ <span>ミャンマー進出支援</span>
+                        <a href="/">HOME</a> ／ <a href="/services">サービス</a> ／ <span>ミャンマー進出支援</span>
                     </p>
                     <p class="cs-hero__eyebrow">Consulting services</p>
                     <h1 class="cs-hero__title">
@@ -1001,21 +1004,21 @@
         <!-- ── FEATURE CARDS ── -->
         <section class="cs-cards">
             <div class="cs-cards__inner">
-                <a class="cs-fcard" href="#reasons">
+                <a class="cs-fcard" href="/services/myanmar-support#reasons">
                     <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic1.webp" alt="" width="60" height="74" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">ミャンマー進出支援</span>
                     <span class="cs-fcard__desc">会社設立から事業立ち上げまで<br>現地の実情に即したサポートで<br>スムーズな進出を実現します。</span>
                     <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
-                <a class="cs-fcard" href="#reasons">
+                <a class="cs-fcard" href="/services/myanmar-support#reasons">
                     <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic2.webp" alt="" width="78" height="65" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">人材確保・育成</span>
                     <span class="cs-fcard__desc">ミャンマー人材の採用・育成を通じ<br>て、貴社の事業の成長を支援します。</span>
                     <img class="cs-fcard__arrow" src="assets/img/cs-card-arrow.webp" alt="" loading="lazy" decoding="async" width="72" height="50" />
                 </a>
 
-                <a class="cs-fcard" href="#achievements">
+                <a class="cs-fcard" href="/services/myanmar-support#achievements">
                     <span class="cs-fcard__circle"><img src="assets/img/cs-card-ic3.webp" alt="" width="88" height="56" loading="lazy" decoding="async" /></span>
                     <span class="cs-fcard__title">現地ネットワーク活用</span>
                     <span class="cs-fcard__desc">長年の現地ネットワークを活かし、<br>信頼できるパートナー・機関と<br>つなぎます。</span>

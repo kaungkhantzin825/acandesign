@@ -61,6 +61,30 @@ Rules 2 and 4 are keyed on `%{THE_REQUEST}` and single-segment patterns, so they
 only to **root-level pages**. Requests under `admin/` keep their `.php` URLs and are
 untouched.
 
+### Service pages — the one nested exception
+
+Service pages have their own URLs under `/services/`, served by internal rewrite from the
+existing flat files (still no folders):
+
+| URL | File |
+|---|---|
+| `/services` | `service.php` |
+| `/services/ai` | `data-services.php` |
+| `/services/bpo` | `bpohome.php` |
+| `/services/kpo` | `kpo-page.php` |
+| `/services/technology` | `acan-dev.php` |
+| `/services/design` | `case-design.php` |
+| `/services/myanmar-support` | `consulting-services.php` |
+
+The old flat URLs (`/bpohome`, `/kpo-page.php`, …) and the singular `/service/<slug>/`
+form used in the domain plan all 301 to these in one hop. The map is duplicated in
+`.htaccess` (rules `S`/`S2`) and `$services` in `router.php` — **change both together**.
+
+Because these URLs are nested, each of those seven pages carries `<base href="/" />` (plus
+a `<link rel="canonical">`) so its relative paths still resolve from the root. A side
+effect: in those pages a bare `href="#id"` would point at the home page, so in-page
+links must be written in full, e.g. `href="/services/myanmar-support#reasons"`.
+
 Internal links (`href`, form `action`, `header('Location: …')`) are written in the clean
 form. **`include`/`require` statements must keep the real `.php` filename** — they are
 server-side file paths, not URLs. When adding a new page, link to it as `/newpage`, never

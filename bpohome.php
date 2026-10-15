@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/bpo: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/bpo" />
     <meta name="description" content="OCR+AIで処理されたデータの確認・修正に特化したBPOサービス。高品質なデータ処理を、より早く、より柔軟に。日本語ブリッジと24時間365日の体制で、安心の運用を実現します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>BPOサービス | A CAN SOLUTIONS</title>
@@ -843,7 +846,7 @@
             <div class="bpo__inner">
                 <p class="bpo-bc">
                     <a href="/">HOME</a> <span class="bpo-bc__sep">／</span>
-                    <a href="service">サービス</a> <span class="bpo-bc__sep">／</span>
+                    <a href="/services">サービス</a> <span class="bpo-bc__sep">／</span>
                     <span class="bpo-bc__current">BPOサービス</span>
                 </p>
 

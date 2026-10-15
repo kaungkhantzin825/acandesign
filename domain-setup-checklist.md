@@ -8,27 +8,30 @@ Source plan: `boss-note.md` · Created 2026-10-13
 ## 0. Findings — read this before touching anything
 
 1. **Canonical domain is `acan-sol.com`.** Confirmed in code: `info@acan-sol.com` (public) and `kado@acan-sol.com` (privacy).
-2. **The redirect targets in `boss-note.md` do not exist.** It proposes `/service/ai/`, `/service/bpo/`, `/service/kpo/`. This site has **no `/service/` directory** — it is ~70 flat `*.php` files. Those URLs would 404. Use the real map in §1.
+2. **The redirect targets in `boss-note.md` now exist** (added 2026-10-15) as `/services/ai`, `/services/bpo`, `/services/kpo` (plural, no trailing slash). The note's singular `/service/ai/` form 301s to them, but point the domain redirects at the `/services/...` form directly. Full map in §1.
 3. **No router, no rewrite layer.** Every 301 must point at a real `.php` file.
 4. **Outbound mail currently leaves via Gmail**, from `acanadobe3@gmail.com` → `acankado@gmail.com` — *not* from `@acan-sol.com`. This affects SPF (§6).
-5. **`.htaccess` now carries the clean-URL rewrites** (added 2026-10-13). Public pages are served without `.php` — `/service`, not `/service.php`. Every 301 target below uses the clean form, so the brand domains land in a single hop instead of chaining `acanbpo.jp → /bpohome.php → /bpohome`.
+5. **`.htaccess` now carries the clean-URL rewrites** (added 2026-10-13). Public pages are served without `.php` — `/service`, not `/service.php`. Every 301 target below uses the clean form, so the brand domains land in a single hop (e.g. `acanbpo.jp → /services/bpo`).
 
 ## 1. Real URL map (use these as 301 targets)
 
 | Purpose | Real URL |
 |---|---|
 | Home | https://acan-sol.com/ |
-| Service index | https://acan-sol.com/service |
-| BPO hub | https://acan-sol.com/bpohome |
-| KPO hub | https://acan-sol.com/kpo-page |
-| AI / data services hub | https://acan-sol.com/data-services |
+| Service index | https://acan-sol.com/services |
+| AI / data services | https://acan-sol.com/services/ai |
+| BPO | https://acan-sol.com/services/bpo |
+| KPO | https://acan-sol.com/services/kpo |
+| Technology (web/system dev) | https://acan-sol.com/services/technology |
+| Design / creative | https://acan-sol.com/services/design |
+| Myanmar business support | https://acan-sol.com/services/myanmar-support |
 | AI overview | https://acan-sol.com/ai-page |
 | Myanmar outsourcing | https://acan-sol.com/myanmar-outsourcing |
 | Contact form | https://acan-sol.com/contectus |
 
 > Pages are served **without `.php`**; the `.php` URLs 301 to these. Use the clean form in all new links.
 
-> Verify the three "hub" choices (bpohome / kpo-page / data-services) against your own IA before committing — they were picked from page `<title>` tags.
+> The old flat service URLs (`/bpohome`, `/kpo-page`, `/data-services`, …) 301 to the `/services/...` URLs above.
 
 ## 2. Redirect map (final)
 
@@ -36,11 +39,11 @@ Source plan: `boss-note.md` · Created 2026-10-13
 |---|---|---|---|
 | acan-sol.com | Main site (do not redirect) | — | required |
 | myanmar-bpo.jp | Independent lead-gen site | **build** (§5) | required |
-| acanbpo.jp | Brand / sales short URL | https://acan-sol.com/bpohome | required |
-| acan-kpo.jp | Brand / sales short URL | https://acan-sol.com/kpo-page | required |
-| acan-ai.jp | AI brand | https://acan-sol.com/data-services | required |
+| acanbpo.jp | Brand / sales short URL | https://acan-sol.com/services/bpo | required |
+| acan-kpo.jp | Brand / sales short URL | https://acan-sol.com/services/kpo | required |
+| acan-ai.jp | AI brand | https://acan-sol.com/services/ai | required |
 | acansolutions.jp | Brand defense | https://acan-sol.com/ | required |
-| aikpo.jp | Future brand — hold | https://acan-sol.com/kpo-page (optional) | required |
+| aikpo.jp | Future brand — hold | https://acan-sol.com/services/kpo (optional) | required |
 
 ## 3. Phase 1 — DNS records (do first)
 
@@ -69,25 +72,25 @@ Every rule stays in one file you already version-control, and host-keying preven
   RewriteEngine On
 
   RewriteCond %{HTTP_HOST} ^(www\.)?acanbpo\.jp$ [NC]
-  RewriteRule ^ https://acan-sol.com/bpohome [R=301,L]
+  RewriteRule ^ https://acan-sol.com/services/bpo [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^(www\.)?acan-kpo\.jp$ [NC]
-  RewriteRule ^ https://acan-sol.com/kpo-page [R=301,L]
+  RewriteRule ^ https://acan-sol.com/services/kpo [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^(www\.)?acan-ai\.jp$ [NC]
-  RewriteRule ^ https://acan-sol.com/data-services [R=301,L]
+  RewriteRule ^ https://acan-sol.com/services/ai [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^(www\.)?acansolutions\.jp$ [NC]
   RewriteRule ^ https://acan-sol.com/ [R=301,L]
 
   RewriteCond %{HTTP_HOST} ^(www\.)?aikpo\.jp$ [NC]
-  RewriteRule ^ https://acan-sol.com/kpo-page [R=301,L]
+  RewriteRule ^ https://acan-sol.com/services/kpo [R=301,L]
 </IfModule>
 ```
 
 > **Order matters.** This block must sit *above* the clean-URL block. Both share the same
 > document root and the clean-URL rules end in `[L]`, so if they ran first,
-> `acanbpo.jp/service` would be served internally as `service.php` instead of redirecting
+> `acanbpo.jp/services` would be served internally as `service.php` instead of redirecting
 > to acan-sol.com.
 
 3. cPanel → *SSL/TLS Status* → **Run AutoSSL** for all domains.
@@ -99,7 +102,7 @@ Every rule stays in one file you already version-control, and host-keying preven
   RewriteRule ^ https://acan-sol.com%{REQUEST_URI} [R=301,L]
 ```
 
-5. Verify: `curl -I https://acanbpo.jp` → expect `301` + `location: https://acan-sol.com/bpohome`.
+5. Verify: `curl -I https://acanbpo.jp` → expect `301` + `location: https://acan-sol.com/services/bpo`.
 
 > Do **not** add these as Aliases if you instead give them their own folder + `.htaccess`; pick one method only.
 
@@ -170,4 +173,4 @@ On **acan-sol.com**:
 - [ ] myanmar-bpo.jp: full site now, or a single landing page first?
 - [ ] Mail: keep the Gmail relay, or move to `info@acan-sol.com` on cPanel?
 - [ ] aikpo.jp: hold as a redirect, or leave parked with no content?
-- [ ] Confirm the BPO / KPO / AI hub pages used as 301 targets.
+- [x] BPO / KPO / AI 301 targets: `/services/bpo`, `/services/kpo`, `/services/ai`.

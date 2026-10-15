@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Served at /services/technology: the root base keeps relative asset paths and links working -->
+    <base href="/" />
+    <link rel="canonical" href="https://acan-sol.com/services/technology" />
     <meta name="description" content="日本品質 × ミャンマー開発チームで、高品質なWeb・システム開発を。ミャンマーのIT人材と連携し、Webサイト制作からシステム開発・保守まで対応します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
     <title>Webサイト・システム開発 | A CAN SOLUTIONS</title>
@@ -928,7 +931,7 @@
         <!-- HERO -->
         <section class="dev-hero">
             <div class="dev__inner">
-                <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="/#services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
+                <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;">＞</span> <a href="/services" style="color: #000;">サービス</a> <span style="color: #000;">＞</span> <span style="font-weight: bolder;">Technology（Webサイト・システム開発）</span></p>
 
                 <div class="dev-hero__content">
                     <p class="dev-hero__eyebrow">Technology</p>

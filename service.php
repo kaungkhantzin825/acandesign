@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Served at /services: the root base keeps relative asset paths and links working -->
+  <base href="/" />
+  <link rel="canonical" href="https://acan-sol.com/services" />
   <meta name="description" content="A CAN SOLUTIONSのサービス一覧。AI・データサービス、BPO、KPO、Technology、Design/Creative、ミャンマー進出支援まで、AI×Humanで企業の業務を次のステージへ。" />
   <meta name="theme-color" content="#ffffff" />
   <title>SERVICE | サービス | A CAN SOLUTIONS</title>
@@ -514,7 +517,7 @@
               <span class="svc-card__feature-label">OCR×AI・<br />データ確認</span>
             </div>
           </div>
-          <a href="ai-agent" class="svc-card__btn">
+          <a href="/services/ai" class="svc-card__btn">
             <span>AI・データサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -559,7 +562,7 @@
               <span class="svc-card__feature-label">OCR・<br />データ確認</span>
             </div>
           </div>
-          <a href="bpocompany" class="svc-card__btn">
+          <a href="/services/bpo" class="svc-card__btn">
             <span>BPOサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -604,7 +607,7 @@
               <span class="svc-card__feature-label">プロンプト設計・<br />AI活用支援</span>
             </div>
           </div>
-          <a href="ai-agent" class="svc-card__btn">
+          <a href="/services/kpo" class="svc-card__btn">
             <span>KPOサービスの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -652,7 +655,7 @@
               <span class="svc-card__feature-label">データベース<br />構築</span>
             </div>
           </div>
-          <a href="/#services" class="svc-card__btn">
+          <a href="/services/technology" class="svc-card__btn">
             <span>Technologyの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -697,7 +700,7 @@
               <span class="svc-card__feature-label">コンテンツ制作・<br />ライティング</span>
             </div>
           </div>
-          <a href="/#services" class="svc-card__btn">
+          <a href="/services/design" class="svc-card__btn">
             <span>Designの詳細を見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -742,7 +745,7 @@
               <span class="svc-card__feature-label">業務体制構築<br />支援</span>
             </div>
           </div>
-          <a href="myanmar-situation" class="svc-card__btn">
+          <a href="/services/myanmar-support" class="svc-card__btn">
             <span>ミャンマー進出支援の詳細を<br />見る</span>
             <span class="svc-card__btn-icon">
               <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

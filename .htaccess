@@ -90,6 +90,43 @@ AddDefaultCharset UTF-8
     RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
     RewriteRule ^ / [R=301,L]
 
+    # (S) Service pages live under /services/<slug> (see (S2) below). The old
+    # flat URLs and the singular /service/... form used in the domain plan
+    # 301 straight there, so each lands in a single hop. Keyed on THE_REQUEST
+    # so the internal rewrites in (S2) can never loop back into these.
+    # Keep this map in sync with $services in router.php.
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+service(\.php)?/?[\s?] [NC]
+    RewriteRule ^ /services [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+service/+([a-z-]+)/?[\s?] [NC]
+    RewriteRule ^ /services/%1 [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+data-services(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/ai [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+bpohome(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/bpo [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+kpo-page(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/kpo [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+acan-dev(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/technology [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+case-design(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/design [R=301,L]
+
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+consulting-services(\.php)?[\s?] [NC]
+    RewriteRule ^ /services/myanmar-support [R=301,L]
+
     # (2) /page.php  ->  /page
     # POST requests are never redirected: a 301 on a POST makes some browsers
     # re-issue the request as GET and silently drop the form body.
@@ -102,6 +139,18 @@ AddDefaultCharset UTF-8
     # URL and break every relative asset path on the page.
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+    # (S2) serve /services and /services/<slug> from the existing flat pages.
+    # These are the only nested public URLs, so each page served here carries
+    # <base href="/"> to keep its relative asset paths and links resolving
+    # from the site root.
+    RewriteRule ^services$                 service.php             [L]
+    RewriteRule ^services/ai$              data-services.php       [L]
+    RewriteRule ^services/bpo$             bpohome.php             [L]
+    RewriteRule ^services/kpo$             kpo-page.php            [L]
+    RewriteRule ^services/technology$      acan-dev.php            [L]
+    RewriteRule ^services/design$          case-design.php         [L]
+    RewriteRule ^services/myanmar-support$ consulting-services.php [L]
 
     # (4) serve /page from page.php (internal rewrite, no redirect)
     RewriteCond %{REQUEST_FILENAME} !-f
