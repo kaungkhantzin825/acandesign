@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI時代のBPO/KPO 人は不要になるのか、それとも「より必要」になるのか？" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AI時代のBPO/KPO 人は不要になるのか、それとも「より必要」になるのか？ | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AI時代のBPO/KPO 人は不要になるのか、それとも「より必要」になるのか？ | A CAN SOLUTIONS',
+    'description' => '「AIが仕事を奪う」時代に、BPO/KPOで人は不要になるのか、それとも「より必要」になるのか。AIと人の役割分担から、これからのアウトソーシングを考えます。',
+    'path'        => '/necessary',
+    'type'        => 'article',
+    'published'   => '2026-06-25',
+    'image'       => '/assets/img/og/necessary.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI学習データ作成とは？高品質なデータがAIの未来を変える理由 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AI学習データ作成とは？高品質なデータがAIの未来を変える理由 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AI学習データ作成とは？高品質なデータがAIの未来を変える理由 | A CAN SOLUTIONS',
+    'description' => 'AI学習データ作成とは何か。信頼できるAIを支える学習データの役割と、高品質なデータがAIの精度と未来を左右する理由をわかりやすく解説します。',
+    'path'        => '/post',
+    'type'        => 'article',
+    'published'   => '2026-07-06',
+    'image'       => '/assets/img/og/post.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

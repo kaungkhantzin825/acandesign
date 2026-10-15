@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="支えるということ。厳しいミャンマーで、あらためて考えた「一緒に働く」という意味 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>支えるということ | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '支えるということ | A CAN SOLUTIONS',
+    'description' => '支えるということ。厳しいミャンマーで、あらためて考えた「一緒に働く」という意味 - A CAN SOLUTIONS',
+    'path'        => '/sunday-support',
+    'type'        => 'article',
+    'published'   => '2026-10-03',
+    'image'       => '/assets/img/og/sunday-support.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

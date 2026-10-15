@@ -89,6 +89,12 @@ if (preg_match('#^/services(?:/([a-z-]+))?$#', $trimmed, $m)) {
     }
 }
 
+// (M) /sitemap.xml is generated from each page's $seo block
+if ($trimmed === '/sitemap.xml') {
+    require __DIR__ . '/sitemap.php';
+    return true;
+}
+
 $target = __DIR__ . $trimmed;
 
 // Real files and directories (assets, admin/*.php, ...) are served as-is.

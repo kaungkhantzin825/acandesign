@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="ミャンマー人材の可能性 — 10年間で確信した「学び続ける力」とは - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>ミャンマー人材の可能性 — 10年間で確信した「学び続ける力」とは | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'ミャンマー人材の可能性 — 10年間で確信した「学び続ける力」とは | A CAN SOLUTIONS',
+    'description' => '2015年からミャンマーで事業を行ってきたA CAN SOLUTIONSが、10年間の経験から確信したミャンマー人材の強み「学び続ける力」について紹介します。',
+    'path'        => '/myanmar-talent',
+    'type'        => 'article',
+    'published'   => '2026-07-25',
+    'image'       => '/assets/img/og/myanmar-talent.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

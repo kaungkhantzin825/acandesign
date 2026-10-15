@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>登録済みのメールアドレスです | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'   => '登録済みのメールアドレスです | A CAN SOLUTIONS',
+    'path'    => '/newsletter-already-registered',
+    'noindex' => true,
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

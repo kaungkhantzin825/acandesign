@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="生成AIを導入したのに成果が出ない理由 〜AIを「使える仕組み」にする3つのポイント〜 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>生成AIを導入したのに成果が出ない理由 〜AIを「使える仕組み」にする3つのポイント〜 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '生成AIを導入したのに成果が出ない理由 〜AIを「使える仕組み」にする3つのポイント〜 | A CAN SOLUTIONS',
+    'description' => 'ChatGPTやCopilotなどの生成AIを導入したのに成果が出ない理由は、AIそのものより「導入の仕方」にあります。AIを使える仕組みにする3つのポイントを解説します。',
+    'path'        => '/genai-tips',
+    'type'        => 'article',
+    'published'   => '2026-07-11',
+    'image'       => '/assets/img/og/genai-tips.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

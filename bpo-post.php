@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BPO導入後、どこまで任せるべきか？「作業代行」から「自走するチーム」へ育てる方法 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>BPO導入後、どこまで任せるべきか？「作業代行」から「自走するチーム」へ育てる方法 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'BPO導入後、どこまで任せるべきか？「作業代行」から「自走するチーム」へ育てる方法 | A CAN SOLUTIONS',
+    'description' => 'BPO導入後、業務をどこまで任せるべきか。単なる「作業代行」から、自ら考えて改善できる「自走するチーム」へ育てていくための考え方と方法を紹介します。',
+    'path'        => '/bpo-post',
+    'type'        => 'article',
+    'published'   => '2026-08-30',
+    'image'       => '/assets/img/og/bpo-post.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

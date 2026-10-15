@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONS — AI時代の業務を、日本品質で支える。ミャンマー発のAI×BPO/KPOアウトソーシング企業。" />
-  <title>A CAN SOLUTIONS | AI×Human = Beyond Outsourcing</title>
+  <?php $seo = [
+    'title'       => 'A CAN SOLUTIONS | AI×Human = Beyond Outsourcing',
+    'description' => 'A CAN SOLUTIONS — AI時代の業務を、日本品質で支える。ミャンマー発のAI×BPO/KPOアウトソーシング企業。',
+    'path'        => '/update-page',
+    'noindex'     => true,
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

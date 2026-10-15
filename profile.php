@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONSの会社情報。会社概要・経営理念・沿革・役員紹介をご紹介します。" />
-  <title>会社情報 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '会社情報 | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSの会社情報。会社概要・経営理念・沿革・役員紹介をご紹介します。',
+    'path'        => '/profile',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

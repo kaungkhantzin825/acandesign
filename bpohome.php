@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Served at /services/bpo: the root base keeps relative asset paths and links working -->
     <base href="/" />
-    <link rel="canonical" href="https://acan-sol.com/services/bpo" />
-    <meta name="description" content="OCR+AIで処理されたデータの確認・修正に特化したBPOサービス。高品質なデータ処理を、より早く、より柔軟に。日本語ブリッジと24時間365日の体制で、安心の運用を実現します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
-    <title>BPOサービス | A CAN SOLUTIONS</title>
+    <?php $seo = [
+      'title'       => 'BPOサービス | A CAN SOLUTIONS',
+      'description' => 'OCR+AIで処理されたデータの確認・修正に特化したBPOサービス。高品質なデータ処理を、より早く、より柔軟に。日本語ブリッジと24時間365日の体制で、安心の運用を実現します。 - A CAN SOLUTIONS',
+      'path'        => '/services/bpo',
+    ]; include 'seo-head.php'; ?>
     <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

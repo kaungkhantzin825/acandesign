@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONSのBLOG記事一覧。BPO/KPO活用ガイド、AI×BPO/KPO、ミャンマーアウトソーシングに関する記事をご紹介します。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>BLOG | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'BLOG | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSのBLOG記事一覧。BPO/KPO活用ガイド、AI×BPO/KPO、ミャンマーアウトソーシングに関する記事をご紹介します。',
+    'path'        => '/blog-page',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

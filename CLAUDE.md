@@ -90,6 +90,28 @@ form. **`include`/`require` statements must keep the real `.php` filename** — 
 server-side file paths, not URLs. When adding a new page, link to it as `/newpage`, never
 `newpage.php`.
 
+## SEO, sitemap & analytics
+
+Every public page's `<title>`, description, canonical, Open Graph tags and JSON-LD come from
+**`seo-head.php`**, included in `<head>` after a `$seo` array:
+
+```php
+<?php $seo = [
+  'title'       => '記事タイトル | A CAN SOLUTIONS',
+  'description' => '…',
+  'path'        => '/new-page',          // the clean URL
+  'type'        => 'article',            // blog posts: also 'published' => 'YYYY-MM-DD'
+  'image'       => '/assets/img/og/new-page.jpg',  // optional 1200x630 JPG
+]; include 'seo-head.php'; ?>
+```
+
+- Don't hand-write `<title>`, `<meta name="description">` or `<link rel="canonical">` — the partial emits them.
+- `'noindex' => true` for utility pages (confirmations, thank-you). `'canonical' => '/other'` for duplicates (`outsourcing-cost` → `/outsourcing`).
+- **`/sitemap.xml` is generated** by `sitemap.php` from these `$seo` blocks (first 8 KB of each root page), so a new page is listed automatically; noindex/canonicalised pages are skipped. `robots.txt` points to it.
+- Share images live in `assets/img/og/` as **JPG**, not WebP — LINE and LinkedIn don't reliably render WebP `og:image`.
+- `seo-config.php` holds the site URL, the **GA4 Measurement ID** and the optional Search Console token. GA4 is off while the ID is empty and never loads on localhost. Cross-domain linking covers `acan-sol.com` + `myanmar-bpo.jp`.
+- Conversion events: `generate_lead` (contact sent, `send-contact.php`) and `sign_up` (newsletter, `confirm-page.php`).
+
 ## Images & performance
 
 All raster images are served as **WebP**. The source PNG/JPG files are kept next to them

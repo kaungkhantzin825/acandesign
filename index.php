@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONS Co.,Ltd. は、ミャンマーを拠点に、先進的かつ信頼性の高いITソリューションを提供する企業です。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>A CAN SOLUTIONS Co.,Ltd. | Grow Your Company</title>
+  <?php $seo = [
+    'title'       => 'ミャンマーBPO・KPO・AIデータサービス | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSは、日本とミャンマー・ヤンゴンを拠点に、BPO・KPO・AIアノテーション・AI学習データ作成・システム開発を日本品質で提供するアウトソーシング企業です。日本語対応・24時間365日体制で業務を支援します。',
+    'path'        => '/',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

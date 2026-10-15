@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI×OCRで紙業務はどこまで自動化できるのか？〜請求書・レシート・契約書のDX最前線〜 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AI×OCRで紙業務はどこまで自動化できるのか？〜請求書・レシート・契約書のDX最前線〜 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AI×OCRで紙業務はどこまで自動化できるのか？〜請求書・レシート・契約書のDX最前線〜 | A CAN SOLUTIONS',
+    'description' => '請求書・レシート・契約書など、紙の業務はAI×OCRでどこまで自動化できるのか。DXの最前線と、自動化を成功させるために人が担うべき確認業務について解説します。',
+    'path'        => '/ocr-dx',
+    'type'        => 'article',
+    'published'   => '2026-07-15',
+    'image'       => '/assets/img/og/ocr-dx.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

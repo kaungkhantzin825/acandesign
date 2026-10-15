@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BPOは「丸投げ」では成功しない｜業務移管を成功させる最初の30日間とは？ - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>BPOは「丸投げ」では成功しない｜業務移管を成功させる最初の30日間とは？ | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'BPOは「丸投げ」では成功しない｜業務移管を成功させる最初の30日間とは？ | A CAN SOLUTIONS',
+    'description' => 'BPOは業務を「丸投げ」するだけでは成功しません。業務移管をスムーズに進めるために重要な、導入後最初の30日間の進め方とポイントを解説します。',
+    'path'        => '/bpocompany',
+    'type'        => 'article',
+    'published'   => '2026-08-26',
+    'image'       => '/assets/img/og/bpocompany.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Served at /services/technology: the root base keeps relative asset paths and links working -->
     <base href="/" />
-    <link rel="canonical" href="https://acan-sol.com/services/technology" />
-    <meta name="description" content="日本品質 × ミャンマー開発チームで、高品質なWeb・システム開発を。ミャンマーのIT人材と連携し、Webサイト制作からシステム開発・保守まで対応します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Webサイト・システム開発 | A CAN SOLUTIONS</title>
+    <?php $seo = [
+      'title'       => 'Webサイト・システム開発 | A CAN SOLUTIONS',
+      'description' => '日本品質 × ミャンマー開発チームで、高品質なWeb・システム開発を。ミャンマーのIT人材と連携し、Webサイト制作からシステム開発・保守まで対応します。 - A CAN SOLUTIONS',
+      'path'        => '/services/technology',
+    ]; include 'seo-head.php'; ?>
     <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

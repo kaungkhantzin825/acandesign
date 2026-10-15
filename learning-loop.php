@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="3か月ぶりのミャンマーで、あらためて感じたこと。「任せる」ということは、信じることなのかもしれない - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>3か月ぶりのミャンマーで、あらためて感じたこと「任せる」ということは、信じることなのかもしれない | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '3か月ぶりのミャンマーで、あらためて感じたこと「任せる」ということは、信じることなのかもしれない | A CAN SOLUTIONS',
+    'description' => '3か月ぶりのミャンマーで、あらためて感じたこと。「任せる」ということは、信じることなのかもしれない - A CAN SOLUTIONS',
+    'path'        => '/learning-loop',
+    'type'        => 'article',
+    'published'   => '2026-09-27',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

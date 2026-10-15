@@ -152,6 +152,9 @@ AddDefaultCharset UTF-8
     RewriteRule ^services/design$          case-design.php         [L]
     RewriteRule ^services/myanmar-support$ consulting-services.php [L]
 
+    # (M) /sitemap.xml is generated from each page's $seo block
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
     # (4) serve /page from page.php (internal rewrite, no redirect)
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d

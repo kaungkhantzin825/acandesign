@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BPO導入で失敗する企業の共通点 - 成功企業との違いから学ぶアウトソーシング活用術" />
   <meta name="theme-color" content="#ffffff" />
-  <title>BPO導入で失敗する企業の共通点 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'BPO導入で失敗する企業の共通点 | A CAN SOLUTIONS',
+    'description' => 'BPOを導入しても期待した成果が出ない企業には共通点があります。成功企業との違いから、失敗しないアウトソーシング活用のポイントを解説します。',
+    'path'        => '/companies',
+    'type'        => 'article',
+    'published'   => '2026-06-21',
+    'image'       => '/assets/img/og/companies.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

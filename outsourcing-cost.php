@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="海外アウトソーシングは「安さ」で選ぶべきではない — 本当に見るべき5つのポイントを解説します。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>海外アウトソーシングは「安さ」で選ぶべきではない | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '海外アウトソーシングは「安さ」で選ぶべきではない | A CAN SOLUTIONS',
+    'description' => '海外アウトソーシングは「安さ」で選ぶべきではない — 本当に見るべき5つのポイントを解説します。',
+    'path'        => '/outsourcing-cost',
+    'type'        => 'article',
+    'published'   => '2026-08-09',
+    'image'       => '/assets/img/og/outsourcing-cost.jpg',
+    'canonical'   => '/outsourcing',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="日本とミャンマー、二つのチームで品質をつくる｜海外BPOにおける「日本の役割」とは - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>日本とミャンマー、二つのチームで品質をつくる｜海外BPOにおける「日本の役割」とは | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '日本とミャンマー、二つのチームで品質をつくる｜海外BPOにおける「日本の役割」とは | A CAN SOLUTIONS',
+    'description' => '日本とミャンマー、二つのチームで品質をつくる。海外BPOで成果を出すために、日本側のチームが果たすべき役割と、両国チームの連携の仕組みを紹介します。',
+    'path'        => '/quality',
+    'type'        => 'article',
+    'published'   => '2026-08-15',
+    'image'       => '/assets/img/og/quality.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

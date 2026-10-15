@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="日本品質を海外で実現するには？品質管理の仕組みづくりとチーム育成の考え方 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>日本品質を海外で実現するには？品質管理の仕組みづくりとチーム育成の考え方 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '日本品質を海外で実現するには？品質管理の仕組みづくりとチーム育成の考え方 | A CAN SOLUTIONS',
+    'description' => '「海外でも日本品質は実現できるのか？」海外アウトソーシングで日本品質を実現するための品質管理の仕組みづくりと、チーム育成の考え方を紹介します。',
+    'path'        => '/japan-quality',
+    'type'        => 'article',
+    'published'   => '2026-08-02',
+    'image'       => '/assets/img/og/japan-quality.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

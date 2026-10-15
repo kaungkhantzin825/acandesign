@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="「納期に間に合わせたい」と、自分たちで動くチーム。ミャンマーのメンバーを見て、改めて思ったこと - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>「納期に間に合わせたい」と、自分たちで動くチーム | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '「納期に間に合わせたい」と、自分たちで動くチーム | A CAN SOLUTIONS',
+    'description' => '「納期に間に合わせたい」と、自分たちで動くチーム。ミャンマーのメンバーを見て、改めて思ったこと - A CAN SOLUTIONS',
+    'path'        => '/sunday-deadline',
+    'type'        => 'article',
+    'published'   => '2026-09-20',
+    'image'       => '/assets/img/og/sunday-deadline.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

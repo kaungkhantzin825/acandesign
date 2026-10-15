@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI×BPOが企業の競争力を変える — 人とAIの最適な役割分担とは？ - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AI×BPOが企業の競争力を変える — 人とAIの最適な役割分担とは？ | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AI×BPOが企業の競争力を変える — 人とAIの最適な役割分担とは？ | A CAN SOLUTIONS',
+    'description' => '生成AIやAIエージェントへの投資が拡大する一方で、成果につながらない企業も少なくありません。AI×BPOで競争力を高めるための、人とAIの最適な役割分担を考えます。',
+    'path'        => '/ai-bpo-roles',
+    'type'        => 'article',
+    'published'   => '2026-07-25',
+    'image'       => '/assets/img/og/ai-bpo-roles.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

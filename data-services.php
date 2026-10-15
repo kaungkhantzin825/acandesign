@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Served at /services/ai: the root base keeps relative asset paths and links working -->
     <base href="/" />
-    <link rel="canonical" href="https://acan-sol.com/services/ai" />
-    <meta name="description" content="AI開発やデータ活用を支える高品質なデータ作成・評価サービスを提供します。データの収集・アノテーションからAIモデルの評価まで、AI開発の全プロセスを支援します。 - A CAN SOLUTIONS" />
     <meta name="theme-color" content="#ffffff" />
-    <title>AI・データサービス | A CAN SOLUTIONS</title>
+    <?php $seo = [
+      'title'       => 'AI・データサービス | A CAN SOLUTIONS',
+      'description' => 'AI開発やデータ活用を支える高品質なデータ作成・評価サービスを提供します。データの収集・アノテーションからAIモデルの評価まで、AI開発の全プロセスを支援します。 - A CAN SOLUTIONS',
+      'path'        => '/services/ai',
+    ]; include 'seo-head.php'; ?>
     <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

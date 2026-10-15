@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONSが贈るミャンマーの最新情報。ビジネス環境、現地の状況について定期的にお届けします。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>Myanmar situation | ミャンマー情報 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'Myanmar situation | ミャンマー情報 | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSが贈るミャンマーの最新情報。ビジネス環境、現地の状況について定期的にお届けします。',
+    'path'        => '/myanmar-situation',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

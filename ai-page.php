@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="国を越えて働く、すべての人へ。環境も言葉も違う場所で、毎日を積み重ねているあなたを、心から応援しています - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>国を越えて働く、すべての人へ。 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '国を越えて働く、すべての人へ。 | A CAN SOLUTIONS',
+    'description' => '国を越えて働く、すべての人へ。環境も言葉も違う場所で、毎日を積み重ねているあなたを、心から応援しています - A CAN SOLUTIONS',
+    'path'        => '/ai-page',
+    'image'       => '/assets/img/og/ai-page.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="どの業務をBPO化すべきか？失敗しない業務選定のポイント" />
   <meta name="theme-color" content="#ffffff" />
-  <title>どの業務をBPO化すべきか？失敗しない業務選定のポイント | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'どの業務をBPO化すべきか？失敗しない業務選定のポイント | A CAN SOLUTIONS',
+    'description' => 'BPOに興味はあるけれど、何を外部委託すればよいかわからない。BPO化に向いている業務の特徴と、失敗しない業務選定のポイントを解説します。',
+    'path'        => '/business',
+    'type'        => 'article',
+    'published'   => '2026-06-15',
+    'image'       => '/assets/img/og/business.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

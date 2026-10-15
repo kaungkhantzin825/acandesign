@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Served at /services: the root base keeps relative asset paths and links working -->
   <base href="/" />
-  <link rel="canonical" href="https://acan-sol.com/services" />
-  <meta name="description" content="A CAN SOLUTIONSのサービス一覧。AI・データサービス、BPO、KPO、Technology、Design/Creative、ミャンマー進出支援まで、AI×Humanで企業の業務を次のステージへ。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>SERVICE | サービス | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'SERVICE | サービス | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSのサービス一覧。AI・データサービス、BPO、KPO、Technology、Design/Creative、ミャンマー進出支援まで、AI×Humanで企業の業務を次のステージへ。',
+    'path'        => '/services',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

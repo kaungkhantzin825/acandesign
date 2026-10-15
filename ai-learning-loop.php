@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AIの「間違い」は失敗なのか？修正理由の裏にこそ、価値あるデータがある - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AIの「間違い」は失敗なのか？修正理由の裏にこそ、価値あるデータがある | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AIの「間違い」は失敗なのか？修正理由の裏にこそ、価値あるデータがある | A CAN SOLUTIONS',
+    'description' => 'AIの「間違い」は失敗ではなく、改善の材料です。人がAIの出力を修正し、その理由を記録することで生まれる価値あるデータと、AIを育てる仕組みについて解説します。',
+    'path'        => '/ai-learning-loop',
+    'type'        => 'article',
+    'published'   => '2025-02-22',
+    'image'       => '/assets/img/og/ai-learning-loop.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

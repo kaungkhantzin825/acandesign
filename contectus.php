@@ -18,9 +18,12 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONSの営業資料をダウンロードいただけます。会社情報・サービス資料を無料でご提供しています。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>営業資料ダウンロード | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'お問い合わせ | A CAN SOLUTIONS',
+    'description' => 'BPO・KPO・AIデータサービス、システム開発、ミャンマー進出支援についてのご相談・お見積りはこちらから。A CAN SOLUTIONSのお問い合わせフォームです。',
+    'path'        => '/contectus',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

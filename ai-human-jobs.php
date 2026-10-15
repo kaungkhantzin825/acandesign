@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AI時代でも人が担う仕事とは？なくなる仕事・進化する仕事を考える - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AI時代でも人が担う仕事とは？なくなる仕事・進化する仕事を考える | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AI時代でも人が担う仕事とは？なくなる仕事・進化する仕事を考える | A CAN SOLUTIONS',
+    'description' => '「AIに仕事を奪われる」は本当か。AI時代になくなる仕事、進化する仕事、そしてこれからも人が担い続ける仕事について、BPO/KPOの現場から考えます。',
+    'path'        => '/ai-human-jobs',
+    'type'        => 'article',
+    'published'   => '2026-07-20',
+    'image'       => '/assets/img/og/ai-human-jobs.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

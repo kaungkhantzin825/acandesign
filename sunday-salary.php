@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="「この給料をもらっていて大丈夫ですか？」あるメンバーの一言から、改めて考えたこと - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>「この給料をもらっていて大丈夫ですか？」あるメンバーの一言から考えたこと | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '「この給料をもらっていて大丈夫ですか？」あるメンバーの一言から考えたこと | A CAN SOLUTIONS',
+    'description' => '「この給料をもらっていて大丈夫ですか？」あるメンバーの一言から、改めて考えたこと - A CAN SOLUTIONS',
+    'path'        => '/sunday-salary',
+    'type'        => 'article',
+    'published'   => '2026-09-20',
+    'image'       => '/assets/img/og/sunday-salary.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

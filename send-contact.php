@@ -105,7 +105,15 @@ if ($hasMailer) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title><?= $sent ? '送信完了 | A CAN SOLUTIONS' : '送信エラー | A CAN SOLUTIONS' ?></title>
+<?php $seo = [
+  'title'   => $sent ? '送信完了 | A CAN SOLUTIONS' : '送信エラー | A CAN SOLUTIONS',
+  'path'    => '/send-contact',
+  'noindex' => true,
+]; include 'seo-head.php'; ?>
+<?php if ($sent): ?>
+<!-- GA4 conversion: mark "generate_lead" as a key event in GA4 > Admin > Events -->
+<script>if (window.gtag) gtag('event', 'generate_lead', { form_name: 'contact' });</script>
+<?php endif; ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/main.css">

@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AIアノテーションとは？AIの精度を左右する「見えない仕事」を解説 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AIアノテーションとは？AIの精度を左右する「見えない仕事」を解説 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AIアノテーションとは？AIの精度を左右する「見えない仕事」を解説 | A CAN SOLUTIONS',
+    'description' => 'AIアノテーションとは、AIが学習するためのデータに正解ラベルを付ける作業です。AIの精度を左右する「見えない仕事」の内容と、品質が重要な理由をわかりやすく解説します。',
+    'path'        => '/blog',
+    'type'        => 'article',
+    'published'   => '2026-07-06',
+    'image'       => '/assets/img/og/blog.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

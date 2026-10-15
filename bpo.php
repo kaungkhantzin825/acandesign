@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="海外BPO（ミャンマー・ベトナム・フィリピン）を比較してみた - 日本企業に最適なアウトソーシング先はどこなのか？" />
   <meta name="theme-color" content="#ffffff" />
-  <title>海外BPO（ミャンマー・ベトナム・フィリピン）を比較してみた | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '海外BPO（ミャンマー・ベトナム・フィリピン）を比較してみた | A CAN SOLUTIONS',
+    'description' => 'ミャンマー・ベトナム・フィリピンの海外BPOを比較。コスト、日本語対応、品質、人材の特徴から、日本企業に最適なアウトソーシング先を考えます。',
+    'path'        => '/bpo',
+    'type'        => 'article',
+    'published'   => '2026-06-25',
+    'image'       => '/assets/img/og/bpo.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

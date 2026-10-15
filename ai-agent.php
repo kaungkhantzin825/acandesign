@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AIエージェントとは？生成AIとの違いをわかりやすく解説 - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>AIエージェントとは？生成AIとの違いをわかりやすく解説 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'AIエージェントとは？生成AIとの違いをわかりやすく解説 | A CAN SOLUTIONS',
+    'description' => 'AIエージェントとは何か、ChatGPTなどの生成AIとは何が違うのかをわかりやすく解説。業務で活用する際のポイントと、人が担うべき役割についても紹介します。',
+    'path'        => '/ai-agent',
+    'type'        => 'article',
+    'published'   => '2026-07-11',
+    'image'       => '/assets/img/og/ai-agent.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

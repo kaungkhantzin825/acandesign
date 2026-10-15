@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A CAN SOLUTIONSのメールマガジンにご登録いただきありがとうございます。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>メールマガジン登録完了 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'メールマガジン登録完了 | A CAN SOLUTIONS',
+    'description' => 'A CAN SOLUTIONSのメールマガジンにご登録いただきありがとうございます。',
+    'path'        => '/confirm-page',
+    'noindex'     => true,
+  ]; include 'seo-head.php'; ?>
+  <!-- GA4 conversion: mark "sign_up" as a key event in GA4 > Admin > Events -->
+  <script>if (window.gtag) gtag('event', 'sign_up', { method: 'newsletter' });</script>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

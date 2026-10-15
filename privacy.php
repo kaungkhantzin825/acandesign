@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="合同会社 A CAN SOLUTIONS の個人情報保護方針（プライバシーポリシー）です。個人情報の取得・利用・管理および開示請求の手続についてご案内します。" />
   <meta name="theme-color" content="#ffffff" />
-  <title>プライバシーポリシー | A CAN SOLUTIONS Co.,Ltd.</title>
+  <?php $seo = [
+    'title'       => 'プライバシーポリシー | A CAN SOLUTIONS Co.,Ltd.',
+    'description' => '合同会社 A CAN SOLUTIONS の個人情報保護方針（プライバシーポリシー）です。個人情報の取得・利用・管理および開示請求の手続についてご案内します。',
+    'path'        => '/privacy',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BPOの品質は「人」で決まるのか？属人化しないチームをつくる5つの仕組み - A CAN SOLUTIONS" />
   <meta name="theme-color" content="#ffffff" />
-  <title>BPOの品質は「人」で決まるのか？属人化しないチームをつくる5つの仕組み | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => 'BPOの品質は「人」で決まるのか？属人化しないチームをつくる5つの仕組み | A CAN SOLUTIONS',
+    'description' => 'BPOの品質は担当者個人の力量で決まるのか。特定の人に依存しない、属人化しないチームをつくるための5つの仕組みを、運用の現場から紹介します。',
+    'path'        => '/blog-quality-team',
+    'type'        => 'article',
+    'published'   => '2026-09-06',
+    'image'       => '/assets/img/og/blog-quality-team.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

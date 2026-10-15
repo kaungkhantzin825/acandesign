@@ -3,9 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="人材不足時代の経営戦略 - なぜ今、BPO/KPO活用企業が競争力を高めているのか" />
   <meta name="theme-color" content="#ffffff" />
-  <title>人材不足時代の経営戦略 - BPO/KPO活用 | A CAN SOLUTIONS</title>
+  <?php $seo = [
+    'title'       => '人材不足時代の経営戦略 - BPO/KPO活用 | A CAN SOLUTIONS',
+    'description' => '採用難・人件費の上昇・バックオフィス業務の負担。人材不足時代に、BPO/KPOを活用する企業が競争力を高めている理由と、経営戦略としての活用法を解説します。',
+    'path'        => '/management',
+    'type'        => 'article',
+    'published'   => '2026-06-15',
+    'image'       => '/assets/img/og/management.jpg',
+  ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
