@@ -481,7 +481,7 @@
     font-size: 0.95rem;
     font-weight: 700;
     color: #1a1a2e;
-    margin: 0 0 -0.75rem;
+    margin: 0 0 -2px;
     font-family: "Anonymous Pro", monospace;
     letter-spacing: 0.04em;
 }
