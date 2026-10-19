@@ -1,4 +1,6 @@
 ﻿<?php
+require_once __DIR__ . '/recaptcha-config.php';
+
 $p = [];
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['_editing'])) {
     foreach (['会社名','ご担当者名','メールアドレス','電話番号','お問い合わせ内容'] as $k) {
@@ -10,6 +12,7 @@ $errorMessages = [
     'required' => '必須項目が入力されていません。空白のみの入力は無効です。',
     'email'    => 'メールアドレスの形式が正しくありません。ご確認の上、再度入力してください。',
     'phone'    => '電話番号は半角数字のみで入力してください（ハイフンなし）。',
+    'captcha'  => 'reCAPTCHA認証に失敗しました。チェックボックスにチェックを入れて、再度お試しください。',
 ];
 $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
 ?>
@@ -29,6 +32,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://www.google.com/recaptcha/api.js?hl=ja" async defer></script>
   <style>
     /* ── Nav overrides ── */
     .site-header__nav { gap: 2.75rem;
@@ -824,9 +828,14 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
             </label>
           </div>
 
+          <!-- reCAPTCHA -->
+          <div style="margin-bottom: 1.5rem;">
+            <div class="g-recaptcha" data-sitekey="<?= htmlspecialchars(RECAPTCHA_SITE_KEY, ENT_QUOTES, 'UTF-8') ?>"></div>
+          </div>
+
           <!-- Submit Button -->
           <div style="display: flex; justify-content: center; margin-top: 1rem;">
-            <button type="submit" 
+            <button type="submit"
               style="background: #1a5fd4; color: #fff; padding: 0.75rem 2.5rem; border: none; border-radius: 999px; font-size: 15px; font-weight: 700; font-family: 'Noto Sans JP', sans-serif; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; transition: background 0.2s;"
               onmouseover="this.style.background='#1450b8'" onmouseout="this.style.background='#1a5fd4'">
               確認画面へ進む

@@ -25,6 +25,10 @@
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
 
+    .image_wids{
+      max-width: 36%;
+    }
+
     /* ── HERO ── */
     /* Text over background image (Canva: HPデザインリニューアル p.10).
        Sizes use container units so the copy scales with the image. */
@@ -205,7 +209,7 @@
     }
 
     /* ── PHILOSOPHY (経営理念) ── */
-    .prof-philosophy {
+    /* .prof-philosophy {
       background: #fff;
       border: none;
       border-radius: 10px;
@@ -214,7 +218,17 @@
       max-width: 630px;
       margin: 0 auto;
       box-sizing: border-box;
-    }
+    } */
+      .prof-philosophy {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 2rem 1.8rem;
+    width: 109%;
+    max-width: 647px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
     .prof-philosophy__title {
       font-size: 22px;
       font-weight: 900;
@@ -235,7 +249,7 @@
     }
     .prof-philosophy__values {
       display: flex;
-      gap: 1rem;
+      gap: 0rem;
     }
     .prof-philosophy__value {
       flex: 1;
@@ -267,7 +281,7 @@
       display: block;
     }
     .prof-philosophy__value-desc {
-      font-size: 11px;
+      font-size: 9px;
       font-family: "Anonymous Pro", monospace;
       color: #6b7280;
       line-height: 1.6;
@@ -476,7 +490,7 @@
       color: #6b7280;
       font-weight: 500;
       line-height: 1.5;
-      margin-bottom: 0.2rem;
+      margin: 0 0 0.2rem;
     }
     .prof-exec__photo {
       /* width: 100%; */
@@ -632,7 +646,6 @@
     @media (max-width: 1023px) {
       .prof-row--stack-md { flex-direction: column; gap: 2rem; }
       .prof-row--stack-md > div { flex: none !important; width: 100%; }
-      .prof-philosophy { max-width: 100%; }
       .prof-philosophy__value-desc { font-size: 12px; }
       .prof-exec__grid { gap: 4rem; }
     }
@@ -723,7 +736,7 @@
           </tr>
           <tr>
             <th>代表社員</th>
-            <td>門 正仁<br>中村 政栄</td>
+            <td>門 正仁<br>中村 政栄<br>KYAWT KAY KHINE</td>
           </tr>
           <tr>
             <th>設立</th>
@@ -811,7 +824,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/4509c7c7-fff1-4e10-9460-a688c2478e93.webp" alt="人を大切に" style="height: 67px;" loading="lazy" decoding="async" width="800" height="445" />
+              <img class="image_wids" src="assets/img/4509c7c7-fff1-4e10-9460-a688c2478e93.webp" alt="人を大切に" style="height: 54px;" loading="lazy" decoding="async" width="800" height="445" />
             </div>
             <span class="prof-philosophy__value-label">人を大切に</span>
             <p class="prof-philosophy__value-desc">多様な人材の力を信じ、<br>成長と活躍を支援します。</p>
@@ -819,7 +832,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/8bab3d59-20e2-4181-b78c-5adf05de440c.webp" alt="品質にこだわる" style="height: 67px;" loading="lazy" decoding="async" width="657" height="800" />
+              <img  class="image_wids" src="assets/img/8bab3d59-20e2-4181-b78c-5adf05de440c.webp" alt="品質にこだわる" style="height: 54px;" loading="lazy" decoding="async" width="657" height="800" />
             </div>
             <span class="prof-philosophy__value-label">品質にこだわる</span>
             <p class="prof-philosophy__value-desc">日本品質のマネジメントで、<br>高品質なサービスを提供します。</p>
@@ -827,7 +840,7 @@
 
           <div class="prof-philosophy__value">
             <div class="prof-philosophy__value-icon">
-              <img src="assets/img/73468981-f617-4e11-955c-0b94f3e87770.webp" alt="未来を創る" style="height: 67px;" loading="lazy" decoding="async" width="786" height="800" />
+              <img  class="image_wids" src="assets/img/73468981-f617-4e11-955c-0b94f3e87770.webp" alt="未来を創る" style="height: 54px;" loading="lazy" decoding="async" width="786" height="800" />
             </div>
             <span class="prof-philosophy__value-label">未来を創る</span>
             <p class="prof-philosophy__value-desc">AIとテクノロジーで、<br>新しい価値を創造します。</p>
@@ -973,9 +986,10 @@
         <img src="assets/img/kado.webp" alt="MASAHITO KADO" class="prof-exec__photo" loading="lazy" decoding="async" width="1500" height="2250" />
       </div>
       <div class="prof-exec__card">
-        <p class="prof-exec__name">KYAWI KAY KHINE</p>
+        <p class="prof-exec__name">KYAWT KAY KHINE</p>
+        <p class="prof-exec__role">A CAN SOLUTIONS合同会社&nbsp;&nbsp;CEO</p>
         <p class="prof-exec__role">A CAN SOLUTION MYANMAR CO.,Ltd<br>MANAGING DIRECTOR</p>
-        <img src="assets/img/khine.webp" alt="KYAWI KAY KHINE" class="prof-exec__photo" loading="lazy" decoding="async" width="1047" height="1563" />
+        <img src="assets/img/khine.webp" alt="KYAWT KAY KHINE" class="prof-exec__photo" loading="lazy" decoding="async" width="1047" height="1563" />
       </div>
     </div>
   </div>

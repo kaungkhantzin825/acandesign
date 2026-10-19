@@ -21,6 +21,7 @@ composer.lock
 # Configuration files with sensitive data (IMPORTANT!)
 # 機密情報を含む設定ファイル（重要！）
 mail-config.php
+recaptcha-config.php
 .env
 .env.local
 

@@ -385,7 +385,7 @@
     }
 
     .dl-panel .blog-card__category {
-      font-size: 0.7rem;
+      font-size: 7px;
       padding: 0.15rem 0.5rem;
     }
 
@@ -1727,9 +1727,9 @@
                 </div>
                 <h3 class="blog-card__title">「できることをやる」に変えたら、組織が回り始めた<br>
                 <p style="font-size: 8px;">日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方
-</p>
+                </p>
 
-</h3>
+                </h3>
 
                 <div class="blog-card__category">日曜コラム</div>
                 <div class="blog-card__tags">
@@ -1746,6 +1746,41 @@
                    <span class="blog-card__tag">＃海外マネジメント</span>
                    <span class="blog-card__tag">＃マネジメント</span>
                   
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
+
+
+
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="organizationnews" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_new_blog.png" alt="距離ができたから、チームが近くなった" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-18">2026/10/18</time>
+                </div>
+                <h3 class="blog-card__title">距離ができたから、チームが近くなった
+<br>
+              <p style="font-size: 8px;">日本中心の営業に切り替えて半年、ミャンマーチームの成長に感じたこと
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#ミャンマー</span>
+                  <span class="blog-card__tag">#組織作り</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#自走型チーム</span>
+                  <span class="blog-card__tag">#二拠点営業</span>
+                  <span class="blog-card__tag">#品質管理</span>
+                  <span class="blog-card__tag">#海外マネジメント</span>
                 </div>
               </div>
             </a>

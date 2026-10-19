@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/recaptcha-config.php';
+
 function h($s) { return htmlspecialchars($s ?? '', ENT_QUOTES, 'UTF-8'); }
 
 $company = trim($_POST['会社名'] ?? '');
@@ -11,6 +13,37 @@ $content = trim($_POST['お問い合わせ内容'] ?? '');
 if ($company === '' || $name === '' || $email === '') {
     header('Location: contectus?error=required');
     exit;
+}
+
+// reCAPTCHA v2 checkbox — verify the token with Google before showing the
+// confirmation screen. Skipped (with a log line) until real keys are set in
+// recaptcha-config.php, so local dev keeps working without them.
+if (RECAPTCHA_SECRET_KEY !== 'your-secret-key-here') {
+    $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
+    $verified = false;
+    if ($recaptchaToken !== '') {
+        $verifyContext = stream_context_create([
+            'http' => [
+                'method'  => 'POST',
+                'header'  => 'Content-Type: application/x-www-form-urlencoded',
+                'content' => http_build_query([
+                    'secret'   => RECAPTCHA_SECRET_KEY,
+                    'response' => $recaptchaToken,
+                    'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+                ]),
+                'timeout' => 10,
+            ],
+        ]);
+        $verifyResult = @file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $verifyContext);
+        $verifyData   = $verifyResult ? json_decode($verifyResult, true) : null;
+        $verified     = !empty($verifyData['success']);
+    }
+    if (!$verified) {
+        header('Location: contectus?error=captcha');
+        exit;
+    }
+} else {
+    error_log('confirm.php: reCAPTCHA not verified — recaptcha-config.php still has placeholder keys');
 }
 
 // Strict email format check
