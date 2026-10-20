@@ -588,6 +588,44 @@
     .prof-cta-banner__btn--contact { background: #12499e; color: #fff; }
     .prof-cta-banner__btn--contact::after { color: #12499e; }
 
+    /* ── DOWNLOAD BANNER (bottom strip) ── */
+    .prof-dl-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      margin: 1.5rem auto;
+      padding: 1.1rem 1.5rem;
+      flex-wrap: wrap;
+      text-align: center;
+      width: 86%;
+    }
+    .prof-dl-banner__text {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1a1a1a;
+    }
+    .prof-dl-banner__btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.6rem;
+      background: #f5a623;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: underline;
+      border-radius: 999px;
+      white-space: nowrap;
+      transition: background var(--transition, 0.2s);
+    }
+    .prof-dl-banner__btn:hover { background: #e0951a; }
+    @media (max-width: 640px) {
+      .prof-dl-banner { padding: 1rem 1.1rem; width: 92%; }
+      .prof-dl-banner__text { font-size: 0.95rem; }
+    }
+
     /* ── CONTACT SECTION ── */
     .prof-contact {
       flex: 1;
@@ -982,6 +1020,7 @@
         <p class="prof-exec__name">MASAHITO KADO</p>
         <p class="prof-exec__role">CEO</p>
          <p class="prof-exec__role" style="visibility: hidden;">CEO</p>
+          <p class="prof-exec__role" style="visibility: hidden;">CEO</p>
         
         <img src="assets/img/kado.webp" alt="MASAHITO KADO" class="prof-exec__photo" loading="lazy" decoding="async" width="1500" height="2250" />
       </div>
@@ -1035,6 +1074,11 @@
   </section>
 
 </div><!-- /prof-bottom-row -->
+
+<div class="prof-dl-banner">
+  <p class="prof-dl-banner__text">会社案内はこちら→</p>
+  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">ダウンロード</a>
+</div>
 
 <?php include 'footer.php'; ?>
 

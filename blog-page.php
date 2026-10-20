@@ -36,6 +36,21 @@
       overflow-x: hidden;
     }
 
+    @media (min-width: 768px) {
+    .blog-card__content {
+        order: 0;
+        position: relative;
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: auto auto 1fr;
+        column-gap: 1.5rem;
+       row-gap: 0rem !important; 
+        align-items: start;
+        min-width: 0;
+        flex: 1;
+    }
+}
+
     img { max-width: 100%; height: auto; display: block; }
     a { color: inherit; }
 
@@ -924,6 +939,7 @@
                 <h3 class="blog-card__title">人材不足時代の経営戦略 - なぜ今、<br />BPO/KPO活用企業が競争力を高めているのか</h3>
                 <div class="blog-card__category">BPO/KPO活用ガイド</div>
                 <div class="blog-card__tags">
+                  <br>
                   <span class="blog-card__tag">#BPO</span>
                   <span class="blog-card__tag">#KPO</span>
                   <span class="blog-card__tag">#アウトソーシング</span>
@@ -947,7 +963,7 @@
                 </div>
                 <h3 class="blog-card__title">どの業務をBPO化すべきか？失敗しない業務<br />選定のポイント</h3>
                 <div class="blog-card__category">BPO/KPO活用ガイド</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#BPO</span>
                   <span class="blog-card__tag">#KPO</span>
                   <span class="blog-card__tag">#アウトソーシング</span>
@@ -971,7 +987,7 @@
                 </div>
                 <h3 class="blog-card__title">BPO導入で失敗する企業の共通点<br />成功企業との違いから学ぶアウトソーシング活用術</h3>
                 <div class="blog-card__category">BPO/KPO活用ガイド</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#BPO</span>
                   <span class="blog-card__tag">#KPO</span>
                   <span class="blog-card__tag">#アウトソーシング</span>
@@ -1052,7 +1068,7 @@
                 </div>
                 <h3 class="blog-card__title">AIアノテーションとは？<br />AIの精度を左右する「見えない仕事」を解説</h3>
                 <div class="blog-card__category">AI × BPO/KPO</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#AI</span>
                   <span class="blog-card__tag">#AIアノテーション</span>
                   <span class="blog-card__tag">#訓練データ</span>
@@ -1106,7 +1122,7 @@
                 </div>
                 <h3 class="blog-card__title">生成AIを導入したのに成果が出ない理由<br />〜AIを「使える仕組み」にする3つのポイント〜</h3>
                 <div class="blog-card__category">AI × BPO/KPO</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#生成AI</span>
                   <span class="blog-card__tag">#ChatGPT</span>
                   <span class="blog-card__tag">#AIツール</span>
@@ -1133,7 +1149,7 @@
                 </div>
                 <h3 class="blog-card__title">AIエージェントとは？<br />生成AIとの違いをわかりやすく解説</h3>
                 <div class="blog-card__category">AI × BPO/KPO</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#生成AI</span>
                   <span class="blog-card__tag">#ChatGPT</span>
                   <span class="blog-card__tag">#AI活用</span>
@@ -1391,7 +1407,7 @@
                 </div>
                 <h3 class="blog-card__title">日本とミャンマー、二つのチームで品質をつくる<br />海外BPOにおける「日本の役割」とは</h3>
                 <div class="blog-card__category">ミャンマーアウトソーシング</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#海外BPO</span>
                   <span class="blog-card__tag">#ミャンマーBPO</span>
                   <span class="blog-card__tag">#導入</span>
@@ -1577,7 +1593,7 @@
                 <h3 class="blog-card__title">「納期に間に合わせたい」と、自分たちで動くチーム<br>ミャンマーのメンバーを見て、改めて思ったこと</h3>
 
                 <div class="blog-card__category">日曜コラム</div>
-                <div class="blog-card__tags">
+                <div class="blog-card__tags"><br>
                   <span class="blog-card__tag">#海外BPO</span>
                   <span class="blog-card__tag">#ミャンマーBPO</span>
                   <span class="blog-card__tag">#ミャンマー人材</span>
@@ -1689,7 +1705,7 @@
                 <img src="assets/img/newblog90.webp" alt="支えるということ 厳しいミャンマーで、あらためて考えた「一緒に働く」という意味" width="300" height="170" loading="lazy" decoding="async" />
               </div>
               <div class="blog-card__content">
-                <div class="blog-card__header">
+                <div class="blog-card__header"><br><br>
                   <time class="blog-card__date" datetime="2026-10-03">2026/10/3</time>
                 </div>
                 <h3 class="blog-card__title">支えるということ</h3>
@@ -1726,7 +1742,7 @@
                   <time class="blog-card__date" datetime="2026-10-11">2026/10/11</time>
                 </div>
                 <h3 class="blog-card__title">「できることをやる」に変えたら、組織が回り始めた<br>
-                <p style="font-size: 8px;">日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方
+                <p style="margin-top: -1px;font-size: 8px;">日本式を押し付けることをやめて分かった、ミャンマーチームとの向き合い方
                 </p>
 
                 </h3>

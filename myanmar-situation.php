@@ -637,7 +637,7 @@
             <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260916.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260916</a></li>
               <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 260923.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 260923</a></li>
                <li class="myanmar-list__item"><span class="myanmar-list__date">2026/9/16</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 261003.pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 261003</a></li>
-               <li class="myanmar-list__item"><span class="myanmar-list__date">22026/10/18</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 261003 (1).pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 261010</a></li>
+               <li class="myanmar-list__item"><span class="myanmar-list__date">2026/10/18</span><span class="myanmar-list__cat">BPO/KPO活用ガイド</span><a href="assets/pdf/ミャンマー状況（ACS発信） 261003 (1).pdf" target="_blank" rel="noopener" class="myanmar-list__link">ミャンマー状況 261018</a></li>
               </ul>
             </div>
             <div class="myanmar-scrollbar" id="myanmar-scrollbar">
