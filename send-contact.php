@@ -83,6 +83,7 @@ if ($hasMailer) {
         $mail->Username   = NEWSLETTER_SMTP_USERNAME;
         $mail->Password   = NEWSLETTER_SMTP_PASSWORD;
         $mail->SMTPSecure = NEWSLETTER_SMTP_SECURE;
+        $mail->SMTPAutoTLS = NEWSLETTER_SMTP_SECURE !== '';
         $mail->Port       = NEWSLETTER_SMTP_PORT;
         $mail->CharSet    = 'UTF-8';
 

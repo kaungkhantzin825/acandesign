@@ -20,7 +20,8 @@ if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'acanadmin');
+require_once __DIR__ . '/db-config.php';
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 if ($conn->connect_error) {
     echo json_encode(['success' => false, 'message' => 'データベース接続エラー。']);
     exit;

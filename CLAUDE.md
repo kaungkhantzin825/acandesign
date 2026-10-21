@@ -169,11 +169,11 @@ MySQL accessed via `mysqli`. Schema (created by `db_setup.php`) has two tables:
 - `subscribers` — `id, email, name, company, phone, message, source, created_at, verify_token, verified_at` (UNIQUE on `email`). `source` is `'contact'` or `'newsletter'`.
 - `admin_users` — `username`, `password` (bcrypt). Default seed login: `admin / admin123`.
 
-**Credentials are duplicated across `admin/db.php`, `db_setup.php`, and `subscriber-save.php` and are currently NOT in sync** (the admin files use `zojtpszw_acanadmin`; `subscriber-save.php` uses `root`/`acanadmin`). Update all three together.
+Credentials live only in **`db-config.php`** (`DB_HOST/USER/PASS/NAME`), required by `admin/db.php`, `db_setup.php`, `subscriber-save.php` and `save-newsletter.php`. Don't hardcode a connection anywhere else.
 
 ## Email Configuration (SMTP)
 
-SMTP credentials live in `newsletter-mail-config.php` (`NEWSLETTER_SMTP_HOST/PORT/SECURE/USERNAME/PASSWORD`, `NEWSLETTER_ADMIN_EMAIL`), consumed by `send-contact.php` and `newsletter-mailer.php`. `contact-config.example.php` is a template for the older `contact-config.php`.
+SMTP credentials live in `newsletter-mail-config.php` (`NEWSLETTER_SMTP_HOST/PORT/SECURE/USERNAME/PASSWORD`, `NEWSLETTER_ADMIN_EMAIL`), consumed by `send-contact.php` and `newsletter-mailer.php`. Use port **587 with `SECURE = ''`** (no encryption; the mailers then disable `SMTPAutoTLS`): the production cPanel host blocks outbound port 25 even though mail clients use it, and SSL isn't usable there. `contact-config.example.php` is a template for the older `contact-config.php`.
 
 > `.gitignore` excludes `mail-config.php` but **not** `newsletter-mail-config.php` — do not commit real credentials there.
 

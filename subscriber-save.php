@@ -1,12 +1,13 @@
 <?php
 /**
  * Shared helpers: saves form submissions into the admin panel's
- * `subscribers` table (see db_setup.php / admin/db.php for the schema
- * and DB credentials — keep those in sync with this file).
+ * `subscribers` table (schema in db_setup.php, credentials in db-config.php).
  */
 
+require_once __DIR__ . '/db-config.php';
+
 function subscriber_db_connect() {
-    $conn = new mysqli('localhost', 'root', '', 'acanadmin');
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
     $conn->set_charset('utf8mb4');
     return $conn;
 }

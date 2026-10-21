@@ -4,14 +4,11 @@
  * Visit http://localhost:8000/db_setup.php once in your browser, then DELETE this file.
  */
 
-$host   = 'localhost';
-$dbUser = 'zojtpszw_acanadmin';
-$dbPass = 'zojtpszw_acanadmin';
-$dbName = 'zojtpszw_acanadmin';
+require_once __DIR__ . '/db-config.php';
 
 // Connect directly to the database already created via cPanel
 // (shared hosting DB users generally can't CREATE DATABASE)
-$conn = new mysqli($host, $dbUser, $dbPass, $dbName);
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 if ($conn->connect_error) {
     die("❌ Connection failed: " . $conn->connect_error);
 }

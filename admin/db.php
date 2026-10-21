@@ -3,12 +3,9 @@
  * Database connection for Admin Panel
  */
 
-$DB_HOST = 'localhost';
-$DB_USER = 'zojtpszw_acanadmin';
-$DB_PASS = 'zojtpszw_acanadmin';
-$DB_NAME = 'zojtpszw_acanadmin';
+require_once __DIR__ . '/../db-config.php';
 
-$conn = new mysqli($DB_HOST, $DB_USER, $DB_PASS, $DB_NAME);
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
 if ($conn->connect_error) {
     http_response_code(500);

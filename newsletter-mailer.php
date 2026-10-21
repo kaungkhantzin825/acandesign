@@ -16,6 +16,7 @@ function send_newsletter_mail($to, $subject, $body) {
         $mail->Username   = NEWSLETTER_SMTP_USERNAME;
         $mail->Password   = NEWSLETTER_SMTP_PASSWORD;
         $mail->SMTPSecure = NEWSLETTER_SMTP_SECURE;
+        $mail->SMTPAutoTLS = NEWSLETTER_SMTP_SECURE !== '';
         $mail->Port       = NEWSLETTER_SMTP_PORT;
         $mail->CharSet    = 'UTF-8';
         // PHPMailer waits up to 300s per connection by default, which left the
