@@ -1783,7 +1783,7 @@
                   <time class="blog-card__date" datetime="2026-10-18">2026/10/18</time>
                 </div>
                 <h3 class="blog-card__title">距離ができたから、チームが近くなった
-<br>
+                  <br>
               <p style="font-size: 8px;">日本中心の営業に切り替えて半年、ミャンマーチームの成長に感じたこと
                 </p></h3>
                 <div class="blog-card__category">日曜コラム</div>
@@ -1803,6 +1803,36 @@
           </li>
 
 
+
+
+          <li class="blog-card" data-cat="ai-bpo">
+            <a href="automation-rate" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_1600ai.png" alt="AI×BPOで自動化率はどこまで上げられる？" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-25">2026/10/25</time>
+                </div>
+                <h3 class="blog-card__title">AI×BPOで自動化率はどこまで上げられる？<br />完全自動化より「例外処理設計」が重要な理由</h3>
+                <div class="blog-card__category">AI × BPO/KPO</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#AI×BPO</span>
+                  <span class="blog-card__tag">#業務自動化</span>
+                  <span class="blog-card__tag">#生成AI</span>
+                  <span class="blog-card__tag">#AI-OCR</span>
+                  <span class="blog-card__tag">#例外処理</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#Human in the Loop</span>
+                  <span class="blog-card__tag">#AI品質評価</span>
+                  <span class="blog-card__tag">#業務設計</span>
+                  <span class="blog-card__tag">#DX</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                </div>
+              </div>
+            </a>
+          </li>
 
 
         </ul>
