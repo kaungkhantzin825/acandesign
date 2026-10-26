@@ -984,6 +984,34 @@
 </div>
 
 
+
+<div class="dl-card">
+          <img src="assets/img/width_800m1.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI時代の現場リーダーは「人を管理す<br>る人」から「仕事を設計する人」へ</p>
+            <p class="dl-card__desc">人とAIの強みを組み合わせ、仕事の流れそのも<br>のを設計することが必要です。</p>
+            <p class="dl-card__meta">PDF/650KB</p>
+          </div>
+          <a href="assets/pdf/AI時代の現場リーダーは仕事を管理する人から仕事を設計する人へ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800m1.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AIの間違いを会社の学びに変える</p>
+            <p class="dl-card__desc">「なぜ直したのか」を残すことが、次の改善につながる</p>
+            <p class="dl-card__meta">PDF/656KB</p>
+          </div>
+          <a href="assets/pdf/AIの間違いを会社の学びに変える.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>
