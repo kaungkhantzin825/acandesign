@@ -279,6 +279,7 @@ $stats = $conn->query("SELECT COUNT(*) as total,
     </div>
     <div class="topbar__right">
       <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
+      <a href="change-password.php">パスワード変更</a>
       <a href="logout.php">ログアウト</a>
     </div>
   </div>
