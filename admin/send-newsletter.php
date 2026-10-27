@@ -258,26 +258,60 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .field__hint { font-size: 0.75rem; color: #9ca3af; margin-top: 0.3rem; }
 
-    .template-bar {
+    .template-card { background: linear-gradient(180deg, #f8faff, #ffffff); }
+
+    .template-row {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
       align-items: center;
+      gap: 0.75rem;
     }
+    .template-row + .template-row { margin-top: 0.85rem; }
+
+    .template-row__icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 9px;
+      background: #eaf0fb;
+      color: #12499e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .template-row__body { flex: 1; min-width: 0; display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
     .template-bar select,
     .template-bar input[type="text"] {
-      padding: 0.55rem 0.8rem;
+      padding: 0.6rem 0.9rem;
       border: 1.5px solid #d1d9e6;
-      border-radius: 8px;
+      border-radius: 999px;
       font-size: 0.85rem;
       font-family: inherit;
       outline: none;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
-    .template-bar select { flex: 1 1 220px; min-width: 0; }
-    .template-bar input[type="text"] { flex: 1 1 200px; min-width: 0; }
+    .template-bar select { flex: 1 1 240px; min-width: 0; appearance: auto; }
+    .template-bar input[type="text"] { flex: 1 1 220px; min-width: 0; }
     .template-bar select:focus,
-    .template-bar input[type="text"]:focus { border-color: #12499e; }
-    #deleteTemplateBtn:disabled { opacity: 0.45; cursor: not-allowed; }
+    .template-bar input[type="text"]:focus {
+      border-color: #12499e;
+      box-shadow: 0 0 0 3px rgba(18,73,158,0.1);
+    }
+
+    .template-divider {
+      border: none;
+      border-top: 1px dashed #e2e8f0;
+      margin: 1.1rem 0;
+    }
+
+    #deleteTemplateBtn {
+      background: #fdecea;
+      color: #b42318;
+    }
+    #deleteTemplateBtn:disabled { opacity: 0.4; cursor: not-allowed; background: #eef1f7; color: #9ca3af; }
 
     #editor {
       background: #fff;
@@ -438,17 +472,30 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       <div class="alert-error"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
 
-    <div class="card">
+    <div class="card template-card">
       <p class="card__title"><span class="dot"></span>テンプレート</p>
-      <div class="template-bar">
-        <select id="templateSelect">
-          <option value="">テンプレートを選択…</option>
-        </select>
-        <input type="text" id="templateName" placeholder="テンプレート名（保存時に入力）" />
-        <button type="button" class="btn btn-default btn-sm" id="saveTemplateBtn">保存</button>
-        <button type="button" class="btn btn-default btn-sm" id="deleteTemplateBtn" disabled>削除</button>
+
+      <div class="template-row">
+        <div class="template-row__icon">📂</div>
+        <div class="template-row__body template-bar">
+          <select id="templateSelect">
+            <option value="">保存済みテンプレートを選択…</option>
+          </select>
+          <button type="button" class="btn btn-default btn-sm" id="deleteTemplateBtn" disabled>🗑 削除</button>
+        </div>
       </div>
-      <div class="field__hint">現在の件名・本文を名前を付けて保存し、次回以降は選択するだけで呼び出せます。</div>
+
+      <hr class="template-divider" />
+
+      <div class="template-row">
+        <div class="template-row__icon">💾</div>
+        <div class="template-row__body template-bar">
+          <input type="text" id="templateName" placeholder="新しいテンプレート名…" />
+          <button type="button" class="btn btn-primary btn-sm" id="saveTemplateBtn">テンプレートとして保存</button>
+        </div>
+      </div>
+
+      <div class="field__hint" style="margin-top: 0.9rem;">件名・本文（画像含む）を名前を付けて保存すると、次回以降は選ぶだけで呼び出せます。</div>
     </div>
 
     <form method="POST" id="newsletterForm">
