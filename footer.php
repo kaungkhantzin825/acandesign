@@ -10,7 +10,7 @@
         <span class="site-footer__divider" aria-hidden="true"></span>
         <a class="site-footer__link" href="download">資料ダウンロード</a>
         <span class="site-footer__divider" aria-hidden="true"></span>
-        <a class="site-footer__link" href="contectus">お問い合わせ</a>
+        <a class="site-footer__link" href="contactus">お問い合わせ</a>
       </nav>
       <div class="site-footer__social">
         <a href="https://substack.com/@acankado" target="_blank" rel="noopener" class="site-footer__social-link">

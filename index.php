@@ -5511,7 +5511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
           <div class="svc-cta__actions">
-            <a href="contectus" class="svc-cta__btn svc-cta__btn--primary">
+            <a href="contactus" class="svc-cta__btn svc-cta__btn--primary">
               <span>お問い合わせ</span>
               <span class="svc-cta__btn-icon">
                 <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -8031,7 +8031,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="cs-btns">
-                    <a class="cs-btn cs-btn--primary" href="contectus">
+                    <a class="cs-btn cs-btn--primary" href="contactus">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-mail.webp" alt="" loading="lazy" decoding="async" width="72" height="64" />
                         お問い合わせ
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.webp" alt="" loading="lazy" decoding="async" width="72" height="34" />

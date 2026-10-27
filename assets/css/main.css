@@ -2772,7 +2772,7 @@ button {
 .prof-contact__icon,
 .ms-contact__icon { margin-top: 0 !important; align-self: center; }
 
-/* ── Contact hero (contectus.php / confirm.php) ──
+/* ── Contact hero (contactus.php / confirm.php) ──
    Text over background image (Canva: HPデザインリニューアル p.2).
    Sizes use container units so the copy scales with the image. */
 .ct-hero {

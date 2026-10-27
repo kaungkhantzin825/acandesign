@@ -11,7 +11,7 @@ $content = trim($_POST['お問い合わせ内容'] ?? '');
 
 // Required fields (whitespace-only input is treated as empty)
 if ($company === '' || $name === '' || $email === '') {
-    header('Location: contectus?error=required');
+    header('Location: contactus?error=required');
     exit;
 }
 
@@ -39,7 +39,7 @@ if (RECAPTCHA_SECRET_KEY !== 'your-secret-key-here') {
         $verified     = !empty($verifyData['success']);
     }
     if (!$verified) {
-        header('Location: contectus?error=captcha');
+        header('Location: contactus?error=captcha');
         exit;
     }
 } else {
@@ -48,13 +48,13 @@ if (RECAPTCHA_SECRET_KEY !== 'your-secret-key-here') {
 
 // Strict email format check
 if (!filter_var($email, FILTER_VALIDATE_EMAIL) || !preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $email)) {
-    header('Location: contectus?error=email');
+    header('Location: contactus?error=email');
     exit;
 }
 
 // Phone is optional, but if provided must be digits only
 if ($tel !== '' && !preg_match('/^[0-9]{9,11}$/', $tel)) {
-    header('Location: contectus?error=phone');
+    header('Location: contactus?error=phone');
     exit;
 }
 
@@ -283,7 +283,7 @@ $f = [
           </form>
 
           <!-- 編集に戻る -->
-          <form action="contectus" method="POST" style="width:100%;max-width:280px;">
+          <form action="contactus" method="POST" style="width:100%;max-width:280px;">
             <input type="hidden" name="_editing"          value="1" />
             <input type="hidden" name="会社名"           value="<?= $f['会社名'] ?>" />
             <input type="hidden" name="ご担当者名"       value="<?= $f['ご担当者名'] ?>" />

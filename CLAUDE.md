@@ -31,7 +31,7 @@ There are too many pages to list individually. The pattern is what matters:
 | `footer.php` | Shared footer — also injects the AI chatbot embed script |
 | `3buttonsection.php` | Shared "3-button" CTA strip, included near the bottom of most content pages |
 | `header/*.php` | Per-page header bands (`download-header.php`, `myanmar-situation-header.php`), included *after* `menu.php` |
-| `contectus.php` → `confirm.php` → `send-contact.php` | Contact form: input → confirm → send |
+| `contactus.php` → `confirm.php` → `send-contact.php` | Contact form: input → confirm → send |
 | `myanmar-situation.php` → `newsletter-subscribe.php` | Newsletter signup entry + handler |
 | `admin/` | Admin panel (login, dashboard, CSV export, delete) |
 | `assets/css/main.css` | Global stylesheet (per-page CSS is inline in each page's `<style>`) |
@@ -147,8 +147,8 @@ reusing a name keeps serving the stale copy.
 
 The active contact form is a **PHP + PHPMailer/SMTP** flow (not FormSubmit):
 
-1. `contectus.php` — input form, `action="confirm.php"`. Field names are Japanese: `会社名`, `ご担当者名`, `メールアドレス`, `電話番号`, `お問い合わせ内容`.
-2. `confirm.php` — read-only confirmation screen. "送信する" posts to `send-contact.php`; "編集に戻る" posts back to `contectus.php`.
+1. `contactus.php` — input form, `action="confirm.php"`. Field names are Japanese: `会社名`, `ご担当者名`, `メールアドレス`, `電話番号`, `お問い合わせ内容`.
+2. `confirm.php` — read-only confirmation screen. "送信する" posts to `send-contact.php`; "編集に戻る" posts back to `contactus.php`.
 3. `send-contact.php` — validates, saves to the `subscribers` table, sends via PHPMailer, and renders the success/error page.
 
 > Note: `index.php` also contains a separate inline form that still POSTs to **FormSubmit.co** via `fetch()`. Both mechanisms coexist in the codebase.

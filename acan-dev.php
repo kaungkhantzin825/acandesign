@@ -1144,7 +1144,7 @@
       <p class="prof-cta-banner__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
       <div class="prof-cta-banner__btns">
         <a href="download" class="prof-cta-banner__btn prof-cta-banner__btn--dl">資料ダウンロード</a>
-        <a href="contectus" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </div>
     </div>
   </div>

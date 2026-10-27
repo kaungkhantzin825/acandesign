@@ -20,7 +20,7 @@ use PHPMailer\PHPMailer\Exception;
 
 // Reject non-POST requests outright
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: contectus');
+    header('Location: contactus');
     exit;
 }
 
@@ -38,20 +38,20 @@ $content = strip_tags(trim($_POST['お問い合わせ内容'] ?? ''));
 
 // Required fields (whitespace-only input is treated as empty)
 if ($company === '' || $name === '' || $email === '') {
-    header('Location: contectus?error=required');
+    header('Location: contactus?error=required');
     exit;
 }
 
 // Strict email format check
 $email = filter_var($email, FILTER_VALIDATE_EMAIL);
 if (!$email || !preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/', $email)) {
-    header('Location: contectus?error=email');
+    header('Location: contactus?error=email');
     exit;
 }
 
 // Phone is optional, but if provided must be digits only
 if ($tel !== '' && !preg_match('/^[0-9]{9,11}$/', $tel)) {
-    header('Location: contectus?error=phone');
+    header('Location: contactus?error=phone');
     exit;
 }
 
@@ -199,7 +199,7 @@ if ($hasMailer) {
       お手数ですが、もう一度お試しいただくか、<br>
       直接 <strong>info@acan-sol.com</strong> までご連絡ください。
     </p>
-    <a href="contectus" class="result-btn result-btn--back">入力画面に戻る</a>
+    <a href="contactus" class="result-btn result-btn--back">入力画面に戻る</a>
 <?php endif; ?>
   </div>
 </section>

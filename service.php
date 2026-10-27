@@ -784,7 +784,7 @@
         </svg>
       </div>
       <div class="svc-cta__actions">
-        <a href="contectus" class="svc-cta__btn svc-cta__btn--primary">
+        <a href="contactus" class="svc-cta__btn svc-cta__btn--primary">
           <span>お問い合わせ</span>
           <span class="svc-cta__btn-icon">
             <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>

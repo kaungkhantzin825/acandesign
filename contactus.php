@@ -25,7 +25,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
   <?php $seo = [
     'title'       => 'お問い合わせ | A CAN SOLUTIONS',
     'description' => 'BPO・KPO・AIデータサービス、システム開発、ミャンマー進出支援についてのご相談・お見積りはこちらから。A CAN SOLUTIONSのお問い合わせフォームです。',
-    'path'        => '/contectus',
+    'path'        => '/contactus',
   ]; include 'seo-head.php'; ?>
   <link rel="icon" type="image/webp" href="assets/img/logo.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />

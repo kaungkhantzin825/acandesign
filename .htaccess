@@ -127,6 +127,11 @@ AddDefaultCharset UTF-8
     RewriteCond %{THE_REQUEST} \s/+consulting-services(\.php)?[\s?] [NC]
     RewriteRule ^ /services/myanmar-support [R=301,L]
 
+    # Old "contectus" typo'd URL -> /contactus
+    RewriteCond %{REQUEST_METHOD} !^POST$
+    RewriteCond %{THE_REQUEST} \s/+contectus(\.php)?/?[\s?] [NC]
+    RewriteRule ^ /contactus [R=301,L]
+
     # (2) /page.php  ->  /page
     # POST requests are never redirected: a 301 on a POST makes some browsers
     # re-issue the request as GET and silently drop the form body.

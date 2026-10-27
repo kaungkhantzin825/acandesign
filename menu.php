@@ -163,7 +163,7 @@
       <a href="profile">会社情報&nbsp;&nbsp;</a>
     </nav>
     <a href="download" class="site-header__cta site-header__cta--dl">資料ダウンロード <span class="site-header__cta-icon">&rarr;</span></a>
-    <a href="contectus" class="site-header__cta">お問い合わせ <span class="site-header__cta-icon">&rarr;</span></a>
+    <a href="contactus" class="site-header__cta">お問い合わせ <span class="site-header__cta-icon">&rarr;</span></a>
     <button class="site-header__hamburger" id="navToggle" aria-label="メニューを開く" aria-expanded="false">
       <span></span>
       <span></span>
@@ -180,7 +180,7 @@
   <a href="profile" class="site-nav-drawer__link">会社情報</a>
   <div class="site-nav-drawer__ctas">
     <a href="download" class="site-nav-drawer__cta site-nav-drawer__cta--dl">資料ダウンロード &rarr;</a>
-    <a href="contectus" class="site-nav-drawer__cta">お問い合わせ &rarr;</a>
+    <a href="contactus" class="site-nav-drawer__cta">お問い合わせ &rarr;</a>
   </div>
 </nav>
 
