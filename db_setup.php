@@ -36,6 +36,16 @@ if ($col && $col->num_rows === 0) {
         ADD COLUMN verified_at DATETIME DEFAULT NULL");
 }
 
+// Create newsletter_templates table (saved email templates for admin/send-newsletter.php)
+$conn->query("CREATE TABLE IF NOT EXISTS newsletter_templates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    body LONGTEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+
 // Create admin_users table
 $conn->query("CREATE TABLE IF NOT EXISTS admin_users (
     id INT AUTO_INCREMENT PRIMARY KEY,

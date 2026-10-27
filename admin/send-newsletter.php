@@ -2,6 +2,15 @@
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/../newsletter-mail-config.php';
 
+$conn->query("CREATE TABLE IF NOT EXISTS newsletter_templates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    subject VARCHAR(255) NOT NULL,
+    body LONGTEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+
 $hasMailer = is_file(__DIR__ . '/../vendor/autoload.php');
 if ($hasMailer) {
     require_once __DIR__ . '/../vendor/autoload.php';
@@ -39,8 +48,8 @@ function send_newsletter_broadcast($to, $subject, $htmlBody) {
         $mail->send();
         return true;
     } catch (Exception $e) {
-        error_log('send-newsletter broadcast failed: ' . $mail->ErrorInfo);
-        return false;
+        error_log('send-newsletter broadcast failed: ' . $e->getMessage());
+        return $e->getMessage();
     }
 }
 
@@ -65,24 +74,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $res = $conn->query("SELECT email, name FROM subscribers WHERE source = 'newsletter' AND id IN ($idList)");
 
         $sent = 0;
-        $failedEmails = [];
+        $failures = []; // email => error message
         // $body is the rich-text editor's HTML output (paragraphs, bold, links,
         // uploaded images with absolute URLs) — sent through as-is.
         $htmlBody = $body;
 
         while ($row = $res->fetch_assoc()) {
-            $ok = send_newsletter_broadcast($row['email'], $subject, $htmlBody);
-            if ($ok) {
+            $result = send_newsletter_broadcast($row['email'], $subject, $htmlBody);
+            if ($result === true) {
                 $sent++;
             } else {
-                $failedEmails[] = $row['email'];
+                $failures[$row['email']] = $result;
             }
         }
 
         $results = [
-            'sent'         => $sent,
-            'failed'       => count($failedEmails),
-            'failedEmails' => $failedEmails,
+            'sent'     => $sent,
+            'failed'   => count($failures),
+            'failures' => $failures,
         ];
     }
 }
@@ -153,9 +162,22 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .topbar__right a:hover { background: rgba(255,255,255,0.28); }
 
-    .wrap { max-width: 900px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
+    .wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3.5rem; }
 
-    h1 { font-size: 1.3rem; margin: 0 0 1.25rem; }
+    .page-head { margin-bottom: 1.5rem; }
+    .page-head h1 {
+      font-size: 1.5rem;
+      font-weight: 900;
+      margin: 0 0 0.3rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .page-head p {
+      font-size: 0.85rem;
+      color: #6b7280;
+      margin: 0;
+    }
 
     .alert-success {
       background: #eafaf1;
@@ -180,16 +202,29 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .card {
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      padding: 1.5rem;
+      border: 1px solid #eef1f7;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(18,73,158,0.05);
+      padding: 1.75rem;
       margin-bottom: 1.5rem;
     }
 
     .card__title {
       font-size: 1rem;
-      font-weight: 700;
-      margin: 0 0 1rem;
+      font-weight: 900;
+      margin: 0 0 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #0d2a63;
+    }
+
+    .card__title .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #12499e;
+      flex-shrink: 0;
     }
 
     .field { margin-bottom: 1.1rem; }
@@ -205,20 +240,44 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     .field input[type="text"],
     .field textarea {
       width: 100%;
-      padding: 0.7rem 0.9rem;
+      padding: 0.75rem 1rem;
       border: 1.5px solid #d1d9e6;
-      border-radius: 8px;
-      font-size: 0.92rem;
+      border-radius: 9px;
+      font-size: 0.95rem;
       font-family: inherit;
       outline: none;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
       resize: vertical;
     }
 
     .field input[type="text"]:focus,
-    .field textarea:focus { border-color: #12499e; }
+    .field textarea:focus {
+      border-color: #12499e;
+      box-shadow: 0 0 0 3px rgba(18,73,158,0.1);
+    }
 
     .field__hint { font-size: 0.75rem; color: #9ca3af; margin-top: 0.3rem; }
+
+    .template-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+    }
+    .template-bar select,
+    .template-bar input[type="text"] {
+      padding: 0.55rem 0.8rem;
+      border: 1.5px solid #d1d9e6;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-family: inherit;
+      outline: none;
+    }
+    .template-bar select { flex: 1 1 220px; min-width: 0; }
+    .template-bar input[type="text"] { flex: 1 1 200px; min-width: 0; }
+    .template-bar select:focus,
+    .template-bar input[type="text"]:focus { border-color: #12499e; }
+    #deleteTemplateBtn:disabled { opacity: 0.45; cursor: not-allowed; }
 
     #editor {
       background: #fff;
@@ -235,6 +294,17 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     .ql-container.ql-snow { border-color: #d1d9e6; font-family: inherit; }
     .ql-editor { min-height: 260px; font-size: 0.92rem; }
     .ql-editor.ql-blank::before { font-style: normal; color: #9ca3af; }
+    .ql-editor img {
+      max-width: 280px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0.75rem 0;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+    .ql-editor img.ql-image-selected { outline: 2px solid #12499e; }
 
     .recipients-head {
       display: flex;
@@ -249,7 +319,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .recipients-list {
       border: 1px solid #eef1f7;
-      border-radius: 8px;
+      border-radius: 10px;
       max-height: 320px;
       overflow-y: auto;
     }
@@ -257,17 +327,42 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     .recipient-row {
       display: flex;
       align-items: center;
-      gap: 0.7rem;
-      padding: 0.6rem 0.9rem;
+      gap: 0.75rem;
+      padding: 0.65rem 1rem;
       border-bottom: 1px solid #f2f4f8;
       font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.15s;
     }
 
     .recipient-row:last-child { border-bottom: none; }
-    .recipient-row:hover { background: #fafbfe; }
+    .recipient-row:hover { background: #f8faff; }
 
+    .recipientCheck {
+      width: 17px;
+      height: 17px;
+      accent-color: #12499e;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .recipient-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #12499e, #1a5fd4);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .recipient-text { min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
     .recipient-email { font-weight: 700; color: #1a1a2e; }
-    .recipient-name { color: #6b7280; }
+    .recipient-name { color: #9ca3af; font-size: 0.78rem; }
 
     .empty-row { text-align: center; color: #9ca3af; padding: 2rem 1rem; }
 
@@ -275,27 +370,34 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.6rem 1.3rem;
-      border-radius: 6px;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
       font-size: 0.88rem;
       font-weight: 700;
       font-family: inherit;
       border: none;
       cursor: pointer;
       text-decoration: none;
-      transition: opacity 0.2s;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
     }
 
-    .btn:hover { opacity: 0.85; }
-    .btn-primary { background: #12499e; color: #fff; }
-    .btn-default { background: #eef1f7; color: #1a1a2e; }
-    .btn-sm { padding: 0.3rem 0.7rem; font-size: 0.78rem; }
+    .btn:hover { opacity: 0.92; }
+    .btn-primary {
+      background: linear-gradient(135deg, #12499e, #1a5fd4);
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(18,73,158,0.3);
+    }
+    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(18,73,158,0.38); }
+    .btn-default { background: #eef1f7; color: #1a1a2e; border-radius: 8px; }
+    .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.78rem; }
 
     .form-actions {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1.5rem;
+      margin-top: 1.75rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid #eef1f7;
     }
   </style>
 </head>
@@ -314,13 +416,20 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
   </div>
 
   <div class="wrap">
-    <h1>ニュースレター送信</h1>
+    <div class="page-head">
+      <h1>📨 ニュースレター送信</h1>
+      <p>メルマガ登録者へ、自由な内容のお知らせメールを作成して送信します。</p>
+    </div>
 
     <?php if ($results !== null): ?>
-      <div class="alert-success">
+      <div class="<?= $results['failed'] > 0 ? 'alert-error' : 'alert-success' ?>">
         送信完了：<?= (int)$results['sent'] ?>件成功<?php if ($results['failed'] > 0): ?>、<?= (int)$results['failed'] ?>件失敗<?php endif; ?>
-        <?php if (!empty($results['failedEmails'])): ?>
-          <br>失敗したアドレス：<?= htmlspecialchars(implode(', ', $results['failedEmails'])) ?>
+        <?php if (!empty($results['failures'])): ?>
+          <ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
+            <?php foreach ($results['failures'] as $failEmail => $reason): ?>
+              <li><?= htmlspecialchars($failEmail) ?>：<?= htmlspecialchars($reason) ?></li>
+            <?php endforeach; ?>
+          </ul>
         <?php endif; ?>
       </div>
     <?php endif; ?>
@@ -329,9 +438,22 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       <div class="alert-error"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
 
+    <div class="card">
+      <p class="card__title"><span class="dot"></span>テンプレート</p>
+      <div class="template-bar">
+        <select id="templateSelect">
+          <option value="">テンプレートを選択…</option>
+        </select>
+        <input type="text" id="templateName" placeholder="テンプレート名（保存時に入力）" />
+        <button type="button" class="btn btn-default btn-sm" id="saveTemplateBtn">保存</button>
+        <button type="button" class="btn btn-default btn-sm" id="deleteTemplateBtn" disabled>削除</button>
+      </div>
+      <div class="field__hint">現在の件名・本文を名前を付けて保存し、次回以降は選択するだけで呼び出せます。</div>
+    </div>
+
     <form method="POST" id="newsletterForm">
       <div class="card">
-        <p class="card__title">メール内容</p>
+        <p class="card__title"><span class="dot"></span>メール内容</p>
         <div class="field">
           <label for="subject">件名</label>
           <input type="text" id="subject" name="subject" required value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" />
@@ -346,7 +468,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
       <div class="card">
         <div class="recipients-head">
-          <p class="card__title" style="margin:0;">送信先（メルマガ登録者）</p>
+          <p class="card__title" style="margin:0;"><span class="dot"></span>送信先（メルマガ登録者）</p>
           <div style="display:flex; align-items:center; gap:0.75rem;">
             <span class="recipients-count"><?= count($subscribers) ?>件登録</span>
             <button type="button" class="btn btn-default btn-sm" id="toggleAll">全選択/解除</button>
@@ -355,11 +477,16 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
         <div class="recipients-list">
           <?php if (empty($subscribers)): ?>
             <div class="empty-row">メルマガ登録者が見つかりません。</div>
-          <?php else: foreach ($subscribers as $s): ?>
+          <?php else: foreach ($subscribers as $s):
+            $initial = mb_substr($s['name'] !== '' ? $s['name'] : $s['email'], 0, 1, 'UTF-8');
+          ?>
             <label class="recipient-row">
               <input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="recipientCheck" checked>
-              <span class="recipient-email"><?= htmlspecialchars($s['email']) ?></span>
-              <span class="recipient-name"><?= htmlspecialchars($s['name']) ?><?= $s['company'] !== '' ? '（' . htmlspecialchars($s['company']) . '）' : '' ?></span>
+              <span class="recipient-avatar"><?= htmlspecialchars(mb_strtoupper($initial, 'UTF-8')) ?></span>
+              <span class="recipient-text">
+                <span class="recipient-email"><?= htmlspecialchars($s['email']) ?></span>
+                <span class="recipient-name"><?= htmlspecialchars($s['name']) ?><?= $s['company'] !== '' ? '（' . htmlspecialchars($s['company']) . '）' : '' ?></span>
+              </span>
             </label>
           <?php endforeach; endif; ?>
         </div>
@@ -441,6 +568,12 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
             if (data.url) {
               quill.insertEmbed(range.index, 'image', data.url);
               quill.setSelection(range.index + 1);
+              // Inline style (not a CSS class) so it survives into the sent
+              // email and keeps the image from overflowing a narrow inbox.
+              var img = quill.root.querySelector('img[src="' + data.url + '"]');
+              if (img) {
+                img.setAttribute('style', 'max-width:100%;height:auto;display:block;border-radius:6px;');
+              }
             } else {
               alert('画像のアップロードに失敗しました: ' + (data.error || ''));
             }
@@ -454,6 +587,111 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     document.getElementById('newsletterForm').addEventListener('submit', function () {
       bodyField.value = quill.root.innerHTML;
+    });
+
+    // ── Templates ──
+    const templateSelect = document.getElementById('templateSelect');
+    const templateName = document.getElementById('templateName');
+    const saveTemplateBtn = document.getElementById('saveTemplateBtn');
+    const deleteTemplateBtn = document.getElementById('deleteTemplateBtn');
+    const subjectField = document.getElementById('subject');
+    let templates = [];
+
+    function loadTemplateList(selectId) {
+      fetch('templates.php')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          templates = data.templates || [];
+          templateSelect.innerHTML = '<option value="">テンプレートを選択…</option>';
+          templates.forEach(function (t) {
+            const opt = document.createElement('option');
+            opt.value = t.id;
+            opt.textContent = t.name;
+            templateSelect.appendChild(opt);
+          });
+          if (selectId) {
+            templateSelect.value = selectId;
+          }
+          deleteTemplateBtn.disabled = !templateSelect.value;
+        });
+    }
+    loadTemplateList();
+
+    templateSelect.addEventListener('change', function () {
+      const id = templateSelect.value;
+      deleteTemplateBtn.disabled = !id;
+      if (!id) return;
+
+      const t = templates.find(function (x) { return String(x.id) === id; });
+      if (!t) return;
+
+      if (quill.getText().trim() !== '' || subjectField.value.trim() !== '') {
+        if (!confirm('現在の内容を破棄してテンプレートを読み込みますか？')) {
+          templateSelect.value = '';
+          deleteTemplateBtn.disabled = true;
+          return;
+        }
+      }
+
+      subjectField.value = t.subject;
+      quill.root.innerHTML = t.body;
+      templateName.value = t.name;
+    });
+
+    saveTemplateBtn.addEventListener('click', function () {
+      const name = templateName.value.trim();
+      if (!name) {
+        alert('テンプレート名を入力してください。');
+        templateName.focus();
+        return;
+      }
+      if (subjectField.value.trim() === '' || quill.getText().trim() === '') {
+        alert('件名と本文を入力してください。');
+        return;
+      }
+
+      const existing = templates.find(function (t) { return t.name === name; });
+      const id = (existing && String(existing.id) === templateSelect.value) ? existing.id : 0;
+
+      const formData = new FormData();
+      formData.append('action', 'save');
+      formData.append('id', id);
+      formData.append('name', name);
+      formData.append('subject', subjectField.value);
+      formData.append('body', quill.root.innerHTML);
+
+      fetch('templates.php', { method: 'POST', body: formData })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.ok) {
+            loadTemplateList(data.id);
+          } else {
+            alert('保存に失敗しました: ' + (data.error || ''));
+          }
+        })
+        .catch(function () { alert('保存に失敗しました。'); });
+    });
+
+    deleteTemplateBtn.addEventListener('click', function () {
+      const id = templateSelect.value;
+      if (!id) return;
+      if (!confirm('このテンプレートを削除しますか？')) return;
+
+      const formData = new FormData();
+      formData.append('action', 'delete');
+      formData.append('id', id);
+
+      fetch('templates.php', { method: 'POST', body: formData })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.ok) {
+            templateName.value = '';
+            loadTemplateList();
+          } else {
+            alert('削除に失敗しました: ' + (data.error || ''));
+          }
+        })
+        .catch(function () { alert('削除に失敗しました。'); });
     });
   </script>
 </body>

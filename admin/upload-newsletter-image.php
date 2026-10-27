@@ -49,4 +49,49 @@ if (!move_uploaded_file($file['tmp_name'], $dest)) {
     fail('画像の保存に失敗しました。');
 }
 
+// Shrink large uploads so they display at a reasonable size in the email and
+// don't balloon the page/editor while composing. GIFs are left alone so
+// animation isn't lost; anything else wider than 1000px is scaled down.
+if (function_exists('imagecreatefromstring') && $ext !== 'gif') {
+    $resized = resize_newsletter_image($dest, $ext, 1000);
+    if ($resized === false) {
+        error_log('upload-newsletter-image: resize skipped for ' . $dest);
+    }
+}
+
+function resize_newsletter_image($path, $ext, $maxWidth) {
+    $info = @getimagesize($path);
+    if (!$info || $info[0] <= $maxWidth) {
+        return true;
+    }
+
+    $data = file_get_contents($path);
+    $src = @imagecreatefromstring($data);
+    if (!$src) {
+        return false;
+    }
+
+    $srcW = imagesx($src);
+    $srcH = imagesy($src);
+    $newW = $maxWidth;
+    $newH = (int) round($srcH * ($maxWidth / $srcW));
+
+    $dst = imagecreatetruecolor($newW, $newH);
+    if ($ext === 'png' || $ext === 'webp') {
+        imagealphablending($dst, false);
+        imagesavealpha($dst, true);
+    }
+    imagecopyresampled($dst, $src, 0, 0, 0, 0, $newW, $newH, $srcW, $srcH);
+
+    switch ($ext) {
+        case 'jpg':  imagejpeg($dst, $path, 85); break;
+        case 'png':  imagepng($dst, $path, 6); break;
+        case 'webp': imagewebp($dst, $path, 85); break;
+    }
+
+    imagedestroy($src);
+    imagedestroy($dst);
+    return true;
+}
+
 echo json_encode(['url' => rtrim(SEO_SITE_URL, '/') . '/assets/img/newsletter/' . $filename]);
