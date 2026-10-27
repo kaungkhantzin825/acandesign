@@ -52,9 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $body    = trim($_POST['body'] ?? '');
     $ids     = array_map('intval', $_POST['ids'] ?? []);
 
+    $bodyIsEmpty = trim(strip_tags($body)) === '' && stripos($body, '<img') === false;
+
     if (!$hasMailer) {
         $error = 'メール送信機能が利用できません（vendor/未インストール）。サーバー管理者にお問い合わせください。';
-    } elseif ($subject === '' || $body === '') {
+    } elseif ($subject === '' || $bodyIsEmpty) {
         $error = '件名と本文を入力してください。';
     } elseif (empty($ids)) {
         $error = '送信先を1件以上選択してください。';
@@ -64,10 +66,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $sent = 0;
         $failedEmails = [];
-        // Admin-only form: body is trusted input, so line breaks become <br>
-        // but any HTML tags the admin writes (<b>, <a href="...">, ...) pass
-        // through untouched and render in the sent email.
-        $htmlBody = nl2br($body);
+        // $body is the rich-text editor's HTML output (paragraphs, bold, links,
+        // uploaded images with absolute URLs) — sent through as-is.
+        $htmlBody = $body;
 
         while ($row = $res->fetch_assoc()) {
             $ok = send_newsletter_broadcast($row['email'], $subject, $htmlBody);
@@ -100,6 +101,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; }
 
@@ -218,6 +220,22 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .field__hint { font-size: 0.75rem; color: #9ca3af; margin-top: 0.3rem; }
 
+    #editor {
+      background: #fff;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.92rem;
+      font-family: inherit;
+      min-height: 260px;
+    }
+    .ql-toolbar.ql-snow {
+      border-color: #d1d9e6;
+      border-radius: 8px 8px 0 0;
+      font-family: inherit;
+    }
+    .ql-container.ql-snow { border-color: #d1d9e6; font-family: inherit; }
+    .ql-editor { min-height: 260px; font-size: 0.92rem; }
+    .ql-editor.ql-blank::before { font-style: normal; color: #9ca3af; }
+
     .recipients-head {
       display: flex;
       align-items: center;
@@ -319,9 +337,10 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
           <input type="text" id="subject" name="subject" required value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" />
         </div>
         <div class="field">
-          <label for="body">本文</label>
-          <textarea id="body" name="body" rows="10" required><?= htmlspecialchars($_POST['body'] ?? '') ?></textarea>
-          <div class="field__hint">改行はそのまま反映されます。簡単なHTMLタグ（&lt;b&gt;、&lt;a href="..."&gt; など）も使用できます。</div>
+          <label for="editor">本文</label>
+          <div id="editor"></div>
+          <textarea name="body" id="bodyField" style="display:none;"><?= $_POST['body'] ?? '' ?></textarea>
+          <div class="field__hint">太字・リンク・画像などはツールバーで装飾できます。画像ボタンからアップロードすると、そのままメールに挿入されます。</div>
         </div>
       </div>
 
@@ -353,6 +372,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     </form>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
   <script>
     const checks = document.querySelectorAll('.recipientCheck');
     const selectedCount = document.getElementById('selectedCount');
@@ -372,6 +392,69 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
         updateCount();
       });
     }
+
+    // Rich-text editor for the email body. Toolbar is limited to formats that
+    // render reliably in email clients (semantic tags + inline-styled embeds) —
+    // no alignment/indent/color, which Quill implements via CSS classes that
+    // won't be available in a recipient's inbox.
+    const quill = new Quill('#editor', {
+      theme: 'snow',
+      placeholder: 'メール本文を入力してください…',
+      modules: {
+        toolbar: {
+          container: [
+            ['bold', 'italic', 'underline'],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            ['blockquote', 'link', 'image'],
+            ['clean']
+          ],
+          handlers: { image: imageHandler }
+        }
+      }
+    });
+
+    const bodyField = document.getElementById('bodyField');
+    if (bodyField.value.trim() !== '') {
+      quill.root.innerHTML = bodyField.value;
+    }
+
+    function imageHandler() {
+      const input = document.createElement('input');
+      input.setAttribute('type', 'file');
+      input.setAttribute('accept', 'image/*');
+      input.click();
+
+      input.onchange = function () {
+        const file = input.files[0];
+        if (!file) return;
+
+        const range = quill.getSelection(true);
+        quill.insertText(range.index, 'アップロード中…', { italic: true });
+
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch('upload-newsletter-image.php', { method: 'POST', body: formData })
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            quill.deleteText(range.index, 'アップロード中…'.length);
+            if (data.url) {
+              quill.insertEmbed(range.index, 'image', data.url);
+              quill.setSelection(range.index + 1);
+            } else {
+              alert('画像のアップロードに失敗しました: ' + (data.error || ''));
+            }
+          })
+          .catch(function () {
+            quill.deleteText(range.index, 'アップロード中…'.length);
+            alert('画像のアップロードに失敗しました。');
+          });
+      };
+    }
+
+    document.getElementById('newsletterForm').addEventListener('submit', function () {
+      bodyField.value = quill.root.innerHTML;
+    });
   </script>
 </body>
 </html>
