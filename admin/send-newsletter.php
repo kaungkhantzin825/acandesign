@@ -2,15 +2,6 @@
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/../newsletter-mail-config.php';
 
-$conn->query("CREATE TABLE IF NOT EXISTS newsletter_templates (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(255) NOT NULL,
-    subject VARCHAR(255) NOT NULL,
-    body LONGTEXT NOT NULL,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    updated_at DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-
 $hasMailer = is_file(__DIR__ . '/../vendor/autoload.php');
 if ($hasMailer) {
     require_once __DIR__ . '/../vendor/autoload.php';
@@ -258,61 +249,6 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .field__hint { font-size: 0.75rem; color: #9ca3af; margin-top: 0.3rem; }
 
-    .template-card { background: linear-gradient(180deg, #f8faff, #ffffff); }
-
-    .template-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-    .template-row + .template-row { margin-top: 0.85rem; }
-
-    .template-row__icon {
-      width: 34px;
-      height: 34px;
-      border-radius: 9px;
-      background: #eaf0fb;
-      color: #12499e;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-    }
-
-    .template-row__body { flex: 1; min-width: 0; display: flex; gap: 0.6rem; flex-wrap: wrap; }
-
-    .template-bar select,
-    .template-bar input[type="text"] {
-      padding: 0.6rem 0.9rem;
-      border: 1.5px solid #d1d9e6;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-family: inherit;
-      outline: none;
-      background: #fff;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .template-bar select { flex: 1 1 240px; min-width: 0; appearance: auto; }
-    .template-bar input[type="text"] { flex: 1 1 220px; min-width: 0; }
-    .template-bar select:focus,
-    .template-bar input[type="text"]:focus {
-      border-color: #12499e;
-      box-shadow: 0 0 0 3px rgba(18,73,158,0.1);
-    }
-
-    .template-divider {
-      border: none;
-      border-top: 1px dashed #e2e8f0;
-      margin: 1.1rem 0;
-    }
-
-    #deleteTemplateBtn {
-      background: #fdecea;
-      color: #b42318;
-    }
-    #deleteTemplateBtn:disabled { opacity: 0.4; cursor: not-allowed; background: #eef1f7; color: #9ca3af; }
-
     #editor {
       background: #fff;
       border-radius: 0 0 8px 8px;
@@ -472,32 +408,6 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       <div class="alert-error"><?= htmlspecialchars($error) ?></div>
     <?php endif; ?>
 
-    <div class="card template-card">
-      <p class="card__title"><span class="dot"></span>テンプレート</p>
-
-      <div class="template-row">
-        <div class="template-row__icon">📂</div>
-        <div class="template-row__body template-bar">
-          <select id="templateSelect">
-            <option value="">保存済みテンプレートを選択…</option>
-          </select>
-          <button type="button" class="btn btn-default btn-sm" id="deleteTemplateBtn" disabled>🗑 削除</button>
-        </div>
-      </div>
-
-      <hr class="template-divider" />
-
-      <div class="template-row">
-        <div class="template-row__icon">💾</div>
-        <div class="template-row__body template-bar">
-          <input type="text" id="templateName" placeholder="新しいテンプレート名…" />
-          <button type="button" class="btn btn-primary btn-sm" id="saveTemplateBtn">テンプレートとして保存</button>
-        </div>
-      </div>
-
-      <div class="field__hint" style="margin-top: 0.9rem;">件名・本文（画像含む）を名前を付けて保存すると、次回以降は選ぶだけで呼び出せます。</div>
-    </div>
-
     <form method="POST" id="newsletterForm">
       <div class="card">
         <p class="card__title"><span class="dot"></span>メール内容</p>
@@ -528,7 +438,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
             $initial = mb_substr($s['name'] !== '' ? $s['name'] : $s['email'], 0, 1, 'UTF-8');
           ?>
             <label class="recipient-row">
-              <input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="recipientCheck" checked>
+              <input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="recipientCheck">
               <span class="recipient-avatar"><?= htmlspecialchars(mb_strtoupper($initial, 'UTF-8')) ?></span>
               <span class="recipient-text">
                 <span class="recipient-email"><?= htmlspecialchars($s['email']) ?></span>
@@ -587,10 +497,19 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       }
     });
 
+    // Default HTML starting layout — inline styles (not Quill's ql-align
+    // classes) so the look survives into the actual sent email too.
+    const DEFAULT_TEMPLATE = ''
+      + '<p style="text-align:center;"><img src="https://acan-sol.com/assets/img/logo.webp" alt="A CAN SOLUTIONS" style="width:56px;height:56px;border-radius:12px;"></p>'
+      + '<h1 style="text-align:center;color:#12499e;font-size:22px;margin:12px 0 4px;">ここにタイトルを入力</h1>'
+      + '<p style="text-align:center;color:#6b7280;font-size:13px;margin:0 0 20px;">サブタイトルや日付を入力</p>'
+      + '<p>いつもA CAN SOLUTIONSをご利用いただき、誠にありがとうございます。</p>'
+      + '<p>ここに本文を入力してください。</p>'
+      + '<p>今後ともよろしくお願いいたします。</p>'
+      + '<p>――――――――――――――――<br>A CAN SOLUTIONS株式会社<br>Email: info@acan-sol.com<br>Web: https://acan-sol.com<br>――――――――――――――――</p>';
+
     const bodyField = document.getElementById('bodyField');
-    if (bodyField.value.trim() !== '') {
-      quill.root.innerHTML = bodyField.value;
-    }
+    quill.root.innerHTML = bodyField.value.trim() !== '' ? bodyField.value : DEFAULT_TEMPLATE;
 
     function imageHandler() {
       const input = document.createElement('input');
@@ -634,111 +553,6 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     document.getElementById('newsletterForm').addEventListener('submit', function () {
       bodyField.value = quill.root.innerHTML;
-    });
-
-    // ── Templates ──
-    const templateSelect = document.getElementById('templateSelect');
-    const templateName = document.getElementById('templateName');
-    const saveTemplateBtn = document.getElementById('saveTemplateBtn');
-    const deleteTemplateBtn = document.getElementById('deleteTemplateBtn');
-    const subjectField = document.getElementById('subject');
-    let templates = [];
-
-    function loadTemplateList(selectId) {
-      fetch('templates.php')
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          templates = data.templates || [];
-          templateSelect.innerHTML = '<option value="">テンプレートを選択…</option>';
-          templates.forEach(function (t) {
-            const opt = document.createElement('option');
-            opt.value = t.id;
-            opt.textContent = t.name;
-            templateSelect.appendChild(opt);
-          });
-          if (selectId) {
-            templateSelect.value = selectId;
-          }
-          deleteTemplateBtn.disabled = !templateSelect.value;
-        });
-    }
-    loadTemplateList();
-
-    templateSelect.addEventListener('change', function () {
-      const id = templateSelect.value;
-      deleteTemplateBtn.disabled = !id;
-      if (!id) return;
-
-      const t = templates.find(function (x) { return String(x.id) === id; });
-      if (!t) return;
-
-      if (quill.getText().trim() !== '' || subjectField.value.trim() !== '') {
-        if (!confirm('現在の内容を破棄してテンプレートを読み込みますか？')) {
-          templateSelect.value = '';
-          deleteTemplateBtn.disabled = true;
-          return;
-        }
-      }
-
-      subjectField.value = t.subject;
-      quill.root.innerHTML = t.body;
-      templateName.value = t.name;
-    });
-
-    saveTemplateBtn.addEventListener('click', function () {
-      const name = templateName.value.trim();
-      if (!name) {
-        alert('テンプレート名を入力してください。');
-        templateName.focus();
-        return;
-      }
-      if (subjectField.value.trim() === '' || quill.getText().trim() === '') {
-        alert('件名と本文を入力してください。');
-        return;
-      }
-
-      const existing = templates.find(function (t) { return t.name === name; });
-      const id = (existing && String(existing.id) === templateSelect.value) ? existing.id : 0;
-
-      const formData = new FormData();
-      formData.append('action', 'save');
-      formData.append('id', id);
-      formData.append('name', name);
-      formData.append('subject', subjectField.value);
-      formData.append('body', quill.root.innerHTML);
-
-      fetch('templates.php', { method: 'POST', body: formData })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data.ok) {
-            loadTemplateList(data.id);
-          } else {
-            alert('保存に失敗しました: ' + (data.error || ''));
-          }
-        })
-        .catch(function () { alert('保存に失敗しました。'); });
-    });
-
-    deleteTemplateBtn.addEventListener('click', function () {
-      const id = templateSelect.value;
-      if (!id) return;
-      if (!confirm('このテンプレートを削除しますか？')) return;
-
-      const formData = new FormData();
-      formData.append('action', 'delete');
-      formData.append('id', id);
-
-      fetch('templates.php', { method: 'POST', body: formData })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data.ok) {
-            templateName.value = '';
-            loadTemplateList();
-          } else {
-            alert('削除に失敗しました: ' + (data.error || ''));
-          }
-        })
-        .catch(function () { alert('削除に失敗しました。'); });
     });
   </script>
 </body>

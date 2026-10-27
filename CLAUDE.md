@@ -168,7 +168,6 @@ MySQL accessed via `mysqli`. Schema (created by `db_setup.php`) has two tables:
 
 - `subscribers` — `id, email, name, company, phone, message, source, created_at, verify_token, verified_at` (UNIQUE on `email`). `source` is `'contact'` or `'newsletter'`.
 - `admin_users` — `username`, `password` (bcrypt). Default seed login: `admin / admin123`.
-- `newsletter_templates` — `id, name, subject, body (HTML), created_at, updated_at`. Saved compose templates for `admin/send-newsletter.php`; self-creates via `CREATE TABLE IF NOT EXISTS` so no manual migration is needed.
 
 Credentials live only in **`db-config.php`** (`DB_HOST/USER/PASS/NAME`), required by `admin/db.php`, `db_setup.php`, `subscriber-save.php` and `save-newsletter.php`. Don't hardcode a connection anywhere else.
 
