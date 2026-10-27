@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -1027,6 +1027,34 @@
           </a>
 </div>
 
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800m4.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI活用をできる人に任せてはいけ<br>ない</p>
+            <p class="dl-card__desc">個人のスキルから、会社の仕組みへ。AIを誰が<br>使っても、同じ品質で結果を出せる組織を。</p>
+            <p class="dl-card__meta">PDF/1.1MB</p>
+          </div>
+          <a href="assets/pdf/AI活用をできる人に任せてはいけない.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800m5.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AIに任せるなら「責任の境界」を<br>決める</p>
+            <p class="dl-card__desc">AIの力を最大限活かすために、どこまでがAIが<br>行い、どこから人がせきにんを持つのか。</p>
+            <p class="dl-card__meta">PDF/683KB</p>
+          </div>
+          <a href="assets/pdf/AIに任せるなら責任の境界を決める.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
 
 
       </div>
