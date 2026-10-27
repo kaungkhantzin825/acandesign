@@ -497,23 +497,14 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       }
     });
 
-    // Default HTML starting layout — inline styles (not Quill's ql-align
-    // classes) so the look survives into the actual sent email too.
-    const DEFAULT_TEMPLATE = ''
-      + '<p style="text-align:center;"><img src="https://acan-sol.com/assets/img/logo.webp" alt="A CAN SOLUTIONS" style="width:56px;height:56px;border-radius:12px;"></p>'
-      + '<h1 style="text-align:center;color:#12499e;font-size:22px;margin:12px 0 4px;">ここにタイトルを入力</h1>'
-      + '<p style="text-align:center;color:#6b7280;font-size:13px;margin:0 0 20px;">サブタイトルや日付を入力</p>'
-      + '<p>いつもA CAN SOLUTIONSをご利用いただき、誠にありがとうございます。</p>'
-      + '<p>ここに本文を入力してください。</p>'
-      + '<p>今後ともよろしくお願いいたします。</p>'
-      + '<p>――――――――――――――――<br>A CAN SOLUTIONS株式会社<br>Email: info@acan-sol.com<br>Web: https://acan-sol.com<br>――――――――――――――――</p>';
-
     const bodyField = document.getElementById('bodyField');
     // dangerouslyPasteHTML (not quill.root.innerHTML) so Quill actually parses
     // this into its own Delta model — setting innerHTML directly bypasses that,
     // and Quill's own update cycle then silently drops anything it doesn't
     // recognize (e.g. bare <br> tags collapsed, no space left behind).
-    quill.clipboard.dangerouslyPasteHTML(bodyField.value.trim() !== '' ? bodyField.value : DEFAULT_TEMPLATE);
+    if (bodyField.value.trim() !== '') {
+      quill.clipboard.dangerouslyPasteHTML(bodyField.value);
+    }
 
     function imageHandler() {
       const input = document.createElement('input');
