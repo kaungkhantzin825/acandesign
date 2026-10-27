@@ -509,7 +509,11 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       + '<p>――――――――――――――――<br>A CAN SOLUTIONS株式会社<br>Email: info@acan-sol.com<br>Web: https://acan-sol.com<br>――――――――――――――――</p>';
 
     const bodyField = document.getElementById('bodyField');
-    quill.root.innerHTML = bodyField.value.trim() !== '' ? bodyField.value : DEFAULT_TEMPLATE;
+    // dangerouslyPasteHTML (not quill.root.innerHTML) so Quill actually parses
+    // this into its own Delta model — setting innerHTML directly bypasses that,
+    // and Quill's own update cycle then silently drops anything it doesn't
+    // recognize (e.g. bare <br> tags collapsed, no space left behind).
+    quill.clipboard.dangerouslyPasteHTML(bodyField.value.trim() !== '' ? bodyField.value : DEFAULT_TEMPLATE);
 
     function imageHandler() {
       const input = document.createElement('input');
