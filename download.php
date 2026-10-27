@@ -986,7 +986,7 @@
 
 
 <div class="dl-card">
-          <img src="assets/img/width_800m1.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <img src="assets/img/width_800m2.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AI時代の現場リーダーは「人を管理す<br>る人」から「仕事を設計する人」へ</p>
             <p class="dl-card__desc">人とAIの強みを組み合わせ、仕事の流れそのも<br>のを設計することが必要です。</p>
@@ -1012,6 +1012,23 @@
             <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
 </div>
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800m3.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI導入のROIは、何時間減ったか<br>では測れない</p>
+            <p class="dl-card__desc">時間削減だけでなく、品質向上・Knowledge<br>蓄積・人材成長・改善速度で見る</p>
+            <p class="dl-card__meta">PDF/792KB</p>
+          </div>
+          <a href="assets/pdf/AI導入のROIは、「何時間減ったか」だけでは測れない.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>
