@@ -6797,7 +6797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             color: #fff;
             font-weight: 700;
             font-size: 0.95rem;
-            text-decoration: none;
+            text-decoration: underline;
             border-radius: 999px;
             white-space: nowrap;
             transition: background var(--transition, 0.2s);
@@ -7817,9 +7817,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
+
+                <div class="dsg-dl-banner" style="background-color: white;">
+                    <p class="dsg-dl-banner__text">ミャンマーKPOチームの資料はこちら→</p>
+                    <a href="assets/pdf/KPOチーム営業資料.pdf" class="dsg-dl-banner__btn">ダウンロード</a>
+                </div>
+          
+
         </section>
 
-    </div><!-- /kpo-page -->
+    </div>
+    
+    <!-- /kpo-page -->
     
     <!-- /bpo-page -->
     <!-- CTA Section -->
