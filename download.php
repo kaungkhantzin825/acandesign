@@ -194,7 +194,7 @@
     font-family: "Anonymous Pro", monospace;
     font-size: 11px;
     color: #555e72;
-    margin: 0 0 0.4rem;
+    margin: 0 0 -0.6rem;
     line-height: 1.65;
     font-weight: bold;
 }
