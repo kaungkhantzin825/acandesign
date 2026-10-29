@@ -1103,6 +1103,36 @@
           </a>
 </div>
 
+
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800mm1.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI導入ではなく、AI業務設計へ</p>
+            <p class="dl-card__desc">AI・人・BPO・KPOの役割を再設計し、成果<br>が続く運用体制へ。</p>
+            <p class="dl-card__meta">PDF/827KB</p>
+          </div>
+          <a href="assets/pdf/AI導入ではなく、AI業務設計へ.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800mm2.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AIに仕事を任せる前にその仕事を分解できていますか</p>
+            <p class="dl-card__desc">仕事を小さく分けることで、AI・人・BPO・<br>KPOの最適な役割が見えてきます。</p>
+            <p class="dl-card__meta">PDF/832KB</p>
+          </div>
+          <a href="assets/pdf/AIに仕事を任せる前にその仕事を分解できていますか.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>

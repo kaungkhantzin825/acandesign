@@ -1805,6 +1805,37 @@
 
 
 
+
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="organization-power" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_1600blog.png" alt="トラブルのときに見える、組織の本当の力" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-25">2026/10/25</time>
+                </div>
+                <h3 class="blog-card__title">トラブルのときに見える、組織の本当の力</h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#組織の力</span>
+                  <span class="blog-card__tag">#チームワーク</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#オフショア開発</span>
+                  <span class="blog-card__tag">#リスク管理</span>
+                  <span class="blog-card__tag">#信頼関係</span>
+                  <span class="blog-card__tag">#A CAN SOLUTIONS</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
           <li class="blog-card" data-cat="ai-bpo">
             <a href="automation-rate" class="blog-card__link">
               <div class="blog-card__image">
