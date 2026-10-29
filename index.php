@@ -7818,9 +7818,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
 
-                <div class="dsg-dl-banner" style="background-color: white;">
+                <div class="dsg-dl-banner" style="background-color: #f5f9ff;">
                     <p class="dsg-dl-banner__text">ミャンマーKPOチームの資料はこちら→</p>
-                    <a href="assets/pdf/KPOチーム営業資料.pdf" class="dsg-dl-banner__btn">ダウンロード</a>
+                    <a href="assets/pdf/KPOチーム営業資料.pdf" class="dsg-dl-banner__btn" >ダウンロード</a>
                 </div>
           
 
