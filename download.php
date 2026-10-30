@@ -1133,6 +1133,23 @@
             <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>
 </div>
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800mm6.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">TOP：AI・人・BPO・KPO仕事はど<br>こに置くべきか</p>
+            <p class="dl-card__desc">仕事を分解し、最適な場所へ配置する。こ<br>れがAI時代の業務設計。</p>
+            <p class="dl-card__meta">PDF/853KB</p>
+          </div>
+          <a href="assets/pdf/TOP：AI・人・BPO・KPO仕事はどこに置くべきか.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>
