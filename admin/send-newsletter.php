@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . '/db.php';
 require_once __DIR__ . '/../newsletter-mail-config.php';
+require_once __DIR__ . '/../seo-config.php';
 
 $hasMailer = is_file(__DIR__ . '/../vendor/autoload.php');
 if ($hasMailer) {
@@ -11,6 +12,59 @@ if ($hasMailer) {
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+
+// Wraps the editor's HTML in a branded email layout (logo header + footer).
+// Table-based + inline CSS, since that's what actually renders consistently
+// across email clients (no external stylesheet, no flexbox/grid). The logo is
+// a PNG (not the site's .webp) because Outlook desktop's Word rendering
+// engine doesn't support WebP in HTML email.
+function build_newsletter_email_html($subject, $bodyHtml) {
+    $logoUrl = rtrim(SEO_SITE_URL, '/') . '/assets/img/logo.webp';
+    $siteUrl = rtrim(SEO_SITE_URL, '/');
+    $year = date('Y');
+
+    return '<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>' . htmlspecialchars($subject, ENT_QUOTES, 'UTF-8') . '</title>
+</head>
+<body style="margin:0; padding:0; background:#f0f3f9; font-family:\'Hiragino Kaku Gothic ProN\', \'Noto Sans JP\', sans-serif;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f0f3f9; padding:32px 16px;">
+<tr><td align="center">
+<table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px; width:100%; background:#ffffff; border-radius:14px; overflow:hidden; box-shadow:0 4px 20px rgba(18,73,158,0.08);">
+
+<tr>
+<td style="background:linear-gradient(135deg,#12499e,#1a5fd4); background-color:#12499e; padding:28px 32px; text-align:center;">
+<img src="' . htmlspecialchars($logoUrl, ENT_QUOTES, 'UTF-8') . '" alt="A CAN SOLUTIONS" width="48" height="48" style="display:block; margin:0 auto 10px; border:0;">
+<span style="color:#ffffff; font-size:18px; font-weight:700; letter-spacing:0.02em;">A CAN SOLUTIONS</span>
+</td>
+</tr>
+
+<tr>
+<td style="padding:36px 32px; color:#1a1a2e; font-size:15px; line-height:1.8;">
+' . $bodyHtml . '
+</td>
+</tr>
+
+<tr>
+<td style="background:#f5f7fb; padding:24px 32px; text-align:center; border-top:1px solid #eef1f7;">
+<p style="margin:0 0 6px; font-size:13px; font-weight:700; color:#0d2a63;">A CAN SOLUTIONS Co.,Ltd.</p>
+<p style="margin:0 0 14px; font-size:12px; color:#9ca3af;">ミャンマーと日本をつなぐITアウトソーシングパートナー</p>
+<p style="margin:0; font-size:12px;">
+<a href="' . htmlspecialchars($siteUrl, ENT_QUOTES, 'UTF-8') . '" style="color:#12499e; text-decoration:none; font-weight:700;">acan-sol.com</a>
+</p>
+<p style="margin:14px 0 0; font-size:11px; color:#c3c9d6;">&copy; ' . $year . ' A CAN SOLUTIONS Co.,Ltd. All rights reserved.</p>
+</td>
+</tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>';
+}
 
 // Separate from the shared send_newsletter_mail() helper (newsletter-mailer.php)
 // on purpose: that helper sends plain-text bodies for the signup auto-reply, and
@@ -44,6 +98,18 @@ function send_newsletter_broadcast($to, $subject, $htmlBody) {
     }
 }
 
+// Self-migrating: history table is created on first use, no manual DB step needed.
+$conn->query("CREATE TABLE IF NOT EXISTS newsletter_sends (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    subject VARCHAR(255) NOT NULL,
+    body LONGTEXT,
+    recipient_count INT DEFAULT 0,
+    sent_count INT DEFAULT 0,
+    failed_count INT DEFAULT 0,
+    sent_by VARCHAR(100) DEFAULT '',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+
 $error = '';
 $results = null; // ['sent' => int, 'failed' => int, 'failedEmails' => []]
 
@@ -67,8 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sent = 0;
         $failures = []; // email => error message
         // $body is the rich-text editor's HTML output (paragraphs, bold, links,
-        // uploaded images with absolute URLs) — sent through as-is.
-        $htmlBody = $body;
+        // uploaded images with absolute URLs); wrap it in the branded template
+        // (logo header + footer) before sending and saving to history, so the
+        // history preview shows exactly what recipients received.
+        $htmlBody = build_newsletter_email_html($subject, $body);
 
         while ($row = $res->fetch_assoc()) {
             $result = send_newsletter_broadcast($row['email'], $subject, $htmlBody);
@@ -84,12 +152,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'failed'   => count($failures),
             'failures' => $failures,
         ];
+
+        $stmt = $conn->prepare("INSERT INTO newsletter_sends (subject, body, recipient_count, sent_count, failed_count, sent_by) VALUES (?, ?, ?, ?, ?, ?)");
+        $recipientCount = count($ids);
+        $sentBy = $_SESSION['admin_username'] ?? '';
+        $stmt->bind_param('ssiiis', $subject, $htmlBody, $recipientCount, $sent, $results['failed'], $sentBy);
+        $stmt->execute();
+        $stmt->close();
     }
 }
 
 $subscribers = [];
 $res = $conn->query("SELECT id, email, name, company, created_at FROM subscribers WHERE source = 'newsletter' ORDER BY created_at DESC");
 while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
+
+$historyCount = 0;
+$res = $conn->query("SELECT COUNT(*) AS c FROM newsletter_sends");
+if ($res) { $historyCount = (int)$res->fetch_assoc()['c']; }
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -153,49 +232,98 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
     .topbar__right a:hover { background: rgba(255,255,255,0.28); }
 
-    .wrap { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 3.5rem; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 2.25rem 1.5rem 3.5rem; }
 
-    .page-head { margin-bottom: 1.5rem; }
-    .page-head h1 {
-      font-size: 1.5rem;
-      font-weight: 900;
-      margin: 0 0 0.3rem;
+    .page-head {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+    .page-head__icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #12499e, #1a5fd4);
+      box-shadow: 0 6px 16px rgba(18,73,158,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .page-head__text { flex: 1; min-width: 200px; }
+    .page-head h1 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin: 0 0 0.25rem;
+      color: #0d2a63;
     }
     .page-head p {
       font-size: 0.85rem;
       color: #6b7280;
       margin: 0;
     }
+    .page-head__stats {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .stat-chip {
+      background: #fff;
+      border: 1px solid #eef1f7;
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      min-width: 76px;
+      box-shadow: 0 2px 8px rgba(18,73,158,0.05);
+    }
+    .stat-chip strong {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 900;
+      color: #12499e;
+      line-height: 1.2;
+    }
+    .stat-chip span {
+      font-size: 0.68rem;
+      color: #9ca3af;
+      font-weight: 700;
+    }
 
-    .alert-success {
-      background: #eafaf1;
-      border: 1px solid #b7ebc6;
-      color: #1e7e34;
-      padding: 0.85rem 1rem;
-      border-radius: 8px;
+    .alert-success,
+    .alert-error {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      padding: 0.9rem 1.1rem;
+      border-radius: 10px;
       font-size: 0.88rem;
       margin-bottom: 1.25rem;
       line-height: 1.7;
+      border-left: 4px solid;
+    }
+
+    .alert-success {
+      background: #eafaf1;
+      border-color: #22a55a;
+      color: #1e7e34;
     }
 
     .alert-error {
       background: #fdecea;
-      border: 1px solid #f5c6cb;
+      border-color: #e5484d;
       color: #b42318;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      margin-bottom: 1.25rem;
     }
+
+    .alert-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.4; }
 
     .card {
       background: #fff;
       border: 1px solid #eef1f7;
-      border-radius: 14px;
-      box-shadow: 0 2px 10px rgba(18,73,158,0.05);
+      border-radius: 16px;
+      box-shadow: 0 2px 12px rgba(18,73,158,0.06);
       padding: 1.75rem;
       margin-bottom: 1.5rem;
     }
@@ -203,18 +331,22 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     .card__title {
       font-size: 1rem;
       font-weight: 900;
-      margin: 0 0 1.1rem;
+      margin: 0 0 1.25rem;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.65rem;
       color: #0d2a63;
     }
 
-    .card__title .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #12499e;
+    .card__icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 9px;
+      background: #eef3fc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
       flex-shrink: 0;
     }
 
@@ -280,16 +412,17 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.9rem;
       flex-wrap: wrap;
       gap: 0.5rem;
     }
 
     .recipients-count { font-size: 0.82rem; color: #6b7280; }
+    .recipients-count strong { color: #12499e; font-weight: 900; }
 
     .recipients-list {
       border: 1px solid #eef1f7;
-      border-radius: 10px;
+      border-radius: 12px;
       max-height: 320px;
       overflow-y: auto;
     }
@@ -298,31 +431,36 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       display: flex;
       align-items: center;
       gap: 0.75rem;
-      padding: 0.65rem 1rem;
+      padding: 0.7rem 1rem;
       border-bottom: 1px solid #f2f4f8;
+      border-left: 3px solid transparent;
       font-size: 0.85rem;
       cursor: pointer;
-      transition: background 0.15s;
+      transition: background 0.15s, border-color 0.15s;
     }
 
     .recipient-row:last-child { border-bottom: none; }
     .recipient-row:hover { background: #f8faff; }
+    .recipient-row:has(.recipientCheck:checked) {
+      background: #eef5ff;
+      border-left-color: #12499e;
+    }
 
     .recipientCheck {
-      width: 17px;
-      height: 17px;
+      width: 18px;
+      height: 18px;
       accent-color: #12499e;
       cursor: pointer;
       flex-shrink: 0;
     }
 
     .recipient-avatar {
-      width: 30px;
-      height: 30px;
+      width: 32px;
+      height: 32px;
       border-radius: 50%;
       background: linear-gradient(135deg, #12499e, #1a5fd4);
       color: #fff;
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       font-weight: 700;
       display: flex;
       align-items: center;
@@ -334,13 +472,19 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     .recipient-email { font-weight: 700; color: #1a1a2e; }
     .recipient-name { color: #9ca3af; font-size: 0.78rem; }
 
-    .empty-row { text-align: center; color: #9ca3af; padding: 2rem 1rem; }
+    .empty-row {
+      text-align: center;
+      color: #9ca3af;
+      padding: 2.5rem 1rem;
+      font-size: 0.85rem;
+    }
+    .empty-row__icon { font-size: 1.6rem; display: block; margin-bottom: 0.5rem; opacity: 0.6; }
 
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      padding: 0.65rem 1.4rem;
+      padding: 0.7rem 1.5rem;
       border-radius: 999px;
       font-size: 0.88rem;
       font-weight: 700;
@@ -348,7 +492,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       border: none;
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s, background 0.15s;
     }
 
     .btn:hover { opacity: 0.92; }
@@ -358,17 +502,18 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       box-shadow: 0 4px 14px rgba(18,73,158,0.3);
     }
     .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(18,73,158,0.38); }
-    .btn-default { background: #eef1f7; color: #1a1a2e; border-radius: 8px; }
-    .btn-sm { padding: 0.35rem 0.8rem; font-size: 0.78rem; }
+    .btn-default { background: #eef1f7; color: #1a1a2e; border-radius: 999px; }
+    .btn-default:hover { background: #e3e9f5; }
+    .btn-sm { padding: 0.4rem 0.95rem; font-size: 0.78rem; }
 
     .form-actions {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      margin-top: 1.75rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid #eef1f7;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1rem;
     }
+
   </style>
 </head>
 <body>
@@ -380,6 +525,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
     </div>
     <div class="topbar__right">
       <a href="dashboard.php">ダッシュボードへ戻る</a>
+      <a href="newsletter-history.php">送信履歴</a>
       <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
       <a href="logout.php">ログアウト</a>
     </div>
@@ -387,30 +533,40 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
   <div class="wrap">
     <div class="page-head">
-      <h1>📨 ニュースレター送信</h1>
-      <p>メルマガ登録者へ、自由な内容のお知らせメールを作成して送信します。</p>
+      <div class="page-head__icon">📨</div>
+      <div class="page-head__text">
+        <h1>ニュースレター送信</h1>
+        <p>メルマガ登録者へ、自由な内容のお知らせメールを作成して送信します。</p>
+      </div>
+      <div class="page-head__stats">
+        <div class="stat-chip"><strong><?= count($subscribers) ?></strong><span>登録者</span></div>
+        <a href="newsletter-history.php" class="stat-chip" style="text-decoration:none;"><strong><?= $historyCount ?></strong><span>送信履歴</span></a>
+      </div>
     </div>
 
     <?php if ($results !== null): ?>
       <div class="<?= $results['failed'] > 0 ? 'alert-error' : 'alert-success' ?>">
-        送信完了：<?= (int)$results['sent'] ?>件成功<?php if ($results['failed'] > 0): ?>、<?= (int)$results['failed'] ?>件失敗<?php endif; ?>
-        <?php if (!empty($results['failures'])): ?>
-          <ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
-            <?php foreach ($results['failures'] as $failEmail => $reason): ?>
-              <li><?= htmlspecialchars($failEmail) ?>：<?= htmlspecialchars($reason) ?></li>
-            <?php endforeach; ?>
-          </ul>
-        <?php endif; ?>
+        <span class="alert-icon"><?= $results['failed'] > 0 ? '⚠️' : '✅' ?></span>
+        <div>
+          送信完了：<?= (int)$results['sent'] ?>件成功<?php if ($results['failed'] > 0): ?>、<?= (int)$results['failed'] ?>件失敗<?php endif; ?>
+          <?php if (!empty($results['failures'])): ?>
+            <ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
+              <?php foreach ($results['failures'] as $failEmail => $reason): ?>
+                <li><?= htmlspecialchars($failEmail) ?>：<?= htmlspecialchars($reason) ?></li>
+              <?php endforeach; ?>
+            </ul>
+          <?php endif; ?>
+        </div>
       </div>
     <?php endif; ?>
 
     <?php if ($error !== ''): ?>
-      <div class="alert-error"><?= htmlspecialchars($error) ?></div>
+      <div class="alert-error"><span class="alert-icon">⚠️</span><div><?= htmlspecialchars($error) ?></div></div>
     <?php endif; ?>
 
     <form method="POST" id="newsletterForm">
       <div class="card">
-        <p class="card__title"><span class="dot"></span>メール内容</p>
+        <p class="card__title"><span class="card__icon">📝</span>メール内容</p>
         <div class="field">
           <label for="subject">件名</label>
           <input type="text" id="subject" name="subject" required value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" />
@@ -425,7 +581,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
 
       <div class="card">
         <div class="recipients-head">
-          <p class="card__title" style="margin:0;"><span class="dot"></span>送信先（メルマガ登録者）</p>
+          <p class="card__title" style="margin:0;"><span class="card__icon">👥</span>送信先（メルマガ登録者）</p>
           <div style="display:flex; align-items:center; gap:0.75rem;">
             <span class="recipients-count"><?= count($subscribers) ?>件登録</span>
             <button type="button" class="btn btn-default btn-sm" id="toggleAll">全選択/解除</button>
@@ -433,7 +589,7 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
         </div>
         <div class="recipients-list">
           <?php if (empty($subscribers)): ?>
-            <div class="empty-row">メルマガ登録者が見つかりません。</div>
+            <div class="empty-row"><span class="empty-row__icon">📭</span>メルマガ登録者が見つかりません。</div>
           <?php else: foreach ($subscribers as $s):
             $initial = mb_substr($s['name'] !== '' ? $s['name'] : $s['email'], 0, 1, 'UTF-8');
           ?>
@@ -450,8 +606,8 @@ while ($row = $res->fetch_assoc()) { $subscribers[] = $row; }
       </div>
 
       <div class="form-actions">
-        <span class="recipients-count"><span id="selectedCount">0</span>件に送信します</span>
-        <button type="submit" class="btn btn-primary" onclick="return confirm('選択した送信先へメールを送信しますか？');">送信する</button>
+        <span class="recipients-count"><strong id="selectedCount">0</strong>件に送信します</span>
+        <button type="submit" class="btn btn-primary" onclick="return confirm('選択した送信先へメールを送信しますか？');">📤 送信する</button>
       </div>
     </form>
   </div>

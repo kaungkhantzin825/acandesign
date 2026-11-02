@@ -280,6 +280,7 @@ $stats = $conn->query("SELECT COUNT(*) as total,
     <div class="topbar__right">
       <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
       <a href="send-newsletter.php">ニュースレター送信</a>
+      <a href="newsletter-history.php">送信履歴</a>
       <a href="change-password.php">パスワード変更</a>
       <a href="logout.php">ログアウト</a>
     </div>

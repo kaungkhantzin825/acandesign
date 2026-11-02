@@ -1138,11 +1138,43 @@
 <div class="dl-card">
           <img src="assets/img/width_800mm6.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
-            <p class="dl-card__title">TOP：AI・人・BPO・KPO仕事はど<br>こに置くべきか</p>
+            <p class="dl-card__title">AI・人・BPO・KPO仕事はど<br>こに置くべきか</p>
             <p class="dl-card__desc">仕事を分解し、最適な場所へ配置する。こ<br>れがAI時代の業務設計。</p>
             <p class="dl-card__meta">PDF/853KB</p>
           </div>
           <a href="assets/pdf/TOP：AI・人・BPO・KPO仕事はどこに置くべきか.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800mm11.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AI導入の完成形は自動化ではな<br>く、学習する業務</p>
+            <p class="dl-card__desc">使えば使うほど仕事が良くなり、人が成長<br>し、会社が賢くなる。</p>
+            <p class="dl-card__meta">PDF/885KB</p>
+          </div>
+          <a href="assets/pdf/AI導入の完成形は自動化ではなく学習する業務.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800222.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AIを現場へ定着させる仕組み</p>
+            <p class="dl-card__desc">導入で終わらせず、使い続け、改善し続ける</p><br>
+            <p class="dl-card__meta">PDF/744KB</p>
+          </div>
+          <a href="assets/pdf/AIを現場に定着させる仕組み.pdf" target="_blank" rel="noopener" class="dl-card__btn">
             ダウンロード
             <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
           </a>

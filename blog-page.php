@@ -1866,6 +1866,66 @@
           </li>
 
 
+
+
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="beyond-trouble" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_888800.png" alt="トラブルを乗り越えたその先にあるもの" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-11-01">2026/11/1</time>
+                </div>
+                <h3 class="blog-card__title">トラブルを乗り越えたその先にあるもの
+                  <br>
+              <p style="font-size: 8px;">頑張ってくれる仲間にいつまでも甘えてはいけない
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#AI活用</span>
+                  <span class="blog-card__tag">#Webサイト保守</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
+         <li class="blog-card" data-cat="sunday-column">
+            <a href="trust-in-difficulty" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_999900.png" alt="信頼は順調な時ではなく困難な時に生まれる" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-11-01">2026/11/1</time>
+                </div>
+                <h3 class="blog-card__title">信頼は順調な時ではなく困難な時に生まれる
+                  <br>
+              <p style="font-size: 8px;">お客様の信頼が業務拡大につながった
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#信頼関係</span>
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#オフショア開発</span>
+                  <span class="blog-card__tag">#Webサイト保守</span>
+                  <span class="blog-card__tag">#チームワーク</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#A CAN SOLUTIONS</span>
+                </div>
+              </div>
+            </a>
+        </li>
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
