@@ -1182,6 +1182,25 @@
 
 
 
+
+
+<div class="dl-card">
+          <img src="assets/img/width_800mm4.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">AIが定着した会社は次に人の役割を変<br>える</p>
+            <p class="dl-card__desc">作業する人から、判断し、改善する人へ。</p><br>
+            <p class="dl-card__meta">PDF/738KB</p>
+          </div>
+          <a href="assets/pdf/AIが定着した会社は次に人の役割を変える.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
+
+
+
+
+
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
         <div class="dl-scrollbar__thumb" id="dl-thumb"></div>
