@@ -1204,7 +1204,7 @@
 <div class="dl-card" >
           <img src="assets/img/width_800mm10.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
-            <p class="dl-card__title">TOP：AI時代に価値が上がるのは良し<br>悪しを判断できる人</p>
+            <p class="dl-card__title">AI時代に価値が上がるのは良し<br>悪しを判断できる人</p>
             <p class="dl-card__desc" style="margin: 0 0 -2.6rem;">答えを出すだけでなく、AIの結果を評価し、理由<br>を説明できる人へ</p><br>
             <p class="dl-card__meta">PDF/796KB</p>
           </div>
