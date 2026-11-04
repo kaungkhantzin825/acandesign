@@ -1188,7 +1188,9 @@
           <img src="assets/img/width_800mm4.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
           <div class="dl-card__info">
             <p class="dl-card__title">AIが定着した会社は次に人の役割を変<br>える</p>
-            <p class="dl-card__desc">作業する人から、判断し、改善する人へ。</p><br>
+            <p class="dl-card__desc" style="
+    margin: 0 0 -1.6rem;
+">作業する人から、判断し、改善する人へ。</p><br>
             <p class="dl-card__meta">PDF/738KB</p>
           </div>
           <a href="assets/pdf/AIが定着した会社は次に人の役割を変える.pdf" target="_blank" rel="noopener" class="dl-card__btn">
@@ -1199,6 +1201,18 @@
 
 
 
+<div class="dl-card" >
+          <img src="assets/img/width_800mm10.png" alt="AIで本当に変えるべきなのは、ツールではなく仕事の仕組み" class="dl-card__thumb" loading="lazy" decoding="async" width="800" height="450" />
+          <div class="dl-card__info">
+            <p class="dl-card__title">TOP：AI時代に価値が上がるのは良し<br>悪しを判断できる人</p>
+            <p class="dl-card__desc" style="margin: 0 0 -2.6rem;">答えを出すだけでなく、AIの結果を評価し、理由<br>を説明できる人へ</p><br>
+            <p class="dl-card__meta">PDF/796KB</p>
+          </div>
+          <a href="assets/pdf/AI時代に価値が上がるのは良し悪しを判断できる人.pdf" target="_blank" rel="noopener" class="dl-card__btn">
+            ダウンロード
+            <img src="assets/img/9c87db64-c705-4723-bef3-d3877fa28138.webp" alt="" style="width: 16px; height: 16px;" loading="lazy" decoding="async" width="800" height="800" />
+          </a>
+</div>
 
 
       </div>
