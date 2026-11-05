@@ -774,7 +774,7 @@
           </tr>
           <tr>
             <th>代表社員</th>
-            <td>門 正仁<br>中村 政栄<br>KYAWT KAY KHINE</td>
+            <td>門 正仁<br>中村 政英<br>KYAWT KAY KHINE</td>
           </tr>
           <tr>
             <th>設立</th>
@@ -1076,8 +1076,8 @@
 </div><!-- /prof-bottom-row -->
 
 <div class="prof-dl-banner">
-  <p class="prof-dl-banner__text">会社案内はこちら→</p>
-  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">ダウンロード</a>
+  <p class="prof-dl-banner__text">A CAN SOLUTIONSを詳しく知る →</p>
+  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">会社案内ダウンロード</a>
 </div>
 
 <?php include 'footer.php'; ?>

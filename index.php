@@ -6828,6 +6828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <!-- <p class="dsg-bc">
                             <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
                         </p> -->
+                             <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;"> &nbsp;&nbsp;＞</span> <a href="/#services" style="color: #000;">サービス</a> <span style="color: #000;"> &nbsp;&nbsp;＞</span> <span style="font-weight: bolder;">Design</span></p>
 
                         <div class="dsg-hero__content">
                             <p class="dsg-hero__eyebrow">Design</p>
