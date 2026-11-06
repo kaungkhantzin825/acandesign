@@ -22,21 +22,32 @@ if (RECAPTCHA_SECRET_KEY !== 'your-secret-key-here') {
     $recaptchaToken = $_POST['g-recaptcha-response'] ?? '';
     $verified = false;
     if ($recaptchaToken !== '') {
-        $verifyContext = stream_context_create([
-            'http' => [
-                'method'  => 'POST',
-                'header'  => 'Content-Type: application/x-www-form-urlencoded',
-                'content' => http_build_query([
-                    'secret'   => RECAPTCHA_SECRET_KEY,
-                    'response' => $recaptchaToken,
-                    'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
-                ]),
-                'timeout' => 10,
-            ],
+        // cURL (not file_get_contents) — its connect/total timeouts are
+        // actually enforced. file_get_contents' stream-context 'timeout'
+        // option does not reliably bound the connection phase on every host,
+        // so if outbound HTTPS to Google is blocked or slow here, that call
+        // can hang well past 10s and tie up a PHP worker, which in turn can
+        // make the whole site stop responding to new requests.
+        $ch = curl_init('https://www.google.com/recaptcha/api/siteverify');
+        curl_setopt_array($ch, [
+            CURLOPT_POST           => true,
+            CURLOPT_POSTFIELDS     => http_build_query([
+                'secret'   => RECAPTCHA_SECRET_KEY,
+                'response' => $recaptchaToken,
+                'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+            ]),
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_CONNECTTIMEOUT => 5,
+            CURLOPT_TIMEOUT        => 8,
         ]);
-        $verifyResult = @file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, $verifyContext);
-        $verifyData   = $verifyResult ? json_decode($verifyResult, true) : null;
-        $verified     = !empty($verifyData['success']);
+        $verifyResult = curl_exec($ch);
+        if (curl_errno($ch) !== 0) {
+            error_log('confirm.php: reCAPTCHA verify request failed — ' . curl_error($ch));
+        }
+        curl_close($ch);
+
+        $verifyData = $verifyResult ? json_decode($verifyResult, true) : null;
+        $verified   = !empty($verifyData['success']);
     }
     if (!$verified) {
         header('Location: contactus?error=captcha');
