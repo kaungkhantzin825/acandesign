@@ -29,3 +29,22 @@
 </footer>
 
 <?php include_once __DIR__ . '/chat-widget.php'; ?>
+
+<script>
+  // GA4 click tracking for every tel:/mailto: link sitewide. Delegated on
+  // document (capture phase) so it works for links added after load (mobile
+  // drawer, dynamically-rendered cards) without touching each page's markup.
+  // No-ops quietly when gtag isn't loaded (localhost, or GA4 ID unset).
+  document.addEventListener('click', function (e) {
+    if (typeof window.gtag !== 'function') return;
+    var a = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a) return;
+    var href = a.getAttribute('href');
+    var isTel = href.indexOf('tel:') === 0;
+    window.gtag('event', isTel ? 'click_to_call' : 'click_to_email', {
+      link_url: href,
+      page_path: window.location.pathname
+    });
+  }, true);
+</script>
+
