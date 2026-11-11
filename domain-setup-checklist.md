@@ -27,7 +27,7 @@ Source plan: `boss-note.md` · Created 2026-10-13
 | Myanmar business support | https://acan-sol.com/services/myanmar-support |
 | AI overview | https://acan-sol.com/ai-page |
 | Myanmar outsourcing | https://acan-sol.com/myanmar-outsourcing |
-| Contact form | https://acan-sol.com/contectus |
+| Contact form | https://acan-sol.com/contactus |
 
 > Pages are served **without `.php`**; the `.php` URLs 301 to these. Use the clean form in all new links.
 
@@ -112,7 +112,7 @@ Every rule stays in one file you already version-control, and host-keying preven
 - Minimum launch: one landing page with the positioning from the note:
   > ミヤンマーBPOなら A CAN SOLUTIONS — 日本品質 × ミヤンマー人材 × AI
 - Do **not** reuse `menu.php` as-is — its nav links are absolute to `acan-sol.com`. Build a slim header for this site.
-- Contact CTA can point to `https://acan-sol.com/contectus.php` initially (track it cross-domain, §7).
+- Contact CTA can point to `https://acan-sol.com/contactus.php` initially (track it cross-domain, §7).
 - Pick one canonical host (apex vs `www`) and 301 the other.
 - Add SSL + force HTTPS.
 - Only after it has real content, submit to Search Console.

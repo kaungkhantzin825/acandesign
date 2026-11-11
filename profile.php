@@ -774,7 +774,7 @@
           </tr>
           <tr>
             <th>代表社員</th>
-            <td>門 正仁<br>中村 政栄<br>KYAWT KAY KHINE</td>
+            <td>門 正仁<br>中村 政英<br>KYAWT KAY KHINE</td>
           </tr>
           <tr>
             <th>設立</th>
@@ -1046,7 +1046,7 @@
       <p class="prof-cta-banner__text">ミャンマー・日本のリソースを<br>最適に組み合わせ、<br>業務改革を支援します。</p>
       <div class="prof-cta-banner__btns">
         <a href="download" class="prof-cta-banner__btn prof-cta-banner__btn--dl">資料ダウンロード</a>
-        <a href="contectus" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a href="contactus" class="prof-cta-banner__btn prof-cta-banner__btn--contact">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;お問い合わせ&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </div>
     </div>
   </div>
@@ -1076,8 +1076,8 @@
 </div><!-- /prof-bottom-row -->
 
 <div class="prof-dl-banner">
-  <p class="prof-dl-banner__text">会社案内はこちら→</p>
-  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">ダウンロード</a>
+  <p class="prof-dl-banner__text">A CAN SOLUTIONSを詳しく知る →</p>
+  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">会社案内ダウンロード</a>
 </div>
 
 <?php include 'footer.php'; ?>

@@ -59,6 +59,12 @@ if ($method !== 'POST') {
         header('Location: /services/' . $m[1] . $query, true, 301);
         return true;
     }
+
+    // Old "contectus" typo'd URL -> /contactus
+    if (preg_match('#^/contectus(\.php)?/?$#', $path)) {
+        header('Location: /contactus' . $query, true, 301);
+        return true;
+    }
 }
 
 // (2) /page.php -> /page   (POST is left alone, matching the Apache rules)

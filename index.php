@@ -5511,7 +5511,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </svg>
           </div>
           <div class="svc-cta__actions">
-            <a href="contectus" class="svc-cta__btn svc-cta__btn--primary">
+            <a href="contactus" class="svc-cta__btn svc-cta__btn--primary">
               <span>お問い合わせ</span>
               <span class="svc-cta__btn-icon">
                 <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
@@ -6797,7 +6797,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             color: #fff;
             font-weight: 700;
             font-size: 0.95rem;
-            text-decoration: none;
+            text-decoration: underline;
             border-radius: 999px;
             white-space: nowrap;
             transition: background var(--transition, 0.2s);
@@ -6828,6 +6828,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <!-- <p class="dsg-bc">
                             <a href="/">HOME</a> ＞ <a href="/#services">サービス</a> ＞ <span>Design（デザインチーム）</span>
                         </p> -->
+                             <p class="dev-bc"><a href="/" style="color: #000;">HOME</a> <span style="color: #000;"> &nbsp;&nbsp;＞</span> <a href="/#services" style="color: #000;">サービス</a> <span style="color: #000;"> &nbsp;&nbsp;＞</span> <span style="font-weight: bolder;">Design</span></p>
 
                         <div class="dsg-hero__content">
                             <p class="dsg-hero__eyebrow">Design</p>
@@ -7817,9 +7818,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </div>
+
+                <div class="dsg-dl-banner" style="background-color: #f5f9ff;">
+                    <p class="dsg-dl-banner__text">ミャンマーKPOチームの資料はこちら→</p>
+                    <a href="assets/pdf/KPOチーム営業資料.pdf" class="dsg-dl-banner__btn" >ダウンロード</a>
+                </div>
+          
+
         </section>
 
-    </div><!-- /kpo-page -->
+    </div>
+    
+    <!-- /kpo-page -->
     
     <!-- /bpo-page -->
     <!-- CTA Section -->
@@ -8031,7 +8041,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
 
                 <div class="cs-btns">
-                    <a class="cs-btn cs-btn--primary" href="contectus">
+                    <a class="cs-btn cs-btn--primary" href="contactus">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-mail.webp" alt="" loading="lazy" decoding="async" width="72" height="64" />
                         お問い合わせ
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.webp" alt="" loading="lazy" decoding="async" width="72" height="34" />

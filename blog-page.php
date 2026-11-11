@@ -1783,7 +1783,7 @@
                   <time class="blog-card__date" datetime="2026-10-18">2026/10/18</time>
                 </div>
                 <h3 class="blog-card__title">距離ができたから、チームが近くなった
-<br>
+                  <br>
               <p style="font-size: 8px;">日本中心の営業に切り替えて半年、ミャンマーチームの成長に感じたこと
                 </p></h3>
                 <div class="blog-card__category">日曜コラム</div>
@@ -1801,6 +1801,204 @@
               </div>
             </a>
           </li>
+
+
+
+
+
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="organization-power" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_1600blog.png" alt="トラブルのときに見える、組織の本当の力" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-25">2026/10/25</time>
+                </div>
+                <h3 class="blog-card__title">トラブルのときに見える、組織の本当の力</h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#組織の力</span>
+                  <span class="blog-card__tag">#チームワーク</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#オフショア開発</span>
+                  <span class="blog-card__tag">#リスク管理</span>
+                  <span class="blog-card__tag">#信頼関係</span>
+                  <span class="blog-card__tag">#A CAN SOLUTIONS</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
+          <li class="blog-card" data-cat="ai-bpo">
+            <a href="automation-rate" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_1600ai.png" alt="AI×BPOで自動化率はどこまで上げられる？" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-10-25">2026/10/25</time>
+                </div>
+                <h3 class="blog-card__title">AI×BPOで自動化率はどこまで上げられる？<br />完全自動化より「例外処理設計」が重要な理由</h3>
+                <div class="blog-card__category">AI × BPO/KPO</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#AI×BPO</span>
+                  <span class="blog-card__tag">#業務自動化</span>
+                  <span class="blog-card__tag">#生成AI</span>
+                  <span class="blog-card__tag">#AI-OCR</span>
+                  <span class="blog-card__tag">#例外処理</span>
+                  <span class="blog-card__tag">#KPO</span>
+                  <span class="blog-card__tag">#BPO</span>
+                  <span class="blog-card__tag">#Human in the Loop</span>
+                  <span class="blog-card__tag">#AI品質評価</span>
+                  <span class="blog-card__tag">#業務設計</span>
+                  <span class="blog-card__tag">#DX</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
+          <li class="blog-card" data-cat="sunday-column">
+            <a href="beyond-trouble" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_888800.png" alt="トラブルを乗り越えたその先にあるもの" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-11-01">2026/11/1</time>
+                </div>
+                <h3 class="blog-card__title">トラブルを乗り越えたその先にあるもの
+                  <br>
+              <p style="font-size: 8px;">頑張ってくれる仲間にいつまでも甘えてはいけない
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags">
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#AI活用</span>
+                  <span class="blog-card__tag">#Webサイト保守</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+
+
+         <li class="blog-card" data-cat="sunday-column">
+            <a href="trust-in-difficulty" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_999900.png" alt="信頼は順調な時ではなく困難な時に生まれる" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026-11-01">2026/11/1</time>
+                </div>
+                <h3 class="blog-card__title">信頼は順調な時ではなく困難な時に生まれる
+                  <br>
+              <p style="font-size: 8px;">お客様の信頼が業務拡大につながった
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">#経営者の視点</span>
+                  <span class="blog-card__tag">#信頼関係</span>
+                  <span class="blog-card__tag">#組織づくり</span>
+                  <span class="blog-card__tag">#ミャンマーBPO</span>
+                  <span class="blog-card__tag">#オフショア開発</span>
+                  <span class="blog-card__tag">#Webサイト保守</span>
+                  <span class="blog-card__tag">#チームワーク</span>
+                  <span class="blog-card__tag">#人材育成</span>
+                  <span class="blog-card__tag">#A CAN SOLUTIONS</span>
+                </div>
+              </div>
+            </a>
+        </li>
+
+
+
+
+
+           <li class="blog-card" data-cat="sunday-column">
+            <a href="delegating_and_letting" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_800_03.png" alt="任せることと、手放すことは違う" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026/11/8">2026/11/8</time>
+                </div>
+                <h3 class="blog-card__title">任せることと、手放すことは違う
+                  <br>
+              <p style="font-size: 8px;">ミャンマーの仲間とAIが教えてくれた、経営者の新しい役割
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">＃経営者の視点</span>
+                  <span class="blog-card__tag">＃組織づくり</span>
+                  <span class="blog-card__tag">＃ミャンマー人材</span>
+                  <span class="blog-card__tag">＃AI活用</span>
+                   <span class="blog-card__tag">＃KPO・BPO</span>
+                   
+                </div>
+              </div>
+            </a>
+        </li>
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+         <li class="blog-card" data-cat="sunday-column">
+            <a href="ai_expands_employee" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_800_044.png" alt="任せることと、手放すことは違う" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026/11/8">2026/11/8</time>
+                </div>
+                <h3 class="blog-card__title">AIが広げる、社員の可能性と会社の未来
+                
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">＃AIエージェント</span>
+                  <span class="blog-card__tag">＃人材育成</span>
+                  <span class="blog-card__tag">＃組織づくり</span>
+                  <span class="blog-card__tag">＃AI活用</span>
+                  <span class="blog-card__tag">＃ミャンマーBPO</span>
+                  <span class="blog-card__tag">＃BPOからKPOへ</span>
+                  <span class="blog-card__tag">＃オフショア開発</span>
+                  <span class="blog-card__tag">＃経営者の視点</span>
+                  <span class="blog-card__tag">＃社員の成長</span>
+                   <span class="blog-card__tag">＃ACANSOLUTIONS</span>
+                   
+                </div>
+              </div>
+            </a>
+        </li>
+        
+
 
 
 

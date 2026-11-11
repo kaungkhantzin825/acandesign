@@ -1107,7 +1107,7 @@
                 </div>
 
                 <div class="cs-btns">
-                    <a class="cs-btn cs-btn--primary" href="contectus">
+                    <a class="cs-btn cs-btn--primary" href="contactus">
                         <img class="cs-btn__ic" src="assets/img/cs-btn-mail.webp" alt="" loading="lazy" decoding="async" width="72" height="64" />
                         お問い合わせ
                         <img class="cs-btn__arrow" src="assets/img/cs-btn-arrow-white.webp" alt="" loading="lazy" decoding="async" width="72" height="34" />
