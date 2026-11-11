@@ -7127,7 +7127,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="dsg-dl-banner">
                     <p class="dsg-dl-banner__text">ミャンマーデザインチームの資料はこちら→</p>
-                    <a href="assets/pdf/デザインチーム営業資料.pdf" class="dsg-dl-banner__btn">ダウンロード</a>
+                    <a href="assets/pdf/デザインチーム営業資料.pdf" target="_blank" rel="noopener" class="dsg-dl-banner__btn">ダウンロード</a>
                 </div>
             </div>
 
@@ -7553,7 +7553,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <div class="dsg-dl-banner" style="background-color: white;">
                     <p class="dsg-dl-banner__text">ミャンマーBPOチームの資料はこちら→</p>
-                    <a href="assets/pdf/BPOチーム営業資料.pdf" class="dsg-dl-banner__btn">ダウンロード</a>
+                    <a href="assets/pdf/BPOチーム営業資料.pdf" target="_blank" rel="noopener" class="dsg-dl-banner__btn">ダウンロード</a>
                 </div>
             </div>
             
@@ -7821,7 +7821,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="dsg-dl-banner" style="background-color: #f5f9ff;">
                     <p class="dsg-dl-banner__text">ミャンマーKPOチームの資料はこちら→</p>
-                    <a href="assets/pdf/KPOチーム営業資料.pdf" class="dsg-dl-banner__btn" >ダウンロード</a>
+                    <a href="assets/pdf/KPOチーム営業資料.pdf" target="_blank" rel="noopener" class="dsg-dl-banner__btn">ダウンロード</a>
                 </div>
           
 

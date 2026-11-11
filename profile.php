@@ -1077,7 +1077,7 @@
 
 <div class="prof-dl-banner">
   <p class="prof-dl-banner__text">A CAN SOLUTIONSを詳しく知る →</p>
-  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" class="prof-dl-banner__btn">会社案内ダウンロード</a>
+  <a href="assets/pdf/A CAN SOLUTIONS会社案内 261020.pdf" target="_blank" rel="noopener" class="prof-dl-banner__btn">会社案内ダウンロード</a>
 </div>
 
 <?php include 'footer.php'; ?>
