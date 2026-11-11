@@ -77,6 +77,30 @@ Options -Indexes
 AddDefaultCharset UTF-8
 
 # ---------------------------------------------------------------------------
+# Maintenance mode — メンテナンスモード
+#
+# To turn ON: remove the leading "# " from the lines between the markers.
+# To turn OFF: put the "# " back (or delete the block).
+#
+# Every request gets HTTP 503 + maintenance.html. 503 (not a redirect) tells
+# Google the outage is temporary, so rankings are not affected. Replace
+# 203\.0\.113\.10 with your office IP (https://whatismyipaddress.com) so you
+# can still see the real site while everyone else sees the maintenance page.
+# ---------------------------------------------------------------------------
+# --- MAINTENANCE START ---
+# ErrorDocument 503 /maintenance.html
+# <IfModule mod_headers.c>
+#     Header always set Retry-After "3600"
+# </IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{REMOTE_ADDR} !^203\.0\.113\.10$
+#     RewriteCond %{REQUEST_URI} !^/maintenance\.html$
+#     RewriteRule ^ - [R=503,L]
+# </IfModule>
+# --- MAINTENANCE END ---
+
+# ---------------------------------------------------------------------------
 # Clean URLs — hide the .php extension
 # クリーンURL設定（URLから .php を除外）
 #
