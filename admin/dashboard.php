@@ -52,6 +52,18 @@ $stats = $conn->query("SELECT COUNT(*) as total,
     SUM(CASE WHEN source='contact' THEN 1 ELSE 0 END) as contact_count,
     SUM(CASE WHEN source='newsletter' THEN 1 ELSE 0 END) as newsletter_count,
     DATE(MAX(created_at)) as latest_date FROM subscribers")->fetch_assoc();
+
+$monthStats = $conn->query("SELECT
+    SUM(CASE WHEN DATE_FORMAT(created_at, '%Y-%m') = DATE_FORMAT(CURDATE(), '%Y-%m') THEN 1 ELSE 0 END) as this_month,
+    SUM(CASE WHEN DATE_FORMAT(created_at, '%Y-%m') = DATE_FORMAT(CURDATE() - INTERVAL 1 MONTH, '%Y-%m') THEN 1 ELSE 0 END) as last_month
+    FROM subscribers")->fetch_assoc();
+$thisMonthCount = (int)($monthStats['this_month'] ?? 0);
+$lastMonthCount = (int)($monthStats['last_month'] ?? 0);
+if ($lastMonthCount > 0) {
+    $monthDelta = round((($thisMonthCount - $lastMonthCount) / $lastMonthCount) * 100);
+} else {
+    $monthDelta = $thisMonthCount > 0 ? 100 : 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -279,6 +291,9 @@ $stats = $conn->query("SELECT COUNT(*) as total,
     </div>
     <div class="topbar__right">
       <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
+      <a href="contacts.php">お問い合わせ一覧</a>
+      <a href="newsletter-subscribers.php">メルマガ登録一覧</a>
+      <a href="analytics-report.php">クリック・DLレポート</a>
       <a href="send-newsletter.php">ニュースレター送信</a>
       <a href="newsletter-history.php">送信履歴</a>
       <a href="change-password.php">パスワード変更</a>
@@ -309,6 +324,15 @@ $stats = $conn->query("SELECT COUNT(*) as total,
       <div class="stat-card">
         <div class="stat-card__value" style="font-size:1.15rem;"><?= htmlspecialchars($stats['latest_date'] ?? '—') ?></div>
         <div class="stat-card__label">最新登録日</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card__value">
+          <?= $thisMonthCount ?>
+          <?php if ($monthDelta !== 0): ?>
+            <span style="font-size:0.8rem; font-weight:700; color: <?= $monthDelta > 0 ? '#1e7e34' : '#dc2626' ?>;"><?= $monthDelta > 0 ? '▲' : '▼' ?><?= abs($monthDelta) ?>%</span>
+          <?php endif; ?>
+        </div>
+        <div class="stat-card__label">今月の登録数（前月比）</div>
       </div>
     </div>
 

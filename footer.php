@@ -31,20 +31,67 @@
 <?php include_once __DIR__ . '/chat-widget.php'; ?>
 
 <script>
-  // GA4 click tracking for every tel:/mailto: link sitewide. Delegated on
-  // document (capture phase) so it works for links added after load (mobile
-  // drawer, dynamically-rendered cards) without touching each page's markup.
+  // Click/download tracking, delegated on document (capture phase) so it
+  // works for links added after load (mobile drawer, dynamically-rendered
+  // cards) without touching each page's markup. Every event is sent to GA4
+  // AND logged to our own DB (log-event.php) so the admin panel can show a
+  // GA-style click/download report without needing the real GA4 account.
   // No-ops quietly when gtag isn't loaded (localhost, or GA4 ID unset).
-  document.addEventListener('click', function (e) {
-    if (typeof window.gtag !== 'function') return;
-    var a = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
-    if (!a) return;
-    var href = a.getAttribute('href');
-    var isTel = href.indexOf('tel:') === 0;
-    window.gtag('event', isTel ? 'click_to_call' : 'click_to_email', {
-      link_url: href,
+  function acanLogEvent(eventName, linkUrl) {
+    var payload = JSON.stringify({
+      event_name: eventName,
+      link_url: linkUrl,
       page_path: window.location.pathname
     });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon('/log-event.php', new Blob([payload], { type: 'application/json' }));
+    } else {
+      fetch('/log-event.php', { method: 'POST', body: payload, keepalive: true }).catch(function () {});
+    }
+  }
+
+  document.addEventListener('click', function (e) {
+    if (typeof window.gtag !== 'function') return;
+
+    // Every tel:/mailto: link sitewide.
+    var contact = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (contact) {
+      var href = contact.getAttribute('href');
+      var isTel = href.indexOf('tel:') === 0;
+      var contactEvent = isTel ? 'click_phone_number' : 'click_email_info';
+      window.gtag('event', contactEvent, { link_url: href, page_path: window.location.pathname });
+      acanLogEvent(contactEvent, href);
+      return;
+    }
+
+    // Every Myanmar report/situation PDF link on myanmar-situation.php.
+    var report = e.target.closest('a.myanmar-list__link');
+    if (report) {
+      var reportHref = report.getAttribute('href');
+      window.gtag('event', 'download_myanmar_report', { link_url: reportHref, page_path: window.location.pathname });
+      acanLogEvent('download_myanmar_report', reportHref);
+      return;
+    }
+
+    // Every resource-library PDF download button on download.php.
+    var resource = e.target.closest('a.dl-card__btn');
+    if (resource) {
+      var resourceHref = resource.getAttribute('href');
+      window.gtag('event', 'file_download', { link_url: resourceHref, page_path: window.location.pathname });
+      acanLogEvent('file_download', resourceHref);
+      return;
+    }
+
+    // Any link opted in via data-ga-event="<event_name>" (e.g. document
+    // download buttons). Mark the event name as a GA4 key event once it
+    // has fired at least once.
+    var tracked = e.target.closest('a[data-ga-event]');
+    if (tracked) {
+      var trackedEvent = tracked.getAttribute('data-ga-event');
+      var trackedHref = tracked.getAttribute('href');
+      window.gtag('event', trackedEvent, { link_url: trackedHref, page_path: window.location.pathname });
+      acanLogEvent(trackedEvent, trackedHref);
+    }
   }, true);
 </script>
 

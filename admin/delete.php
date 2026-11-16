@@ -8,5 +8,12 @@ if ($id > 0) {
     $stmt->execute();
     $stmt->close();
 }
-header('Location: dashboard.php?msg=deleted');
+
+$allowedReturns = ['dashboard.php', 'contacts.php', 'newsletter-subscribers.php'];
+$return = $_GET['return'] ?? 'dashboard.php';
+if (!in_array($return, $allowedReturns, true)) {
+    $return = 'dashboard.php';
+}
+
+header('Location: ' . $return . '?msg=deleted');
 exit;

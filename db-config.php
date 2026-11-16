@@ -5,6 +5,6 @@
  */
 
 define('DB_HOST', 'localhost');
-define('DB_USER', 'zojtpszw_acanadmin');
-define('DB_PASS', 'zojtpszw_acanadmin');
+define('DB_USER', 'root');
+define('DB_PASS', '');
 define('DB_NAME', 'zojtpszw_acanadmin');

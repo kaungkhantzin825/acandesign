@@ -112,8 +112,8 @@ if ($hasMailer) {
   'noindex' => true,
 ]; include 'seo-head.php'; ?>
 <?php if ($sent): ?>
-<!-- GA4 conversion: mark "generate_lead" as a key event in GA4 > Admin > Events -->
-<script>if (window.gtag) gtag('event', 'generate_lead', { form_name: 'contact' });</script>
+<!-- GA4 conversion: "contact_submission" is marked as a key event in GA4 > Admin > Events -->
+<script>if (window.gtag) gtag('event', 'contact_submission', { form_name: 'contact' });</script>
 <?php endif; ?>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">

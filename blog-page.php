@@ -2003,6 +2003,42 @@
 
 
 
+
+           <li class="blog-card" data-cat="sunday-column">
+            <a href="ai_expands_punctuality" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_823432400.png" alt="任せることと、手放すことは違う" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026/11/8">2026/11/15</time>
+                </div>
+                <h3 class="blog-card__title">時間を守ることより、大切にしたかったこと
+                
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">＃組織づくり</span>
+                  <span class="blog-card__tag">＃働き方改革 </span>
+                 <span class="blog-card__tag"> ＃フレックスタイム制</span>
+                 <span class="blog-card__tag">＃ミャンマーBPO </span>
+                 <span class="blog-card__tag">＃自主性 </span>
+                 <span class="blog-card__tag">＃人材育成 </span>
+                 <span class="blog-card__tag"> ＃オフショア開発</span>
+                 <span class="blog-card__tag">＃経営者の視点 </span>
+                 <span class="blog-card__tag">＃チームマネジメント </span>
+
+                 <span class="blog-card__tag"> ＃ACANSOLUTIONS</span>
+                   
+                </div>
+              </div>
+            </a>
+        </li>
+        
+
+
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
