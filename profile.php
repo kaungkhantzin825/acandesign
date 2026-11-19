@@ -836,6 +836,10 @@
           <dd>KYAWT KAY KHINE</dd>
         </div>
         <div class="prof-dl__row">
+          <dt>役員</dt>
+          <dd>門 正仁</dd>
+        </div>
+        <div class="prof-dl__row">
           <dt>従業員数</dt>
           <dd>約30名</dd>
         </div>
