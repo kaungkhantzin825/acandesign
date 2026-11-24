@@ -2039,6 +2039,44 @@
 
 
 
+
+
+
+           <li class="blog-card" data-cat="sunday-column">
+            <a href="ai_ewblog_punctuality" class="blog-card__link">
+              <div class="blog-card__image">
+                <img src="assets/img/width_800newblog2.png" alt="任せることと、手放すことは違う" width="300" height="170" loading="lazy" decoding="async" />
+              </div>
+              <div class="blog-card__content">
+                <div class="blog-card__header">
+                  <time class="blog-card__date" datetime="2026/11/22">2026/11/22</time>
+                </div>
+                <h3 class="blog-card__title">ミャンマーの物価を調べる、本当の理由
+                
+                </p></h3>
+                <div class="blog-card__category">日曜コラム</div>
+                <div class="blog-card__tags" style="gap: 0px;">
+                  <span class="blog-card__tag">＃ミャンマー</span>
+                 <span class="blog-card__tag">＃ミャンマー経済</span>
+                 <span class="blog-card__tag">＃ミャンマーBPO</span>
+                 <span class="blog-card__tag">＃物価調査</span>
+                 <span class="blog-card__tag">＃海外事業</span>
+                 <span class="blog-card__tag">＃人材育成</span>
+                 <span class="blog-card__tag"></span>
+<span class="blog-card__tag">＃給</span>
+                   <span class="blog-card__tag">＃組織づくり</span>
+                    <span class="blog-card__tag">＃経営者の視点</span>
+                     <span class="blog-card__tag">＃A CAN SOLUTIONS</span>
+                </div>
+              </div>
+            </a>
+        </li>
+
+
+        
+
+
+
         </ul>
       </div>
       <div class="dl-scrollbar" id="dl-scrollbar">
