@@ -36,7 +36,8 @@
   // cards) without touching each page's markup. Every event is sent to GA4
   // AND logged to our own DB (log-event.php) so the admin panel can show a
   // GA-style click/download report without needing the real GA4 account.
-  // No-ops quietly when gtag isn't loaded (localhost, or GA4 ID unset).
+  // The DB log always runs; GA4 is only called when gtag is on the page
+  // (it isn't on localhost, or when the GA4 ID is unset).
   function acanLogEvent(eventName, linkUrl) {
     var payload = JSON.stringify({
       event_name: eventName,
@@ -50,35 +51,35 @@
     }
   }
 
+  function acanTrack(eventName, linkUrl) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, { link_url: linkUrl, page_path: window.location.pathname });
+    }
+    acanLogEvent(eventName, linkUrl);
+  }
+
   document.addEventListener('click', function (e) {
-    if (typeof window.gtag !== 'function') return;
+    if (!e.target.closest) return;
 
     // Every tel:/mailto: link sitewide.
     var contact = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
     if (contact) {
       var href = contact.getAttribute('href');
-      var isTel = href.indexOf('tel:') === 0;
-      var contactEvent = isTel ? 'click_phone_number' : 'click_email_info';
-      window.gtag('event', contactEvent, { link_url: href, page_path: window.location.pathname });
-      acanLogEvent(contactEvent, href);
+      acanTrack(href.indexOf('tel:') === 0 ? 'click_phone_number' : 'click_email_info', href);
       return;
     }
 
     // Every Myanmar report/situation PDF link on myanmar-situation.php.
     var report = e.target.closest('a.myanmar-list__link');
     if (report) {
-      var reportHref = report.getAttribute('href');
-      window.gtag('event', 'download_myanmar_report', { link_url: reportHref, page_path: window.location.pathname });
-      acanLogEvent('download_myanmar_report', reportHref);
+      acanTrack('download_myanmar_report', report.getAttribute('href'));
       return;
     }
 
     // Every resource-library PDF download button on download.php.
     var resource = e.target.closest('a.dl-card__btn');
     if (resource) {
-      var resourceHref = resource.getAttribute('href');
-      window.gtag('event', 'file_download', { link_url: resourceHref, page_path: window.location.pathname });
-      acanLogEvent('file_download', resourceHref);
+      acanTrack('file_download', resource.getAttribute('href'));
       return;
     }
 
@@ -87,11 +88,12 @@
     // has fired at least once.
     var tracked = e.target.closest('a[data-ga-event]');
     if (tracked) {
-      var trackedEvent = tracked.getAttribute('data-ga-event');
-      var trackedHref = tracked.getAttribute('href');
-      window.gtag('event', trackedEvent, { link_url: trackedHref, page_path: window.location.pathname });
-      acanLogEvent(trackedEvent, trackedHref);
+      acanTrack(tracked.getAttribute('data-ga-event'), tracked.getAttribute('href'));
     }
   }, true);
 </script>
+
+<!-- Site analytics (blog posts, /download, /myanmar-situation: views, reading time, card clicks, downloads)
+     → analytics-track.php; report in admin > アクセス解析 -->
+<script src="/assets/js/site-tracker.js?v=3" defer></script>
 

@@ -795,7 +795,7 @@
           <div>
             <p class="ms-contact__label">電話で相談する</p>
             <p class="ms-contact__hours">平日 10:00〜17:00</p>
-            <p class="ms-contact__value">(082)209-6669</p>
+            <p class="ms-contact__value"><a href="tel:+81822096669" class="contact-tel">(082)209-6669</a></p>
           </div>
         </div>
         <div class="ms-contact__card">

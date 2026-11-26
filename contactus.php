@@ -923,7 +923,7 @@ $errorMessage = $errorMessages[$_GET['error'] ?? ''] ?? null;
         <div>
           <p class="dl-contact__label">電話で相談する</p>
           <p class="dl-contact__hours">平日 10:00〜17:00</p>
-          <p class="dl-contact__value">(082)209-6669</p>
+          <p class="dl-contact__value"><a href="tel:+81822096669" class="contact-tel">(082)209-6669</a></p>
         </div>
       </div>
 

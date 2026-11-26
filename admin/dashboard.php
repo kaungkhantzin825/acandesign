@@ -65,360 +65,164 @@ if ($lastMonthCount > 0) {
     $monthDelta = $thisMonthCount > 0 ? 100 : 0;
 }
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ダッシュボード | A CAN SOLUTIONS 管理画面</title>
-  <link rel="icon" type="image/webp" href="../assets/img/logo.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
+<?php
+$pageTitle    = t('dash.title');
+$pageSubtitle = t('dash.subtitle');
+require __DIR__ . '/partials/header.php';
+?>
 
-    body {
-      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
-      margin: 0;
-      background: #f5f7fb;
-      color: #1a1a2e;
-    }
+        <?php if (($_GET['msg'] ?? '') === 'deleted'): ?>
+          <div class="alert alert-success alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="<?= te('common.close') ?>">&times;</button>
+            <i class="icon fas fa-check"></i><?= te('common.deleted') ?>
+          </div>
+        <?php endif; ?>
 
-    a { color: inherit; }
-
-    /* ── Topbar ── */
-    .topbar {
-      background: #12499e;
-      color: #fff;
-      padding: 0.9rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .topbar__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 900;
-      font-size: 1rem;
-    }
-
-    .topbar__brand img { width: 30px; height: 30px; }
-
-    .topbar__right {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.85rem;
-    }
-
-    .topbar__right a {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255,255,255,0.15);
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      transition: background 0.2s;
-    }
-
-    .topbar__right a:hover { background: rgba(255,255,255,0.28); }
-
-    /* ── Layout ── */
-    .wrap { max-width: 1200px; margin: 0 auto; padding: 1.75rem 1.5rem 3rem; }
-
-    h1 { font-size: 1.3rem; margin: 0 0 1.25rem; }
-
-    .alert-success {
-      background: #eafaf1;
-      border: 1px solid #b7ebc6;
-      color: #1e7e34;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      font-size: 0.88rem;
-      margin-bottom: 1.25rem;
-    }
-
-    /* ── Stats ── */
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .stat-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1.1rem 1.25rem;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      border-left: 4px solid #12499e;
-    }
-
-    .stat-card__value { font-size: 1.7rem; font-weight: 900; color: #1a1a2e; line-height: 1.2; }
-    .stat-card__label { font-size: 0.82rem; color: #6b7280; margin-top: 0.2rem; }
-
-    /* ── Card / table ── */
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-      overflow: hidden;
-    }
-
-    .card__head {
-      padding: 1rem 1.25rem;
-      border-bottom: 1px solid #eef1f7;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .search-form { display: flex; gap: 0.5rem; }
-
-    .search-form input[type="text"] {
-      padding: 0.5rem 0.8rem;
-      border: 1.5px solid #d1d9e6;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-family: inherit;
-      width: 260px;
-      max-width: 60vw;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      font-family: inherit;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-
-    .btn:hover { opacity: 0.85; }
-    .btn-primary { background: #12499e; color: #fff; }
-    .btn-default { background: #eef1f7; color: #1a1a2e; }
-    .btn-danger { background: #dc2626; color: #fff; }
-    .btn-danger:disabled { background: #f3a8a8; cursor: not-allowed; opacity: 1; }
-    .btn-sm { padding: 0.35rem 0.7rem; font-size: 0.78rem; }
-
-    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-    thead th {
-      text-align: left;
-      padding: 0.7rem 1rem;
-      background: #f5f7fb;
-      color: #6b7280;
-      font-weight: 700;
-      border-bottom: 1px solid #eef1f7;
-      white-space: nowrap;
-    }
-    tbody td {
-      padding: 0.7rem 1rem;
-      border-bottom: 1px solid #f2f4f8;
-      vertical-align: top;
-    }
-    tbody tr:hover { background: #fafbfe; }
-
-    .msg-cell {
-      max-width: 240px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 0.2rem 0.65rem;
-      border-radius: 999px;
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #fff;
-    }
-    .badge-contact { background: #1a5fd4; }
-    .badge-newsletter { background: #12499e; }
-
-    .empty-row { text-align: center; color: #9ca3af; padding: 2.5rem 1rem; }
-
-    .card__foot {
-      padding: 0.9rem 1.25rem;
-      border-top: 1px solid #eef1f7;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .pagination { display: flex; gap: 0.35rem; list-style: none; margin: 0; padding: 0; }
-    .pagination a, .pagination span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 30px;
-      height: 30px;
-      padding: 0 0.4rem;
-      border-radius: 6px;
-      font-size: 0.8rem;
-      text-decoration: none;
-      color: #1a1a2e;
-      background: #f5f7fb;
-    }
-    .pagination .active span { background: #12499e; color: #fff; }
-
-    @media (max-width: 700px) {
-      .search-form input[type="text"] { width: 160px; }
-      table { display: block; overflow-x: auto; }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="topbar">
-    <div class="topbar__brand">
-      <img src="../assets/img/logo.webp" alt="" />
-      A CAN SOLUTIONS 管理画面
-    </div>
-    <div class="topbar__right">
-      <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
-      <a href="contacts.php">お問い合わせ一覧</a>
-      <a href="newsletter-subscribers.php">メルマガ登録一覧</a>
-      <a href="analytics-report.php">クリック・DLレポート</a>
-      <a href="send-newsletter.php">ニュースレター送信</a>
-      <a href="newsletter-history.php">送信履歴</a>
-      <a href="change-password.php">パスワード変更</a>
-      <a href="logout.php">ログアウト</a>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <h1>登録者一覧</h1>
-
-    <?php if (($_GET['msg'] ?? '') === 'deleted'): ?>
-      <div class="alert-success">削除しました。</div>
-    <?php endif; ?>
-
-    <div class="stats">
-      <div class="stat-card">
-        <div class="stat-card__value"><?= (int)$stats['total'] ?></div>
-        <div class="stat-card__label">総登録者数</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card__value"><?= (int)($stats['contact_count'] ?? 0) ?></div>
-        <div class="stat-card__label">お問い合わせ</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card__value"><?= (int)($stats['newsletter_count'] ?? 0) ?></div>
-        <div class="stat-card__label">メルマガ登録</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card__value" style="font-size:1.15rem;"><?= htmlspecialchars($stats['latest_date'] ?? '—') ?></div>
-        <div class="stat-card__label">最新登録日</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-card__value">
-          <?= $thisMonthCount ?>
-          <?php if ($monthDelta !== 0): ?>
-            <span style="font-size:0.8rem; font-weight:700; color: <?= $monthDelta > 0 ? '#1e7e34' : '#dc2626' ?>;"><?= $monthDelta > 0 ? '▲' : '▼' ?><?= abs($monthDelta) ?>%</span>
-          <?php endif; ?>
+        <!-- KPI tiles -->
+        <div class="row">
+          <div class="col-lg col-md-4 col-6">
+            <div class="small-box bg-acan">
+              <div class="inner">
+                <h3><?= (int)$stats['total'] ?></h3>
+                <p><?= te('dash.total') ?></p>
+              </div>
+              <div class="icon"><i class="fas fa-users"></i></div>
+              <a href="export.php" class="small-box-footer"><?= te('common.csv_export') ?> <i class="fas fa-download"></i></a>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3><?= (int)($stats['contact_count'] ?? 0) ?></h3>
+                <p><?= te('dash.contacts') ?></p>
+              </div>
+              <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+              <a href="contacts.php" class="small-box-footer"><?= te('common.view_list') ?> <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg col-md-4 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3><?= (int)($stats['newsletter_count'] ?? 0) ?></h3>
+                <p><?= te('dash.newsletter') ?></p>
+              </div>
+              <div class="icon"><i class="fas fa-newspaper"></i></div>
+              <a href="newsletter-subscribers.php" class="small-box-footer"><?= te('common.view_list') ?> <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <h3>
+                  <?= $thisMonthCount ?>
+                  <?php if ($monthDelta != 0): ?>
+                    <span class="delta"><i class="fas fa-arrow-<?= $monthDelta > 0 ? 'up' : 'down' ?>"></i> <?= abs($monthDelta) ?>%</span>
+                  <?php endif; ?>
+                </h3>
+                <p><?= te('dash.this_month') ?></p>
+              </div>
+              <div class="icon"><i class="fas fa-calendar-plus"></i></div>
+              <span class="small-box-footer"><?= te('common.prev_month', ['n' => $lastMonthCount]) ?></span>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-12">
+            <div class="small-box bg-secondary">
+              <div class="inner">
+                <h3 class="is-date"><?= htmlspecialchars($stats['latest_date'] ?? '—') ?></h3>
+                <p><?= te('dash.latest') ?></p>
+              </div>
+              <div class="icon"><i class="fas fa-clock"></i></div>
+              <span class="small-box-footer">&nbsp;</span>
+            </div>
+          </div>
         </div>
-        <div class="stat-card__label">今月の登録数（前月比）</div>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="card__head">
-        <form method="GET" class="search-form">
-          <input type="text" name="q" placeholder="メール・名前・会社名・電話番号で検索" value="<?= htmlspecialchars($search) ?>" />
-          <button type="submit" class="btn btn-primary">検索</button>
-          <?php if ($search !== ''): ?>
-            <a href="dashboard.php" class="btn btn-default">クリア</a>
-          <?php endif; ?>
-        </form>
-        <a href="export.php<?= $search !== '' ? '?q=' . urlencode($search) : '' ?>" class="btn btn-default">CSVエクスポート</a>
-      </div>
+        <!-- Subscriber list -->
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title"><i class="fas fa-list mr-1"></i><?= te('dash.list') ?><span class="badge badge-light ml-1"><?= te('common.items', ['n' => (int)$total]) ?></span></h3>
+            <div class="card-tools">
+              <a href="export.php<?= $search !== '' ? '?q=' . urlencode($search) : '' ?>" class="btn btn-tool" title="<?= te('common.csv_export') ?>"><i class="fas fa-file-csv"></i> CSV</a>
+            </div>
+          </div>
+          <div class="card-body border-bottom py-2">
+            <form method="GET" class="admin-search">
+              <div class="input-group input-group-sm">
+                <input type="text" name="q" class="form-control" placeholder="<?= te('common.search_ph') ?>" value="<?= htmlspecialchars($search) ?>" />
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i> <?= te('common.search') ?></button>
+                  <?php if ($search !== ''): ?>
+                    <a href="dashboard.php" class="btn btn-default"><?= te('common.clear') ?></a>
+                  <?php endif; ?>
+                </div>
+              </div>
+            </form>
+          </div>
 
-      <form method="POST" id="bulkForm">
-        <input type="hidden" name="action" value="bulk_delete">
-        <div style="overflow-x:auto;">
-          <table>
-            <thead>
-              <tr>
-                <th style="width:30px;"><input type="checkbox" id="selectAll"></th>
-                <th>メールアドレス</th>
-                <th>名前</th>
-                <th>会社名</th>
-                <th>電話番号</th>
-                <th>メッセージ</th>
-                <th>ソース</th>
-                <th>登録日時</th>
-                <th>操作</th>
-              </tr>
-            </thead>
-            <tbody>
-            <?php if (empty($subscribers)): ?>
-              <tr><td colspan="9" class="empty-row">登録者が見つかりません。</td></tr>
-            <?php else: foreach ($subscribers as $s): ?>
-              <tr>
-                <td><input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="rowCheck"></td>
-                <td><?= htmlspecialchars($s['email']) ?></td>
-                <td><?= htmlspecialchars($s['name']) ?></td>
-                <td><?= htmlspecialchars($s['company']) ?></td>
-                <td><?= htmlspecialchars($s['phone']) ?></td>
-                <td class="msg-cell" title="<?= htmlspecialchars($s['message']) ?>"><?= htmlspecialchars($s['message']) ?></td>
-                <td><span class="badge badge-<?= htmlspecialchars($s['source']) ?>"><?= htmlspecialchars($s['source']) ?></span></td>
-                <td><?= htmlspecialchars($s['created_at']) ?></td>
-                <td>
-                  <a href="delete.php?id=<?= (int)$s['id'] ?>" class="btn btn-sm btn-danger" onclick="return confirm('削除しますか？');">削除</a>
-                </td>
-              </tr>
-            <?php endforeach; endif; ?>
-            </tbody>
-          </table>
+          <form method="POST" id="bulkForm">
+            <input type="hidden" name="action" value="bulk_delete">
+            <div class="card-body table-responsive p-0">
+              <table class="table table-hover table-striped admin-table mb-0">
+                <thead>
+                  <tr>
+                    <th style="width:36px;"><input type="checkbox" id="selectAll" aria-label="<?= te('common.select_all') ?>"></th>
+                    <th><?= te('col.email') ?></th>
+                    <th><?= te('col.name') ?></th>
+                    <th><?= te('col.company') ?></th>
+                    <th><?= te('col.phone') ?></th>
+                    <th><?= te('col.message') ?></th>
+                    <th><?= te('col.source') ?></th>
+                    <th><?= te('col.created') ?></th>
+                    <th class="text-right"><?= te('col.actions') ?></th>
+                  </tr>
+                </thead>
+                <tbody>
+                <?php if (empty($subscribers)): ?>
+                  <tr><td colspan="9" class="empty-row"><i class="fas fa-inbox"></i><?= te('dash.empty') ?></td></tr>
+                <?php else: foreach ($subscribers as $s): ?>
+                  <tr>
+                    <td><input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="rowCheck"></td>
+                    <td><?= htmlspecialchars($s['email']) ?></td>
+                    <td class="wrap"><?= htmlspecialchars($s['name']) ?></td>
+                    <td class="wrap"><?= htmlspecialchars($s['company']) ?></td>
+                    <td><?= htmlspecialchars($s['phone']) ?></td>
+                    <td class="msg-cell" title="<?= htmlspecialchars($s['message']) ?>"><?= htmlspecialchars($s['message']) ?></td>
+                    <td>
+                      <?php if ($s['source'] === 'contact'): ?>
+                        <span class="badge badge-success"><?= te('source.contact') ?></span>
+                      <?php elseif ($s['source'] === 'newsletter'): ?>
+                        <span class="badge badge-info"><?= te('source.newsletter') ?></span>
+                      <?php else: ?>
+                        <span class="badge badge-secondary"><?= htmlspecialchars($s['source']) ?></span>
+                      <?php endif; ?>
+                    </td>
+                    <td><?= htmlspecialchars($s['created_at']) ?></td>
+                    <td class="text-right">
+                      <a href="delete.php?id=<?= (int)$s['id'] ?>" class="btn btn-xs btn-outline-danger" data-confirm="<?= te('common.delete_q') ?>"><i class="fas fa-trash-alt"></i> <?= te('common.delete') ?></a>
+                    </td>
+                  </tr>
+                <?php endforeach; endif; ?>
+                </tbody>
+              </table>
+            </div>
+            <div class="card-footer clearfix">
+              <button type="submit" class="btn btn-sm btn-danger" id="bulkDeleteBtn" disabled data-confirm="<?= te('dash.bulk_q') ?>">
+                <i class="fas fa-trash-alt"></i> <?= te('common.bulk_delete') ?> (<span id="bulkSelectedCount">0</span>)
+              </button>
+
+              <?php if ($totalPages > 1): ?>
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <?php for ($p = 1; $p <= $totalPages; $p++): ?>
+                    <li class="page-item<?= $p === $page ? ' active' : '' ?>">
+                      <a class="page-link" href="?page=<?= $p ?><?= $search !== '' ? '&q=' . urlencode($search) : '' ?>"><?= $p ?></a>
+                    </li>
+                  <?php endfor; ?>
+                </ul>
+              <?php endif; ?>
+            </div>
+          </form>
         </div>
-        <div class="card__foot">
-          <button type="submit" class="btn btn-danger" id="bulkDeleteBtn" disabled onclick="return confirm('選択した登録者を削除しますか？');">選択項目を削除</button>
 
-          <?php if ($totalPages > 1): ?>
-            <ul class="pagination">
-              <?php for ($p = 1; $p <= $totalPages; $p++): ?>
-                <li class="<?= $p === $page ? 'active' : '' ?>">
-                  <a href="?page=<?= $p ?><?= $search !== '' ? '&q=' . urlencode($search) : '' ?>"><span><?= $p ?></span></a>
-                </li>
-              <?php endfor; ?>
-            </ul>
-          <?php endif; ?>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>
-    const selectAll = document.getElementById('selectAll');
-    const rowChecks = document.querySelectorAll('.rowCheck');
-    const bulkDeleteBtn = document.getElementById('bulkDeleteBtn');
-
-    function updateBulkBtn() {
-      bulkDeleteBtn.disabled = !Array.from(rowChecks).some(c => c.checked);
-    }
-
-    if (selectAll) {
-      selectAll.addEventListener('change', function () {
-        rowChecks.forEach(c => { c.checked = selectAll.checked; });
-        updateBulkBtn();
-      });
-    }
-    rowChecks.forEach(c => c.addEventListener('change', updateBulkBtn));
-  </script>
+<?php require __DIR__ . '/partials/footer.php'; ?>
 </body>
 </html>

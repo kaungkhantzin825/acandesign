@@ -43,7 +43,7 @@ $fp = fopen('php://output', 'w');
 // BOM for Excel UTF-8
 fwrite($fp, "\xEF\xBB\xBF");
 
-fputcsv($fp, ['ID', 'メールアドレス', '名前', '会社名', '電話番号', 'メッセージ', 'ソース', '登録日時']);
+fputcsv($fp, ['ID', t('col.email'), t('col.name'), t('col.company'), t('col.phone'), t('col.message'), t('col.source'), t('col.created')]);
 
 while ($row = $result->fetch_assoc()) {
     fputcsv($fp, [

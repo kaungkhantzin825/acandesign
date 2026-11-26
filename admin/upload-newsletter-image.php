@@ -11,17 +11,17 @@ function fail($message) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || empty($_FILES['image'])) {
-    fail('画像が送信されていません。');
+    fail(t('upload.none'));
 }
 
 $file = $_FILES['image'];
 if ($file['error'] !== UPLOAD_ERR_OK) {
-    fail('アップロードに失敗しました。');
+    fail(t('upload.failed'));
 }
 
 // 5MB limit
 if ($file['size'] > 5 * 1024 * 1024) {
-    fail('画像サイズは5MB以下にしてください。');
+    fail(t('upload.too_large'));
 }
 
 $allowed = [
@@ -33,7 +33,7 @@ $allowed = [
 
 $mime = mime_content_type($file['tmp_name']);
 if (!isset($allowed[$mime])) {
-    fail('対応していない画像形式です（JPEG, PNG, WebP, GIFのみ）。');
+    fail(t('upload.bad_type'));
 }
 
 $ext = $allowed[$mime];
@@ -46,7 +46,7 @@ $filename = uniqid('nl_', true) . '.' . $ext;
 $dest = $dir . '/' . $filename;
 
 if (!move_uploaded_file($file['tmp_name'], $dest)) {
-    fail('画像の保存に失敗しました。');
+    fail(t('upload.save_failed'));
 }
 
 // Shrink large uploads so they display at a reasonable size in the email and

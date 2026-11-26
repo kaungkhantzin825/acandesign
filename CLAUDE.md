@@ -33,7 +33,8 @@ There are too many pages to list individually. The pattern is what matters:
 | `header/*.php` | Per-page header bands (`download-header.php`, `myanmar-situation-header.php`), included *after* `menu.php` |
 | `contactus.php` → `confirm.php` → `send-contact.php` | Contact form: input → confirm → send |
 | `myanmar-situation.php` → `newsletter-subscribe.php` | Newsletter signup entry + handler |
-| `admin/` | Admin panel (login, dashboard, CSV export, delete) |
+| `admin/` | Admin panel (login, dashboard, CSV export, delete). AdminLTE 3.2 from CDN; every page sets `$pageTitle` and wraps its content in `admin/partials/header.php` + `footer.php` (sidebar menu lives in `header.php`); brand overrides in `admin/css/admin.css`. UI text is Japanese/English via `admin/lang.php` (`te('key')` in templates, `t()` in PHP, `tj()` in JS) — add new strings there in both languages, never hard-code them |
+| `assets/js/site-tracker.js` → `analytics-track.php` | First-party analytics (loaded by `footer.php`): views, reading time, scroll depth and blog-card clicks on every blog post; views + document downloads on `/download` and `/myanmar-situation`. Anonymous visitor id in localStorage, no IPs; country from the browser time zone. Table `analytics_events` (created on first use); helpers + tracked-page list in `analytics-lib.php` (`ANALYTICS_PAGES`, keep in sync with `PAGES` in the JS). Titles are read server-side from the page files. Report: `admin/analytics-report.php` tabs, built by `admin/partials/report-data.php` + `report-view.php` |
 | `assets/css/main.css` | Global stylesheet (per-page CSS is inline in each page's `<style>`) |
 | `assets/js/main.js` | Scroll-reveal animations |
 | `db_setup.php` | One-time DB bootstrap — **dev only, delete on production** |

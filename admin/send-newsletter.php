@@ -121,11 +121,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $bodyIsEmpty = trim(strip_tags($body)) === '' && stripos($body, '<img') === false;
 
     if (!$hasMailer) {
-        $error = 'メール送信機能が利用できません（vendor/未インストール）。サーバー管理者にお問い合わせください。';
+        $error = t('send.err_mailer');
     } elseif ($subject === '' || $bodyIsEmpty) {
-        $error = '件名と本文を入力してください。';
+        $error = t('send.err_empty');
     } elseif (empty($ids)) {
-        $error = '送信先を1件以上選択してください。';
+        $error = t('send.err_no_to');
     } else {
         $idList = implode(',', $ids);
         $res = $conn->query("SELECT email, name FROM subscribers WHERE source = 'newsletter' AND id IN ($idList)");
@@ -170,541 +170,224 @@ $historyCount = 0;
 $res = $conn->query("SELECT COUNT(*) AS c FROM newsletter_sends");
 if ($res) { $historyCount = (int)$res->fetch_assoc()['c']; }
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ニュースレター送信 | A CAN SOLUTIONS 管理画面</title>
-  <link rel="icon" type="image/webp" href="../assets/img/logo.webp" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
+<?php
+$pageTitle    = t('send.title');
+$pageSubtitle = t('send.subtitle');
+$extraHead    = '<link href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.snow.min.css" rel="stylesheet" />';
+require __DIR__ . '/partials/header.php';
+?>
 
-    body {
-      font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
-      margin: 0;
-      background: #f5f7fb;
-      color: #1a1a2e;
-    }
+        <?php if ($results !== null): ?>
+          <div class="alert <?= $results['failed'] > 0 ? 'alert-warning' : 'alert-success' ?> alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="<?= te('common.close') ?>">&times;</button>
+            <h5 class="mb-1"><i class="icon fas <?= $results['failed'] > 0 ? 'fa-exclamation-triangle' : 'fa-check' ?>"></i><?= te('send.done') ?></h5>
+            <?php if ($results['failed'] > 0): ?>
+              <?= te('send.result_failed', ['sent' => (int)$results['sent'], 'failed' => (int)$results['failed']]) ?>
+            <?php else: ?>
+              <?= te('send.result', ['sent' => (int)$results['sent']]) ?>
+            <?php endif; ?>
+            <?php if (!empty($results['failures'])): ?>
+              <ul class="mt-2 mb-0 pl-3">
+                <?php foreach ($results['failures'] as $failEmail => $reason): ?>
+                  <li><?= htmlspecialchars($failEmail) ?><?= te('common.colon') ?><?= htmlspecialchars($reason) ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+          </div>
+        <?php endif; ?>
 
-    a { color: inherit; }
+        <?php if ($error !== ''): ?>
+          <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert" aria-label="<?= te('common.close') ?>">&times;</button>
+            <i class="icon fas fa-ban"></i><?= htmlspecialchars($error) ?>
+          </div>
+        <?php endif; ?>
 
-    .topbar {
-      background: #12499e;
-      color: #fff;
-      padding: 0.9rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    .topbar__brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      font-weight: 900;
-      font-size: 1rem;
-    }
-
-    .topbar__brand img { width: 30px; height: 30px; }
-
-    .topbar__right {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      font-size: 0.85rem;
-    }
-
-    .topbar__right a {
-      text-decoration: none;
-      color: #fff;
-      background: rgba(255,255,255,0.15);
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      transition: background 0.2s;
-    }
-
-    .topbar__right a:hover { background: rgba(255,255,255,0.28); }
-
-    .wrap { max-width: 920px; margin: 0 auto; padding: 2.25rem 1.5rem 3.5rem; }
-
-    .page-head {
-      display: flex;
-      align-items: center;
-      gap: 1.1rem;
-      flex-wrap: wrap;
-      margin-bottom: 1.75rem;
-    }
-    .page-head__icon {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #12499e, #1a5fd4);
-      box-shadow: 0 6px 16px rgba(18,73,158,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      flex-shrink: 0;
-    }
-    .page-head__text { flex: 1; min-width: 200px; }
-    .page-head h1 {
-      font-size: 1.4rem;
-      font-weight: 900;
-      margin: 0 0 0.25rem;
-      color: #0d2a63;
-    }
-    .page-head p {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin: 0;
-    }
-    .page-head__stats {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-    .stat-chip {
-      background: #fff;
-      border: 1px solid #eef1f7;
-      border-radius: 12px;
-      padding: 0.5rem 1rem;
-      text-align: center;
-      min-width: 76px;
-      box-shadow: 0 2px 8px rgba(18,73,158,0.05);
-    }
-    .stat-chip strong {
-      display: block;
-      font-size: 1.1rem;
-      font-weight: 900;
-      color: #12499e;
-      line-height: 1.2;
-    }
-    .stat-chip span {
-      font-size: 0.68rem;
-      color: #9ca3af;
-      font-weight: 700;
-    }
-
-    .alert-success,
-    .alert-error {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.65rem;
-      padding: 0.9rem 1.1rem;
-      border-radius: 10px;
-      font-size: 0.88rem;
-      margin-bottom: 1.25rem;
-      line-height: 1.7;
-      border-left: 4px solid;
-    }
-
-    .alert-success {
-      background: #eafaf1;
-      border-color: #22a55a;
-      color: #1e7e34;
-    }
-
-    .alert-error {
-      background: #fdecea;
-      border-color: #e5484d;
-      color: #b42318;
-    }
-
-    .alert-icon { font-size: 1.1rem; flex-shrink: 0; line-height: 1.4; }
-
-    .card {
-      background: #fff;
-      border: 1px solid #eef1f7;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(18,73,158,0.06);
-      padding: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .card__title {
-      font-size: 1rem;
-      font-weight: 900;
-      margin: 0 0 1.25rem;
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-      color: #0d2a63;
-    }
-
-    .card__icon {
-      width: 30px;
-      height: 30px;
-      border-radius: 9px;
-      background: #eef3fc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.95rem;
-      flex-shrink: 0;
-    }
-
-    .field { margin-bottom: 1.1rem; }
-
-    .field label {
-      display: block;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 0.4rem;
-    }
-
-    .field input[type="text"],
-    .field textarea {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      border: 1.5px solid #d1d9e6;
-      border-radius: 9px;
-      font-size: 0.95rem;
-      font-family: inherit;
-      outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
-      resize: vertical;
-    }
-
-    .field input[type="text"]:focus,
-    .field textarea:focus {
-      border-color: #12499e;
-      box-shadow: 0 0 0 3px rgba(18,73,158,0.1);
-    }
-
-    .field__hint { font-size: 0.75rem; color: #9ca3af; margin-top: 0.3rem; }
-
-    #editor {
-      background: #fff;
-      border-radius: 0 0 8px 8px;
-      font-size: 0.92rem;
-      font-family: inherit;
-      min-height: 260px;
-    }
-    .ql-toolbar.ql-snow {
-      border-color: #d1d9e6;
-      border-radius: 8px 8px 0 0;
-      font-family: inherit;
-    }
-    .ql-container.ql-snow { border-color: #d1d9e6; font-family: inherit; }
-    .ql-editor { min-height: 260px; font-size: 0.92rem; }
-    .ql-editor.ql-blank::before { font-style: normal; color: #9ca3af; }
-    .ql-editor img {
-      max-width: 280px;
-      max-height: 200px;
-      width: auto;
-      height: auto;
-      display: block;
-      margin: 0.75rem 0;
-      border-radius: 6px;
-      object-fit: contain;
-    }
-    .ql-editor img.ql-image-selected { outline: 2px solid #12499e; }
-
-    .recipients-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 0.9rem;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .recipients-count { font-size: 0.82rem; color: #6b7280; }
-    .recipients-count strong { color: #12499e; font-weight: 900; }
-
-    .recipients-list {
-      border: 1px solid #eef1f7;
-      border-radius: 12px;
-      max-height: 320px;
-      overflow-y: auto;
-    }
-
-    .recipient-row {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      padding: 0.7rem 1rem;
-      border-bottom: 1px solid #f2f4f8;
-      border-left: 3px solid transparent;
-      font-size: 0.85rem;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
-    }
-
-    .recipient-row:last-child { border-bottom: none; }
-    .recipient-row:hover { background: #f8faff; }
-    .recipient-row:has(.recipientCheck:checked) {
-      background: #eef5ff;
-      border-left-color: #12499e;
-    }
-
-    .recipientCheck {
-      width: 18px;
-      height: 18px;
-      accent-color: #12499e;
-      cursor: pointer;
-      flex-shrink: 0;
-    }
-
-    .recipient-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #12499e, #1a5fd4);
-      color: #fff;
-      font-size: 0.74rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .recipient-text { min-width: 0; display: flex; flex-direction: column; gap: 0.1rem; }
-    .recipient-email { font-weight: 700; color: #1a1a2e; }
-    .recipient-name { color: #9ca3af; font-size: 0.78rem; }
-
-    .empty-row {
-      text-align: center;
-      color: #9ca3af;
-      padding: 2.5rem 1rem;
-      font-size: 0.85rem;
-    }
-    .empty-row__icon { font-size: 1.6rem; display: block; margin-bottom: 0.5rem; opacity: 0.6; }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.7rem 1.5rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      font-weight: 700;
-      font-family: inherit;
-      border: none;
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s, background 0.15s;
-    }
-
-    .btn:hover { opacity: 0.92; }
-    .btn-primary {
-      background: linear-gradient(135deg, #12499e, #1a5fd4);
-      color: #fff;
-      box-shadow: 0 4px 14px rgba(18,73,158,0.3);
-    }
-    .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(18,73,158,0.38); }
-    .btn-default { background: #eef1f7; color: #1a1a2e; border-radius: 999px; }
-    .btn-default:hover { background: #e3e9f5; }
-    .btn-sm { padding: 0.4rem 0.95rem; font-size: 0.78rem; }
-
-    .form-actions {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-  </style>
-</head>
-<body>
-
-  <div class="topbar">
-    <div class="topbar__brand">
-      <img src="../assets/img/logo.webp" alt="" />
-      A CAN SOLUTIONS 管理画面
-    </div>
-    <div class="topbar__right">
-      <a href="dashboard.php">ダッシュボードへ戻る</a>
-      <a href="newsletter-history.php">送信履歴</a>
-      <span><?= htmlspecialchars($_SESSION['admin_username'] ?? '') ?></span>
-      <a href="logout.php">ログアウト</a>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="page-head">
-      <div class="page-head__icon">📨</div>
-      <div class="page-head__text">
-        <h1>ニュースレター送信</h1>
-        <p>メルマガ登録者へ、自由な内容のお知らせメールを作成して送信します。</p>
-      </div>
-      <div class="page-head__stats">
-        <div class="stat-chip"><strong><?= count($subscribers) ?></strong><span>登録者</span></div>
-        <a href="newsletter-history.php" class="stat-chip" style="text-decoration:none;"><strong><?= $historyCount ?></strong><span>送信履歴</span></a>
-      </div>
-    </div>
-
-    <?php if ($results !== null): ?>
-      <div class="<?= $results['failed'] > 0 ? 'alert-error' : 'alert-success' ?>">
-        <span class="alert-icon"><?= $results['failed'] > 0 ? '⚠️' : '✅' ?></span>
-        <div>
-          送信完了：<?= (int)$results['sent'] ?>件成功<?php if ($results['failed'] > 0): ?>、<?= (int)$results['failed'] ?>件失敗<?php endif; ?>
-          <?php if (!empty($results['failures'])): ?>
-            <ul style="margin: 0.6rem 0 0; padding-left: 1.2rem;">
-              <?php foreach ($results['failures'] as $failEmail => $reason): ?>
-                <li><?= htmlspecialchars($failEmail) ?>：<?= htmlspecialchars($reason) ?></li>
-              <?php endforeach; ?>
-            </ul>
-          <?php endif; ?>
-        </div>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($error !== ''): ?>
-      <div class="alert-error"><span class="alert-icon">⚠️</span><div><?= htmlspecialchars($error) ?></div></div>
-    <?php endif; ?>
-
-    <form method="POST" id="newsletterForm">
-      <div class="card">
-        <p class="card__title"><span class="card__icon">📝</span>メール内容</p>
-        <div class="field">
-          <label for="subject">件名</label>
-          <input type="text" id="subject" name="subject" required value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" />
-        </div>
-        <div class="field">
-          <label for="editor">本文</label>
-          <div id="editor"></div>
-          <textarea name="body" id="bodyField" style="display:none;"><?= $_POST['body'] ?? '' ?></textarea>
-          <div class="field__hint">太字・リンク・画像などはツールバーで装飾できます。画像ボタンからアップロードすると、そのままメールに挿入されます。</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="recipients-head">
-          <p class="card__title" style="margin:0;"><span class="card__icon">👥</span>送信先（メルマガ登録者）</p>
-          <div style="display:flex; align-items:center; gap:0.75rem;">
-            <span class="recipients-count"><?= count($subscribers) ?>件登録</span>
-            <button type="button" class="btn btn-default btn-sm" id="toggleAll">全選択/解除</button>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="info-box">
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text"><?= te('send.subscribers') ?></span>
+                <span class="info-box-number"><?= count($subscribers) ?> <small><?= te('common.unit') ?></small></span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <a href="newsletter-history.php" class="info-box text-reset">
+              <span class="info-box-icon bg-acan elevation-1"><i class="fas fa-history"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text"><?= te('send.history') ?></span>
+                <span class="info-box-number"><?= $historyCount ?> <small><?= te('common.unit') ?></small></span>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="recipients-list">
-          <?php if (empty($subscribers)): ?>
-            <div class="empty-row"><span class="empty-row__icon">📭</span>メルマガ登録者が見つかりません。</div>
-          <?php else: foreach ($subscribers as $s):
-            $initial = mb_substr($s['name'] !== '' ? $s['name'] : $s['email'], 0, 1, 'UTF-8');
-          ?>
-            <label class="recipient-row">
-              <input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="recipientCheck">
-              <span class="recipient-avatar"><?= htmlspecialchars(mb_strtoupper($initial, 'UTF-8')) ?></span>
-              <span class="recipient-text">
-                <span class="recipient-email"><?= htmlspecialchars($s['email']) ?></span>
-                <span class="recipient-name"><?= htmlspecialchars($s['name']) ?><?= $s['company'] !== '' ? '（' . htmlspecialchars($s['company']) . '）' : '' ?></span>
-              </span>
-            </label>
-          <?php endforeach; endif; ?>
-        </div>
-      </div>
 
-      <div class="form-actions">
-        <span class="recipients-count"><strong id="selectedCount">0</strong>件に送信します</span>
-        <button type="submit" class="btn btn-primary" onclick="return confirm('選択した送信先へメールを送信しますか？');">📤 送信する</button>
-      </div>
-    </form>
-  </div>
+        <form method="POST" id="newsletterForm">
+          <div class="row">
+            <!-- Message -->
+            <div class="col-lg-7">
+              <div class="card card-primary card-outline">
+                <div class="card-header">
+                  <h3 class="card-title"><i class="fas fa-edit mr-1"></i><?= te('send.content') ?></h3>
+                </div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="subject"><?= te('send.subject') ?></label>
+                    <input type="text" id="subject" name="subject" class="form-control" required value="<?= htmlspecialchars($_POST['subject'] ?? '') ?>" />
+                  </div>
+                  <div class="form-group mb-0">
+                    <label for="editor"><?= te('send.body') ?></label>
+                    <div id="editor"></div>
+                    <textarea name="body" id="bodyField" class="d-none"><?= htmlspecialchars($_POST['body'] ?? '') ?></textarea>
+                    <small class="form-text text-muted"><?= te('send.hint') ?></small>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
-  <script>
-    const checks = document.querySelectorAll('.recipientCheck');
-    const selectedCount = document.getElementById('selectedCount');
-    const toggleAll = document.getElementById('toggleAll');
+            <!-- Recipients -->
+            <div class="col-lg-5">
+              <div class="card card-primary card-outline">
+                <div class="card-header">
+                  <h3 class="card-title"><i class="fas fa-user-friends mr-1"></i><?= te('send.recipients') ?></h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" id="toggleAll"><i class="fas fa-check-double"></i> <?= te('send.toggle_all') ?></button>
+                  </div>
+                </div>
+                <div class="card-body p-0 recipients-list">
+                  <?php if (empty($subscribers)): ?>
+                    <div class="empty-row"><i class="fas fa-inbox"></i><?= te('subs.empty') ?></div>
+                  <?php else: ?>
+                    <ul class="list-group list-group-flush">
+                      <?php foreach ($subscribers as $s):
+                        $initial = mb_substr($s['name'] !== '' ? $s['name'] : $s['email'], 0, 1, 'UTF-8');
+                      ?>
+                        <li class="list-group-item p-0">
+                          <label class="recipient-row px-3 py-2">
+                            <input type="checkbox" name="ids[]" value="<?= (int)$s['id'] ?>" class="recipientCheck">
+                            <span class="recipient-avatar"><?= htmlspecialchars(mb_strtoupper($initial, 'UTF-8')) ?></span>
+                            <span class="recipient-text">
+                              <span class="recipient-email"><?= htmlspecialchars($s['email']) ?></span>
+                              <span class="recipient-name"><?= htmlspecialchars($s['name']) ?><?= $s['company'] !== '' ? te('common.paren', ['x' => $s['company']]) : '' ?></span>
+                            </span>
+                          </label>
+                        </li>
+                      <?php endforeach; ?>
+                    </ul>
+                  <?php endif; ?>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between flex-wrap">
+                  <span class="text-muted"><?= th('send.will_send', ['n' => '<strong class="text-acan" id="selectedCount">0</strong>']) ?></span>
+                  <button type="submit" class="btn btn-primary ml-auto" data-confirm="<?= te('send.confirm') ?>"><i class="fas fa-paper-plane"></i> <?= te('send.submit') ?></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
 
-    function updateCount() {
-      selectedCount.textContent = Array.from(checks).filter(c => c.checked).length;
-    }
+<?php require __DIR__ . '/partials/footer.php'; ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.7/quill.min.js"></script>
+<script>
+  const i18n = {
+    placeholder: <?= tj('send.placeholder') ?>,
+    uploading: <?= tj('send.uploading') ?>,
+    uploadFailed: <?= tj('send.upload_failed') ?>,
+    uploadFailedReason: <?= tj('send.upload_failed_reason') ?>
+  };
 
-    checks.forEach(c => c.addEventListener('change', updateCount));
-    updateCount();
+  const checks = document.querySelectorAll('.recipientCheck');
+  const selectedCount = document.getElementById('selectedCount');
+  const toggleAll = document.getElementById('toggleAll');
 
-    if (toggleAll) {
-      toggleAll.addEventListener('click', function () {
-        const anyUnchecked = Array.from(checks).some(c => !c.checked);
-        checks.forEach(c => { c.checked = anyUnchecked; });
-        updateCount();
-      });
-    }
+  function updateCount() {
+    selectedCount.textContent = Array.from(checks).filter(c => c.checked).length;
+  }
 
-    // Rich-text editor for the email body. Toolbar is limited to formats that
-    // render reliably in email clients (semantic tags + inline-styled embeds) —
-    // no alignment/indent/color, which Quill implements via CSS classes that
-    // won't be available in a recipient's inbox.
-    const quill = new Quill('#editor', {
-      theme: 'snow',
-      placeholder: 'メール本文を入力してください…',
-      modules: {
-        toolbar: {
-          container: [
-            ['bold', 'italic', 'underline'],
-            [{ list: 'ordered' }, { list: 'bullet' }],
-            ['blockquote', 'link', 'image'],
-            ['clean']
-          ],
-          handlers: { image: imageHandler }
-        }
+  checks.forEach(c => c.addEventListener('change', updateCount));
+  updateCount();
+
+  if (toggleAll) {
+    toggleAll.addEventListener('click', function () {
+      const anyUnchecked = Array.from(checks).some(c => !c.checked);
+      checks.forEach(c => { c.checked = anyUnchecked; });
+      updateCount();
+    });
+  }
+
+  // Rich-text editor for the email body. Toolbar is limited to formats that
+  // render reliably in email clients (semantic tags + inline-styled embeds) —
+  // no alignment/indent/color, which Quill implements via CSS classes that
+  // won't be available in a recipient's inbox.
+  const quill = new Quill('#editor', {
+    theme: 'snow',
+    placeholder: i18n.placeholder,
+    modules: {
+      toolbar: {
+        container: [
+          ['bold', 'italic', 'underline'],
+          [{ list: 'ordered' }, { list: 'bullet' }],
+          ['blockquote', 'link', 'image'],
+          ['clean']
+        ],
+        handlers: { image: imageHandler }
       }
-    });
-
-    const bodyField = document.getElementById('bodyField');
-    // dangerouslyPasteHTML (not quill.root.innerHTML) so Quill actually parses
-    // this into its own Delta model — setting innerHTML directly bypasses that,
-    // and Quill's own update cycle then silently drops anything it doesn't
-    // recognize (e.g. bare <br> tags collapsed, no space left behind).
-    if (bodyField.value.trim() !== '') {
-      quill.clipboard.dangerouslyPasteHTML(bodyField.value);
     }
+  });
 
-    function imageHandler() {
-      const input = document.createElement('input');
-      input.setAttribute('type', 'file');
-      input.setAttribute('accept', 'image/*');
-      input.click();
+  const bodyField = document.getElementById('bodyField');
+  // dangerouslyPasteHTML (not quill.root.innerHTML) so Quill actually parses
+  // this into its own Delta model — setting innerHTML directly bypasses that,
+  // and Quill's own update cycle then silently drops anything it doesn't
+  // recognize (e.g. bare <br> tags collapsed, no space left behind).
+  if (bodyField.value.trim() !== '') {
+    quill.clipboard.dangerouslyPasteHTML(bodyField.value);
+  }
 
-      input.onchange = function () {
-        const file = input.files[0];
-        if (!file) return;
+  function imageHandler() {
+    const input = document.createElement('input');
+    input.setAttribute('type', 'file');
+    input.setAttribute('accept', 'image/*');
+    input.click();
 
-        const range = quill.getSelection(true);
-        quill.insertText(range.index, 'アップロード中…', { italic: true });
+    input.onchange = function () {
+      const file = input.files[0];
+      if (!file) return;
 
-        const formData = new FormData();
-        formData.append('image', file);
+      const range = quill.getSelection(true);
+      quill.insertText(range.index, i18n.uploading, { italic: true });
 
-        fetch('upload-newsletter-image.php', { method: 'POST', body: formData })
-          .then(function (r) { return r.json(); })
-          .then(function (data) {
-            quill.deleteText(range.index, 'アップロード中…'.length);
-            if (data.url) {
-              quill.insertEmbed(range.index, 'image', data.url);
-              quill.setSelection(range.index + 1);
-              // Inline style (not a CSS class) so it survives into the sent
-              // email and keeps the image from overflowing a narrow inbox.
-              var img = quill.root.querySelector('img[src="' + data.url + '"]');
-              if (img) {
-                img.setAttribute('style', 'max-width:100%;height:auto;display:block;border-radius:6px;');
-              }
-            } else {
-              alert('画像のアップロードに失敗しました: ' + (data.error || ''));
+      const formData = new FormData();
+      formData.append('image', file);
+
+      fetch('upload-newsletter-image.php', { method: 'POST', body: formData })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          quill.deleteText(range.index, i18n.uploading.length);
+          if (data.url) {
+            quill.insertEmbed(range.index, 'image', data.url);
+            quill.setSelection(range.index + 1);
+            // Inline style (not a CSS class) so it survives into the sent
+            // email and keeps the image from overflowing a narrow inbox.
+            var img = quill.root.querySelector('img[src="' + data.url + '"]');
+            if (img) {
+              img.setAttribute('style', 'max-width:100%;height:auto;display:block;border-radius:6px;');
             }
-          })
-          .catch(function () {
-            quill.deleteText(range.index, 'アップロード中…'.length);
-            alert('画像のアップロードに失敗しました。');
-          });
-      };
-    }
+          } else {
+            alert(i18n.uploadFailedReason + (data.error || ''));
+          }
+        })
+        .catch(function () {
+          quill.deleteText(range.index, i18n.uploading.length);
+          alert(i18n.uploadFailed);
+        });
+    };
+  }
 
-    document.getElementById('newsletterForm').addEventListener('submit', function () {
-      bodyField.value = quill.root.innerHTML;
-    });
-  </script>
+  document.getElementById('newsletterForm').addEventListener('submit', function () {
+    bodyField.value = quill.root.innerHTML;
+  });
+</script>
 </body>
 </html>
